@@ -18,9 +18,9 @@ public class ItemAtividade implements Serializable {
 	private long id;
 	
 	@OneToOne
-	private TipoAtividade tipoAtividade;
+	private Atividade atividade;
 	
-	private String descricao;
+	private int idItemPai;
 	
 	private BigDecimal valor;
 
@@ -32,20 +32,32 @@ public class ItemAtividade implements Serializable {
 		this.id = id;
 	}
 
-	public TipoAtividade getTipoAtividade() {
-		return tipoAtividade;
+	/**
+	 * @return the atividade
+	 */
+	public Atividade getAtividade() {
+		return atividade;
 	}
 
-	public void setTipoAtividade(TipoAtividade tipoAtividade) {
-		this.tipoAtividade = tipoAtividade;
+	/**
+	 * @param atividade the atividade to set
+	 */
+	public void setAtividade(Atividade atividade) {
+		this.atividade = atividade;
 	}
 
-	public String getDescricao() {
-		return descricao;
+	/**
+	 * @return the idItemPai
+	 */
+	public int getIdItemPai() {
+		return idItemPai;
 	}
 
-	public void setDescricao(String descricao) {
-		this.descricao = descricao;
+	/**
+	 * @param idItemPai the idItemPai to set
+	 */
+	public void setIdItemPai(int idItemPai) {
+		this.idItemPai = idItemPai;
 	}
 
 	public BigDecimal getValor() {

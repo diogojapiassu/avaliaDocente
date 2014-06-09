@@ -8,7 +8,7 @@
 	</classpathentry>
 	<classpathentry kind="con" path="com.google.appengine.eclipse.wtp.jpa.DATANUCLEUS_CONTAINER">
 		<attributes>
-			<attribute name="owner.project.facets" value="jpt.jpa;jst.jsf"/>
+			<attribute name="owner.project.facets" value="jst.jsf"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>

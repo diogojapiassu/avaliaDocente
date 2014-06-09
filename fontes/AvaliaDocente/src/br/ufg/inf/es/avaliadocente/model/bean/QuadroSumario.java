@@ -20,9 +20,6 @@ public class QuadroSumario implements Serializable {
 	private Resolucao resolucao;
 	
 	@OneToOne
-	private GrupoAtividade grupoAtividade;
-	
-	@OneToOne
 	private Docente docente;
 	
 	public long getId() {
@@ -39,14 +36,6 @@ public class QuadroSumario implements Serializable {
 
 	public void setResolucao(Resolucao resolucao) {
 		this.resolucao = resolucao;
-	}
-
-	public GrupoAtividade getGrupoAtividade() {
-		return grupoAtividade;
-	}
-
-	public void setGrupoAtividade(GrupoAtividade grupoAtividade) {
-		this.grupoAtividade = grupoAtividade;
 	}
 
 	public Docente getDocente() {

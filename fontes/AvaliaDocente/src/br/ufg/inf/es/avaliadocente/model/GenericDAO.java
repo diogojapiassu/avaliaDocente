@@ -7,7 +7,8 @@ public class GenericDAO {
 	private static Session session;
 
 	public void teste() {
-		session = HibernateCfg.getSession();
+		HibernateCfg hibernateCfg = new HibernateCfg();
+		session = hibernateCfg.getSession();
 
 		try {
 			session.beginTransaction();

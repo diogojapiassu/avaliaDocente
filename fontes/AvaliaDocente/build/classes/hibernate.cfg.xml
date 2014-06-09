@@ -7,5 +7,6 @@
 		<property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/avaliaDocente</property>
 		<property name="hibernate.connection.username">postgres</property>
 		<property name="hibernate.connection.password">12345</property>
+		<property name="hibernate.temp.use_jdbc_metadata_defaults">false</property>
 	</session-factory>
 </hibernate-configuration>

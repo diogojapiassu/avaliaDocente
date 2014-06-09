@@ -15,6 +15,8 @@ public class Resolucao implements Serializable {
 	@Id
 	private long id;
 	
+	private String descricao;
+	
 	private int numeroNotas;
 	
 	private int numeroAtividades;
@@ -25,6 +27,14 @@ public class Resolucao implements Serializable {
 
 	public void setId(long id) {
 		this.id = id;
+	}
+
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
 	}
 
 	public int getNumeroNotas() {

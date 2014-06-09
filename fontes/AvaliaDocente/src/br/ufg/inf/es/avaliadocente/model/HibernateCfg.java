@@ -18,7 +18,7 @@ public class HibernateCfg {
 		setSession(sessionFactory.openSession());
 	}
 
-	public static Session getSession() {
+	public Session getSession() {
 		return session;
 	}
 
