@@ -1,8 +1,13 @@
 package br.ufg.inf.es.avaliadocente.model.bean;
 
 import java.io.Serializable;
+import java.util.List;
 
+import javax.persistence.FetchType;
+import javax.persistence.GenerationType;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
 import org.hibernate.annotations.Entity;
@@ -14,6 +19,7 @@ public class QuadroSumario implements Serializable {
 	private static final long serialVersionUID = 8454327804099597504L;
 	
 	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 	
 	@OneToOne
@@ -21,6 +27,9 @@ public class QuadroSumario implements Serializable {
 	
 	@OneToOne
 	private Docente docente;
+	
+	@OneToMany(fetch = FetchType.LAZY)
+	private List<NotasGrupoAtividade> notasGrupoAtividade;
 	
 	public long getId() {
 		return id;
@@ -44,5 +53,13 @@ public class QuadroSumario implements Serializable {
 
 	public void setDocente(Docente docente) {
 		this.docente = docente;
+	}
+
+	public List<NotasGrupoAtividade> getNotasGrupoAtividade() {
+		return notasGrupoAtividade;
+	}
+
+	public void setNotasGrupoAtividade(List<NotasGrupoAtividade> notasGrupoAtividade) {
+		this.notasGrupoAtividade = notasGrupoAtividade;
 	}
 }

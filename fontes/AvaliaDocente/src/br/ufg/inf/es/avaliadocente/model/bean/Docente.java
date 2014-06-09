@@ -2,6 +2,8 @@ package br.ufg.inf.es.avaliadocente.model.bean;
 
 import java.io.Serializable;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import org.hibernate.annotations.Entity;
@@ -13,11 +15,17 @@ public class Docente implements Serializable {
 	private static final long serialVersionUID = 8454327804099597504L;
 	
 	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
+	
 	private String matricula;
+	
 	private String nome;
+	
 	private String departamento;
+	
 	private String periodo;
+	
 	private String regime;
 	
 	public long getId() {

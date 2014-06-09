@@ -3,8 +3,10 @@ package br.ufg.inf.es.avaliadocente.model.bean;
 import java.io.Serializable;
 import java.math.BigDecimal;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
 
 import org.hibernate.annotations.Entity;
 
@@ -15,12 +17,13 @@ public class NotasGrupoAtividade implements Serializable {
 	private static final long serialVersionUID = 8454327804099597504L;
 	
 	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 	
-	@OneToOne
+	@ManyToOne
 	private QuadroSumario quadroSumario;
 	
-	@OneToOne
+	@ManyToOne
 	private GrupoAtividade grupoAtividade;
 	
 	private BigDecimal valor;

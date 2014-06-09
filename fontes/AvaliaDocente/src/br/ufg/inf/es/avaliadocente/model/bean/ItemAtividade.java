@@ -3,8 +3,10 @@ package br.ufg.inf.es.avaliadocente.model.bean;
 import java.io.Serializable;
 import java.math.BigDecimal;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
 
 import org.hibernate.annotations.Entity;
 
@@ -15,9 +17,10 @@ public class ItemAtividade implements Serializable {
 	private static final long serialVersionUID = 8454327804099597504L;
 	
 	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 	
-	@OneToOne
+	@ManyToOne
 	private Atividade atividade;
 	
 	private int idItemPai;
@@ -32,30 +35,18 @@ public class ItemAtividade implements Serializable {
 		this.id = id;
 	}
 
-	/**
-	 * @return the atividade
-	 */
 	public Atividade getAtividade() {
 		return atividade;
 	}
 
-	/**
-	 * @param atividade the atividade to set
-	 */
 	public void setAtividade(Atividade atividade) {
 		this.atividade = atividade;
 	}
 
-	/**
-	 * @return the idItemPai
-	 */
 	public int getIdItemPai() {
 		return idItemPai;
 	}
 
-	/**
-	 * @param idItemPai the idItemPai to set
-	 */
 	public void setIdItemPai(int idItemPai) {
 		this.idItemPai = idItemPai;
 	}
