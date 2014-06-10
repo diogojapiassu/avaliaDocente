@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/" debug="false">
+
+	<appender name="consoleAppender" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[${services.context}] %d{HH:mm:ss-SSS} [%t] %p %C{1}(%L): %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="fileAppender" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="file" value="logs/${services.context}-${version}.log" />
+		<param name="datePattern" value="'.'yyyy-MM-dd-HH" />
+		<param name="immediateFlush" value="false" />
+		<param name="append" value="true" />
+		<param name="threshold" value="info" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[${services.context}] [%d{yyyy-MM-dd HH:mm:ss-SSS}] [%t] [%X{session_id}] [%p] [%X{login}] [%C{1}]: %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="asyncConsoleAppender" class="org.apache.log4j.AsyncAppender">
+		<appender-ref ref="consoleAppender" />
+	</appender>
+
+	<appender name="asyncfileAppender" class="org.apache.log4j.AsyncAppender">
+		<appender-ref ref="fileAppender" />
+	</appender>
+
+	<logger name="br.ufg.inf.es">
+		<level value="${log4j.level}" />
+	</logger>
+
+	<logger name="org.springframework">
+		<level value="${log4j.level}" />
+	</logger>
+
+	<logger name="org.springframework.web">
+		<level value="${log4j.level}" />
+	</logger>
+
+	<root>
+		<priority value="${log4j.level}" />
+		<appender-ref ref="asyncConsoleAppender" />
+		<appender-ref ref="asyncfileAppender" />
+	</root>
+
+</log4j:configuration>

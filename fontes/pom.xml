@@ -1,0 +1,180 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>br.ufg.inf.es</groupId>
+  <artifactId>avalia-docente</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>Avalia Docente</name>
+  <description>Avalia Docente</description>
+  
+  
+  <modules>
+      <module>avalia-docente-core</module>
+      <module>avalia-docente-web</module>
+  </modules>
+  
+  <properties>
+  
+     <!-- jdbc properties -->
+     <jdbc.groupId>org.postgresql</jdbc.groupId>
+     <jdbc.artifactId>postgresql</jdbc.artifactId>
+     <jdbc.version>9.2-1003-jdbc4</jdbc.version>
+     <jdbc.user>postgres</jdbc.user>
+     <jdbc.password>oobj.postgres</jdbc.password>
+     <jdbc.driver>org.postgresql.Driver</jdbc.driver>
+     <jdbc.url>jdbc:postgresql://localhost:5432/avaliaDocente</jdbc.url>
+     
+     <environment>dev</environment>
+     <log4j.level>debug</log4j.level>
+     
+     <!-- hibernate properties -->
+     <hibernate.hbm2ddl.auto>update</hibernate.hbm2ddl.auto>
+     <hibernate.show.sql>false</hibernate.show.sql>
+     <hibernate.format.sql>false</hibernate.format.sql>
+     <hibernate.use_sql_comments>true</hibernate.use_sql_comments>
+     <hibernate.generate_statistics>true</hibernate.generate_statistics>
+     <hibernate.dialect>org.hibernate.dialect.PostgreSQL82Dialect</hibernate.dialect>
+     
+     <!-- versões de dependências comuns a todos os projetos -->
+     <junit.version>4.11</junit.version>
+     <log4j.version>1.2.17</log4j.version>
+     <mockito.version>1.9.5</mockito.version>
+     <servlet-api.version>2.5</servlet-api.version>
+     <commons-lang.version>3.1</commons-lang.version>
+     <commons-logging.version>1.1.3</commons-logging.version>
+     
+     <!-- server services properties -->
+     <services.protocolo>http</services.protocolo>
+     <services.domain>localhost</services.domain>
+     <services.port>8080</services.port>
+     <services.context>avalia-docente</services.context>
+  </properties>
+  
+  <build>
+   <!-- plugins comuns a todos os projetos -->
+        <plugins>
+            <!-- http://maven.apache.org/plugins/maven-compiler-plugin/ -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+
+            <!-- http://maven.apache.org/plugins/maven-resources-plugin/ -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>2.6</version>
+            </plugin>
+        </plugins>
+
+        <!-- plugins comuns a mais de um projeto -->
+        <pluginManagement>
+            <plugins>
+                <!-- http://maven.apache.org/plugins/maven-war-plugin/ -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-war-plugin</artifactId>
+                    <version>2.4</version>
+                    <configuration>
+                        <archiveClasses>false</archiveClasses>
+                        <archive>
+                            <index>true</index>
+                            <manifest>
+                                <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+                            </manifest>
+                        </archive>
+                        <webResources>
+                            <resource>
+                                <directory>src/main/resources</directory>
+                                <targetPath>WEB-INF/classes</targetPath>
+                                <filtering>true</filtering>
+                            </resource>
+                        </webResources>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+
+    </build>
+    
+    <!-- dependências comuns a todos os projetos -->
+    <dependencies>
+        <!-- dependências para teste -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>${mockito.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <!-- dependências comuns a mais de um projeto -->
+    <dependencyManagement>
+        <dependencies>
+            <!-- dependências para log -->
+            <dependency>
+                <groupId>log4j</groupId>
+                <artifactId>log4j</artifactId>
+                <version>${log4j.version}</version>
+            </dependency>
+
+            <!-- dependências apache commons -->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-logging</groupId>
+                <artifactId>commons-logging</artifactId>
+                <version>${commons-logging.version}</version>
+            </dependency>
+
+            <!-- dependência para servlet -->
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>servlet-api</artifactId>
+                <version>${servlet-api.version}</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <!-- dependências para json -->
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-core</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-annotations</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <!-- repositórios de dependências não presentes no repositório central -->
+    <repositories>
+        <repository>
+            <id>spring.framework</id>
+            <name>Spring Release Repository</name>
+            <url>http://repo.spring.io/release/</url>
+        </repository>
+    </repositories>
+</project>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+						http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+
+	<!-- C3p0 configuration -->
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close" p:driverClass="${jdbc.driver}" 
+		p:jdbcUrl="${jdbc.url}" p:user="${jdbc.user}" p:password="${jdbc.password}" p:acquireRetryDelay="1000"
+		p:maxIdleTime="240" p:maxPoolSize="20" p:minPoolSize="5" p:autoCommitOnClose="false" />
+
+</beans>

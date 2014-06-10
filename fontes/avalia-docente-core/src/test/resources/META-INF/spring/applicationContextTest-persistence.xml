@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+						http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd
+						http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd
+						http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa-1.3.xsd">
+
+	<context:component-scan base-package="br.ufg.inf.es.avaliadocente.repository,br.ufg.inf.es.avaliadocente.repository.support" />
+
+	<!-- Banco de dados em memória para execução dos testes -->
+	<!-- C3p0 configuration -->
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" p:driverClass="org.h2.Driver" p:user="sa" p:password=""
+		p:jdbcUrl="jdbc:h2:mem:avaliaDocente-test;DB_CLOSE_ON_EXIT=FALSE" p:acquireRetryDelay="1000" />
+
+	<util:properties id="jpaProperties" location="classpath:hibernate-test.properties" />
+
+	<bean class="org.springframework.orm.hibernate4.HibernateExceptionTranslator" />
+
+	<bean class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor" />
+
+	<bean id="jpaVendorAdapter" class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" />
+
+	<bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"
+		p:dataSource-ref="dataSource" p:jpaProperties-ref="jpaProperties" p:jpaVendorAdapter-ref="jpaVendorAdapter"/>
+
+	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager"
+		p:entityManagerFactory-ref="entityManagerFactory" />
+
+	<jpa:repositories base-package="br.ufg.inf.es.avaliadocente.repository,br.ufg.inf.es.avaliadocente.repository.support"
+		transaction-manager-ref="transactionManager"
+		entity-manager-factory-ref="entityManagerFactory"
+		factory-class="br.ufg.inf.es.avaliadocente.repository.support.factory.RepositoryFactoryBean" />
+
+</beans>
