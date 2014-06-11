@@ -103,7 +103,6 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
 			<version>${spring.version}</version>
-			<scope>test</scope>
 			<exclusions>
 				<exclusion>
 					<artifactId>hamcrest-core</artifactId>
@@ -115,7 +114,6 @@
 			<groupId>com.github.springtestdbunit</groupId>
 			<artifactId>spring-test-dbunit</artifactId>
 			<version>${spring-test-dbunit.version}</version>
-			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.dbunit</groupId>

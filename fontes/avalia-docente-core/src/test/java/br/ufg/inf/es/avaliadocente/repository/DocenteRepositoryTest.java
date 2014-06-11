@@ -127,5 +127,35 @@ public class DocenteRepositoryTest {
 						Matchers.is("Instituto de Física")));
 		Assert.assertThat(resultList, Matchers.contains(mat1, mat2));
 	}
+	
+	/**
+	 * Testa a busca por docente com base no departamento.
+	 * 
+	 * <p>
+	 * DETALHE: a acentuação correta é necessária!
+	 * </p>
+	 *  
+	 */
+	@Test
+	@DatabaseSetup(SAVED_DB)
+	public void testFindByDepartamento() {
+		final List<Docente> resultList = this.repository.findByDepartamento("Instituto de Informática");
+		Assert.assertEquals(resultList.size(), 2);
+	}
+	
+	/**
+	 * Testa a busca por docente com base no nome.
+	 * 
+	 * <p>
+	 * DETALHE: a acentuação correta é necessária!
+	 * </p>
+	 *  
+	 */
+	@Test
+	@DatabaseSetup(SAVED_DB)
+	public void testFindByNome() {
+		final List<Docente> resultList = this.repository.findByNome("Marcelo Quinta");
+		Assert.assertEquals(resultList.size(), 1);
+	}
 
 }
