@@ -1,0 +1,742 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quadroSumario>
+
+	<resolucao>32/2013</resolucao>
+	
+	<docente>
+		<id>1</id>
+		<nome>Marcelo Ricardo Quinta</nome>
+		<matricula>123456</matricula>
+		<departamento>Instituto de Informática</departamento>
+		<regime>40</regime>
+		<periodo>Integral</periodo>
+	</docente>
+
+	<!-- I – ATIVIDADES DE ENSINO -->
+	<grupoAtividade id="1">
+		<!-- I-2- Graduação -->
+		<atividade id="1">
+			<!-- Aulas presenciais na graduação -->
+			<itemAtividade indice="1" valor="40"/>
+			
+			<!-- Aulas do ensino a distância na graduação -->
+			<itemAtividade indice="2" valor="10"/>
+		</atividade>
+		
+		<!-- I-2- Pós-Graduação stricto e lato sensu -->
+		<atividade id="2">
+			<!-- Aulas presenciais na pós-graduação -->
+			<itemAtividade indice="1" valor="30"/>
+			
+			<!-- Aulas do ensino a distância na pós-graduação -->
+			<itemAtividade indice="2" valor="4"/>
+		</atividade>		
+	</grupoAtividade>
+	
+	<!-- II - PRODUÇÃO INTELECTUAL -->
+	<grupoAtividade id="2">
+		<!-- II-1- Produção Científica -->
+		<atividade id="1">
+			<!-- Artigo completo ou texto literário publicado em periódico -->
+			
+			<!-- Com classificação no Qualis/CAPES 20 -->
+			<itemAtividade indice="1.1" />
+			
+			<!-- Não sujeito à classificação no Qualis/CAPES 10 -->
+			<itemAtividade indice="1.2" />
+			
+			<!-- Resumo de artigo em periódicos especializados nacional ou internacional com corpo editorial -->
+			<itemAtividade indice="2" />
+			
+			<!-- Artigos ou textos literários em repositórios de publicação eletrônica ligados a 
+					editoras ou universidades (total máximo a ser considerado neste item são 10 
+					pontos) -->
+			<itemAtividade indice="3" />
+			
+			<!-- Resumo expandido publicado em anais (total máximo a ser considerado neste 
+					item são 10 pontos) de congresso (4.1, 4.2 ou 4.3) -->
+			<itemAtividade indice="4" />
+			
+			<!-- Internacional 8 -->
+			<itemAtividade indice="4.1" />
+			
+			<!-- Nacional 6 -->
+			<itemAtividade indice="4.2" />
+			
+			<!-- Regional ou Local 4 -->
+			<itemAtividade indice="4.3" />
+			
+			<!-- Resumo simples publicado em anais (total máximo a ser considerado neste item 
+					são 10 pontos) de congresso (5.1, 5.2 ou 5.3) -->
+			<itemAtividade indice="5" />
+			
+			<!-- Internacional 4 -->
+			<itemAtividade indice="5.1" />
+			
+			<!-- Nacional 3 -->
+			<itemAtividade indice="5.2" />
+			
+			<!-- Regional ou Local 2 -->
+			<itemAtividade indice="5.3" />
+			
+			<!-- Trabalho completo publicado em anais de congresso cientifico -->
+			<itemAtividade indice="6" />
+			
+			<!-- Editor ou Coordenador editorial de livro publicado com selo de editora que possua corpo editorial -->
+			<itemAtividade indice="7" />
+			
+			<!-- Livro publicado com selo de editora que possua corpo editorial -->
+			<itemAtividade indice="8" />
+			
+			<!-- Livro publicado com selo de editora que não possua corpo editorial -->
+			<itemAtividade indice="9" />
+			
+			<!-- Capítulo de livro publicado com selo de editora que possua corpo editorial (total máximo a ser considerado neste item são 40 pontos) -->
+			<itemAtividade indice="10" />
+			
+			<!-- Edição ou organização de livro (coletânea) publicado com selo de editora que possua corpo editorial  -->
+			<itemAtividade indice="11" />
+			
+			<!-- Capítulo traduzido de livro publicado com selo de editora que possua corpo editorial (total máximo a ser considerado neste item são 20 pontos) -->
+			<itemAtividade indice="12" />
+			
+			<!-- Tradução ou revisão científica de livro traduzido e publicado com selo de editora que possua corpo editorial -->
+			<itemAtividade indice="13" />
+			
+			<!-- Resenhas, prefácios ou verbetes -->
+			<itemAtividade indice="14" />
+			
+			<!-- Livro didático desenvolvido para projetos institucionais/governamentais  -->
+			<itemAtividade indice="15" />
+			
+			<!-- Editor de periódicos especializados indexados com corpo editorial -->
+			<itemAtividade indice="16" />
+			
+			<!-- Editor de jornais ou revistas com distribuição (17.1, 17.2 ou 17.3) -->
+			<itemAtividade indice="17" />
+			
+			<!-- Local ou Regional 15 -->
+			<itemAtividade indice="17.1" />
+			
+			<!-- Nacional 20 -->
+			<itemAtividade indice="17.2" />
+			
+			<!-- Internacional 20 -->
+			<itemAtividade indice="17.3" />
+			
+			<!-- Dissertação de Mestrado defendida de aprovada (sendo o docente o autor da dissertação) -->
+			<itemAtividade indice="18" />
+			
+			<!-- Tese de Doutorado defendida e aprovada (sendo o docente o autor da tese) -->
+			<itemAtividade indice="19" />
+		</atividade>
+		
+		<!-- II - 2 Produção Artística e Cultural-->
+		<atividade id="2">
+			<!-- Criação, produção e direção de filmes, vídeos, discos, audiovisuais, coreografias, peças teatrais, óperas ou musicais, ou musicais apresentados em eventos (1.1, 1.2 ou 1.3) -->
+			<itemAtividade indice="1" />
+			
+			<!-- Com classificação no Qualis/CAPES 20 -->
+			<itemAtividade indice="1.1" />
+			
+			<!-- Não sujeito à classificação no Qualis/CAPES 10 -->
+			<itemAtividade indice="1.2" />
+			
+			<!-- Criação e produção do projeto gráfico de livros: concepção gráfica (mancha gráfica, diagramação, escolha de fonte) -->
+			<itemAtividade indice="2" />
+			
+			<!-- Design (gráfico, de luz, de figurino e formas animadas, cenográfico e similares) 5 -->
+			<itemAtividade indice="3" />
+			  
+			<!-- Design de impressos por peça (limitados a 20 pontos) 1 --> 
+			<itemAtividade indice="4" />
+			
+			<!-- Design de interfaces digitais 10 -->
+			<itemAtividade indice="5" />
+			
+			<!-- Design de interfaces digitais ou produtos com inovação tecnológica 20 -->
+			<itemAtividade indice="6" />
+			
+			<!-- Exposições e apresentações artísticas locais ou regionais -->
+			<itemAtividade indice="5" />
+			
+			<!-- Participação individual, camerista, solista ou ator principal 16 -->
+			<itemAtividade indice="5.1" />
+			
+			<!-- Participação coletiva ou coadjuvante 5 -->
+			<itemAtividade indice="5.2" />
+			
+			<!-- Exposições e apresentações artísticas nacionais  -->
+			<itemAtividade indice="6" />
+			
+			<!-- Participação individual, camerista, solista ou ator principal 20 -->
+			<itemAtividade indice="6.1" />
+			
+			<!-- Participação coletiva ou coadjuvante 10 -->
+			<itemAtividade indice="6.2" />
+			
+			<!-- Exposições e apresentações artísticas internacionais  -->
+			<itemAtividade indice="7" />
+			
+			<!-- Participação individual, camerista, solista ou ator principal 20 -->
+			<itemAtividade indice="7.1" />
+			
+			<!-- Participação coletiva ou coadjuvante 15 -->
+			<itemAtividade indice="7.2" />
+			
+			<!-- Composições musicais -->
+			<itemAtividade indice="8" />
+			
+			<!-- Editadas 20 -->
+			<itemAtividade indice="8.1" />
+			
+			<!-- Publicadas em revistas científicas 20 -->
+			<itemAtividade indice="8.2" />
+			
+			<!-- Gravadas 15 -->
+			<itemAtividade indice="8.3" />
+			
+			<!-- Executadas em apresentações públicas 15 -->
+			<itemAtividade indice="8.4" />
+			
+			<!-- Produção artística, arquitetônica ou de design premiada em evento -->
+			<itemAtividade indice="9" />
+			
+			<!-- Local ou regional 5 -->
+			<itemAtividade indice="9.1" />
+			
+			<!-- Nacional 10 -->
+			<itemAtividade indice="9.2" />
+			
+			<!-- Internacional 15 -->
+			<itemAtividade indice="9.3" />
+			
+			<!-- Arranjos musicais (canto, coral e orquestral) 5 -->
+			<itemAtividade indice="10" />
+			
+			<!-- Apresentação artística ou cultural em rádio ou TV 5 -->
+			<itemAtividade indice="11" />
+			
+			<!-- Sonoplastia (cinema, música, rádio, televisão, teatro) -->
+			<itemAtividade indice="12" />
+		</atividade>
+
+		<!-- II - 3 Produção Técnica e Tecnológica Pontos -->
+		<atividade id="3">
+			<!-- Desenvolvimento de programa de computador (software) com registro no INPI ou com ampla disponibilização em ambientes de software livre 20 -->
+			<itemAtividade indice="1" />
+			
+			<!-- Desenvolvimento de software com divulgação em periódicos indexados e com corpo editorial ou em anais de congresso científico 10 -->
+			<itemAtividade indice="2" />
+			
+			<!-- Desenvolvimento de software para uso institucional (total máximo a ser considerado neste item são 10 pontos) 5  -->
+			<itemAtividade indice="3" />
+			
+			<!-- Desenvolvimento e registro no INPI de topografia de circuito integrado 20 -->
+			<itemAtividade indice="4" />
+			
+			<!-- Desenvolvimento de produto, processo ou técnica com registro de patente no INPI ou modelo de utilidade20 -->
+			<itemAtividade indice="5" />
+			
+			<!-- Desenvolvimento e registro no INPI de desenho industrial 20 -->
+			<itemAtividade indice="6" />
+			
+			<!-- Desenvolvimento e registro no INPI de processo de indicação geográfica 20 -->
+			<itemAtividade indice="7" />
+			
+			<!-- Desenvolvimento e registro no INPI de marcas 5 -->
+			<itemAtividade indice="8" />
+			
+			<!-- Participação em comitê editorial de periódicos especializados indexados e de editoras universitárias 10* -->
+			<itemAtividade indice="9" valor="1" />
+			
+			<!-- Parecer de consultoria ad hoc em comitês de avaliação de concursos e editais de publicação de livros de editoras com corpo editorial 3 -->
+			<itemAtividade indice="10" />
+			
+			<!-- Parecer de consultoria ad hoc para periódicos especializados com corpo editorial ou para instituições de fomento à pesquisa ou para livros de editoras com corpo editorial 3 -->
+			<itemAtividade indice="11" />
+			
+			<!-- Projeto, parecer ou relatório técnico realizado em consultoria ou assessoria oficializada por convite, convênio, contrato ou designação -->
+			<itemAtividade indice="12" />
+			
+			<!-- Parecer com anotação de responsabilidade técnica (ART) ou registro de responsabilidade técnica (RRT) 10 -->
+			<itemAtividade indice="12.1" />
+			
+			<!-- Parecer sem anotação de responsabilidade técnica (ART) ou registro de responsabilidade técnica (RRT) 5 -->
+			<itemAtividade indice="12.2" />
+			
+			<!-- Projeto ou Relatório Técnico com anotação de responsabilidade técnica (ART) ou registro de responsabilidade técnica (RRT) 20 -->
+			<itemAtividade indice="12.3" />
+			
+			<!-- Projeto ou Relatório Técnico sem anotação de responsabilidade técnica (ART) ou registro de responsabilidade técnica (RRT) 10 -->
+			<itemAtividade indice="12.4" />
+			
+			<!-- Anais, Manuais, catálogos, boletins, com ficha bibliográfica (organizador / redator) 5 -->
+			<itemAtividade indice="13" />
+			
+			<!-- Produção e publicação de mapas, cartas ou similares 10 -->
+			<itemAtividade indice="14" />
+			
+			<!-- Desenvolvimento de maquete 5 -->
+			<itemAtividade indice="15" />
+			
+			<!-- Manutenção de obra artística -->
+			<itemAtividade indice="16" />
+			
+			<!-- Restauração de obra artística 20 -->
+			<itemAtividade indice="16.1" />
+			
+			<!-- Conservação de obra artística 10* -->
+			<itemAtividade indice="16.2" valor="1" />
+			
+			<!-- Curadoria de exposições 5 -->
+			<itemAtividade indice="17" />
+			
+			<!-- Produção de cinema, vídeo, rádio, TV ou mídias digitais  -->
+			<itemAtividade indice="18" />
+			
+			<!-- Editor 20* -->
+			<itemAtividade indice="18.1" valor="1" />
+			
+			<!-- Participante (total máximo a ser considerado neste item são 9 pontos) -->
+			<itemAtividade indice="18.2" />
+		</atividade>
+		
+		<!-- II - 4 Outro Tipo de Produção Pontos -->
+		<atividade id="4">
+			<!-- Artigos de opinião veiculados em jornais e revistas (eletrônico ou impresso) 1 -->
+			<itemAtividade indice="1" />
+			
+			<!-- Texto ou material didático para uso institucional (não fracionados e com  ampla divulgação) 2 -->
+			<itemAtividade indice="2" />
+			
+			<!-- Artigos de divulgação científica, tecnológica e artística veiculados em jornais  e revistas (eletrônico ou impresso) 3 -->
+			<itemAtividade indice="3" />
+			
+			<!-- Apresentação oral de trabalho publicado em anais de congresso científico (total máximo a ser considerado neste item são 9 pontos) 3 -->
+			<itemAtividade indice="4" />
+			
+			<!-- Apresentação em painel de trabalho publicado em anais de congresso científico (total máximo a ser considerado neste item são 3 pontos) 1 -->
+			<itemAtividade indice="5" />
+			
+			<!-- Trabalho premiado em evento científico nacional ou internacional 5 -->
+			<itemAtividade indice="6" />
+			
+			<!-- Tese, dissertação e trabalho de iniciação científica premiados por instituições de fomento (sendo o docente o autor ou orientador do produto) 8 -->
+			<itemAtividade indice="7" />
+		</atividade>
+	</grupoAtividade>
+	
+	<!-- III – ATIVIDADES DE PESQUISA E EXTENSÃO -->
+	<grupoAtividade id="3">
+		<!-- III -1 Atividades de Coordenação de Pesquisa -->
+		<atividade>
+			<!-- Coordenador de projeto conjuntos de pesquisa e cooperação científica (tipo PRODOC, PROCAD, PNPD, entre outros) e de cursos MINTER e DINTER aprovados por órgãos oficiais de fomento 10-->
+			<itemAtividade indice="1" valor="1"/>
+			
+			<!-- Coordenador de projeto de pesquisa aprovado com comprovação de financiamento (exceto bolsas) 10 -->
+			<itemAtividade indice="2" valor="1"/>
+			
+			<!-- Coordenador de projeto de pesquisa aprovado sem financiamento (total máximo a ser considerado neste item são 10 pontos) 5 -->
+			<itemAtividade indice="3" valor="1"/>
+		</atividade>
+		
+		
+		<!-- III - 2 Atividades de Extensão -->
+		<atividade>
+			<!-- Coordenador de projeto de extensão aprovado com comprovação de  financiamento (exceto bolsas) 10* -->
+			<itemAtividade indice="1" valor="1" />
+			
+			<!-- Coordenador de projeto ou programa de extensão/cultura cadastrado na  PROEC (total máximo a ser considerado neste item são 15 pontos) 5* -->
+			<itemAtividade indice="2" valor="1" />
+			
+			<!-- Coordenador de contratos e de convênios de cooperação institucional internacional 5* -->
+			<itemAtividade indice="3" valor="1" />
+			
+			<!-- Coordenador de contratos e de convênios de cooperação institucional nacional 3* -->
+			<itemAtividade indice="4" valor="1" />
+			
+			<!-- Participante de projeto de extensão/cultura cadastrado na PROEC (total  máximo a ser considerado neste item são 15 pontos) 3* -->
+			<itemAtividade indice="5" valor="1" />
+			
+			<!-- Curso de extensão ministrado com 20 ou mais horas (total máximo a ser  considerado neste item são 15 pontos) 5 -->
+			<itemAtividade indice="6" />
+			
+			<!-- Curso de extensão ministrado com menos de 20 horas (total máximo a ser  considerado neste item são 10 pontos) 2 -->
+			<itemAtividade indice="7" />
+			
+			<!-- Palestrante, conferencista ou participante em mesa redonda em evento científico,  cultural ou artístico -->
+			<itemAtividade indice="8" />
+			
+			
+			<!-- Evento internacional (total máximo a ser considerado neste item são 15 pontos) 5 -->
+			<itemAtividade indice="8.1" />
+			
+			<!-- Evento nacional (total máximo a ser considerado neste item são 12 pontos) 4 -->
+			<itemAtividade indice="8.2" />
+			
+			<!-- Evento regional ou local (total máximo a ser considerado neste item são 9 pontos) 3 -->
+			<itemAtividade indice="8.3" />
+			
+			<!-- Promoção ou produção de eventos artísticos e científicos locais -->
+			<itemAtividade indice="9" />
+			
+			<!-- Presidente 4 -->
+			<itemAtividade indice="9.1" />
+			<!-- Comissão organizadora 2 -->
+			<itemAtividade indice="9.2" />
+			
+			<!-- Promoção ou produção de eventos artísticos e científicos regionais -->
+			<itemAtividade indice="10" />
+			
+			<!-- Presidente 6 -->
+			<itemAtividade indice="10.1" />
+			
+			<!-- Comissão organizadora 3 -->
+			<itemAtividade indice="10.2" />
+			
+			<!-- Promoção ou produção de eventos artísticos e científicos nacionais -->
+			<itemAtividade indice="11" />
+			
+			<!-- Presidente 8 -->
+			<itemAtividade indice="11.1" />
+			
+			<!-- Comissão organizadora 4 -->
+			<itemAtividade indice="11.2" />
+			
+			<!-- Promoção ou produção de eventos artísticos e científicos internacionais -->
+			<itemAtividade indice="12" />
+			
+			<!-- Presidente 10 -->
+			<itemAtividade indice="12.1" />
+			
+			<!-- Comissão organizadora 5 -->
+			<itemAtividade indice="12.2" />
+		</atividade>
+	</grupoAtividade>
+	
+	<!-- IV - ATIVIDADES ADMINISTRATIVAS E DE REPRESENTAÇÃO -->
+	<grupoAtividade id="4">
+		<!-- IV – 1 Direção e Função Gratificada -->
+		<atividade id="1">
+			<!-- Reitor ou Vice-Reitor ou Pró-Reitor 14 -->
+			<itemAtividade indice="1" valor="1" />
+			
+			<!-- Chefe de Gabinete 10 -->
+			<itemAtividade indice="2" valor="1" />
+			
+			<!-- Coordenador ou assessor vinculado à Reitoria 10 -->
+			<itemAtividade indice="3" valor="1" />
+			
+			<!-- Diretor de Unidade Acadêmica, de Unidade Acadêmica Especial ou do CEPAE 10 -->
+			<itemAtividade indice="4" valor="1" />
+			
+			<!-- Diretor de Campus do interior 12 -->
+			<itemAtividade indice="5" valor="1" />
+			
+			<!-- Vice-diretor de Campus do interior 12 -->
+			<itemAtividade indice="6" valor="1" />
+			
+			<!-- Diretor Geral do Hospital das Clínicas 10 -->
+			<itemAtividade indice="7" valor="1" />
+			
+			<!-- Coordenador ou assessor vinculado às Pró-Reitorias ou à Direção dos Campus do Interior 8 -->
+			<itemAtividade indice="8" valor="1" />
+			
+			<!-- Coordenador de Programa de Pós-Graduação stricto sensu 8 -->
+			<itemAtividade indice="9" valor="1" />
+			
+			<!-- Coordenador de Curso de Ensino Básico ou de Graduação 8 -->
+			<itemAtividade indice="10" valor="1" />
+			
+			<!-- Vice-diretor de Unidade Acadêmica ou Unidade Acadêmica Especial ou do CEPAE 8 -->
+			<itemAtividade indice="11" valor="1" />
+			
+			<!-- Diretor do Hospital Veterinário 8 -->
+			<itemAtividade indice="12" valor="1" />
+			
+			<!-- Diretor de Órgão da Administração (CERCOMP, CGA, CEGRAF, CIAR, DDRH, CS, SIASS, Museu, Rádio, Biblioteca etc.) 8 -->
+			<itemAtividade indice="13" valor="1" />
+		</atividade>
+		
+		
+		<!-- IV – 2 Atividades Administrativas -->
+		<atividade id="2">
+			<!-- Coordenador de projeto institucional com financiamento ou de contratos e  convênio com plano de trabalho aprovado 5* -->
+			<itemAtividade indice="1" valor="1" />
+			
+			<!-- Coordenador de curso de especialização, residência médica ou residência multiprofissional em saúde (total máximo a ser considerado neste item são 10 pontos) 10 -->
+			<itemAtividade indice="2" />
+			
+			<!-- Membro representante de classe da carreira docente no CONSUNI 10 -->
+			<itemAtividade indice="3" />
+			
+			<!-- Membro do Conselho de Curadores ou do Plenário do CEPEC ou de Conselho de Fundações 10 -->
+			<itemAtividade indice="4" />
+			
+			<!-- Atividades acadêmicas e administrativas designadas por portaria do Reitor, Pró-Reitor ou Diretor de Unidade Acadêmica com carga horária >=150 horas 10** -->
+			<itemAtividade indice="5" />
+		</atividade>
+
+		<!-- IV – 3 Outras Atividades Administrativas -->
+		<atividade id="3">
+			<!-- Presidente da CPPD 7 -->
+			<itemAtividade indice="1" valor="1" />
+			
+			<!-- Presidente da Comissão de Avaliação Institucional ou da Comissão Própria de Avaliação 5 -->
+			<itemAtividade indice="2" valor="1" />
+			
+			<!-- Membros da Coordenação Permanente do Centro de Seleção 5 -->
+			<itemAtividade indice="3" valor="1" />
+			
+			<!-- Diretores do HC 5 -->
+			<itemAtividade indice="4" valor="1" />
+			
+			<!-- Presidente do Comitê de Ética em Pesquisa da UFG e do HC/UFG 5 -->
+			<itemAtividade indice="5" valor="1" />
+			
+			<!-- Membros da CPPD ou da Comissão de Avaliação Institucional ou da Comissão Própria de Avaliação ou da CAD 5 -->
+			<itemAtividade indice="6" valor="1" />
+			
+			<!-- Coordenador de Pesquisa ou de Ensino ou de Extensão ou de Estágio das Unidades Acadêmicas 3 -->
+			<itemAtividade indice="7" valor="1" />
+			
+			<!-- Chefe de Departamento 3 -->
+			<itemAtividade indice="8" valor="1" />
+			
+			<!-- Chefe do Pronto Socorro ou da Maternidade ou do CEROF do Hospital das Clínicas da UFG 3 -->
+			<itemAtividade indice="9" valor="1" />
+			
+			<!-- Coordenador das Atividades de Interação com a Sociedade 3 -->
+			<itemAtividade indice="10" valor="1" />
+			
+			<!-- Coordenador das Atividades de Pesquisa e de Pós–Graduação lato sensu 3 -->
+			<itemAtividade indice="11" valor="1" />
+			
+			<!-- Membros do Comitê de Ética da UFG e do HC/UFG 3 -->
+			<itemAtividade indice="12" valor="1" />
+			
+			<!-- Membros do Comitê Interno e Externo do PIBIC 3 -->
+			<itemAtividade indice="13" valor="1" />
+		</atividade>
+		
+		<!-- IV – 4 Atividades de Representação Fora da UFG -->
+		<atividade id="4">
+			<!-- Representante titular em conselho de classe profissional com carga horária igual ou superior a 150 horas 10** -->
+			<itemAtividade indice="1" valor="1" /> 
+			
+			<!-- Presidente do Sindicato de Docentes da UFG 10 -->
+			<itemAtividade indice="2" valor="1"  />
+			
+			<!-- Diretor do Sindicato de Docentes da UFG 3 -->
+			<itemAtividade indice="3" valor="1" />
+			
+			<!-- Representante sindical com carga horária igual ou superior a 150 horas 10** -->
+			<itemAtividade indice="4" valor="1" />
+			
+			<!-- Representante em entidade científica, artística e cultural com carga horária igual ou superior a 150 horas 10** -->
+			<itemAtividade indice="5" valor="1" />
+			
+			<!-- Representante em comissão de órgão governamental com carga horária igual ou superior a 150 horas 10** -->
+			<itemAtividade indice="6" valor="1" />
+		</atividade>
+	</grupoAtividade>
+	
+	<!-- V - OUTRAS ATIVIDADES -->	
+	<grupoAtividade>
+		<!-- V - 1 Atividades Acadêmicas - Orientação -->
+		<atividade id="1">
+			<!-- Aluno orientado em tese de doutorado defendida e aprovada 20 -->
+			<itemAtividade indice="1" />
+			
+			<!-- Aluno co-orientado em tese de doutorado defendida e aprovada 7 -->
+			<itemAtividade indice="2" />
+			
+			<!-- Aluno orientado em tese de doutorado em andamento 10 -->
+			<itemAtividade indice="3" />
+			
+			<!-- Aluno co-orientado em tese de doutorado em andamento 4 -->
+			<itemAtividade indice="4" />
+			
+			<!-- Aluno orientado em dissertação de mestrado defendida e aprovada 15 -->
+			<itemAtividade indice="5" />
+			
+			<!-- Aluno co-orientado em dissertação de mestrado defendida e aprovada 5 -->
+			<itemAtividade indice="6" />
+			
+			<!-- Aluno orientado em dissertação de mestrado em andamento 8 -->
+			<itemAtividade indice="7" />
+			
+			<!-- Aluno co-orientado em dissertação de mestrado em andamento 3 -->
+			<itemAtividade indice="8" />
+			
+			<!-- Aluno orientado em monografia de especialização aprovada (máximo de 24 pontos) 8 -->
+			<itemAtividade indice="9" />
+			
+			<!-- Aluno orientado em monografia de especialização em andamento (total máximo a ser considerado neste item são 12 pontos) 4 -->
+			<itemAtividade indice="10" />
+			
+			<!-- Aluno orientado em residência médica ou em residência multiprofissional em saúde 5 -->
+			<itemAtividade indice="11" />
+			
+			<!-- Aluno orientado em estágio supervisionado 3 -->
+			<itemAtividade indice="12" />
+			
+			<!-- Aluno orientado em projeto de final de curso 3 -->
+			<itemAtividade indice="13" />
+			
+			<!-- Aluno de outra IFE orientado em tese de doutorado defendida e aprovada 6 -->
+			<itemAtividade indice="14" />
+			
+			<!-- Aluno de outra IFE co-orientado em tese de doutorado defendida e aprovada 3 -->
+			<itemAtividade indice="15" />
+			
+			<!-- Aluno de outra IFE orientado em tese de doutorado em andamento 3 -->
+			<itemAtividade indice="16" />
+			
+			<!-- Aluno de outra IFE co-orientado em tese de doutorado em andamento 2 -->
+			<itemAtividade indice="17" />
+			
+			<!-- Aluno de outra IFE orientado em dissertação de mestrado defendida e aprovada 4 -->
+			<itemAtividade indice="18" />
+			
+			<!-- Aluno de outra IFE co-orientado em dissertação de mestrado defendida e aprovada 2 -->
+			<itemAtividade indice="19" />
+			
+			<!-- Aluno de outra IFE orientado em dissertação de mestrado em andamento 2 -->
+			<itemAtividade indice="20" />
+			
+			<!-- Aluno de outra IFE co-orientado em dissertação de mestrado em andamento 1 -->
+			<itemAtividade indice="21" />
+			
+			<!-- Aluno orientado em programa de iniciação científica (PIBIC/PIVIC/PROLICEN/PICME-OBMEP) 6 -->
+			<itemAtividade indice="22" />
+			
+			<!-- Aluno orientado em programa de iniciação científica júnior 5 -->
+			<itemAtividade indice="13" />
+			
+			<!-- Aluno orientado em programa especial de treinamento (PET) 5 -->
+			<itemAtividade indice="24" />
+			
+			<!-- Aluno orientado com bolsa de DTI, PIBIT, AT, Jovens Talentos e similares 5 -->
+			<itemAtividade indice="25" />
+			
+			<!-- Aluno orientado com bolsa de licenciatura (PIBID e similares) 5 -->
+			<itemAtividade indice="26" />
+			
+			<!-- Aluno orientado com bolsa extensão/cultura/ensino 5 -->
+			<itemAtividade indice="27" />
+			
+			<!-- Aluno orientado em projetos de extensão/cultura/ensino sem bolsa 3 -->
+			<itemAtividade indice="28" />
+			
+			<!-- Aluno orientado com bolsa PROCOM ou similar, vinculada a projeto de pesquisa/extensão/ensino 5 -->
+			<itemAtividade indice="29" />
+			
+			<!-- Aluno orientado em programa de monitoria 3 -->
+			<itemAtividade indice="30" />
+			
+			<!-- Aluno orientado em atividade não curricular com bolsa 2 -->
+			<itemAtividade indice="31" />
+			
+			<!-- Aluno orientado em atividade não curricular sem bolsa 1 -->
+			<itemAtividade indice="32" />
+			
+			<!-- Pesquisador supervisionado em estágio de pós-doutoramento (PRODOC, PNPD, DCR, entre outros) 8 -->
+			<itemAtividade indice="33" />
+			
+			<!-- Aluno orientado em Prática como Componente Curricular (PCC) 1 -->
+			<itemAtividade indice="34" />
+		</atividade>
+		
+		<!-- V - 2 Atividades Acadêmicas – Bancas e Cursos -->
+		<atividade id="2">
+			<!-- Membro de banca de concurso para docente efetivo -->
+			<itemAtividade indice="1" />
+			
+			<!-- Na instituição 4 -->
+			<itemAtividade indice="1.1" />
+			
+			<!-- Em outra instituição 6 -->
+			<itemAtividade indice="1.2" />
+			
+			<!-- Membro de banca de concurso para docente substituto 2 -->
+			<itemAtividade indice="2" />
+			
+			<!-- Membro de banca de defesa de dissertação de mestrado -->
+			<itemAtividade indice="3" />
+			
+			<!-- Na instituição 4 -->
+			<itemAtividade indice="3.1" />
+			
+			<!-- Em outra instituição 6 -->
+			<itemAtividade indice="3.2" />
+			
+			<!-- Membro de banca de defesa de tese de doutorado -->
+			<itemAtividade indice="4" />
+			
+			<!-- Na instituição 6 -->
+			<itemAtividade indice="4.1" />
+			
+			<!-- Em outra instituição 8 -->
+			<itemAtividade indice="4.2" />
+			
+			<!-- Membro de banca de qualificação de mestrado -->
+			<itemAtividade indice="5" />
+			
+			<!-- Na instituição 3 -->
+			<itemAtividade indice="5.1" />
+			
+			<!-- Em outra instituição 4 -->
+			<itemAtividade indice="5.2" />
+			
+			<!-- Membro de banca de qualificação de doutorado -->
+			<itemAtividade indice="6" />
+			
+			<!-- Na instituição 5 -->
+			<itemAtividade indice="6.1" />
+			
+			<!-- Em outra instituição 6 -->
+			<itemAtividade indice="6.2" />
+			
+			<!-- Membro de banca de defesa de monografia, projeto final de curso e outros tipos de bancas (total máximo a ser considerado neste item são 10 pontos) 2 -->
+			<itemAtividade indice="7" />
+			
+			<!-- Membro de corpo de júri -->
+			<itemAtividade indice="8" />
+			
+			<!-- Concursos internacionais 8 -->
+			<itemAtividade indice="8.1" />
+			
+			<!-- Concursos nacionais 6 -->
+			<itemAtividade indice="8.2" />
+			
+			<!-- Cursos, palestras ou treinamento não curricular ministrados para docentes, funcionários ou alunos da UFG  2 -->
+			<itemAtividade indice="9" />
+			
+			<!-- Coordenador de projeto institucional de intercâmbio internacional 10* -->
+			<itemAtividade indice="10" valor="1" />
+		</atividade>
+		
+		<!-- V - 3 Atividades de Aprendizado e Aperfeiçoamento -->
+		<atividade id="">
+			<!-- Docente regularmente matriculado em curso de doutorado com relatórios de pós-graduação aprovados (pontuação por mês de curso) 12 -->
+			<itemAtividade indice="1" />
+			
+			<!-- Estágio Pós-Doutoral ou Estágio Sênior (pontuação por mês de estágio) 12 -->
+			<itemAtividade indice="2" />
+			
+			<!-- Docente em licença para capacitação (Artigo 87, Lei N.8112) (pontuação por mês de licença) 12 -->
+			<itemAtividade indice="3" />
+			
+			<!-- Curso de aperfeiçoamento realizado com carga horária superior a 40 horas 3 -->
+			<itemAtividade indice="4" />
+			
+			<!-- Curso de aperfeiçoamento realizado com carga horária inferior a 40 horas 1 -->
+			<itemAtividade indice="5" />
+			
+			<!-- Participação em Congressos, Seminários, Encontros, Jornadas etc. (total máximo a ser considerado neste item são 3 pontos) 1 -->
+			<itemAtividade indice="6" />
+		</atividade>
+	</grupoAtividade>
+</quadroSumario>
