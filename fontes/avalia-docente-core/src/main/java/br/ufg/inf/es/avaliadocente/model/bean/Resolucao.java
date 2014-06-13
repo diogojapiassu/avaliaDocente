@@ -1,7 +1,11 @@
 package br.ufg.inf.es.avaliadocente.model.bean;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.OneToMany;
 
 import br.ufg.inf.es.avaliadocente.model.support.AbstractEntity;
 
@@ -22,8 +26,9 @@ public class Resolucao extends AbstractEntity<Resolucao> {
 	
 	private int numeroNotas;
 	
-	private int numeroAtividades;
-
+	@OneToMany(fetch = FetchType.LAZY) 
+	private List<QuadroSumario> quadroSumarios;
+	
 	@Column
 	public String getDescricao() {
 		return descricao;
@@ -41,14 +46,13 @@ public class Resolucao extends AbstractEntity<Resolucao> {
 	public void setNumeroNotas(int numeroNotas) {
 		this.numeroNotas = numeroNotas;
 	}
-
-	@Column(name="numero_atividades")
-	public int getNumeroAtividades() {
-		return numeroAtividades;
+	
+	public List<QuadroSumario> getQuadroSumarios() {
+		return quadroSumarios;
 	}
-
-	public void setNumeroAtividades(int numeroAtividades) {
-		this.numeroAtividades = numeroAtividades;
+	
+	public void setQuadroSumarios(List<QuadroSumario> quadroSumarios) {
+		this.quadroSumarios = quadroSumarios;
 	}
 
 }

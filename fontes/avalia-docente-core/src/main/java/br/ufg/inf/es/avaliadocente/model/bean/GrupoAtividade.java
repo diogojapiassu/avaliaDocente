@@ -10,6 +10,7 @@ import javax.persistence.OneToMany;
 import br.ufg.inf.es.avaliadocente.model.support.AbstractEntity;
 
 /**
+ * Representação de um Grupo de Atividades
  * 
  * @author Douglas Japiassu
  * @author Danilo Guimarães
@@ -21,6 +22,8 @@ public class GrupoAtividade extends AbstractEntity<GrupoAtividade> {
 	private static final long serialVersionUID = 8454327804099597504L;
 	
 	private String descricao;
+	
+	private long idGrupoPai;
 	
 	@OneToMany(fetch = FetchType.LAZY) 
 	private List<Atividade> atividades;
@@ -35,6 +38,15 @@ public class GrupoAtividade extends AbstractEntity<GrupoAtividade> {
 	
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
+	}
+	
+	@Column
+	public long getIdGrupoPai() {
+		return idGrupoPai;
+	}
+	
+	public void setIdGrupoPai(long idGrupoPai) {
+		this.idGrupoPai = idGrupoPai;
 	}
 
 	public List<Atividade> getAtividades() {

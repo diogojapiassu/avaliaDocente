@@ -1,7 +1,11 @@
 package br.ufg.inf.es.avaliadocente.model.bean;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.OneToMany;
 
 import br.ufg.inf.es.avaliadocente.model.support.AbstractEntity;
 
@@ -26,6 +30,9 @@ public class Docente extends AbstractEntity<Docente> {
 	private String periodo;
 	
 	private String regime;
+	
+	@OneToMany(fetch = FetchType.LAZY)
+	private List<QuadroSumario> quadroSumarios;
 	
 	@Column
 	public String getMatricula() {

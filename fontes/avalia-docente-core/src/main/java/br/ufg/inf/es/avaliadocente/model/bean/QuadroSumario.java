@@ -4,8 +4,8 @@ import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
 
 import br.ufg.inf.es.avaliadocente.model.support.AbstractEntity;
 
@@ -21,14 +21,14 @@ public class QuadroSumario extends AbstractEntity<QuadroSumario> {
 
 	private static final long serialVersionUID = 8454327804099597504L;
 	
-	@OneToOne
+	@ManyToOne
 	private Resolucao resolucao;
 	
-	@OneToOne
+	@ManyToOne
 	private Docente docente;
 	
 	@OneToMany(fetch = FetchType.LAZY)
-	private List<NotasGrupoAtividade> notasGrupoAtividade;
+	private List<NotasGrupoAtividade> notasGrupoAtividades;
 	
 	public Resolucao getResolucao() {
 		return resolucao;
@@ -46,11 +46,11 @@ public class QuadroSumario extends AbstractEntity<QuadroSumario> {
 		this.docente = docente;
 	}
 
-	public List<NotasGrupoAtividade> getNotasGrupoAtividade() {
-		return notasGrupoAtividade;
+	public List<NotasGrupoAtividade> getNotasGrupoAtividades() {
+		return notasGrupoAtividades;
 	}
 
-	public void setNotasGrupoAtividade(List<NotasGrupoAtividade> notasGrupoAtividade) {
-		this.notasGrupoAtividade = notasGrupoAtividade;
+	public void setNotasGrupoAtividades(List<NotasGrupoAtividade> notasGrupoAtividades) {
+		this.notasGrupoAtividades = notasGrupoAtividades;
 	}
 }

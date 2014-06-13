@@ -1,12 +1,9 @@
 package br.ufg.inf.es.avaliadocente.model.bean;
 
-import java.util.List;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 import br.ufg.inf.es.avaliadocente.model.support.AbstractEntity;
 
@@ -22,14 +19,13 @@ public class Atividade extends AbstractEntity<Atividade> {
 
 	private static final long serialVersionUID = 8454327804099597504L;
 	
-	
 	private String descricao;
 	
 	@ManyToOne
 	private GrupoAtividade grupoAtividade;
 	
-	@OneToMany(fetch = FetchType.LAZY)
-	private List<ItemAtividade> itemAtividades;
+	@OneToOne
+	private Multiplicador multiplicador;
 	
 	@Column
 	public String getDescricao() {
@@ -48,11 +44,11 @@ public class Atividade extends AbstractEntity<Atividade> {
 		this.grupoAtividade = grupoAtividade;
 	}
 
-	public List<ItemAtividade> getItemAtividades() {
-		return itemAtividades;
+	public Multiplicador getMultiplicador() {
+		return multiplicador;
 	}
-
-	public void setItemAtividades(List<ItemAtividade> itemAtividades) {
-		this.itemAtividades = itemAtividades;
+	
+	public void setMultiplicador(Multiplicador multiplicador) {
+		this.multiplicador = multiplicador;
 	}
 }
