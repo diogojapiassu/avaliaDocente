@@ -5,6 +5,7 @@ import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
 import br.ufg.inf.es.avaliadocente.model.support.AbstractEntity;
@@ -23,7 +24,8 @@ public class GrupoAtividade extends AbstractEntity<GrupoAtividade> {
 	
 	private String descricao;
 	
-	private long idGrupoPai;
+	@ManyToOne
+	private GrupoAtividade grupoAtividadePai;
 	
 	@OneToMany(fetch = FetchType.LAZY) 
 	private List<Atividade> atividades;
@@ -41,12 +43,12 @@ public class GrupoAtividade extends AbstractEntity<GrupoAtividade> {
 	}
 	
 	@Column
-	public long getIdGrupoPai() {
-		return idGrupoPai;
+	public GrupoAtividade getGrupoAtividadePai() {
+		return grupoAtividadePai;
 	}
 	
-	public void setIdGrupoPai(long idGrupoPai) {
-		this.idGrupoPai = idGrupoPai;
+	public void setGrupoAtividadePai(GrupoAtividade grupoAtividadePai) {
+		this.grupoAtividadePai = grupoAtividadePai;
 	}
 
 	public List<Atividade> getAtividades() {
