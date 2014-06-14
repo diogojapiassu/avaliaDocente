@@ -14,6 +14,12 @@ import br.ufg.inf.es.avaliadocente.model.support.AbstractEntity;
  * Repositório genérico para extender recursos do Spring Data, para queries ou
  * métodos mais elaborados.
  * 
+ * <p>
+ * Para consultar a documentação de como criar queries específicas do modelo de
+ * domínio, <a href=
+ * "http://docs.spring.io/spring-data/jpa/docs/1.4.2.RELEASE/reference/html/jpa.repositories.html#jpa.query-methods.query-creation"
+ * >consulte aqui.</a>
+ * 
  * @author Danilo Guimarães
  * @see JpaRepository
  */

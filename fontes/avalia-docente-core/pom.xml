@@ -141,7 +141,6 @@
             <groupId>com.mchange</groupId>
             <artifactId>c3p0</artifactId>
             <version>${c3p0.version}</version>
-            <scope>test</scope>
         </dependency>
 	</dependencies>
 </project>

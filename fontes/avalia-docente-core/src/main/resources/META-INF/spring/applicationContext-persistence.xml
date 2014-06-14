@@ -9,6 +9,7 @@
 						http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa-1.3.xsd">
 
 	<import resource="applicationContext-persistence-${environment}.xml"/>
+	<import resource="applicationContext-populador.xml"/>
 	
 	<util:properties id="jpaProperties" location="classpath:hibernate.properties" />
 

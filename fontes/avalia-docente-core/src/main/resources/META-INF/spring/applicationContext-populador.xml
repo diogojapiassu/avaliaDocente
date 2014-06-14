@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+						http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+
+	<!-- Conjunto de beans populadores de banco de dados -->
+	<!-- Sera mantido temporariamente ate que consigamos subir a aplicacao
+		sem a necessidade de popular os dados -->
+	<bean id="populador" class="br.ufg.inf.es.avaliadocente.main.populador.PopuladorBancoDeDados"/>
+	
+	<bean id="populadorDocente" class="br.ufg.inf.es.avaliadocente.main.populador.PopuladorDocente"/>
+	
+	<bean id="populadorResolucao" class="br.ufg.inf.es.avaliadocente.main.populador.PopuladorResolucao"/>
+	
+	<bean id="populadorGrupoAtividade" class="br.ufg.inf.es.avaliadocente.main.populador.PopuladorGrupoAtividade"/>
+
+</beans>
