@@ -11,10 +11,12 @@
 		<param-value>client</param-value>
 	</context-param>
 
-	<!-- Define o ciclo de vida da aplicacao para o JSF. Em Production o desempenho eh melhor. -->
+	<!-- Define o ciclo de vida da aplicacao para o JSF. Em Production o desempenho eh melhor. 
+		Alterar para Production ao finalizar.
+	-->
 	<context-param>
 		<param-name>javax.faces.PROJECT_STAGE</param-name>
-		<param-value>Production</param-value>
+		<param-value>Development</param-value>
 	</context-param>
 
 	<!-- Sufixo das paginas com conteudo JSF. -->
@@ -32,8 +34,10 @@
 		<servlet-name>Faces Servlet</servlet-name>
 		<url-pattern>/faces/*</url-pattern>
 		<url-pattern>*.jsf</url-pattern>
+		<url-pattern>*.faces</url-pattern>
+		<url-pattern>*.xhtml</url-pattern>
 	</servlet-mapping>
 	<welcome-file-list>
-		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>/faces/index.jsp</welcome-file>
 	</welcome-file-list>
 </web-app>
