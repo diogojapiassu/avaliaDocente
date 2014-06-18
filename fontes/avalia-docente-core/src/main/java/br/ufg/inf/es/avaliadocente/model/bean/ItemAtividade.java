@@ -22,8 +22,10 @@ public class ItemAtividade extends AbstractEntity<ItemAtividade> {
 	@ManyToOne
 	private Atividade atividade;
 	
-	private int idItemPai;
+	@Column
+	private Integer idItemPai;
 	
+	@Column
 	private BigDecimal valor;
 
 	public Atividade getAtividade() {
@@ -34,7 +36,6 @@ public class ItemAtividade extends AbstractEntity<ItemAtividade> {
 		this.atividade = atividade;
 	}
 
-	@Column
 	public int getIdItemPai() {
 		return idItemPai;
 	}
@@ -43,7 +44,6 @@ public class ItemAtividade extends AbstractEntity<ItemAtividade> {
 		this.idItemPai = idItemPai;
 	}
 
-	@Column
 	public BigDecimal getValor() {
 		return valor;
 	}

@@ -22,14 +22,16 @@ public class Resolucao extends AbstractEntity<Resolucao> {
 
 	private static final long serialVersionUID = 8454327804099597504L;
 	
+	@Column
 	private String descricao;
-	
-	private int numeroNotas;
+
+	@Column
+	private Integer numeroNotas;
 	
 	@OneToMany(fetch = FetchType.LAZY) 
 	private List<QuadroSumario> quadroSumarios;
 	
-	@Column
+
 	public String getDescricao() {
 		return descricao;
 	}
@@ -39,11 +41,11 @@ public class Resolucao extends AbstractEntity<Resolucao> {
 	}
 
 	@Column(name="numero_notas")
-	public int getNumeroNotas() {
+	public Integer getNumeroNotas() {
 		return numeroNotas;
 	}
 
-	public void setNumeroNotas(int numeroNotas) {
+	public void setNumeroNotas(Integer numeroNotas) {
 		this.numeroNotas = numeroNotas;
 	}
 	

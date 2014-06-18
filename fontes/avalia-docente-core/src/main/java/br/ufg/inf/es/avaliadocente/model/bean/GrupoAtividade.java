@@ -5,6 +5,7 @@ import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
@@ -22,9 +23,11 @@ public class GrupoAtividade extends AbstractEntity<GrupoAtividade> {
 
 	private static final long serialVersionUID = 8454327804099597504L;
 	
+	@Column
 	private String descricao;
 	
 	@ManyToOne
+	@JoinColumn(name = "grupo_atividade_pai_id")
 	private GrupoAtividade grupoAtividadePai;
 	
 	@OneToMany(fetch = FetchType.LAZY) 
@@ -33,7 +36,7 @@ public class GrupoAtividade extends AbstractEntity<GrupoAtividade> {
 	@OneToMany(fetch = FetchType.LAZY)
 	private List<NotasGrupoAtividade> notasGrupoAtividades;
 	
-	@Column
+
 	public String getDescricao() {
 		return descricao;
 	}
@@ -42,7 +45,6 @@ public class GrupoAtividade extends AbstractEntity<GrupoAtividade> {
 		this.descricao = descricao;
 	}
 	
-	@Column
 	public GrupoAtividade getGrupoAtividadePai() {
 		return grupoAtividadePai;
 	}

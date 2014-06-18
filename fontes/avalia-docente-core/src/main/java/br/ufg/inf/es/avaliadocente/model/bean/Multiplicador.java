@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
 import br.ufg.inf.es.avaliadocente.model.support.AbstractEntity;
@@ -18,12 +19,14 @@ public class Multiplicador extends AbstractEntity<Multiplicador>{
 
 	private static final long serialVersionUID = 7117819398892815646L;
 	
+	@Column
 	private BigDecimal fator_multiplicador;
 	
 	@OneToOne
+	@JoinColumn(name = "atividade_id")
 	private Atividade atividade;
 	
-	@Column
+
 	public BigDecimal getFator_multiplicador() {
 		return fator_multiplicador;
 	}

@@ -5,6 +5,8 @@ import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
 import br.ufg.inf.es.avaliadocente.model.support.AbstractEntity;
@@ -21,20 +23,26 @@ public class Docente extends AbstractEntity<Docente> {
 
 	private static final long serialVersionUID = 8454327804099597504L;
 	
+	@Column
 	private String matricula;
 	
+	@Column
 	private String nome;
 	
+	@Column
 	private String departamento;
 	
+	@Column
 	private String periodo;
 	
-	private String regime;
+	@ManyToOne
+	@JoinColumn(name = "regime_id")
+	private Regime regime;
 	
 	@OneToMany(fetch = FetchType.LAZY)
 	private List<QuadroSumario> quadroSumarios;
 	
-	@Column
+
 	public String getMatricula() {
 		return matricula;
 	}
@@ -43,7 +51,6 @@ public class Docente extends AbstractEntity<Docente> {
 		this.matricula = matricula;
 	}
 	
-	@Column
 	public String getNome() {
 		return nome;
 	}
@@ -52,7 +59,6 @@ public class Docente extends AbstractEntity<Docente> {
 		this.nome = nome;
 	}
 	
-	@Column
 	public String getDepartamento() {
 		return departamento;
 	}
@@ -61,7 +67,6 @@ public class Docente extends AbstractEntity<Docente> {
 		this.departamento = departamento;
 	}
 	
-	@Column
 	public String getPeriodo() {
 		return periodo;
 	}
@@ -70,12 +75,23 @@ public class Docente extends AbstractEntity<Docente> {
 		this.periodo = periodo;
 	}
 	
-	@Column
-	public String getRegime() {
+	public Regime getRegime() {
 		return regime;
 	}
 	
-	public void setRegime(String regime) {
+	public void setRegime(Regime regime) {
 		this.regime = regime;
+	}
+	
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append(super.toString())
+		.append(", Nome: " + this.getNome())
+		.append(", Departamento : " + this.getDepartamento())
+		.append(", Matricula: " + this.getMatricula())
+		.append(", Regime: " + (this.getRegime() != null ? this.getRegime().getCargaHorariaSemanal() + " h/semana": "n/a") );
+		
+		return sb.toString();
 	}
 }

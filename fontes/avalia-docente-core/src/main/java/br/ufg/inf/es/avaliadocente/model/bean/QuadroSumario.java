@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
@@ -22,9 +23,11 @@ public class QuadroSumario extends AbstractEntity<QuadroSumario> {
 	private static final long serialVersionUID = 8454327804099597504L;
 	
 	@ManyToOne
+	@JoinColumn(name = "resolucao_id")
 	private Resolucao resolucao;
 	
 	@ManyToOne
+	@JoinColumn(name = "docente_id")
 	private Docente docente;
 	
 	@OneToMany(fetch = FetchType.LAZY)

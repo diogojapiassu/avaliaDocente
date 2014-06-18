@@ -2,10 +2,13 @@ package br.ufg.inf.es.avaliadocente.model.bean;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
 import br.ufg.inf.es.avaliadocente.model.support.AbstractEntity;
+import br.ufg.inf.es.avaliadocente.model.support.annotation.Hiddenable;
+import br.ufg.inf.es.avaliadocente.model.support.annotation.Updatable;
 
 /**
  * Representação de atividade de um grupo de atividades.
@@ -19,15 +22,17 @@ public class Atividade extends AbstractEntity<Atividade> {
 
 	private static final long serialVersionUID = 8454327804099597504L;
 	
+	@Column
 	private String descricao;
 	
 	@ManyToOne
+	@JoinColumn(name = "grupo_atividade_id")
 	private GrupoAtividade grupoAtividade;
 	
 	@OneToOne
+	@JoinColumn(name = "multiplicador_id")
 	private Multiplicador multiplicador;
 	
-	@Column
 	public String getDescricao() {
 		return descricao;
 	}
