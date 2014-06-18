@@ -7,8 +7,6 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
 import br.ufg.inf.es.avaliadocente.model.support.AbstractEntity;
-import br.ufg.inf.es.avaliadocente.model.support.annotation.Hiddenable;
-import br.ufg.inf.es.avaliadocente.model.support.annotation.Updatable;
 
 /**
  * Representação de atividade de um grupo de atividades.
