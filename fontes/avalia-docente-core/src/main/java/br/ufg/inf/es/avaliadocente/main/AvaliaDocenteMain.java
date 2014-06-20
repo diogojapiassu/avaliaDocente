@@ -28,7 +28,7 @@ public class AvaliaDocenteMain {
 		populador = CustomApplicationContext.getInstance().getContext().getBean(PopuladorBancoDeDados.class);
 		
 		//Aciona uma classe para popular alguns dados no banco...
-		//populador.popular();
+		populador.popular();
 		
 		LOG.info("Aplicacao iniciada.");
 	}

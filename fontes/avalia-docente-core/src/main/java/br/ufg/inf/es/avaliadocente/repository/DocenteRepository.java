@@ -27,4 +27,13 @@ public interface DocenteRepository extends GenericRepository<Docente, Long> {
 	 * @return lista de {@link Docente}s.
 	 */
 	List<Docente> findByDepartamento(String departamento);
+	
+	/**
+	 * Procura um docente combinando o nome, matrícula e departamento.
+	 * @param nome
+	 * @param matricula
+	 * @param departamento
+	 * @return
+	 */
+	Docente findByNomeAndMatriculaAndDepartamento(String nome, String matricula, String departamento);
 }

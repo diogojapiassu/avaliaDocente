@@ -4,7 +4,7 @@
 
 	<appender name="consoleAppender" class="org.apache.log4j.ConsoleAppender">
 		<layout class="org.apache.log4j.PatternLayout">
-			<param name="ConversionPattern" value="[${services.context}] %d{HH:mm:ss-SSS} [%t] %p %C{1}(%L): %m%n" />
+			<param name="ConversionPattern" value="[${services.context}] %d{HH:mm:ss-SSS} [%t] [%-5p] [%-15c{1}]: %m%n" />
 		</layout>
 	</appender>
 
@@ -15,7 +15,7 @@
 		<param name="append" value="true" />
 		<param name="threshold" value="info" />
 		<layout class="org.apache.log4j.PatternLayout">
-			<param name="ConversionPattern" value="[${services.context}] [%d{yyyy-MM-dd HH:mm:ss-SSS}] [%t] [%X{session_id}] [%p] [%X{login}] [%C{1}]: %m%n" />
+			<param name="ConversionPattern" value="[${services.context}] [%d{yyyy-MM-dd HH:mm:ss-SSS}] [%t] [%X{session_id}] [%-5p] [%-15c{1}]: %m%n" />
 		</layout>
 	</appender>
 

@@ -8,6 +8,7 @@ import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 import br.ufg.inf.es.avaliadocente.model.support.AbstractEntity;
 
@@ -36,6 +37,9 @@ public class GrupoAtividade extends AbstractEntity<GrupoAtividade> {
 	@OneToMany(fetch = FetchType.LAZY)
 	private List<NotasGrupoAtividade> notasGrupoAtividades;
 	
+	@OneToOne
+	@JoinColumn(name = "resolucao_id")
+	private Resolucao resolucao;
 
 	public String getDescricao() {
 		return descricao;
@@ -68,4 +72,13 @@ public class GrupoAtividade extends AbstractEntity<GrupoAtividade> {
 	public void setNotasGrupoAtividades(List<NotasGrupoAtividade> notasGrupoAtividades) {
 		this.notasGrupoAtividades = notasGrupoAtividades;
 	}
+
+	public Resolucao getResolucao() {
+		return resolucao;
+	}
+
+	public void setResolucao(Resolucao resolucao) {
+		this.resolucao = resolucao;
+	}
+	
 }

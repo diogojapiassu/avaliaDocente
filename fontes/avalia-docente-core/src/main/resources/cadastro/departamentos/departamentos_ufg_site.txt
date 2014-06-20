@@ -1,0 +1,28 @@
+Escola de Engenharia Civil (EEC) - www.eec.ufg.br
+Escola de Engenharia Elétrica (EEEC) - www.eeec.ufg.br
+Faculdade de Direito (FD) - www.direito.ufg.br
+Faculdade de Educação (FE) - www.fe.ufg.br
+Faculdade de Enfermagem (FEN) - www.fen.ufg.br
+Faculdade Farmácia (FF) - www.farmacia.ufg.br
+Faculdade de Medicina (FM) - www.medicina.ufg.br
+Faculdade de Nutrição (Fanut) - www.fanut.ufg.br
+Faculdade de Odontologia (FO) - www.odonto.ufg.br
+Instituto de Patologia Tropical e Saúde Pública (IPTSP) - www.iptsp.ufg.br
+Centro de Ensino e Pesquisa Aplicada à Educação (Cepae) – www.cepae.ufg.br
+Escola de Agronomia (EA) - www.agro.ufg.br
+Escola de Música e Artes Cênicas (Emac) - www.emac.ufg.br
+Escola de Veterinária e Zootecnia (EVZ) - www.evz.ufg.br
+Faculdade de Artes Visuais (FAV) - www.fav.ufg.br
+Faculdade de Administração, Ciências Contábeis e Ciências Econômicas (FACE) – www.face.ufg.br
+Faculdade de História (FH)  - www.historia.ufg.br
+Faculdade de Filosofia (Fafil) – www.filosofia.ufg.br
+Faculdade de Ciências Sociais (FCS) – www.cienciassociais.ufg.br
+Faculdade de Informação e Comunicação - www.fic.ufg.br
+Faculdade de Educação Física (FEF) - www.fef.ufg.br
+Faculdade de Letras (FL) - www.letras.ufg.br
+Instituto de Estudos Socioambientais (Iesa) - www.iesa.ufg.br
+Instituto de Ciências Biológicas (ICB) - www.icb.ufg.br
+Instituto de Física (IF) - www.if.ufg.br
+Instituto de Informática (INF) - www.inf.ufg.br
+Instituto de Matemática e Estatística (IME) - www.mat.ufg.br
+Instituto de Química (IQ) - www.quimica.ufg.br

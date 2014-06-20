@@ -6,7 +6,7 @@ import java.util.StringTokenizer;
 
 /**
  * 
- * A class containing useful utility methods relating to files.
+ * Classe contendo métodos utilitários relacionados a manipulação de {@link File}s.
  * 
  * <p>
  * Classe adaptada do <a href="http://examples.javacodegeeks.com/core-java/class/find-a-file-in-classpath/">seguinte link</a>.
@@ -16,6 +16,10 @@ import java.util.StringTokenizer;
  * @author Danilo Guimarães
  */
 public class FileUtils {
+	
+	private static final String NEW_LINE_REGEX = "[\\r\\n]+";
+	private static final String COMMA_REGEX = "\\;";
+	private static final String PIPE_REGEX = "\\|";
 	
 	//Classe estática
 	private FileUtils() { }
@@ -69,6 +73,19 @@ public class FileUtils {
 	}
 	
 	/**
+	 * Lê e retorna o conteúdo de um {@link File} qualquer.
+	 * 
+	 * @param file arquivo que terá o conteúdo lido
+	 * @param encoding o encoding a ser usado, null significa o default da plataforma
+	 * @return conteúdo do arquivo.
+	 * @throws IOException
+	 * @author Danilo Guimarães
+	 */
+	public static String getFileContent(final File file, String encoding) throws IOException {
+		return org.apache.commons.io.FileUtils.readFileToString(file, encoding);
+	}
+	
+	/**
 	 * Busca por um arquivo que esteja no classpath e retorna seu conteúdo.
 	 * 
 	 * @param fileName nome do arquivo que está no classpath
@@ -79,4 +96,73 @@ public class FileUtils {
 	public static String getContent(final String fileName) throws IOException {
 		return getFileContent(findFileOnClassPath(fileName));
 	}
+	
+	/**
+	 * Busca por um arquivo que esteja no classpath e retorna seu conteúdo.
+	 * 
+	 * @param fileName nome do arquivo que está no classpath
+	 * @param encoding o encoding a ser usado, null significa o default da plataforma
+	 * @return conteúdo do arquivo.
+	 * @throws IOException
+	 * @author Danilo Guimarães
+	 */
+	public static String getContent(final String fileName, String encoding) throws IOException {
+		return getFileContent(findFileOnClassPath(fileName), encoding);
+	}
+	
+	/**
+	 * Faz a separação de um conteúdo com base no token passado.
+	 * 
+	 * <p>
+	 * É o mesmo que:
+	 * 
+	 * <pre>
+	 * String[] splitted = content.split(token);
+	 * return splitted;
+	 * </pre>
+	 * 
+	 * @param content
+	 * @param token
+	 * @return
+	 * @author Danilo Guimarães
+	 */
+	public static String[] splitContent(String content, String token) {
+		return content.split(token);
+	}
+	
+	/**
+	 * Faz a separação de um conteúdo com base no caracter new line
+	 * (<b>'\r\n'</b>)
+	 * @param content conteúdo que sofrerá o split por <b>'\r\n'</b>
+	 * @return array de {@link String} com o conteúdo separado.
+	 * @author Danilo Guimarães
+	 */
+	public static String[] splitByNewLine(String content) {
+		return splitContent(content, NEW_LINE_REGEX);
+	}
+	
+	/**
+	 * Faz a separação de um conteúdo com base no caracter ponto-vírgula
+	 * (<b>';'</b>)
+	 * 
+	 * @param content conteúdo que sofrerá o split por <b>';'</b>
+	 * @return array de {@link String} com o conteúdo separado.
+	 * @author Danilo Guimarães
+	 */
+	public static String[] splitByComma(String content) {
+		return splitContent(content, COMMA_REGEX);
+	}
+	
+	/**
+	 * Faz a separação de um conteúdo com base no caracter pipe (<b>'|'</b>)
+	 * 
+	 * @param content conteúdo que sofrerá o split por <b>'|'</b>
+	 * @return array de {@link String} com o conteúdo separado.
+	 * @author Danilo Guimarães
+	 */
+	public static String[] splitByPipe(String content) {
+		return splitContent(content, PIPE_REGEX);
+	}
+	
+	
 }

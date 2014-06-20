@@ -14,5 +14,7 @@
 	<bean id="populadorResolucao" class="br.ufg.inf.es.avaliadocente.main.populador.PopuladorResolucao"/>
 	
 	<bean id="populadorGrupoAtividade" class="br.ufg.inf.es.avaliadocente.main.populador.PopuladorGrupoAtividade"/>
+	
+	<bean id="populadorAtividade" class="br.ufg.inf.es.avaliadocente.main.populador.PopuladorAtividade"/>
 
 </beans>

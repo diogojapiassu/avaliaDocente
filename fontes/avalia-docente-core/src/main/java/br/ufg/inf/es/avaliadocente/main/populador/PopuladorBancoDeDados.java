@@ -19,6 +19,9 @@ public class PopuladorBancoDeDados implements IPopulador {
 	@Autowired
 	PopuladorResolucao populadorResolucao;
 	
+	@Autowired
+	PopuladorAtividade populadorAtividade;
+	
 	public PopuladorBancoDeDados() {
 		
 	}
@@ -28,6 +31,7 @@ public class PopuladorBancoDeDados implements IPopulador {
 		populadorResolucao.popular();
 		populadorDocente.popular();
 		populadorGrupoAtividade.popular();
+		populadorAtividade.popular();
 	}
 
 }

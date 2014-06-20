@@ -4,35 +4,78 @@ import java.math.BigDecimal;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
 
 import br.ufg.inf.es.avaliadocente.model.support.AbstractEntity;
+
 /**
  * Multiplicador a ser aplicado pela Atividade.
  * 
+ * <p>
+ * Quando {@link #isValorado}, significa que não será considerado apenas o valor
+ * de {@link #fatorMultiplicador}, mas sim será multiplicado com um valor
+ * qualquer passado.
+ * 
  * @author Douglas Japiassu
- *
+ * @author Danilo Guimarães
+ * 
  */
 @Entity
 public class Multiplicador extends AbstractEntity<Multiplicador>{
 
 	private static final long serialVersionUID = 7117819398892815646L;
 	
-	@Column
-	private BigDecimal fator_multiplicador;
+	public Multiplicador() { }
 	
-	@OneToOne
-	@JoinColumn(name = "atividade_id")
-	private Atividade atividade;
-	
-
-	public BigDecimal getFator_multiplicador() {
-		return fator_multiplicador;
+	public Multiplicador(BigDecimal fatorMultiplicador) {
+		this(fatorMultiplicador, null, null);
 	}
 	
-	public void setFator_multiplicador(BigDecimal fator_multiplicador) {
-		this.fator_multiplicador = fator_multiplicador;
+	public Multiplicador(BigDecimal fatorMultiplicador, BigDecimal valorMaximo) {
+		this(fatorMultiplicador, valorMaximo, null);
+	}
+	
+	public Multiplicador(BigDecimal fatorMultiplicador, Boolean isValorado) {
+		this(fatorMultiplicador, null, isValorado);
+	}
+	
+	public Multiplicador(BigDecimal fatorMultiplicador, BigDecimal valorMaximo, Boolean isValorado) {
+		setFatorMultiplicador(fatorMultiplicador);
+		setValorMaximo(valorMaximo);
+		setIsValorado(isValorado);
+	}
+	
+	@Column
+	private BigDecimal fatorMultiplicador;
+	
+	@Column
+	private BigDecimal valorMaximo;
+	
+	@Column
+	private Boolean isValorado;
+	
+
+	public BigDecimal getFatorMultiplicador() {
+		return fatorMultiplicador;
+	}
+	
+	public void setFatorMultiplicador(BigDecimal fatorMultiplicador) {
+		this.fatorMultiplicador = fatorMultiplicador;
+	}
+
+	public BigDecimal getValorMaximo() {
+		return valorMaximo;
+	}
+
+	public void setValorMaximo(BigDecimal valorMaximo) {
+		this.valorMaximo = valorMaximo;
+	}
+
+	public Boolean getIsValorado() {
+		return isValorado;
+	}
+
+	public void setIsValorado(Boolean isValorado) {
+		this.isValorado = isValorado;
 	}
 
 }

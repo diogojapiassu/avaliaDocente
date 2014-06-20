@@ -1,0 +1,198 @@
+1;1;Aulas presenciais na graduação;10;;true
+1;2;Aulas do ensino a distância na graduação;10;;true
+1;3;Aulas presenciais na pós-graduação;10;;true
+1;4;Aulas do ensino a distância na pós-graduação;10;;true
+2;1;Artigo completo ou texto literário publicado em periódico com classificação no Qualis/CAPES;20;;false
+2;2;Artigo completo ou texto literário publicado em periódico não sujeito à classificação no Qualis/CAPES;10;;false
+2;3;Resumo de artigo em periódicos especializados nacional ou internacional com corpo editorial;5;;false
+2;4;Artigos ou textos literários em repositórios de publicação eletrônica ligados a editoras ou universidades;5;;false
+2;5;Resumo expandido publicado em anais internacional;8;;false
+2;6;Resumo expandido publicado em anais nacional;6;;false
+2;7;Resumo expandido publicado em anais regional ou local;4;;false
+2;8;Resumo simples publicado em anais internacional;4;;false
+2;9;Resumo simples publicado em anais nacional;3;;false
+2;10;Resumo simples publicado em anais internacional;2;;false
+2;11;Trabalho completo publicado em anais de congresso cientifico;10;;false
+2;12;Editor ou Coordenador editorial de livro publicado com selo de editora que possua corpo editorial";20;;false
+2;13;Livro publicado com selo de editora que possua corpo editorial;40;;false
+2;14;Livro publicado com selo de editora que não possua corpo editorial;10;;false
+2;15;Capítulo de livro publicado com selo de editora que possua corpo editorial;10;;false
+2;16;Edição ou organização de livro (coletânea) publicado com selo de editora que possua corpo editorial;12;;false
+2;17;Capítulo traduzido de livro publicado com selo de editora que possua corpo editorial;5;20;false
+2;18;Tradução ou revisão científica de livro traduzido e publicado com selo de editora que possua corpo editorial;10;;false
+2;19;Resenhas, prefácios ou verbetes;10;;false
+2;20;Livro didático desenvolvido para projetos institucionais/governamentais;10;;false
+2;21;Editor de periódicos especializados indexados com corpo editorial;20;;false
+2;22;"Editor de jornais ou revistas com distribuição Local ou regional""";15;;false
+2;23;"Editor de jornais ou revistas com distribuição nacional""";20;;false
+2;24;Editor de jornais ou revistas com distribuição internacional;20;;false
+2;25;Dissertação de Mestrado defendida de aprovada (sendo o docente o autor da dissertação);10;;false
+2;26;Tese de Doutorado defendida e aprovada (sendo o docente o autor da tese);15;;false
+2;27;Criação, produção e direção de filmes, vídeos, discos, audiovisuais, coreografias, peças teatrais, óperas ou musicais, ou musicais apresentados em eventos locais ou regionais;10;;false
+2;28;Criação, produção e direção de filmes, vídeos, discos, audiovisuais, coreografias, peças teatrais, óperas ou musicais, ou musicais apresentados em eventos nacionais;15;;false
+2;29;Criação, produção e direção de filmes, vídeos, discos, audiovisuais, coreografias, peças teatrais, óperas ou musicais, ou musicais apresentados em eventos internacionais;20;;false
+2;30;Criação e produção do projeto gráfico de livros: concepção gráfica (mancha gráfica, diagramação, escolha de fonte);10;;false
+2;31;Design (gráfico, de luz, de figurino e formas animadas, cenográfico e similares);5;;false
+2;32;Design de impressos por peça;1;20;false
+2;33;Design de interfaces digitais;10;;false
+2;34;Design de interfaces digitais ou produtos com inovação tecnológica;20;;false
+2;35;Exposições e apresentações artísticas locais ou regionais c/ participação individual, camerista, solista ou ator principal;16;;false
+2;36;Exposições e apresentações artísticas locais ou regionais c/ participação coletiva ou coadjuvante;5;;false
+2;37;Exposições e apresentações artísticas nacionais c/ participação individual, camerista, solista ou ator principal;20;;false
+2;38;Exposições e apresentações artísticas nacionais c/ participação coletiva ou coadjuvante;10;;false
+2;39;Exposições e apresentações artísticas internacionais c/ participação individual, camerista, solista ou ator principal;20;;false
+2;40;Exposições e apresentações artísticas internacionais c/ participação coletiva ou coadjuvante;15;;false
+2;41;Composições musicais editadas;20;;false
+2;42;Composições musicais publicadas em revistas científicas;20;;false
+2;43;Composições musicais gravadas;15;;false
+2;44;Composições musicais executadas em apresentações públicas;15;;false
+2;45;Produção artística, arquitetônica ou de design premiada em evento Local ou regional;5;;false
+2;46;Produção artística, arquitetônica ou de design premiada em evento Nacional;10;;false
+2;47;Produção artística, arquitetônica ou de design premiada em evento Internacional;15;;false
+2;48;Arranjos musicais (canto, coral e orquestral);5;;false
+2;49;Apresentação artística ou cultural em rádio ou TV;5;;false
+2;50;Sonoplastia (cinema, música, rádio, televisão, teatro);3;;false
+2;51;Desenvolvimento de programa de computador (software) com registro no INPI ou com ampla disponibilização em ambientes de software livre;20;;false
+2;52;Desenvolvimento de software com divulgação em periódicos indexados e com corpo editorial ou em anais de congresso científico;10;;false
+2;53;Desenvolvimento de software para uso institucional;5;10;false
+2;54;Desenvolvimento e registro no INPI de topografia de circuito integrado;20;;false
+2;55;Desenvolvimento de produto, processo ou técnica com registro de patente no INPI ou modelo de utilidade;20;;false
+2;56;Desenvolvimento e registro no INPI de desenho industrial;20;;false
+2;57;Desenvolvimento e registro no INPI de processo de indicação geográfica;20;;false
+2;58;Desenvolvimento e registro no INPI de marcas;5;;false
+2;59;Participação em comitê editorial de periódicos especializados indexados e de editoras universitárias;10;;true
+2;60;Parecer de consultoria ad hoc em comitês de avaliação de concursos e editais de publicação de livros de editoras com corpo editorial;3;;false
+2;61;Parecer de consultoria ad hoc para periódicos especializados com corpo editorial ou para instituições de fomento à pesquisa ou para livros de editoras com corpo editorial;3;;false
+2;62;Projeto, parecer ou relatório técnico realizado em consultoria ou assessoria oficializada por convite, convênio, contrato ou designação: parecer com anotação de responsabilidade técnica (ART) ou registro de responsabilidade técnica (RRT);10;;false
+2;63;Projeto, parecer ou relatório técnico realizado em consultoria ou assessoria oficializada por convite, convênio, contrato ou designação: parecer sem anotação de responsabilidade técnica (ART) ou registro de responsabilidade técnica (RRT);5;;false
+2;64;Projeto, parecer ou relatório técnico realizado em consultoria ou assessoria oficializada por convite, convênio, contrato ou designação: projeto ou Relatório Técnico com anotação de responsabilidade técnica (ART) ou registro de responsabilidade técnica (RRT);20;;false
+2;65;Projeto, parecer ou relatório técnico realizado em consultoria ou assessoria oficializada por convite, convênio, contrato ou designação: projeto ou Relatório Técnico sem anotação de responsabilidade técnica (ART) ou registro de responsabilidade técnica (RRT);10;;false
+2;66;Anais, Manuais, catálogos, boletins, com ficha bibliográfica (organizador / redator);5;;false
+2;67;Produção e publicação de mapas, cartas ou similares;10;;false
+2;68;Desenvolvimento de maquete;5;;false
+2;69;Manutenção de obra artística Restauração de obra artística;20;;false
+2;69;Manutenção de obra artística Conservação de obra artística;10;;true
+2;70;Curadoria de exposições;5;;false
+2;71;Produção de cinema, vídeo, rádio, TV ou mídias digitais: editor;20;;true
+2;72;Produção de cinema, vídeo, rádio, TV ou mídias digitais: Participante;3;9;false
+2;73;Artigos de opinião veiculados em jornais e revistas (eletrônico ou impresso);1;;false
+2;74;Texto ou material didático para uso institucional (não fracionados e com  ampla divulgação);2;;false
+2;75;Artigos de divulgação científica, tecnológica e artística veiculados em jornais  revistas (eletrônico ou impresso);3;;false
+2;76;Apresentação oral de trabalho publicado em anais de congresso científico;3;9;false
+2;77;Apresentação em painel de trabalho publicado em anais de congresso científico;1;3;false
+2;78;Trabalho premiado em evento científico nacional ou internacional;5;;false
+2;79;Tese, dissertação e trabalho de iniciação científica premiados por instituições de fomento (sendo o docente o autor ou orientador do produto);8;;false
+3;1;Coordenador de projeto conjuntos de pesquisa e cooperação científica (tipo PRODOC, PROCAD, PNPD, entre outros) e de cursos MINTER e DINTER aprovados por órgãos oficiais de fomento;10;;false
+3;2;Coordenador de projeto de pesquisa aprovado com comprovação de financiamento (exceto bolsas);10;;false
+3;3;Coordenador de projeto de pesquisa aprovado sem financiamento;5;10;false
+3;4;Coordenador de projeto de extensão aprovado com comprovação de financiamento (exceto bolsas);10;;true
+3;5;Coordenador de projeto ou programa de extensão/cultura cadastrado na PROEC;5;15;true
+3;6;Coordenador de contratos e de convênios de cooperação institucional internacional;5;;true
+3;7;Coordenador de contratos e de convênios de cooperação institucional nacional;3;;true
+3;8;Participante de projeto de extensão/cultura cadastrado na PROEC;3;15;true
+3;9;Curso de extensão ministrado com 20 ou mais horas;5;15;false
+3;10;Curso de extensão ministrado com menos de 20 horas;2;10;false
+3;11;Palestrante, conferencista ou participante em mesa redonda em evento científico, cultural ou artístico: evento internacional;5;15;false
+3;12;Palestrante, conferencista ou participante em mesa redonda em evento científico, cultural ou artístico: evento nacional;4;12;false
+3;13;Palestrante, conferencista ou participante em mesa redonda em evento científico, cultural ou artístico: evento regional ou local;3;9;false
+3;14;Promoção ou produção de eventos artísticos e científicos locais: Presidente;4;;false
+3;15;Promoção ou produção de eventos artísticos e científicos locais: Comissão organizadora;2;;false
+3;16;Promoção ou produção de eventos artísticos e científicos regionais: Presidente;6;;false
+3;17;Promoção ou produção de eventos artísticos e científicos regionais: Comissão organizadora;3;;false
+3;18;Promoção ou produção de eventos artísticos e científicos nacionais: Presidente;8;;false
+3;19;Promoção ou produção de eventos artísticos e científicos nacionais: Comissão organizadora;4;;false
+3;20;Promoção ou produção de eventos artísticos e científicos internacionais: Presidente;10;;false
+3;21;Promoção ou produção de eventos artísticos e científicos internacionais: Comissão organizadora;5;;false
+4;1;Reitor ou Vice-Reitor ou Pró-Reitor;14;;true
+4;2;"Chefe de Gabinete";10;;true
+4;3;Coordenador ou assessor vinculado à Reitoria;10;;true
+4;4;Diretor de Unidade Acadêmica, de Unidade Acadêmica Especial ou do CEPAE;10;;true
+4;5;Diretor de Campus do interior;12;;true
+4;6;Vice-diretor de Campus do interior;12;;true
+4;7;Diretor Geral do Hospital das Clínicas;10;;true
+4;8;Coordenador ou assessor vinculado às Pró-Reitorias ou à Direção dos Campus do Interior;8;;true
+4;9;Coordenador de Programa de Pós-Graduação stricto sensu;8;;true
+4;10;Coordenador de Curso de Ensino Básico ou de Graduação;8;;true
+4;11;Vice-diretor de Unidade Acadêmica ou Unidade Acadêmica Especial ou do CEPAE;8;;true
+4;12;Diretor do Hospital Veterinário;8;;true
+4;13;Diretor de Órgão da Administração (CERCOMP, CGA, CEGRAF, CIAR, DDRH, CS, SIASS, Museu, Rádio, Biblioteca etc.);8;;true
+4;14;Coordenador de projeto institucional com financiamento ou de contratos e convênio com plano de trabalho aprovado;5;;true
+4;15;Coordenador de curso de especialização, residência médica ou residência multiprofissional em saúde (total máximo a ser considerado neste item são 10 pontos);10;10;false
+4;16;Membro representante de classe da carreira docente no CONSUNI;10;;false
+4;17;Membro do Conselho de Curadores ou do Plenário do CEPEC ou de Conselho de Fundações;10;;false
+4;18;Atividades acadêmicas e administrativas designadas por portaria do Reitor, Pró-Reitor ou Diretor de Unidade Acadêmica com carga horária >=150 horas;10;;true
+4;19;Presidente da CPPD;7;;true
+4;20;Presidente da Comissão de Avaliação Institucional ou da Comissão Própria de Avaliação;5;;true
+4;21;Membros da Coordenação Permanente do Centro de Seleção;5;;true
+4;22;Diretores do HC;5;;true
+4;23;Presidente do Comitê de Ética em Pesquisa da UFG e do HC/UFG;5;;true
+4;24;Membros da CPPD ou da Comissão de Avaliação Institucional ou da Comissão Própria de Avaliação ou da CAD;5;;true
+4;25;Coordenador de Pesquisa ou de Ensino ou de Extensão ou de Estágio das Unidades Acadêmicas;3;;true
+4;26;Chefe de Departamento;3;;true
+4;27;Chefe do Pronto Socorro ou da Maternidade ou do CEROF do Hospital das Clínicas da UFG;3;;true
+4;28;Coordenador das Atividades de Interação com a Sociedade;3;;true
+4;29;Coordenador das Atividades de Pesquisa e de Pós–Graduação lato sensu;3;;true
+4;30;Membros do Comitê de Ética da UFG e do HC/UFG;3;;true
+4;31;Membros do Comitê Interno e Externo do PIBIC;3;;true
+4;32;Representante titular em conselho de classe profissional com carga horária igual ou superior a 150 horas;10;;true
+4;33;Presidente do Sindicato de Docentes da UFG;10;;true
+4;34;Diretor do Sindicato de Docentes da UFG;3;;true
+4;35;Representante sindical com carga horária igual ou superior a 150 horas;10;;true
+4;36;Representante em entidade científica, artística e cultural com carga horária igual ou superior a 150 horas;10;;true
+4;37;Representante em comissão de órgão governamental com carga horária igual ou superior a 150 horas;10;;true
+5;1;Aluno orientado em tese de doutorado defendida e aprovada;20;;false
+5;2;Aluno co-orientado em tese de doutorado defendida e aprovada;7;;false
+5;3;Aluno orientado em tese de doutorado em andamento;10;;false
+5;4;Aluno co-orientado em tese de doutorado em andamento;4;;false
+5;5;Aluno orientado em dissertação de mestrado defendida e aprovada;15;;false
+5;6;Aluno co-orientado em dissertação de mestrado defendida e aprovada;5;;false
+5;7;Aluno orientado em dissertação de mestrado em andamento;8;;false
+5;8;Aluno co-orientado em dissertação de mestrado em andamento;3;;false
+5;9;Aluno orientado em monografia de especialização aprovada (máximo de 24 pontos);8;;false
+5;10;Aluno orientado em monografia de especialização em andamento (total máximo a ser considerado neste item são 12 pontos);4;;false
+5;11;Aluno orientado em residência médica ou em residência multiprofissional em saúde;5;;false
+5;12;Aluno orientado em estágio supervisionado;3;;false
+5;13;Aluno orientado em projeto de final de curso;3;;false
+5;14;Aluno de outra IFE orientado em tese de doutorado defendida e aprovada;6;;false
+5;15;Aluno de outra IFE co-orientado em tese de doutorado defendida e aprovada;3;;false
+5;16;Aluno de outra IFE orientado em tese de doutorado em andamento;3;;false
+5;17;Aluno de outra IFE co-orientado em tese de doutorado em andamento;2;;false
+5;18;Aluno de outra IFE orientado em dissertação de mestrado defendida e aprovada;4;;false
+5;19;Aluno de outra IFE co-orientado em dissertação de mestrado defendida e aprovada;2;;false
+5;20;Aluno de outra IFE orientado em dissertação de mestrado em andamento;2;;false
+5;21;Aluno de outra IFE co-orientado em dissertação de mestrado em andamento;1;;false
+5;22;Aluno orientado em programa de iniciação científica (PIBIC/PIVIC/PROLICEN/PICME-OBMEP);6;;false
+5;23;Aluno orientado em programa de iniciação científica júnior;5;;false
+5;24;Aluno orientado em programa especial de treinamento (PET);5;;false
+5;25;Aluno orientado com bolsa de DTI, PIBIT, AT, Jovens Talentos e similares;5;;false
+5;26;Aluno orientado com bolsa de licenciatura (PIBID e similares);5;;false
+5;27;Aluno orientado com bolsa extensão/cultura/ensino;5;;false
+5;28;Aluno orientado em projetos de extensão/cultura/ensino sem bolsa;3;;false
+5;29;Aluno orientado com bolsa PROCOM ou similar, vinculada a projeto de pesquisa/extensão/ensino;5;;false
+5;30;Aluno orientado em programa de monitoria;3;;false
+5;31;Aluno orientado em atividade não curricular com bolsa;2;;false
+5;32;Aluno orientado em atividade não curricular sem bolsa;1;;false
+5;33;Pesquisador supervisionado em estágio de pós-doutoramento (PRODOC, PNPD, DCR, entre outros);8;;false
+5;34;Aluno orientado em Prática como Componente Curricular (PCC);1;;false
+5;35;Membro de banca de concurso para docente efetivo na instituição;4;;false
+5;36;Membro de banca de concurso para docente efetivo em outra instituição;6;;false
+5;37;Membro de banca de concurso para docente substituto;2;;false
+5;38;Membro de banca de defesa de dissertação de mestrado na instituição;4;;false
+5;39;Membro de banca de defesa de dissertação de mestrado em outra instituição;6;;false
+5;40;Membro de banca de defesa de tese de doutorado na instituição;6;;false
+5;41;Membro de banca de defesa de tese de doutorado Em outra instituição;8;;false
+5;42;Membro de banca de qualificação de mestrado na instituição;3;;false
+5;43;Membro de banca de qualificação de mestrado em outra instituição;4;;false
+5;44;Membro de banca de qualificação de doutorado na instituição;5;;false
+5;45;Membro de banca de qualificação de doutorado em outra instituição;6;;false
+5;46;Membro de banca de defesa de monografia, projeto final de curso e outros tipos de bancas;2;10;false
+5;47;Membro de corpo de júri: concursos internacionais;8;;false
+5;48;Membro de corpo de júri: concursos nacionais;6;;false
+5;49;Cursos, palestras ou treinamento não curricular ministrados para docentes, funcionários ou alunos da UFG;2;;false
+5;50;Coordenador de projeto institucional de intercâmbio internacional;10;;true
+5;51;Docente regularmente matriculado em curso de doutorado com relatórios de pós-graduação aprovados (pontuação por mês de curso);12;;false
+5;52;Estágio Pós-Doutoral ou Estágio Sênior (pontuação por mês de estágio);12;;false
+5;53;Docente em licença para capacitação (Artigo 87, Lei N.8112) (pontuação por mês de licença);12;;false
+5;54;Curso de aperfeiçoamento realizado com carga horária superior a 40 horas;3;;false
+5;55;Curso de aperfeiçoamento realizado com carga horária inferior a 40 horas;1;;false
+5;56;Participação em Congressos, Seminários, Encontros, Jornadas etc. (total máximo a ser considerado neste item são 3 pontos);1;;false

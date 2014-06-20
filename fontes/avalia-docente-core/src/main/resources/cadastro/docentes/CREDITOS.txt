@@ -1,0 +1,7 @@
+nomes.txt
+Beyond the Top 1000 Names, by Social Security Administration, USA.
+	URL: http://www.ssa.gov/oact/babynames/limits.html
+
+sobrenomes.txt
+U.S. place names for more than 10,000 entries. This U.S. place name list is available in a simple, alphabetically-ordered .txt format, making it convenient for reference, spell-checking, or in more sophisticated application, for developers looking to build a custom location tool or database. The entries represent a sampling of U.S. place names: 10,196 places in total.
+	URL: http://www.infochimps.com/datasets/word-list-10000-common-place-names

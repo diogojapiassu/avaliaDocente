@@ -1,0 +1,2 @@
+departamentos_ufg.txt
+	URL: http://www.ufg.br/pages/68989-unidades-academicas-da-ufg

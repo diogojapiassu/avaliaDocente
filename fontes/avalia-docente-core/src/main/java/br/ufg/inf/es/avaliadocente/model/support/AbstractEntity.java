@@ -7,7 +7,9 @@ import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.MappedSuperclass;
+import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Version;
@@ -30,7 +32,7 @@ public abstract class AbstractEntity<E extends Serializable> implements Persista
     private static final long serialVersionUID = -2187928984731943693L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     /**
@@ -45,6 +47,10 @@ public abstract class AbstractEntity<E extends Serializable> implements Persista
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "data_insercao_alteracao")
     private Date dataInsercaoAlteracao;
+    
+    @OneToOne(optional = true)
+    @JoinColumn(name = "versao_anterior")
+    private E versaoAnterior;
 
     @Override
     public Long getId() {
@@ -77,6 +83,14 @@ public abstract class AbstractEntity<E extends Serializable> implements Persista
 
     public void setDataInsercaoAlteracao(final Date dataInsercaoAlteracao) {
         this.dataInsercaoAlteracao = dataInsercaoAlteracao;
+    }
+    
+    public E getVersaoAnterior() {
+        return this.versaoAnterior;
+    }
+
+    public void setVersaoAnterior(final E versaoAnterior) {
+        this.versaoAnterior = versaoAnterior;
     }
 
     @Override

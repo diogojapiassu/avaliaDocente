@@ -3,6 +3,8 @@ package br.ufg.inf.es.avaliadocente.main.populador;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import br.ufg.inf.es.avaliadocente.model.bean.GrupoAtividade;
+import br.ufg.inf.es.avaliadocente.model.bean.Resolucao;
+import br.ufg.inf.es.avaliadocente.model.bean.builder.GrupoAtividadeBuilder;
 import br.ufg.inf.es.avaliadocente.repository.GrupoAtividadeRepository;
 
 /**
@@ -15,23 +17,38 @@ public class PopuladorGrupoAtividade implements IPopulador {
 	
 	@Autowired
 	GrupoAtividadeRepository repository;
+	
+	@Autowired
+	PopuladorResolucao populadorResolucao;
 
 	@Override
 	public void popular() {
-		GrupoAtividade g1 = new GrupoAtividade();
-		g1.setDescricao("I - Atividade de Ensino");
+		Resolucao resolucao = populadorResolucao.getResolucao();
 		
-		GrupoAtividade g2 = new GrupoAtividade();
-		g2.setDescricao("II - Producao Intelectual");
-		
-		GrupoAtividade g3 = new GrupoAtividade();
-		g3.setDescricao("III - Atividades de Pesquisa e Extensão");
-		
-		GrupoAtividade g4 = new GrupoAtividade();
-		g4.setDescricao("IV - Atividades Administrativas e de Representacao");
-		
-		GrupoAtividade g5 = new GrupoAtividade();
-		g5.setDescricao("V - Outras atividades");
+		GrupoAtividade g1 = new GrupoAtividadeBuilder()
+				.descricao("I - Atividade de Ensino")
+				.resolucao(resolucao)
+				.build();
+
+		GrupoAtividade g2 = new GrupoAtividadeBuilder()
+				.descricao("II - Producao Intelectual")
+				.resolucao(resolucao)
+				.build();
+
+		GrupoAtividade g3 = new GrupoAtividadeBuilder()
+				.descricao("III - Atividades de Pesquisa e Extensão")
+				.resolucao(resolucao)
+				.build();
+
+		GrupoAtividade g4 = new GrupoAtividadeBuilder()
+				.descricao("IV - Atividades Administrativas e de Representacao")
+				.resolucao(resolucao)
+				.build();
+
+		GrupoAtividade g5 = new GrupoAtividadeBuilder()
+				.descricao("V - Outras atividades")
+				.resolucao(resolucao)
+				.build();
 		
 		repository.saveAndFlush(g1);
 		repository.saveAndFlush(g2);
