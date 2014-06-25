@@ -1,0 +1,1175 @@
+[avalia-docente] [2014-06-25 16:01:02-533] [main] [] [INFO ] [XmlBeanDefinitionReader]: Loading XML bean definitions from class path resource [META-INF/spring/applicationContextTest-persistence.xml]
+[avalia-docente] [2014-06-25 16:01:05-313] [main] [] [INFO ] [GenericApplicationContext]: Refreshing org.springframework.context.support.GenericApplicationContext@2ba15da0: startup date [Wed Jun 25 16:01:05 BRT 2014]; root of context hierarchy
+[avalia-docente] [2014-06-25 16:01:05-392] [main] [] [INFO ] [GenericApplicationContext]: Bean 'org.springframework.orm.hibernate4.HibernateExceptionTranslator#0' of type [class org.springframework.orm.hibernate4.HibernateExceptionTranslator] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[avalia-docente] [2014-06-25 16:01:05-427] [main] [] [INFO ] [MLog           ]: MLog clients using log4j logging.
+[avalia-docente] [2014-06-25 16:01:05-447] [main] [] [INFO ] [UidUtils       ]: Failed to get local InetAddress for VMID. This is unlikely to matter. At all. We'll add some extra randomness
+java.net.UnknownHostException: pc-649301: pc-649301: Nome ou serviço desconhecido
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1473)
+	at com.mchange.v2.uid.UidUtils.generateVmId(UidUtils.java:70)
+	at com.mchange.v2.uid.UidUtils.<clinit>(UidUtils.java:54)
+	at com.mchange.v2.c3p0.impl.C3P0ImplUtils.<clinit>(C3P0ImplUtils.java:122)
+	at com.mchange.v2.c3p0.impl.PoolBackedDataSourceBase.<init>(PoolBackedDataSourceBase.java:238)
+	at com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.<init>(AbstractPoolBackedDataSource.java:74)
+	at com.mchange.v2.c3p0.ComboPooledDataSource.<init>(ComboPooledDataSource.java:134)
+	at com.mchange.v2.c3p0.ComboPooledDataSource.<init>(ComboPooledDataSource.java:130)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:147)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:990)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:943)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:485)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:323)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:107)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1360)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1118)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:420)
+	at org.springframework.beans.factory.BeanFactoryUtils.beansOfTypeIncludingAncestors(BeanFactoryUtils.java:277)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.detectPersistenceExceptionTranslators(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.<init>(PersistenceExceptionTranslationInterceptor.java:79)
+	at org.springframework.dao.annotation.PersistenceExceptionTranslationAdvisor.<init>(PersistenceExceptionTranslationAdvisor.java:70)
+	at org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor.setBeanFactory(PersistenceExceptionTranslationPostProcessor.java:103)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeAwareMethods(AbstractAutowireCapableBeanFactory.java:1475)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:734)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:457)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:120)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:100)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:248)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:64)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91)
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:122)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:312)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:211)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:288)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:284)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:88)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+Caused by: java.net.UnknownHostException: pc-649301: Nome ou serviço desconhecido
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:901)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1293)
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1469)
+	... 84 more
+[avalia-docente] [2014-06-25 16:01:05-494] [main] [] [INFO ] [C3P0Registry   ]: Initializing c3p0-0.9.2.1 [built 20-March-2013 10:47:27 +0000; debug? true; trace: 10]
+[avalia-docente] [2014-06-25 16:01:05-569] [main] [] [INFO ] [GenericApplicationContext]: Bean 'dataSource' of type [class com.mchange.v2.c3p0.ComboPooledDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[avalia-docente] [2014-06-25 16:01:05-578] [main] [] [INFO ] [PropertiesFactoryBean]: Loading properties file from class path resource [hibernate-test.properties]
+[avalia-docente] [2014-06-25 16:01:05-578] [main] [] [INFO ] [GenericApplicationContext]: Bean 'jpaProperties' of type [class org.springframework.beans.factory.config.PropertiesFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[avalia-docente] [2014-06-25 16:01:05-578] [main] [] [INFO ] [GenericApplicationContext]: Bean 'jpaProperties' of type [class java.util.Properties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[avalia-docente] [2014-06-25 16:01:05-588] [main] [] [INFO ] [GenericApplicationContext]: Bean 'jpaVendorAdapter' of type [class org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[avalia-docente] [2014-06-25 16:01:05-597] [main] [] [INFO ] [LocalContainerEntityManagerFactoryBean]: Building JPA container EntityManagerFactory for persistence unit 'avaliaDocente'
+[avalia-docente] [2014-06-25 16:01:05-706] [main] [] [INFO ] [Version        ]: HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+[avalia-docente] [2014-06-25 16:01:05-710] [main] [] [INFO ] [Version        ]: HHH000412: Hibernate Core {4.2.7.Final}
+[avalia-docente] [2014-06-25 16:01:05-712] [main] [] [INFO ] [Environment    ]: HHH000205: Loaded properties from resource hibernate.properties: {hibernate.show_sql=true, hibernate.jdbc.batch_size=50, hibernate.bytecode.use_reflection_optimizer=true, hibernate.jdbc.fetch_size=10, hibernate.default_batch_fetch_size=16, hibernate.generate_statistics=true, hibernate.hbm2ddl.auto=create, hibernate.connection.useUnicode=true, hibernate.jdbc.use_streams_for_binary=true, hibernate.max_fetch_depth=5, hibernate.connection.charSet=UTF-8, hibernate.use_outer_join=true, hibernate.jdbc.use_scrollable_resultset=true, hibernate.format_sql=false, hibernate.connection.isolation=2, hibernate.order_inserts=true, hibernate.use_sql_comments=false, hibernate.order_updates=true, hibernate.dialect=org.hibernate.dialect.MySQLDialect, hibernate.query.factory_class=org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory}
+[avalia-docente] [2014-06-25 16:01:05-712] [main] [] [INFO ] [Environment    ]: HHH000407: Using java.io streams to persist binary types
+[avalia-docente] [2014-06-25 16:01:05-712] [main] [] [INFO ] [Environment    ]: HHH000406: Using bytecode reflection optimizer
+[avalia-docente] [2014-06-25 16:01:05-712] [main] [] [INFO ] [Environment    ]: HHH000021: Bytecode provider name : javassist
+[avalia-docente] [2014-06-25 16:01:05-868] [main] [] [INFO ] [ConnectionProviderInitiator]: HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+[avalia-docente] [2014-06-25 16:01:05-903] [main] [] [INFO ] [AbstractPoolBackedDataSource]: Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> ftcutdjnhxjvcwmn3n|2625e90a, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> org.h2.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> ftcutdjnhxjvcwmn3n|2625e90a, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:h2:mem:avaliaDocente-test;DB_CLOSE_ON_EXIT=FALSE, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 15, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+[avalia-docente] [2014-06-25 16:01:06-075] [main] [] [INFO ] [Dialect        ]: HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[avalia-docente] [2014-06-25 16:01:06-081] [main] [] [INFO ] [LobCreatorBuilder]: HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+[avalia-docente] [2014-06-25 16:01:06-240] [main] [] [INFO ] [TransactionFactoryInitiator]: HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+[avalia-docente] [2014-06-25 16:01:06-245] [main] [] [INFO ] [ASTQueryTranslatorFactory]: HHH000397: Using ASTQueryTranslatorFactory
+[avalia-docente] [2014-06-25 16:01:06-283] [main] [] [INFO ] [Version        ]: HV000001: Hibernate Validator 4.3.1.Final
+[avalia-docente] [2014-06-25 16:01:06-809] [main] [] [INFO ] [SchemaExport   ]: HHH000227: Running hbm2ddl schema export
+[avalia-docente] [2014-06-25 16:01:06-817] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Atividade drop foreign key FK_6s9e2tavcspah7m9f8wyxrq8y
+[avalia-docente] [2014-06-25 16:01:06-817] [main] [] [ERROR] [SchemaExport   ]: Table "ATIVIDADE" not found; SQL statement:
+alter table Atividade drop foreign key FK_6s9e2tavcspah7m9f8wyxrq8y [42102-174]
+[avalia-docente] [2014-06-25 16:01:06-819] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Atividade drop foreign key FK_fk8w73e07qv9h1w25xpg64ebk
+[avalia-docente] [2014-06-25 16:01:06-819] [main] [] [ERROR] [SchemaExport   ]: Table "ATIVIDADE" not found; SQL statement:
+alter table Atividade drop foreign key FK_fk8w73e07qv9h1w25xpg64ebk [42102-174]
+[avalia-docente] [2014-06-25 16:01:06-821] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Atividade drop foreign key FK_fd2fgki6oqb4mr4vxf7km0nxw
+[avalia-docente] [2014-06-25 16:01:06-821] [main] [] [ERROR] [SchemaExport   ]: Table "ATIVIDADE" not found; SQL statement:
+alter table Atividade drop foreign key FK_fd2fgki6oqb4mr4vxf7km0nxw [42102-174]
+[avalia-docente] [2014-06-25 16:01:06-823] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Avaliacao drop foreign key FK_5vksohj4mcqvxcg51n2an28tb
+[avalia-docente] [2014-06-25 16:01:06-823] [main] [] [ERROR] [SchemaExport   ]: Table "AVALIACAO" not found; SQL statement:
+alter table Avaliacao drop foreign key FK_5vksohj4mcqvxcg51n2an28tb [42102-174]
+[avalia-docente] [2014-06-25 16:01:06-825] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Avaliacao drop foreign key FK_ceoong99fopou31vqgwu2wycj
+[avalia-docente] [2014-06-25 16:01:06-825] [main] [] [ERROR] [SchemaExport   ]: Table "AVALIACAO" not found; SQL statement:
+alter table Avaliacao drop foreign key FK_ceoong99fopou31vqgwu2wycj [42102-174]
+[avalia-docente] [2014-06-25 16:01:06-827] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Docente drop foreign key FK_5w8lj8907q09gkf97ud0n9kqn
+[avalia-docente] [2014-06-25 16:01:06-827] [main] [] [ERROR] [SchemaExport   ]: Table "DOCENTE" not found; SQL statement:
+alter table Docente drop foreign key FK_5w8lj8907q09gkf97ud0n9kqn [42102-174]
+[avalia-docente] [2014-06-25 16:01:06-829] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Docente drop foreign key FK_1ojoi9c53cbeheg39nywjm8iv
+[avalia-docente] [2014-06-25 16:01:06-829] [main] [] [ERROR] [SchemaExport   ]: Table "DOCENTE" not found; SQL statement:
+alter table Docente drop foreign key FK_1ojoi9c53cbeheg39nywjm8iv [42102-174]
+[avalia-docente] [2014-06-25 16:01:06-831] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Docente_QuadroSumario drop foreign key FK_e1pyts6nasxxbghp3f3ls16qx
+[avalia-docente] [2014-06-25 16:01:06-831] [main] [] [ERROR] [SchemaExport   ]: Table "DOCENTE_QUADROSUMARIO" not found; SQL statement:
+alter table Docente_QuadroSumario drop foreign key FK_e1pyts6nasxxbghp3f3ls16qx [42102-174]
+[avalia-docente] [2014-06-25 16:01:06-833] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Docente_QuadroSumario drop foreign key FK_7yd0rye7vf1wv080x5exmju7a
+[avalia-docente] [2014-06-25 16:01:06-833] [main] [] [ERROR] [SchemaExport   ]: Table "DOCENTE_QUADROSUMARIO" not found; SQL statement:
+alter table Docente_QuadroSumario drop foreign key FK_7yd0rye7vf1wv080x5exmju7a [42102-174]
+[avalia-docente] [2014-06-25 16:01:06-835] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade drop foreign key FK_ht6byi0p1oxl3ctfa1n0qhok1
+[avalia-docente] [2014-06-25 16:01:06-835] [main] [] [ERROR] [SchemaExport   ]: Table "GRUPOATIVIDADE" not found; SQL statement:
+alter table GrupoAtividade drop foreign key FK_ht6byi0p1oxl3ctfa1n0qhok1 [42102-174]
+[avalia-docente] [2014-06-25 16:01:06-837] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade drop foreign key FK_iuqc0v8w9k1y2fdcx3l8qjl8h
+[avalia-docente] [2014-06-25 16:01:06-837] [main] [] [ERROR] [SchemaExport   ]: Table "GRUPOATIVIDADE" not found; SQL statement:
+alter table GrupoAtividade drop foreign key FK_iuqc0v8w9k1y2fdcx3l8qjl8h [42102-174]
+[avalia-docente] [2014-06-25 16:01:06-839] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade drop foreign key FK_6ts0188i5gi51g6o4inu1cn1w
+[avalia-docente] [2014-06-25 16:01:06-839] [main] [] [ERROR] [SchemaExport   ]: Table "GRUPOATIVIDADE" not found; SQL statement:
+alter table GrupoAtividade drop foreign key FK_6ts0188i5gi51g6o4inu1cn1w [42102-174]
+[avalia-docente] [2014-06-25 16:01:06-842] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade_Atividade drop foreign key FK_1vdk2h22fvgv4i6jhn73if0ln
+[avalia-docente] [2014-06-25 16:01:06-842] [main] [] [ERROR] [SchemaExport   ]: Table "GRUPOATIVIDADE_ATIVIDADE" not found; SQL statement:
+alter table GrupoAtividade_Atividade drop foreign key FK_1vdk2h22fvgv4i6jhn73if0ln [42102-174]
+[avalia-docente] [2014-06-25 16:01:06-843] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade_Atividade drop foreign key FK_k3ua0rdiqga57v3amvkvpesnh
+[avalia-docente] [2014-06-25 16:01:06-843] [main] [] [ERROR] [SchemaExport   ]: Table "GRUPOATIVIDADE_ATIVIDADE" not found; SQL statement:
+alter table GrupoAtividade_Atividade drop foreign key FK_k3ua0rdiqga57v3amvkvpesnh [42102-174]
+[avalia-docente] [2014-06-25 16:01:06-845] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade_NotasGrupoAtividade drop foreign key FK_gev2ekyeg5b5raxu69sap3x8a
+[avalia-docente] [2014-06-25 16:01:06-845] [main] [] [ERROR] [SchemaExport   ]: Table "GRUPOATIVIDADE_NOTASGRUPOATIVIDADE" not found; SQL statement:
+alter table GrupoAtividade_NotasGrupoAtividade drop foreign key FK_gev2ekyeg5b5raxu69sap3x8a [42102-174]
+[avalia-docente] [2014-06-25 16:01:06-847] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade_NotasGrupoAtividade drop foreign key FK_6gyyh0ckfonr2xbm5433026bo
+[avalia-docente] [2014-06-25 16:01:06-847] [main] [] [ERROR] [SchemaExport   ]: Table "GRUPOATIVIDADE_NOTASGRUPOATIVIDADE" not found; SQL statement:
+alter table GrupoAtividade_NotasGrupoAtividade drop foreign key FK_6gyyh0ckfonr2xbm5433026bo [42102-174]
+[avalia-docente] [2014-06-25 16:01:06-848] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table ItemAtividade drop foreign key FK_jk9r9j6scatyqinfpgpkhgwew
+[avalia-docente] [2014-06-25 16:01:06-848] [main] [] [ERROR] [SchemaExport   ]: Table "ITEMATIVIDADE" not found; SQL statement:
+alter table ItemAtividade drop foreign key FK_jk9r9j6scatyqinfpgpkhgwew [42102-174]
+[avalia-docente] [2014-06-25 16:01:06-850] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table ItemAtividade drop foreign key FK_hawfu0txs45v32qud541qhvj0
+[avalia-docente] [2014-06-25 16:01:06-850] [main] [] [ERROR] [SchemaExport   ]: Table "ITEMATIVIDADE" not found; SQL statement:
+alter table ItemAtividade drop foreign key FK_hawfu0txs45v32qud541qhvj0 [42102-174]
+[avalia-docente] [2014-06-25 16:01:06-852] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Multiplicador drop foreign key FK_hcqv7wx7i7u1xt1o64nlw8m4k
+[avalia-docente] [2014-06-25 16:01:06-852] [main] [] [ERROR] [SchemaExport   ]: Table "MULTIPLICADOR" not found; SQL statement:
+alter table Multiplicador drop foreign key FK_hcqv7wx7i7u1xt1o64nlw8m4k [42102-174]
+[avalia-docente] [2014-06-25 16:01:06-854] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table NotasGrupoAtividade drop foreign key FK_m4mij8t1a5pimcues8rse5982
+[avalia-docente] [2014-06-25 16:01:06-854] [main] [] [ERROR] [SchemaExport   ]: Table "NOTASGRUPOATIVIDADE" not found; SQL statement:
+alter table NotasGrupoAtividade drop foreign key FK_m4mij8t1a5pimcues8rse5982 [42102-174]
+[avalia-docente] [2014-06-25 16:01:06-856] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table NotasGrupoAtividade drop foreign key FK_hxu58q4cdpl8y4prnp6x4vifr
+[avalia-docente] [2014-06-25 16:01:06-856] [main] [] [ERROR] [SchemaExport   ]: Table "NOTASGRUPOATIVIDADE" not found; SQL statement:
+alter table NotasGrupoAtividade drop foreign key FK_hxu58q4cdpl8y4prnp6x4vifr [42102-174]
+[avalia-docente] [2014-06-25 16:01:06-858] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table NotasGrupoAtividade drop foreign key FK_ktt14x2jcm3s2y1w50d5h6887
+[avalia-docente] [2014-06-25 16:01:06-858] [main] [] [ERROR] [SchemaExport   ]: Table "NOTASGRUPOATIVIDADE" not found; SQL statement:
+alter table NotasGrupoAtividade drop foreign key FK_ktt14x2jcm3s2y1w50d5h6887 [42102-174]
+[avalia-docente] [2014-06-25 16:01:06-859] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table QuadroSumario drop foreign key FK_9eumvgtrg8s8st4grj9o9vn0r
+[avalia-docente] [2014-06-25 16:01:06-859] [main] [] [ERROR] [SchemaExport   ]: Table "QUADROSUMARIO" not found; SQL statement:
+alter table QuadroSumario drop foreign key FK_9eumvgtrg8s8st4grj9o9vn0r [42102-174]
+[avalia-docente] [2014-06-25 16:01:06-861] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table QuadroSumario drop foreign key FK_a1l6l5hc2c7t4wgtu8gnxftrb
+[avalia-docente] [2014-06-25 16:01:06-861] [main] [] [ERROR] [SchemaExport   ]: Table "QUADROSUMARIO" not found; SQL statement:
+alter table QuadroSumario drop foreign key FK_a1l6l5hc2c7t4wgtu8gnxftrb [42102-174]
+[avalia-docente] [2014-06-25 16:01:06-863] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table QuadroSumario drop foreign key FK_mug8yaiow5onrp3o9qpn2jinw
+[avalia-docente] [2014-06-25 16:01:06-863] [main] [] [ERROR] [SchemaExport   ]: Table "QUADROSUMARIO" not found; SQL statement:
+alter table QuadroSumario drop foreign key FK_mug8yaiow5onrp3o9qpn2jinw [42102-174]
+[avalia-docente] [2014-06-25 16:01:06-865] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table QuadroSumario_NotasGrupoAtividade drop foreign key FK_gilaf5gfg8igldf3gyq3koclp
+[avalia-docente] [2014-06-25 16:01:06-865] [main] [] [ERROR] [SchemaExport   ]: Table "QUADROSUMARIO_NOTASGRUPOATIVIDADE" not found; SQL statement:
+alter table QuadroSumario_NotasGrupoAtividade drop foreign key FK_gilaf5gfg8igldf3gyq3koclp [42102-174]
+[avalia-docente] [2014-06-25 16:01:06-866] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table QuadroSumario_NotasGrupoAtividade drop foreign key FK_a4rnxy76uwoiiybdpmrb6acf4
+[avalia-docente] [2014-06-25 16:01:06-866] [main] [] [ERROR] [SchemaExport   ]: Table "QUADROSUMARIO_NOTASGRUPOATIVIDADE" not found; SQL statement:
+alter table QuadroSumario_NotasGrupoAtividade drop foreign key FK_a4rnxy76uwoiiybdpmrb6acf4 [42102-174]
+[avalia-docente] [2014-06-25 16:01:06-868] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Regime drop foreign key FK_eyso6s2nirtpntyxmfnw94mi3
+[avalia-docente] [2014-06-25 16:01:06-868] [main] [] [ERROR] [SchemaExport   ]: Table "REGIME" not found; SQL statement:
+alter table Regime drop foreign key FK_eyso6s2nirtpntyxmfnw94mi3 [42102-174]
+[avalia-docente] [2014-06-25 16:01:06-870] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Resolucao drop foreign key FK_ptpvfefs5yo95ixprxnbdb72a
+[avalia-docente] [2014-06-25 16:01:06-870] [main] [] [ERROR] [SchemaExport   ]: Table "RESOLUCAO" not found; SQL statement:
+alter table Resolucao drop foreign key FK_ptpvfefs5yo95ixprxnbdb72a [42102-174]
+[avalia-docente] [2014-06-25 16:01:06-872] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Resolucao_QuadroSumario drop foreign key FK_4nefcaij79acqceelmb3h19oh
+[avalia-docente] [2014-06-25 16:01:06-872] [main] [] [ERROR] [SchemaExport   ]: Table "RESOLUCAO_QUADROSUMARIO" not found; SQL statement:
+alter table Resolucao_QuadroSumario drop foreign key FK_4nefcaij79acqceelmb3h19oh [42102-174]
+[avalia-docente] [2014-06-25 16:01:06-874] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Resolucao_QuadroSumario drop foreign key FK_2iv10wqnx484wbhfmprie3eln
+[avalia-docente] [2014-06-25 16:01:06-874] [main] [] [ERROR] [SchemaExport   ]: Table "RESOLUCAO_QUADROSUMARIO" not found; SQL statement:
+alter table Resolucao_QuadroSumario drop foreign key FK_2iv10wqnx484wbhfmprie3eln [42102-174]
+[avalia-docente] [2014-06-25 16:01:07-223] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Atividade add index FK_6s9e2tavcspah7m9f8wyxrq8y (versao_anterior), add constraint FK_6s9e2tavcspah7m9f8wyxrq8y foreign key (versao_anterior) references Atividade (id)
+[avalia-docente] [2014-06-25 16:01:07-223] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_6S9E2TAVCSPAH7M9F8WYXRQ8Y"; SQL statement:
+alter table Atividade add index FK_6s9e2tavcspah7m9f8wyxrq8y (versao_anterior), add constraint FK_6s9e2tavcspah7m9f8wyxrq8y foreign key (versao_anterior) references Atividade (id) [50004-174]
+[avalia-docente] [2014-06-25 16:01:07-224] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Atividade add index FK_fk8w73e07qv9h1w25xpg64ebk (grupo_atividade_id), add constraint FK_fk8w73e07qv9h1w25xpg64ebk foreign key (grupo_atividade_id) references GrupoAtividade (id)
+[avalia-docente] [2014-06-25 16:01:07-224] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_FK8W73E07QV9H1W25XPG64EBK"; SQL statement:
+alter table Atividade add index FK_fk8w73e07qv9h1w25xpg64ebk (grupo_atividade_id), add constraint FK_fk8w73e07qv9h1w25xpg64ebk foreign key (grupo_atividade_id) references GrupoAtividade (id) [50004-174]
+[avalia-docente] [2014-06-25 16:01:07-226] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Atividade add index FK_fd2fgki6oqb4mr4vxf7km0nxw (multiplicador_id), add constraint FK_fd2fgki6oqb4mr4vxf7km0nxw foreign key (multiplicador_id) references Multiplicador (id)
+[avalia-docente] [2014-06-25 16:01:07-226] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_FD2FGKI6OQB4MR4VXF7KM0NXW"; SQL statement:
+alter table Atividade add index FK_fd2fgki6oqb4mr4vxf7km0nxw (multiplicador_id), add constraint FK_fd2fgki6oqb4mr4vxf7km0nxw foreign key (multiplicador_id) references Multiplicador (id) [50004-174]
+[avalia-docente] [2014-06-25 16:01:07-227] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Avaliacao add index FK_5vksohj4mcqvxcg51n2an28tb (versao_anterior), add constraint FK_5vksohj4mcqvxcg51n2an28tb foreign key (versao_anterior) references Avaliacao (id)
+[avalia-docente] [2014-06-25 16:01:07-227] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_5VKSOHJ4MCQVXCG51N2AN28TB"; SQL statement:
+alter table Avaliacao add index FK_5vksohj4mcqvxcg51n2an28tb (versao_anterior), add constraint FK_5vksohj4mcqvxcg51n2an28tb foreign key (versao_anterior) references Avaliacao (id) [50004-174]
+[avalia-docente] [2014-06-25 16:01:07-229] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Avaliacao add index FK_ceoong99fopou31vqgwu2wycj (docente_id), add constraint FK_ceoong99fopou31vqgwu2wycj foreign key (docente_id) references Docente (id)
+[avalia-docente] [2014-06-25 16:01:07-229] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_CEOONG99FOPOU31VQGWU2WYCJ"; SQL statement:
+alter table Avaliacao add index FK_ceoong99fopou31vqgwu2wycj (docente_id), add constraint FK_ceoong99fopou31vqgwu2wycj foreign key (docente_id) references Docente (id) [50004-174]
+[avalia-docente] [2014-06-25 16:01:07-230] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Docente add index FK_5w8lj8907q09gkf97ud0n9kqn (versao_anterior), add constraint FK_5w8lj8907q09gkf97ud0n9kqn foreign key (versao_anterior) references Docente (id)
+[avalia-docente] [2014-06-25 16:01:07-230] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_5W8LJ8907Q09GKF97UD0N9KQN"; SQL statement:
+alter table Docente add index FK_5w8lj8907q09gkf97ud0n9kqn (versao_anterior), add constraint FK_5w8lj8907q09gkf97ud0n9kqn foreign key (versao_anterior) references Docente (id) [50004-174]
+[avalia-docente] [2014-06-25 16:01:07-232] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Docente add index FK_1ojoi9c53cbeheg39nywjm8iv (regime_id), add constraint FK_1ojoi9c53cbeheg39nywjm8iv foreign key (regime_id) references Regime (id)
+[avalia-docente] [2014-06-25 16:01:07-232] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_1OJOI9C53CBEHEG39NYWJM8IV"; SQL statement:
+alter table Docente add index FK_1ojoi9c53cbeheg39nywjm8iv (regime_id), add constraint FK_1ojoi9c53cbeheg39nywjm8iv foreign key (regime_id) references Regime (id) [50004-174]
+[avalia-docente] [2014-06-25 16:01:07-233] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Docente_QuadroSumario add index FK_e1pyts6nasxxbghp3f3ls16qx (quadroSumarios_id), add constraint FK_e1pyts6nasxxbghp3f3ls16qx foreign key (quadroSumarios_id) references QuadroSumario (id)
+[avalia-docente] [2014-06-25 16:01:07-233] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_E1PYTS6NASXXBGHP3F3LS16QX"; SQL statement:
+alter table Docente_QuadroSumario add index FK_e1pyts6nasxxbghp3f3ls16qx (quadroSumarios_id), add constraint FK_e1pyts6nasxxbghp3f3ls16qx foreign key (quadroSumarios_id) references QuadroSumario (id) [50004-174]
+[avalia-docente] [2014-06-25 16:01:07-234] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Docente_QuadroSumario add index FK_7yd0rye7vf1wv080x5exmju7a (Docente_id), add constraint FK_7yd0rye7vf1wv080x5exmju7a foreign key (Docente_id) references Docente (id)
+[avalia-docente] [2014-06-25 16:01:07-234] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_7YD0RYE7VF1WV080X5EXMJU7A"; SQL statement:
+alter table Docente_QuadroSumario add index FK_7yd0rye7vf1wv080x5exmju7a (Docente_id), add constraint FK_7yd0rye7vf1wv080x5exmju7a foreign key (Docente_id) references Docente (id) [50004-174]
+[avalia-docente] [2014-06-25 16:01:07-236] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade add index FK_ht6byi0p1oxl3ctfa1n0qhok1 (versao_anterior), add constraint FK_ht6byi0p1oxl3ctfa1n0qhok1 foreign key (versao_anterior) references GrupoAtividade (id)
+[avalia-docente] [2014-06-25 16:01:07-236] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_HT6BYI0P1OXL3CTFA1N0QHOK1"; SQL statement:
+alter table GrupoAtividade add index FK_ht6byi0p1oxl3ctfa1n0qhok1 (versao_anterior), add constraint FK_ht6byi0p1oxl3ctfa1n0qhok1 foreign key (versao_anterior) references GrupoAtividade (id) [50004-174]
+[avalia-docente] [2014-06-25 16:01:07-238] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade add index FK_iuqc0v8w9k1y2fdcx3l8qjl8h (grupo_atividade_pai_id), add constraint FK_iuqc0v8w9k1y2fdcx3l8qjl8h foreign key (grupo_atividade_pai_id) references GrupoAtividade (id)
+[avalia-docente] [2014-06-25 16:01:07-238] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_IUQC0V8W9K1Y2FDCX3L8QJL8H"; SQL statement:
+alter table GrupoAtividade add index FK_iuqc0v8w9k1y2fdcx3l8qjl8h (grupo_atividade_pai_id), add constraint FK_iuqc0v8w9k1y2fdcx3l8qjl8h foreign key (grupo_atividade_pai_id) references GrupoAtividade (id) [50004-174]
+[avalia-docente] [2014-06-25 16:01:07-240] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade add index FK_6ts0188i5gi51g6o4inu1cn1w (resolucao_id), add constraint FK_6ts0188i5gi51g6o4inu1cn1w foreign key (resolucao_id) references Resolucao (id)
+[avalia-docente] [2014-06-25 16:01:07-240] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_6TS0188I5GI51G6O4INU1CN1W"; SQL statement:
+alter table GrupoAtividade add index FK_6ts0188i5gi51g6o4inu1cn1w (resolucao_id), add constraint FK_6ts0188i5gi51g6o4inu1cn1w foreign key (resolucao_id) references Resolucao (id) [50004-174]
+[avalia-docente] [2014-06-25 16:01:07-248] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade_Atividade add index FK_1vdk2h22fvgv4i6jhn73if0ln (atividades_id), add constraint FK_1vdk2h22fvgv4i6jhn73if0ln foreign key (atividades_id) references Atividade (id)
+[avalia-docente] [2014-06-25 16:01:07-248] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_1VDK2H22FVGV4I6JHN73IF0LN"; SQL statement:
+alter table GrupoAtividade_Atividade add index FK_1vdk2h22fvgv4i6jhn73if0ln (atividades_id), add constraint FK_1vdk2h22fvgv4i6jhn73if0ln foreign key (atividades_id) references Atividade (id) [50004-174]
+[avalia-docente] [2014-06-25 16:01:07-252] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade_Atividade add index FK_k3ua0rdiqga57v3amvkvpesnh (GrupoAtividade_id), add constraint FK_k3ua0rdiqga57v3amvkvpesnh foreign key (GrupoAtividade_id) references GrupoAtividade (id)
+[avalia-docente] [2014-06-25 16:01:07-252] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_K3UA0RDIQGA57V3AMVKVPESNH"; SQL statement:
+alter table GrupoAtividade_Atividade add index FK_k3ua0rdiqga57v3amvkvpesnh (GrupoAtividade_id), add constraint FK_k3ua0rdiqga57v3amvkvpesnh foreign key (GrupoAtividade_id) references GrupoAtividade (id) [50004-174]
+[avalia-docente] [2014-06-25 16:01:07-254] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade_NotasGrupoAtividade add index FK_gev2ekyeg5b5raxu69sap3x8a (notasGrupoAtividades_id), add constraint FK_gev2ekyeg5b5raxu69sap3x8a foreign key (notasGrupoAtividades_id) references NotasGrupoAtividade (id)
+[avalia-docente] [2014-06-25 16:01:07-254] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_GEV2EKYEG5B5RAXU69SAP3X8A"; SQL statement:
+alter table GrupoAtividade_NotasGrupoAtividade add index FK_gev2ekyeg5b5raxu69sap3x8a (notasGrupoAtividades_id), add constraint FK_gev2ekyeg5b5raxu69sap3x8a foreign key (notasGrupoAtividades_id) references NotasGrupoAtividade (id) [50004-174]
+[avalia-docente] [2014-06-25 16:01:07-255] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade_NotasGrupoAtividade add index FK_6gyyh0ckfonr2xbm5433026bo (GrupoAtividade_id), add constraint FK_6gyyh0ckfonr2xbm5433026bo foreign key (GrupoAtividade_id) references GrupoAtividade (id)
+[avalia-docente] [2014-06-25 16:01:07-255] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_6GYYH0CKFONR2XBM5433026BO"; SQL statement:
+alter table GrupoAtividade_NotasGrupoAtividade add index FK_6gyyh0ckfonr2xbm5433026bo (GrupoAtividade_id), add constraint FK_6gyyh0ckfonr2xbm5433026bo foreign key (GrupoAtividade_id) references GrupoAtividade (id) [50004-174]
+[avalia-docente] [2014-06-25 16:01:07-257] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table ItemAtividade add index FK_jk9r9j6scatyqinfpgpkhgwew (versao_anterior), add constraint FK_jk9r9j6scatyqinfpgpkhgwew foreign key (versao_anterior) references ItemAtividade (id)
+[avalia-docente] [2014-06-25 16:01:07-257] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_JK9R9J6SCATYQINFPGPKHGWEW"; SQL statement:
+alter table ItemAtividade add index FK_jk9r9j6scatyqinfpgpkhgwew (versao_anterior), add constraint FK_jk9r9j6scatyqinfpgpkhgwew foreign key (versao_anterior) references ItemAtividade (id) [50004-174]
+[avalia-docente] [2014-06-25 16:01:07-259] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table ItemAtividade add index FK_hawfu0txs45v32qud541qhvj0 (atividade_id), add constraint FK_hawfu0txs45v32qud541qhvj0 foreign key (atividade_id) references Atividade (id)
+[avalia-docente] [2014-06-25 16:01:07-259] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_HAWFU0TXS45V32QUD541QHVJ0"; SQL statement:
+alter table ItemAtividade add index FK_hawfu0txs45v32qud541qhvj0 (atividade_id), add constraint FK_hawfu0txs45v32qud541qhvj0 foreign key (atividade_id) references Atividade (id) [50004-174]
+[avalia-docente] [2014-06-25 16:01:07-262] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Multiplicador add index FK_hcqv7wx7i7u1xt1o64nlw8m4k (versao_anterior), add constraint FK_hcqv7wx7i7u1xt1o64nlw8m4k foreign key (versao_anterior) references Multiplicador (id)
+[avalia-docente] [2014-06-25 16:01:07-262] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_HCQV7WX7I7U1XT1O64NLW8M4K"; SQL statement:
+alter table Multiplicador add index FK_hcqv7wx7i7u1xt1o64nlw8m4k (versao_anterior), add constraint FK_hcqv7wx7i7u1xt1o64nlw8m4k foreign key (versao_anterior) references Multiplicador (id) [50004-174]
+[avalia-docente] [2014-06-25 16:01:07-263] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table NotasGrupoAtividade add index FK_m4mij8t1a5pimcues8rse5982 (versao_anterior), add constraint FK_m4mij8t1a5pimcues8rse5982 foreign key (versao_anterior) references NotasGrupoAtividade (id)
+[avalia-docente] [2014-06-25 16:01:07-263] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_M4MIJ8T1A5PIMCUES8RSE5982"; SQL statement:
+alter table NotasGrupoAtividade add index FK_m4mij8t1a5pimcues8rse5982 (versao_anterior), add constraint FK_m4mij8t1a5pimcues8rse5982 foreign key (versao_anterior) references NotasGrupoAtividade (id) [50004-174]
+[avalia-docente] [2014-06-25 16:01:07-265] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table NotasGrupoAtividade add index FK_hxu58q4cdpl8y4prnp6x4vifr (grupo_atividade_id), add constraint FK_hxu58q4cdpl8y4prnp6x4vifr foreign key (grupo_atividade_id) references GrupoAtividade (id)
+[avalia-docente] [2014-06-25 16:01:07-265] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_HXU58Q4CDPL8Y4PRNP6X4VIFR"; SQL statement:
+alter table NotasGrupoAtividade add index FK_hxu58q4cdpl8y4prnp6x4vifr (grupo_atividade_id), add constraint FK_hxu58q4cdpl8y4prnp6x4vifr foreign key (grupo_atividade_id) references GrupoAtividade (id) [50004-174]
+[avalia-docente] [2014-06-25 16:01:07-267] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table NotasGrupoAtividade add index FK_ktt14x2jcm3s2y1w50d5h6887 (quadro_sumario_id), add constraint FK_ktt14x2jcm3s2y1w50d5h6887 foreign key (quadro_sumario_id) references QuadroSumario (id)
+[avalia-docente] [2014-06-25 16:01:07-267] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_KTT14X2JCM3S2Y1W50D5H6887"; SQL statement:
+alter table NotasGrupoAtividade add index FK_ktt14x2jcm3s2y1w50d5h6887 (quadro_sumario_id), add constraint FK_ktt14x2jcm3s2y1w50d5h6887 foreign key (quadro_sumario_id) references QuadroSumario (id) [50004-174]
+[avalia-docente] [2014-06-25 16:01:07-268] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table QuadroSumario add index FK_9eumvgtrg8s8st4grj9o9vn0r (versao_anterior), add constraint FK_9eumvgtrg8s8st4grj9o9vn0r foreign key (versao_anterior) references QuadroSumario (id)
+[avalia-docente] [2014-06-25 16:01:07-268] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_9EUMVGTRG8S8ST4GRJ9O9VN0R"; SQL statement:
+alter table QuadroSumario add index FK_9eumvgtrg8s8st4grj9o9vn0r (versao_anterior), add constraint FK_9eumvgtrg8s8st4grj9o9vn0r foreign key (versao_anterior) references QuadroSumario (id) [50004-174]
+[avalia-docente] [2014-06-25 16:01:07-270] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table QuadroSumario add index FK_a1l6l5hc2c7t4wgtu8gnxftrb (docente_id), add constraint FK_a1l6l5hc2c7t4wgtu8gnxftrb foreign key (docente_id) references Docente (id)
+[avalia-docente] [2014-06-25 16:01:07-270] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_A1L6L5HC2C7T4WGTU8GNXFTRB"; SQL statement:
+alter table QuadroSumario add index FK_a1l6l5hc2c7t4wgtu8gnxftrb (docente_id), add constraint FK_a1l6l5hc2c7t4wgtu8gnxftrb foreign key (docente_id) references Docente (id) [50004-174]
+[avalia-docente] [2014-06-25 16:01:07-272] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table QuadroSumario add index FK_mug8yaiow5onrp3o9qpn2jinw (resolucao_id), add constraint FK_mug8yaiow5onrp3o9qpn2jinw foreign key (resolucao_id) references Resolucao (id)
+[avalia-docente] [2014-06-25 16:01:07-272] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_MUG8YAIOW5ONRP3O9QPN2JINW"; SQL statement:
+alter table QuadroSumario add index FK_mug8yaiow5onrp3o9qpn2jinw (resolucao_id), add constraint FK_mug8yaiow5onrp3o9qpn2jinw foreign key (resolucao_id) references Resolucao (id) [50004-174]
+[avalia-docente] [2014-06-25 16:01:07-273] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table QuadroSumario_NotasGrupoAtividade add index FK_gilaf5gfg8igldf3gyq3koclp (notasGrupoAtividades_id), add constraint FK_gilaf5gfg8igldf3gyq3koclp foreign key (notasGrupoAtividades_id) references NotasGrupoAtividade (id)
+[avalia-docente] [2014-06-25 16:01:07-273] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_GILAF5GFG8IGLDF3GYQ3KOCLP"; SQL statement:
+alter table QuadroSumario_NotasGrupoAtividade add index FK_gilaf5gfg8igldf3gyq3koclp (notasGrupoAtividades_id), add constraint FK_gilaf5gfg8igldf3gyq3koclp foreign key (notasGrupoAtividades_id) references NotasGrupoAtividade (id) [50004-174]
+[avalia-docente] [2014-06-25 16:01:07-274] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table QuadroSumario_NotasGrupoAtividade add index FK_a4rnxy76uwoiiybdpmrb6acf4 (QuadroSumario_id), add constraint FK_a4rnxy76uwoiiybdpmrb6acf4 foreign key (QuadroSumario_id) references QuadroSumario (id)
+[avalia-docente] [2014-06-25 16:01:07-274] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_A4RNXY76UWOIIYBDPMRB6ACF4"; SQL statement:
+alter table QuadroSumario_NotasGrupoAtividade add index FK_a4rnxy76uwoiiybdpmrb6acf4 (QuadroSumario_id), add constraint FK_a4rnxy76uwoiiybdpmrb6acf4 foreign key (QuadroSumario_id) references QuadroSumario (id) [50004-174]
+[avalia-docente] [2014-06-25 16:01:07-276] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Regime add index FK_eyso6s2nirtpntyxmfnw94mi3 (versao_anterior), add constraint FK_eyso6s2nirtpntyxmfnw94mi3 foreign key (versao_anterior) references Regime (id)
+[avalia-docente] [2014-06-25 16:01:07-276] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_EYSO6S2NIRTPNTYXMFNW94MI3"; SQL statement:
+alter table Regime add index FK_eyso6s2nirtpntyxmfnw94mi3 (versao_anterior), add constraint FK_eyso6s2nirtpntyxmfnw94mi3 foreign key (versao_anterior) references Regime (id) [50004-174]
+[avalia-docente] [2014-06-25 16:01:07-278] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Resolucao add index FK_ptpvfefs5yo95ixprxnbdb72a (versao_anterior), add constraint FK_ptpvfefs5yo95ixprxnbdb72a foreign key (versao_anterior) references Resolucao (id)
+[avalia-docente] [2014-06-25 16:01:07-278] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_PTPVFEFS5YO95IXPRXNBDB72A"; SQL statement:
+alter table Resolucao add index FK_ptpvfefs5yo95ixprxnbdb72a (versao_anterior), add constraint FK_ptpvfefs5yo95ixprxnbdb72a foreign key (versao_anterior) references Resolucao (id) [50004-174]
+[avalia-docente] [2014-06-25 16:01:07-279] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Resolucao_QuadroSumario add index FK_4nefcaij79acqceelmb3h19oh (quadroSumarios_id), add constraint FK_4nefcaij79acqceelmb3h19oh foreign key (quadroSumarios_id) references QuadroSumario (id)
+[avalia-docente] [2014-06-25 16:01:07-280] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_4NEFCAIJ79ACQCEELMB3H19OH"; SQL statement:
+alter table Resolucao_QuadroSumario add index FK_4nefcaij79acqceelmb3h19oh (quadroSumarios_id), add constraint FK_4nefcaij79acqceelmb3h19oh foreign key (quadroSumarios_id) references QuadroSumario (id) [50004-174]
+[avalia-docente] [2014-06-25 16:01:07-281] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Resolucao_QuadroSumario add index FK_2iv10wqnx484wbhfmprie3eln (Resolucao_id), add constraint FK_2iv10wqnx484wbhfmprie3eln foreign key (Resolucao_id) references Resolucao (id)
+[avalia-docente] [2014-06-25 16:01:07-281] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_2IV10WQNX484WBHFMPRIE3ELN"; SQL statement:
+alter table Resolucao_QuadroSumario add index FK_2iv10wqnx484wbhfmprie3eln (Resolucao_id), add constraint FK_2iv10wqnx484wbhfmprie3eln foreign key (Resolucao_id) references Resolucao (id) [50004-174]
+[avalia-docente] [2014-06-25 16:01:07-281] [main] [] [INFO ] [SchemaExport   ]: HHH000230: Schema export complete
+[avalia-docente] [2014-06-25 16:01:07-318] [main] [] [INFO ] [GenericApplicationContext]: Bean 'entityManagerFactory' of type [class org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[avalia-docente] [2014-06-25 16:01:07-325] [main] [] [INFO ] [DefaultListableBeanFactory]: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@31125c11: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,dataSource,jpaProperties,org.springframework.orm.hibernate4.HibernateExceptionTranslator#0,org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor#0,jpaVendorAdapter,entityManagerFactory,transactionManager,itemAtividadeRepository,resolucaoRepository,multiplicadorRepository,notasGrupoAtividadeRepository,quadroSumarioRepository,atividadeRepository,docenteRepository,grupoAtividadeRepository,org.springframework.data.repository.core.support.RepositoryInterfaceAwareBeanPostProcessor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+[avalia-docente] [2014-06-25 16:01:07-560] [main] [] [WARN ] [AbstractTableMetaData]: Potential problem found: The configured data type factory 'class org.dbunit.dataset.datatype.DefaultDataTypeFactory' might cause problems with the current database 'H2' (e.g. some datatypes may not be supported properly). In rare cases you might see this message because the list of supported database products is incomplete (list=[derby]). If so please request a java-class update via the forums.If you are using your own IDataTypeFactory extending DefaultDataTypeFactory, ensure that you override getValidDbProducts() to specify the supported database products.
+[avalia-docente] [2014-06-25 16:01:07-601] [main] [] [WARN ] [AbstractTableMetaData]: Potential problem found: The configured data type factory 'class org.dbunit.dataset.datatype.DefaultDataTypeFactory' might cause problems with the current database 'H2' (e.g. some datatypes may not be supported properly). In rare cases you might see this message because the list of supported database products is incomplete (list=[derby]). If so please request a java-class update via the forums.If you are using your own IDataTypeFactory extending DefaultDataTypeFactory, ensure that you override getValidDbProducts() to specify the supported database products.
+[avalia-docente] [2014-06-25 16:01:07-647] [main] [] [WARN ] [AbstractTableMetaData]: Potential problem found: The configured data type factory 'class org.dbunit.dataset.datatype.DefaultDataTypeFactory' might cause problems with the current database 'H2' (e.g. some datatypes may not be supported properly). In rare cases you might see this message because the list of supported database products is incomplete (list=[derby]). If so please request a java-class update via the forums.If you are using your own IDataTypeFactory extending DefaultDataTypeFactory, ensure that you override getValidDbProducts() to specify the supported database products.
+[avalia-docente] [2014-06-25 16:01:07-743] [main] [] [WARN ] [AbstractTableMetaData]: Potential problem found: The configured data type factory 'class org.dbunit.dataset.datatype.DefaultDataTypeFactory' might cause problems with the current database 'H2' (e.g. some datatypes may not be supported properly). In rare cases you might see this message because the list of supported database products is incomplete (list=[derby]). If so please request a java-class update via the forums.If you are using your own IDataTypeFactory extending DefaultDataTypeFactory, ensure that you override getValidDbProducts() to specify the supported database products.
+[avalia-docente] [2014-06-25 16:01:07-774] [main] [] [WARN ] [AbstractTableMetaData]: Potential problem found: The configured data type factory 'class org.dbunit.dataset.datatype.DefaultDataTypeFactory' might cause problems with the current database 'H2' (e.g. some datatypes may not be supported properly). In rare cases you might see this message because the list of supported database products is incomplete (list=[derby]). If so please request a java-class update via the forums.If you are using your own IDataTypeFactory extending DefaultDataTypeFactory, ensure that you override getValidDbProducts() to specify the supported database products.
+[avalia-docente] [2014-06-25 16:01:07-786] [Thread-7] [] [INFO ] [GenericApplicationContext]: Closing org.springframework.context.support.GenericApplicationContext@2ba15da0: startup date [Wed Jun 25 16:01:05 BRT 2014]; root of context hierarchy
+[avalia-docente] [2014-06-25 16:01:07-787] [Thread-7] [] [INFO ] [DefaultListableBeanFactory]: Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@31125c11: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,dataSource,jpaProperties,org.springframework.orm.hibernate4.HibernateExceptionTranslator#0,org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor#0,jpaVendorAdapter,entityManagerFactory,transactionManager,itemAtividadeRepository,resolucaoRepository,multiplicadorRepository,notasGrupoAtividadeRepository,quadroSumarioRepository,atividadeRepository,docenteRepository,grupoAtividadeRepository,org.springframework.data.repository.core.support.RepositoryInterfaceAwareBeanPostProcessor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+[avalia-docente] [2014-06-25 16:01:07-791] [Thread-7] [] [INFO ] [LocalContainerEntityManagerFactoryBean]: Closing JPA EntityManagerFactory for persistence unit 'avaliaDocente'
+[avalia-docente] [2014-06-25 16:01:07-792] [Thread-7] [] [INFO ] [SchemaExport   ]: HHH000227: Running hbm2ddl schema export
+[avalia-docente] [2014-06-25 16:01:07-793] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Atividade drop foreign key FK_6s9e2tavcspah7m9f8wyxrq8y
+[avalia-docente] [2014-06-25 16:01:07-793] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table Atividade drop foreign key FK_6s9e2tavcspah7m9f8wyxrq8y [42122-174]
+[avalia-docente] [2014-06-25 16:01:07-794] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Atividade drop foreign key FK_fk8w73e07qv9h1w25xpg64ebk
+[avalia-docente] [2014-06-25 16:01:07-794] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table Atividade drop foreign key FK_fk8w73e07qv9h1w25xpg64ebk [42122-174]
+[avalia-docente] [2014-06-25 16:01:07-795] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Atividade drop foreign key FK_fd2fgki6oqb4mr4vxf7km0nxw
+[avalia-docente] [2014-06-25 16:01:07-795] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table Atividade drop foreign key FK_fd2fgki6oqb4mr4vxf7km0nxw [42122-174]
+[avalia-docente] [2014-06-25 16:01:07-796] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Avaliacao drop foreign key FK_5vksohj4mcqvxcg51n2an28tb
+[avalia-docente] [2014-06-25 16:01:07-796] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table Avaliacao drop foreign key FK_5vksohj4mcqvxcg51n2an28tb [42122-174]
+[avalia-docente] [2014-06-25 16:01:07-796] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Avaliacao drop foreign key FK_ceoong99fopou31vqgwu2wycj
+[avalia-docente] [2014-06-25 16:01:07-796] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table Avaliacao drop foreign key FK_ceoong99fopou31vqgwu2wycj [42122-174]
+[avalia-docente] [2014-06-25 16:01:07-797] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Docente drop foreign key FK_5w8lj8907q09gkf97ud0n9kqn
+[avalia-docente] [2014-06-25 16:01:07-797] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table Docente drop foreign key FK_5w8lj8907q09gkf97ud0n9kqn [42122-174]
+[avalia-docente] [2014-06-25 16:01:07-798] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Docente drop foreign key FK_1ojoi9c53cbeheg39nywjm8iv
+[avalia-docente] [2014-06-25 16:01:07-798] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table Docente drop foreign key FK_1ojoi9c53cbeheg39nywjm8iv [42122-174]
+[avalia-docente] [2014-06-25 16:01:07-799] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Docente_QuadroSumario drop foreign key FK_e1pyts6nasxxbghp3f3ls16qx
+[avalia-docente] [2014-06-25 16:01:07-799] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table Docente_QuadroSumario drop foreign key FK_e1pyts6nasxxbghp3f3ls16qx [42122-174]
+[avalia-docente] [2014-06-25 16:01:07-800] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Docente_QuadroSumario drop foreign key FK_7yd0rye7vf1wv080x5exmju7a
+[avalia-docente] [2014-06-25 16:01:07-800] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table Docente_QuadroSumario drop foreign key FK_7yd0rye7vf1wv080x5exmju7a [42122-174]
+[avalia-docente] [2014-06-25 16:01:07-800] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade drop foreign key FK_ht6byi0p1oxl3ctfa1n0qhok1
+[avalia-docente] [2014-06-25 16:01:07-800] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table GrupoAtividade drop foreign key FK_ht6byi0p1oxl3ctfa1n0qhok1 [42122-174]
+[avalia-docente] [2014-06-25 16:01:07-801] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade drop foreign key FK_iuqc0v8w9k1y2fdcx3l8qjl8h
+[avalia-docente] [2014-06-25 16:01:07-801] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table GrupoAtividade drop foreign key FK_iuqc0v8w9k1y2fdcx3l8qjl8h [42122-174]
+[avalia-docente] [2014-06-25 16:01:07-802] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade drop foreign key FK_6ts0188i5gi51g6o4inu1cn1w
+[avalia-docente] [2014-06-25 16:01:07-802] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table GrupoAtividade drop foreign key FK_6ts0188i5gi51g6o4inu1cn1w [42122-174]
+[avalia-docente] [2014-06-25 16:01:07-802] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade_Atividade drop foreign key FK_1vdk2h22fvgv4i6jhn73if0ln
+[avalia-docente] [2014-06-25 16:01:07-802] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table GrupoAtividade_Atividade drop foreign key FK_1vdk2h22fvgv4i6jhn73if0ln [42122-174]
+[avalia-docente] [2014-06-25 16:01:07-803] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade_Atividade drop foreign key FK_k3ua0rdiqga57v3amvkvpesnh
+[avalia-docente] [2014-06-25 16:01:07-803] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table GrupoAtividade_Atividade drop foreign key FK_k3ua0rdiqga57v3amvkvpesnh [42122-174]
+[avalia-docente] [2014-06-25 16:01:07-804] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade_NotasGrupoAtividade drop foreign key FK_gev2ekyeg5b5raxu69sap3x8a
+[avalia-docente] [2014-06-25 16:01:07-804] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table GrupoAtividade_NotasGrupoAtividade drop foreign key FK_gev2ekyeg5b5raxu69sap3x8a [42122-174]
+[avalia-docente] [2014-06-25 16:01:07-805] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade_NotasGrupoAtividade drop foreign key FK_6gyyh0ckfonr2xbm5433026bo
+[avalia-docente] [2014-06-25 16:01:07-805] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table GrupoAtividade_NotasGrupoAtividade drop foreign key FK_6gyyh0ckfonr2xbm5433026bo [42122-174]
+[avalia-docente] [2014-06-25 16:01:07-805] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table ItemAtividade drop foreign key FK_jk9r9j6scatyqinfpgpkhgwew
+[avalia-docente] [2014-06-25 16:01:07-805] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table ItemAtividade drop foreign key FK_jk9r9j6scatyqinfpgpkhgwew [42122-174]
+[avalia-docente] [2014-06-25 16:01:07-806] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table ItemAtividade drop foreign key FK_hawfu0txs45v32qud541qhvj0
+[avalia-docente] [2014-06-25 16:01:07-806] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table ItemAtividade drop foreign key FK_hawfu0txs45v32qud541qhvj0 [42122-174]
+[avalia-docente] [2014-06-25 16:01:07-807] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Multiplicador drop foreign key FK_hcqv7wx7i7u1xt1o64nlw8m4k
+[avalia-docente] [2014-06-25 16:01:07-807] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table Multiplicador drop foreign key FK_hcqv7wx7i7u1xt1o64nlw8m4k [42122-174]
+[avalia-docente] [2014-06-25 16:01:07-808] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table NotasGrupoAtividade drop foreign key FK_m4mij8t1a5pimcues8rse5982
+[avalia-docente] [2014-06-25 16:01:07-808] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table NotasGrupoAtividade drop foreign key FK_m4mij8t1a5pimcues8rse5982 [42122-174]
+[avalia-docente] [2014-06-25 16:01:07-808] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table NotasGrupoAtividade drop foreign key FK_hxu58q4cdpl8y4prnp6x4vifr
+[avalia-docente] [2014-06-25 16:01:07-808] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table NotasGrupoAtividade drop foreign key FK_hxu58q4cdpl8y4prnp6x4vifr [42122-174]
+[avalia-docente] [2014-06-25 16:01:07-809] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table NotasGrupoAtividade drop foreign key FK_ktt14x2jcm3s2y1w50d5h6887
+[avalia-docente] [2014-06-25 16:01:07-809] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table NotasGrupoAtividade drop foreign key FK_ktt14x2jcm3s2y1w50d5h6887 [42122-174]
+[avalia-docente] [2014-06-25 16:01:07-810] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table QuadroSumario drop foreign key FK_9eumvgtrg8s8st4grj9o9vn0r
+[avalia-docente] [2014-06-25 16:01:07-810] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table QuadroSumario drop foreign key FK_9eumvgtrg8s8st4grj9o9vn0r [42122-174]
+[avalia-docente] [2014-06-25 16:01:07-810] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table QuadroSumario drop foreign key FK_a1l6l5hc2c7t4wgtu8gnxftrb
+[avalia-docente] [2014-06-25 16:01:07-810] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table QuadroSumario drop foreign key FK_a1l6l5hc2c7t4wgtu8gnxftrb [42122-174]
+[avalia-docente] [2014-06-25 16:01:07-811] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table QuadroSumario drop foreign key FK_mug8yaiow5onrp3o9qpn2jinw
+[avalia-docente] [2014-06-25 16:01:07-811] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table QuadroSumario drop foreign key FK_mug8yaiow5onrp3o9qpn2jin[avalia-docente] [2014-06-25 16:42:51-139] [main] [] [INFO ] [XmlBeanDefinitionReader]: Loading XML bean definitions from class path resource [META-INF/spring/applicationContextTest-persistence.xml]
+[avalia-docente] [2014-06-25 16:42:54-110] [main] [] [INFO ] [GenericApplicationContext]: Refreshing org.springframework.context.support.GenericApplicationContext@9482acb: startup date [Wed Jun 25 16:42:54 BRT 2014]; root of context hierarchy
+[avalia-docente] [2014-06-25 16:42:54-180] [main] [] [INFO ] [GenericApplicationContext]: Bean 'org.springframework.orm.hibernate4.HibernateExceptionTranslator#0' of type [class org.springframework.orm.hibernate4.HibernateExceptionTranslator] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[avalia-docente] [2014-06-25 16:42:54-214] [main] [] [INFO ] [MLog           ]: MLog clients using log4j logging.
+[avalia-docente] [2014-06-25 16:42:54-235] [main] [] [INFO ] [UidUtils       ]: Failed to get local InetAddress for VMID. This is unlikely to matter. At all. We'll add some extra randomness
+java.net.UnknownHostException: pc-649301: pc-649301: Nome ou serviço desconhecido
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1473)
+	at com.mchange.v2.uid.UidUtils.generateVmId(UidUtils.java:70)
+	at com.mchange.v2.uid.UidUtils.<clinit>(UidUtils.java:54)
+	at com.mchange.v2.c3p0.impl.C3P0ImplUtils.<clinit>(C3P0ImplUtils.java:122)
+	at com.mchange.v2.c3p0.impl.PoolBackedDataSourceBase.<init>(PoolBackedDataSourceBase.java:238)
+	at com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.<init>(AbstractPoolBackedDataSource.java:74)
+	at com.mchange.v2.c3p0.ComboPooledDataSource.<init>(ComboPooledDataSource.java:134)
+	at com.mchange.v2.c3p0.ComboPooledDataSource.<init>(ComboPooledDataSource.java:130)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:147)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:990)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:943)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:485)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:323)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:107)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1360)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1118)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:420)
+	at org.springframework.beans.factory.BeanFactoryUtils.beansOfTypeIncludingAncestors(BeanFactoryUtils.java:277)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.detectPersistenceExceptionTranslators(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.<init>(PersistenceExceptionTranslationInterceptor.java:79)
+	at org.springframework.dao.annotation.PersistenceExceptionTranslationAdvisor.<init>(PersistenceExceptionTranslationAdvisor.java:70)
+	at org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor.setBeanFactory(PersistenceExceptionTranslationPostProcessor.java:103)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeAwareMethods(AbstractAutowireCapableBeanFactory.java:1475)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:734)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:457)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:120)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:100)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:248)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:64)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91)
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:122)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:312)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:211)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:288)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:284)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:88)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+Caused by: java.net.UnknownHostException: pc-649301: Nome ou serviço desconhecido
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:901)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1293)
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1469)
+	... 84 more
+[avalia-docente] [2014-06-25 16:42:54-276] [main] [] [INFO ] [C3P0Registry   ]: Initializing c3p0-0.9.2.1 [built 20-March-2013 10:47:27 +0000; debug? true; trace: 10]
+[avalia-docente] [2014-06-25 16:42:54-351] [main] [] [INFO ] [GenericApplicationContext]: Bean 'dataSource' of type [class com.mchange.v2.c3p0.ComboPooledDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[avalia-docente] [2014-06-25 16:42:54-358] [main] [] [INFO ] [PropertiesFactoryBean]: Loading properties file from class path resource [hibernate-test.properties]
+[avalia-docente] [2014-06-25 16:42:54-359] [main] [] [INFO ] [GenericApplicationContext]: Bean 'jpaProperties' of type [class org.springframework.beans.factory.config.PropertiesFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[avalia-docente] [2014-06-25 16:42:54-359] [main] [] [INFO ] [GenericApplicationContext]: Bean 'jpaProperties' of type [class java.util.Properties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[avalia-docente] [2014-06-25 16:42:54-368] [main] [] [INFO ] [GenericApplicationContext]: Bean 'jpaVendorAdapter' of type [class org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[avalia-docente] [2014-06-25 16:42:54-377] [main] [] [INFO ] [LocalContainerEntityManagerFactoryBean]: Building JPA container EntityManagerFactory for persistence unit 'avaliaDocente'
+[avalia-docente] [2014-06-25 16:42:54-486] [main] [] [INFO ] [Version        ]: HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+[avalia-docente] [2014-06-25 16:42:54-491] [main] [] [INFO ] [Version        ]: HHH000412: Hibernate Core {4.2.7.Final}
+[avalia-docente] [2014-06-25 16:42:54-493] [main] [] [INFO ] [Environment    ]: HHH000205: Loaded properties from resource hibernate.properties: {hibernate.show_sql=true, hibernate.jdbc.batch_size=50, hibernate.bytecode.use_reflection_optimizer=true, hibernate.jdbc.fetch_size=10, hibernate.default_batch_fetch_size=16, hibernate.generate_statistics=true, hibernate.hbm2ddl.auto=create, hibernate.connection.useUnicode=true, hibernate.jdbc.use_streams_for_binary=true, hibernate.max_fetch_depth=5, hibernate.connection.charSet=UTF-8, hibernate.use_outer_join=true, hibernate.jdbc.use_scrollable_resultset=true, hibernate.format_sql=false, hibernate.connection.isolation=2, hibernate.order_inserts=true, hibernate.use_sql_comments=false, hibernate.order_updates=true, hibernate.dialect=org.hibernate.dialect.MySQLDialect, hibernate.query.factory_class=org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory}
+[avalia-docente] [2014-06-25 16:42:54-494] [main] [] [INFO ] [Environment    ]: HHH000407: Using java.io streams to persist binary types
+[avalia-docente] [2014-06-25 16:42:54-494] [main] [] [INFO ] [Environment    ]: HHH000406: Using bytecode reflection optimizer
+[avalia-docente] [2014-06-25 16:42:54-494] [main] [] [INFO ] [Environment    ]: HHH000021: Bytecode provider name : javassist
+[avalia-docente] [2014-06-25 16:42:54-655] [main] [] [INFO ] [ConnectionProviderInitiator]: HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+[avalia-docente] [2014-06-25 16:42:54-690] [main] [] [INFO ] [AbstractPoolBackedDataSource]: Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1bq25ttjni5438kijxd|79e582c1, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> org.h2.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1bq25ttjni5438kijxd|79e582c1, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:h2:mem:avaliaDocente-test;DB_CLOSE_ON_EXIT=FALSE, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 15, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+[avalia-docente] [2014-06-25 16:42:54-861] [main] [] [INFO ] [Dialect        ]: HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[avalia-docente] [2014-06-25 16:42:54-867] [main] [] [INFO ] [LobCreatorBuilder]: HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+[avalia-docente] [2014-06-25 16:42:55-035] [main] [] [INFO ] [TransactionFactoryInitiator]: HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+[avalia-docente] [2014-06-25 16:42:55-039] [main] [] [INFO ] [ASTQueryTranslatorFactory]: HHH000397: Using ASTQueryTranslatorFactory
+[avalia-docente] [2014-06-25 16:42:55-075] [main] [] [INFO ] [Version        ]: HV000001: Hibernate Validator 4.3.1.Final
+[avalia-docente] [2014-06-25 16:42:55-595] [main] [] [INFO ] [SchemaExport   ]: HHH000227: Running hbm2ddl schema export
+[avalia-docente] [2014-06-25 16:42:55-603] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Atividade drop foreign key FK_6s9e2tavcspah7m9f8wyxrq8y
+[avalia-docente] [2014-06-25 16:42:55-603] [main] [] [ERROR] [SchemaExport   ]: Table "ATIVIDADE" not found; SQL statement:
+alter table Atividade drop foreign key FK_6s9e2tavcspah7m9f8wyxrq8y [42102-174]
+[avalia-docente] [2014-06-25 16:42:55-605] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Atividade drop foreign key FK_fk8w73e07qv9h1w25xpg64ebk
+[avalia-docente] [2014-06-25 16:42:55-605] [main] [] [ERROR] [SchemaExport   ]: Table "ATIVIDADE" not found; SQL statement:
+alter table Atividade drop foreign key FK_fk8w73e07qv9h1w25xpg64ebk [42102-174]
+[avalia-docente] [2014-06-25 16:42:55-607] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Atividade drop foreign key FK_fd2fgki6oqb4mr4vxf7km0nxw
+[avalia-docente] [2014-06-25 16:42:55-607] [main] [] [ERROR] [SchemaExport   ]: Table "ATIVIDADE" not found; SQL statement:
+alter table Atividade drop foreign key FK_fd2fgki6oqb4mr4vxf7km0nxw [42102-174]
+[avalia-docente] [2014-06-25 16:42:55-609] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Avaliacao drop foreign key FK_5vksohj4mcqvxcg51n2an28tb
+[avalia-docente] [2014-06-25 16:42:55-609] [main] [] [ERROR] [SchemaExport   ]: Table "AVALIACAO" not found; SQL statement:
+alter table Avaliacao drop foreign key FK_5vksohj4mcqvxcg51n2an28tb [42102-174]
+[avalia-docente] [2014-06-25 16:42:55-611] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Avaliacao drop foreign key FK_ceoong99fopou31vqgwu2wycj
+[avalia-docente] [2014-06-25 16:42:55-611] [main] [] [ERROR] [SchemaExport   ]: Table "AVALIACAO" not found; SQL statement:
+alter table Avaliacao drop foreign key FK_ceoong99fopou31vqgwu2wycj [42102-174]
+[avalia-docente] [2014-06-25 16:42:55-613] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Docente drop foreign key FK_5w8lj8907q09gkf97ud0n9kqn
+[avalia-docente] [2014-06-25 16:42:55-613] [main] [] [ERROR] [SchemaExport   ]: Table "DOCENTE" not found; SQL statement:
+alter table Docente drop foreign key FK_5w8lj8907q09gkf97ud0n9kqn [42102-174]
+[avalia-docente] [2014-06-25 16:42:55-615] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Docente drop foreign key FK_1ojoi9c53cbeheg39nywjm8iv
+[avalia-docente] [2014-06-25 16:42:55-615] [main] [] [ERROR] [SchemaExport   ]: Table "DOCENTE" not found; SQL statement:
+alter table Docente drop foreign key FK_1ojoi9c53cbeheg39nywjm8iv [42102-174]
+[avalia-docente] [2014-06-25 16:42:55-617] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Docente_QuadroSumario drop foreign key FK_e1pyts6nasxxbghp3f3ls16qx
+[avalia-docente] [2014-06-25 16:42:55-617] [main] [] [ERROR] [SchemaExport   ]: Table "DOCENTE_QUADROSUMARIO" not found; SQL statement:
+alter table Docente_QuadroSumario drop foreign key FK_e1pyts6nasxxbghp3f3ls16qx [42102-174]
+[avalia-docente] [2014-06-25 16:42:55-619] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Docente_QuadroSumario drop foreign key FK_7yd0rye7vf1wv080x5exmju7a
+[avalia-docente] [2014-06-25 16:42:55-619] [main] [] [ERROR] [SchemaExport   ]: Table "DOCENTE_QUADROSUMARIO" not found; SQL statement:
+alter table Docente_QuadroSumario drop foreign key FK_7yd0rye7vf1wv080x5exmju7a [42102-174]
+[avalia-docente] [2014-06-25 16:42:55-621] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade drop foreign key FK_ht6byi0p1oxl3ctfa1n0qhok1
+[avalia-docente] [2014-06-25 16:42:55-621] [main] [] [ERROR] [SchemaExport   ]: Table "GRUPOATIVIDADE" not found; SQL statement:
+alter table GrupoAtividade drop foreign key FK_ht6byi0p1oxl3ctfa1n0qhok1 [42102-174]
+[avalia-docente] [2014-06-25 16:42:55-623] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade drop foreign key FK_iuqc0v8w9k1y2fdcx3l8qjl8h
+[avalia-docente] [2014-06-25 16:42:55-623] [main] [] [ERROR] [SchemaExport   ]: Table "GRUPOATIVIDADE" not found; SQL statement:
+alter table GrupoAtividade drop foreign key FK_iuqc0v8w9k1y2fdcx3l8qjl8h [42102-174]
+[avalia-docente] [2014-06-25 16:42:55-625] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade drop foreign key FK_6ts0188i5gi51g6o4inu1cn1w
+[avalia-docente] [2014-06-25 16:42:55-625] [main] [] [ERROR] [SchemaExport   ]: Table "GRUPOATIVIDADE" not found; SQL statement:
+alter table GrupoAtividade drop foreign key FK_6ts0188i5gi51g6o4inu1cn1w [42102-174]
+[avalia-docente] [2014-06-25 16:42:55-627] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade_Atividade drop foreign key FK_1vdk2h22fvgv4i6jhn73if0ln
+[avalia-docente] [2014-06-25 16:42:55-627] [main] [] [ERROR] [SchemaExport   ]: Table "GRUPOATIVIDADE_ATIVIDADE" not found; SQL statement:
+alter table GrupoAtividade_Atividade drop foreign key FK_1vdk2h22fvgv4i6jhn73if0ln [42102-174]
+[avalia-docente] [2014-06-25 16:42:55-629] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade_Atividade drop foreign key FK_k3ua0rdiqga57v3amvkvpesnh
+[avalia-docente] [2014-06-25 16:42:55-629] [main] [] [ERROR] [SchemaExport   ]: Table "GRUPOATIVIDADE_ATIVIDADE" not found; SQL statement:
+alter table GrupoAtividade_Atividade drop foreign key FK_k3ua0rdiqga57v3amvkvpesnh [42102-174]
+[avalia-docente] [2014-06-25 16:42:55-631] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade_NotasGrupoAtividade drop foreign key FK_gev2ekyeg5b5raxu69sap3x8a
+[avalia-docente] [2014-06-25 16:42:55-631] [main] [] [ERROR] [SchemaExport   ]: Table "GRUPOATIVIDADE_NOTASGRUPOATIVIDADE" not found; SQL statement:
+alter table GrupoAtividade_NotasGrupoAtividade drop foreign key FK_gev2ekyeg5b5raxu69sap3x8a [42102-174]
+[avalia-docente] [2014-06-25 16:42:55-632] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade_NotasGrupoAtividade drop foreign key FK_6gyyh0ckfonr2xbm5433026bo
+[avalia-docente] [2014-06-25 16:42:55-632] [main] [] [ERROR] [SchemaExport   ]: Table "GRUPOATIVIDADE_NOTASGRUPOATIVIDADE" not found; SQL statement:
+alter table GrupoAtividade_NotasGrupoAtividade drop foreign key FK_6gyyh0ckfonr2xbm5433026bo [42102-174]
+[avalia-docente] [2014-06-25 16:42:55-634] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table ItemAtividade drop foreign key FK_jk9r9j6scatyqinfpgpkhgwew
+[avalia-docente] [2014-06-25 16:42:55-634] [main] [] [ERROR] [SchemaExport   ]: Table "ITEMATIVIDADE" not found; SQL statement:
+alter table ItemAtividade drop foreign key FK_jk9r9j6scatyqinfpgpkhgwew [42102-174]
+[avalia-docente] [2014-06-25 16:42:55-636] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table ItemAtividade drop foreign key FK_hawfu0txs45v32qud541qhvj0
+[avalia-docente] [2014-06-25 16:42:55-636] [main] [] [ERROR] [SchemaExport   ]: Table "ITEMATIVIDADE" not found; SQL statement:
+alter table ItemAtividade drop foreign key FK_hawfu0txs45v32qud541qhvj0 [42102-174]
+[avalia-docente] [2014-06-25 16:42:55-639] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Multiplicador drop foreign key FK_hcqv7wx7i7u1xt1o64nlw8m4k
+[avalia-docente] [2014-06-25 16:42:55-639] [main] [] [ERROR] [SchemaExport   ]: Table "MULTIPLICADOR" not found; SQL statement:
+alter table Multiplicador drop foreign key FK_hcqv7wx7i7u1xt1o64nlw8m4k [42102-174]
+[avalia-docente] [2014-06-25 16:42:55-641] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table NotasGrupoAtividade drop foreign key FK_m4mij8t1a5pimcues8rse5982
+[avalia-docente] [2014-06-25 16:42:55-641] [main] [] [ERROR] [SchemaExport   ]: Table "NOTASGRUPOATIVIDADE" not found; SQL statement:
+alter table NotasGrupoAtividade drop foreign key FK_m4mij8t1a5pimcues8rse5982 [42102-174]
+[avalia-docente] [2014-06-25 16:42:55-643] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table NotasGrupoAtividade drop foreign key FK_hxu58q4cdpl8y4prnp6x4vifr
+[avalia-docente] [2014-06-25 16:42:55-643] [main] [] [ERROR] [SchemaExport   ]: Table "NOTASGRUPOATIVIDADE" not found; SQL statement:
+alter table NotasGrupoAtividade drop foreign key FK_hxu58q4cdpl8y4prnp6x4vifr [42102-174]
+[avalia-docente] [2014-06-25 16:42:55-646] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table NotasGrupoAtividade drop foreign key FK_ktt14x2jcm3s2y1w50d5h6887
+[avalia-docente] [2014-06-25 16:42:55-646] [main] [] [ERROR] [SchemaExport   ]: Table "NOTASGRUPOATIVIDADE" not found; SQL statement:
+alter table NotasGrupoAtividade drop foreign key FK_ktt14x2jcm3s2y1w50d5h6887 [42102-174]
+[avalia-docente] [2014-06-25 16:42:55-648] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table QuadroSumario drop foreign key FK_9eumvgtrg8s8st4grj9o9vn0r
+[avalia-docente] [2014-06-25 16:42:55-648] [main] [] [ERROR] [SchemaExport   ]: Table "QUADROSUMARIO" not found; SQL statement:
+alter table QuadroSumario drop foreign key FK_9eumvgtrg8s8st4grj9o9vn0r [42102-174]
+[avalia-docente] [2014-06-25 16:42:55-650] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table QuadroSumario drop foreign key FK_a1l6l5hc2c7t4wgtu8gnxftrb
+[avalia-docente] [2014-06-25 16:42:55-650] [main] [] [ERROR] [SchemaExport   ]: Table "QUADROSUMARIO" not found; SQL statement:
+alter table QuadroSumario drop foreign key FK_a1l6l5hc2c7t4wgtu8gnxftrb [42102-174]
+[avalia-docente] [2014-06-25 16:42:55-652] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table QuadroSumario drop foreign key FK_mug8yaiow5onrp3o9qpn2jinw
+[avalia-docente] [2014-06-25 16:42:55-652] [main] [] [ERROR] [SchemaExport   ]: Table "QUADROSUMARIO" not found; SQL statement:
+alter table QuadroSumario drop foreign key FK_mug8yaiow5onrp3o9qpn2jinw [42102-174]
+[avalia-docente] [2014-06-25 16:42:55-654] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table QuadroSumario_NotasGrupoAtividade drop foreign key FK_gilaf5gfg8igldf3gyq3koclp
+[avalia-docente] [2014-06-25 16:42:55-654] [main] [] [ERROR] [SchemaExport   ]: Table "QUADROSUMARIO_NOTASGRUPOATIVIDADE" not found; SQL statement:
+alter table QuadroSumario_NotasGrupoAtividade drop foreign key FK_gilaf5gfg8igldf3gyq3koclp [42102-174]
+[avalia-docente] [2014-06-25 16:42:55-656] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table QuadroSumario_NotasGrupoAtividade drop foreign key FK_a4rnxy76uwoiiybdpmrb6acf4
+[avalia-docente] [2014-06-25 16:42:55-656] [main] [] [ERROR] [SchemaExport   ]: Table "QUADROSUMARIO_NOTASGRUPOATIVIDADE" not found; SQL statement:
+alter table QuadroSumario_NotasGrupoAtividade drop foreign key FK_a4rnxy76uwoiiybdpmrb6acf4 [42102-174]
+[avalia-docente] [2014-06-25 16:42:55-658] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Regime drop foreign key FK_eyso6s2nirtpntyxmfnw94mi3
+[avalia-docente] [2014-06-25 16:42:55-658] [main] [] [ERROR] [SchemaExport   ]: Table "REGIME" not found; SQL statement:
+alter table Regime drop foreign key FK_eyso6s2nirtpntyxmfnw94mi3 [42102-174]
+[avalia-docente] [2014-06-25 16:42:55-660] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Resolucao drop foreign key FK_ptpvfefs5yo95ixprxnbdb72a
+[avalia-docente] [2014-06-25 16:42:55-660] [main] [] [ERROR] [SchemaExport   ]: Table "RESOLUCAO" not found; SQL statement:
+alter table Resolucao drop foreign key FK_ptpvfefs5yo95ixprxnbdb72a [42102-174]
+[avalia-docente] [2014-06-25 16:42:55-663] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Resolucao_QuadroSumario drop foreign key FK_4nefcaij79acqceelmb3h19oh
+[avalia-docente] [2014-06-25 16:42:55-663] [main] [] [ERROR] [SchemaExport   ]: Table "RESOLUCAO_QUADROSUMARIO" not found; SQL statement:
+alter table Resolucao_QuadroSumario drop foreign key FK_4nefcaij79acqceelmb3h19oh [42102-174]
+[avalia-docente] [2014-06-25 16:42:55-665] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Resolucao_QuadroSumario drop foreign key FK_2iv10wqnx484wbhfmprie3eln
+[avalia-docente] [2014-06-25 16:42:55-665] [main] [] [ERROR] [SchemaExport   ]: Table "RESOLUCAO_QUADROSUMARIO" not found; SQL statement:
+alter table Resolucao_QuadroSumario drop foreign key FK_2iv10wqnx484wbhfmprie3eln [42102-174]
+[avalia-docente] [2014-06-25 16:42:55-681] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Atividade add index FK_6s9e2tavcspah7m9f8wyxrq8y (versao_anterior), add constraint FK_6s9e2tavcspah7m9f8wyxrq8y foreign key (versao_anterior) references Atividade (id)
+[avalia-docente] [2014-06-25 16:42:55-681] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_6S9E2TAVCSPAH7M9F8WYXRQ8Y"; SQL statement:
+alter table Atividade add index FK_6s9e2tavcspah7m9f8wyxrq8y (versao_anterior), add constraint FK_6s9e2tavcspah7m9f8wyxrq8y foreign key (versao_anterior) references Atividade (id) [50004-174]
+[avalia-docente] [2014-06-25 16:42:55-684] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Atividade add index FK_fk8w73e07qv9h1w25xpg64ebk (grupo_atividade_id), add constraint FK_fk8w73e07qv9h1w25xpg64ebk foreign key (grupo_atividade_id) references GrupoAtividade (id)
+[avalia-docente] [2014-06-25 16:42:55-684] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_FK8W73E07QV9H1W25XPG64EBK"; SQL statement:
+alter table Atividade add index FK_fk8w73e07qv9h1w25xpg64ebk (grupo_atividade_id), add constraint FK_fk8w73e07qv9h1w25xpg64ebk foreign key (grupo_atividade_id) references GrupoAtividade (id) [50004-174]
+[avalia-docente] [2014-06-25 16:42:55-686] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Atividade add index FK_fd2fgki6oqb4mr4vxf7km0nxw (multiplicador_id), add constraint FK_fd2fgki6oqb4mr4vxf7km0nxw foreign key (multiplicador_id) references Multiplicador (id)
+[avalia-docente] [2014-06-25 16:42:55-686] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_FD2FGKI6OQB4MR4VXF7KM0NXW"; SQL statement:
+alter table Atividade add index FK_fd2fgki6oqb4mr4vxf7km0nxw (multiplicador_id), add constraint FK_fd2fgki6oqb4mr4vxf7km0nxw foreign key (multiplicador_id) references Multiplicador (id) [50004-174]
+[avalia-docente] [2014-06-25 16:42:55-687] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Avaliacao add index FK_5vksohj4mcqvxcg51n2an28tb (versao_anterior), add constraint FK_5vksohj4mcqvxcg51n2an28tb foreign key (versao_anterior) references Avaliacao (id)
+[avalia-docente] [2014-06-25 16:42:55-687] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_5VKSOHJ4MCQVXCG51N2AN28TB"; SQL statement:
+alter table Avaliacao add index FK_5vksohj4mcqvxcg51n2an28tb (versao_anterior), add constraint FK_5vksohj4mcqvxcg51n2an28tb foreign key (versao_anterior) references Avaliacao (id) [50004-174]
+[avalia-docente] [2014-06-25 16:42:55-689] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Avaliacao add index FK_ceoong99fopou31vqgwu2wycj (docente_id), add constraint FK_ceoong99fopou31vqgwu2wycj foreign key (docente_id) references Docente (id)
+[avalia-docente] [2014-06-25 16:42:55-689] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_CEOONG99FOPOU31VQGWU2WYCJ"; SQL statement:
+alter table Avaliacao add index FK_ceoong99fopou31vqgwu2wycj (docente_id), add constraint FK_ceoong99fopou31vqgwu2wycj foreign key (docente_id) references Docente (id) [50004-174]
+[avalia-docente] [2014-06-25 16:42:55-691] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Docente add index FK_5w8lj8907q09gkf97ud0n9kqn (versao_anterior), add constraint FK_5w8lj8907q09gkf97ud0n9kqn foreign key (versao_anterior) references Docente (id)
+[avalia-docente] [2014-06-25 16:42:55-691] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_5W8LJ8907Q09GKF97UD0N9KQN"; SQL statement:
+alter table Docente add index FK_5w8lj8907q09gkf97ud0n9kqn (versao_anterior), add constraint FK_5w8lj8907q09gkf97ud0n9kqn foreign key (versao_anterior) references Docente (id) [50004-174]
+[avalia-docente] [2014-06-25 16:42:55-692] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Docente add index FK_1ojoi9c53cbeheg39nywjm8iv (regime_id), add constraint FK_1ojoi9c53cbeheg39nywjm8iv foreign key (regime_id) references Regime (id)
+[avalia-docente] [2014-06-25 16:42:55-692] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_1OJOI9C53CBEHEG39NYWJM8IV"; SQL statement:
+alter table Docente add index FK_1ojoi9c53cbeheg39nywjm8iv (regime_id), add constraint FK_1ojoi9c53cbeheg39nywjm8iv foreign key (regime_id) references Regime (id) [50004-174]
+[avalia-docente] [2014-06-25 16:42:55-694] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Docente_QuadroSumario add index FK_e1pyts6nasxxbghp3f3ls16qx (quadroSumarios_id), add constraint FK_e1pyts6nasxxbghp3f3ls16qx foreign key (quadroSumarios_id) references QuadroSumario (id)
+[avalia-docente] [2014-06-25 16:42:55-694] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_E1PYTS6NASXXBGHP3F3LS16QX"; SQL statement:
+alter table Docente_QuadroSumario add index FK_e1pyts6nasxxbghp3f3ls16qx (quadroSumarios_id), add constraint FK_e1pyts6nasxxbghp3f3ls16qx foreign key (quadroSumarios_id) references QuadroSumario (id) [50004-174]
+[avalia-docente] [2014-06-25 16:42:55-696] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Docente_QuadroSumario add index FK_7yd0rye7vf1wv080x5exmju7a (Docente_id), add constraint FK_7yd0rye7vf1wv080x5exmju7a foreign key (Docente_id) references Docente (id)
+[avalia-docente] [2014-06-25 16:42:55-696] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_7YD0RYE7VF1WV080X5EXMJU7A"; SQL statement:
+alter table Docente_QuadroSumario add index FK_7yd0rye7vf1wv080x5exmju7a (Docente_id), add constraint FK_7yd0rye7vf1wv080x5exmju7a foreign key (Docente_id) references Docente (id) [50004-174]
+[avalia-docente] [2014-06-25 16:42:55-710] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade add index FK_ht6byi0p1oxl3ctfa1n0qhok1 (versao_anterior), add constraint FK_ht6byi0p1oxl3ctfa1n0qhok1 foreign key (versao_anterior) references GrupoAtividade (id)
+[avalia-docente] [2014-06-25 16:42:55-710] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_HT6BYI0P1OXL3CTFA1N0QHOK1"; SQL statement:
+alter table GrupoAtividade add index FK_ht6byi0p1oxl3ctfa1n0qhok1 (versao_anterior), add constraint FK_ht6byi0p1oxl3ctfa1n0qhok1 foreign key (versao_anterior) references GrupoAtividade (id) [50004-174]
+[avalia-docente] [2014-06-25 16:42:55-712] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade add index FK_iuqc0v8w9k1y2fdcx3l8qjl8h (grupo_atividade_pai_id), add constraint FK_iuqc0v8w9k1y2fdcx3l8qjl8h foreign key (grupo_atividade_pai_id) references GrupoAtividade (id)
+[avalia-docente] [2014-06-25 16:42:55-713] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_IUQC0V8W9K1Y2FDCX3L8QJL8H"; SQL statement:
+alter table GrupoAtividade add index FK_iuqc0v8w9k1y2fdcx3l8qjl8h (grupo_atividade_pai_id), add constraint FK_iuqc0v8w9k1y2fdcx3l8qjl8h foreign key (grupo_atividade_pai_id) references GrupoAtividade (id) [50004-174]
+[avalia-docente] [2014-06-25 16:42:55-714] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade add index FK_6ts0188i5gi51g6o4inu1cn1w (resolucao_id), add constraint FK_6ts0188i5gi51g6o4inu1cn1w foreign key (resolucao_id) references Resolucao (id)
+[avalia-docente] [2014-06-25 16:42:55-714] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_6TS0188I5GI51G6O4INU1CN1W"; SQL statement:
+alter table GrupoAtividade add index FK_6ts0188i5gi51g6o4inu1cn1w (resolucao_id), add constraint FK_6ts0188i5gi51g6o4inu1cn1w foreign key (resolucao_id) references Resolucao (id) [50004-174]
+[avalia-docente] [2014-06-25 16:42:55-715] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade_Atividade add index FK_1vdk2h22fvgv4i6jhn73if0ln (atividades_id), add constraint FK_1vdk2h22fvgv4i6jhn73if0ln foreign key (atividades_id) references Atividade (id)
+[avalia-docente] [2014-06-25 16:42:55-715] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_1VDK2H22FVGV4I6JHN73IF0LN"; SQL statement:
+alter table GrupoAtividade_Atividade add index FK_1vdk2h22fvgv4i6jhn73if0ln (atividades_id), add constraint FK_1vdk2h22fvgv4i6jhn73if0ln foreign key (atividades_id) references Atividade (id) [50004-174]
+[avalia-docente] [2014-06-25 16:42:55-717] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade_Atividade add index FK_k3ua0rdiqga57v3amvkvpesnh (GrupoAtividade_id), add constraint FK_k3ua0rdiqga57v3amvkvpesnh foreign key (GrupoAtividade_id) references GrupoAtividade (id)
+[avalia-docente] [2014-06-25 16:42:55-717] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_K3UA0RDIQGA57V3AMVKVPESNH"; SQL statement:
+alter table GrupoAtividade_Atividade add index FK_k3ua0rdiqga57v3amvkvpesnh (GrupoAtividade_id), add constraint FK_k3ua0rdiqga57v3amvkvpesnh foreign key (GrupoAtividade_id) references GrupoAtividade (id) [50004-174]
+[avalia-docente] [2014-06-25 16:42:55-718] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade_NotasGrupoAtividade add index FK_gev2ekyeg5b5raxu69sap3x8a (notasGrupoAtividades_id), add constraint FK_gev2ekyeg5b5raxu69sap3x8a foreign key (notasGrupoAtividades_id) references NotasGrupoAtividade (id)
+[avalia-docente] [2014-06-25 16:42:55-718] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_GEV2EKYEG5B5RAXU69SAP3X8A"; SQL statement:
+alter table GrupoAtividade_NotasGrupoAtividade add index FK_gev2ekyeg5b5raxu69sap3x8a (notasGrupoAtividades_id), add constraint FK_gev2ekyeg5b5raxu69sap3x8a foreign key (notasGrupoAtividades_id) references NotasGrupoAtividade (id) [50004-174]
+[avalia-docente] [2014-06-25 16:42:55-719] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade_NotasGrupoAtividade add index FK_6gyyh0ckfonr2xbm5433026bo (GrupoAtividade_id), add constraint FK_6gyyh0ckfonr2xbm5433026bo foreign key (GrupoAtividade_id) references GrupoAtividade (id)
+[avalia-docente] [2014-06-25 16:42:55-719] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_6GYYH0CKFONR2XBM5433026BO"; SQL statement:
+alter table GrupoAtividade_NotasGrupoAtividade add index FK_6gyyh0ckfonr2xbm5433026bo (GrupoAtividade_id), add constraint FK_6gyyh0ckfonr2xbm5433026bo foreign key (GrupoAtividade_id) references GrupoAtividade (id) [50004-174]
+[avalia-docente] [2014-06-25 16:42:55-720] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table ItemAtividade add index FK_jk9r9j6scatyqinfpgpkhgwew (versao_anterior), add constraint FK_jk9r9j6scatyqinfpgpkhgwew foreign key (versao_anterior) references ItemAtividade (id)
+[avalia-docente] [2014-06-25 16:42:55-720] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_JK9R9J6SCATYQINFPGPKHGWEW"; SQL statement:
+alter table ItemAtividade add index FK_jk9r9j6scatyqinfpgpkhgwew (versao_anterior), add constraint FK_jk9r9j6scatyqinfpgpkhgwew foreign key (versao_anterior) references ItemAtividade (id) [50004-174]
+[avalia-docente] [2014-06-25 16:42:55-721] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table ItemAtividade add index FK_hawfu0txs45v32qud541qhvj0 (atividade_id), add constraint FK_hawfu0txs45v32qud541qhvj0 foreign key (atividade_id) references Atividade (id)
+[avalia-docente] [2014-06-25 16:42:55-721] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_HAWFU0TXS45V32QUD541QHVJ0"; SQL statement:
+alter table ItemAtividade add index FK_hawfu0txs45v32qud541qhvj0 (atividade_id), add constraint FK_hawfu0txs45v32qud541qhvj0 foreign key (atividade_id) references Atividade (id) [50004-174]
+[avalia-docente] [2014-06-25 16:42:55-722] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Multiplicador add index FK_hcqv7wx7i7u1xt1o64nlw8m4k (versao_anterior), add constraint FK_hcqv7wx7i7u1xt1o64nlw8m4k foreign key (versao_anterior) references Multiplicador (id)
+[avalia-docente] [2014-06-25 16:42:55-722] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_HCQV7WX7I7U1XT1O64NLW8M4K"; SQL statement:
+alter table Multiplicador add index FK_hcqv7wx7i7u1xt1o64nlw8m4k (versao_anterior), add constraint FK_hcqv7wx7i7u1xt1o64nlw8m4k foreign key (versao_anterior) references Multiplicador (id) [50004-174]
+[avalia-docente] [2014-06-25 16:42:55-723] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table NotasGrupoAtividade add index FK_m4mij8t1a5pimcues8rse5982 (versao_anterior), add constraint FK_m4mij8t1a5pimcues8rse5982 foreign key (versao_anterior) references NotasGrupoAtividade (id)
+[avalia-docente] [2014-06-25 16:42:55-723] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_M4MIJ8T1A5PIMCUES8RSE5982"; SQL statement:
+alter table NotasGrupoAtividade add index FK_m4mij8t1a5pimcues8rse5982 (versao_anterior), add constraint FK_m4mij8t1a5pimcues8rse5982 foreign key (versao_anterior) references NotasGrupoAtividade (id) [50004-174]
+[avalia-docente] [2014-06-25 16:42:55-725] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table NotasGrupoAtividade add index FK_hxu58q4cdpl8y4prnp6x4vifr (grupo_atividade_id), add constraint FK_hxu58q4cdpl8y4prnp6x4vifr foreign key (grupo_atividade_id) references GrupoAtividade (id)
+[avalia-docente] [2014-06-25 16:42:55-725] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_HXU58Q4CDPL8Y4PRNP6X4VIFR"; SQL statement:
+alter table NotasGrupoAtividade add index FK_hxu58q4cdpl8y4prnp6x4vifr (grupo_atividade_id), add constraint FK_hxu58q4cdpl8y4prnp6x4vifr foreign key (grupo_atividade_id) references GrupoAtividade (id) [50004-174]
+[avalia-docente] [2014-06-25 16:42:55-727] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table NotasGrupoAtividade add index FK_ktt14x2jcm3s2y1w50d5h6887 (quadro_sumario_id), add constraint FK_ktt14x2jcm3s2y1w50d5h6887 foreign key (quadro_sumario_id) references QuadroSumario (id)
+[avalia-docente] [2014-06-25 16:42:55-727] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_KTT14X2JCM3S2Y1W50D5H6887"; SQL statement:
+alter table NotasGrupoAtividade add index FK_ktt14x2jcm3s2y1w50d5h6887 (quadro_sumario_id), add constraint FK_ktt14x2jcm3s2y1w50d5h6887 foreign key (quadro_sumario_id) references QuadroSumario (id) [50004-174]
+[avalia-docente] [2014-06-25 16:42:55-728] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table QuadroSumario add index FK_9eumvgtrg8s8st4grj9o9vn0r (versao_anterior), add constraint FK_9eumvgtrg8s8st4grj9o9vn0r foreign key (versao_anterior) references QuadroSumario (id)
+[avalia-docente] [2014-06-25 16:42:55-728] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_9EUMVGTRG8S8ST4GRJ9O9VN0R"; SQL statement:
+alter table QuadroSumario add index FK_9eumvgtrg8s8st4grj9o9vn0r (versao_anterior), add constraint FK_9eumvgtrg8s8st4grj9o9vn0r foreign key (versao_anterior) references QuadroSumario (id) [50004-174]
+[avalia-docente] [2014-06-25 16:42:55-729] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table QuadroSumario add index FK_a1l6l5hc2c7t4wgtu8gnxftrb (docente_id), add constraint FK_a1l6l5hc2c7t4wgtu8gnxftrb foreign key (docente_id) references Docente (id)
+[avalia-docente] [2014-06-25 16:42:55-729] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_A1L6L5HC2C7T4WGTU8GNXFTRB"; SQL statement:
+alter table QuadroSumario add index FK_a1l6l5hc2c7t4wgtu8gnxftrb (docente_id), add constraint FK_a1l6l5hc2c7t4wgtu8gnxftrb foreign key (docente_id) references Docente (id) [50004-174]
+[avalia-docente] [2014-06-25 16:42:55-730] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table QuadroSumario add index FK_mug8yaiow5onrp3o9qpn2jinw (resolucao_id), add constraint FK_mug8yaiow5onrp3o9qpn2jinw foreign key (resolucao_id) references Resolucao (id)
+[avalia-docente] [2014-06-25 16:42:55-730] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_MUG8YAIOW5ONRP3O9QPN2JINW"; SQL statement:
+alter table QuadroSumario add index FK_mug8yaiow5onrp3o9qpn2jinw (resolucao_id), add constraint FK_mug8yaiow5onrp3o9qpn2jinw foreign key (resolucao_id) references Resolucao (id) [50004-174]
+[avalia-docente] [2014-06-25 16:42:55-731] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table QuadroSumario_NotasGrupoAtividade add index FK_gilaf5gfg8igldf3gyq3koclp (notasGrupoAtividades_id), add constraint FK_gilaf5gfg8igldf3gyq3koclp foreign key (notasGrupoAtividades_id) references NotasGrupoAtividade (id)
+[avalia-docente] [2014-06-25 16:42:55-731] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_GILAF5GFG8IGLDF3GYQ3KOCLP"; SQL statement:
+alter table QuadroSumario_NotasGrupoAtividade add index FK_gilaf5gfg8igldf3gyq3koclp (notasGrupoAtividades_id), add constraint FK_gilaf5gfg8igldf3gyq3koclp foreign key (notasGrupoAtividades_id) references NotasGrupoAtividade (id) [50004-174]
+[avalia-docente] [2014-06-25 16:42:55-732] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table QuadroSumario_NotasGrupoAtividade add index FK_a4rnxy76uwoiiybdpmrb6acf4 (QuadroSumario_id), add constraint FK_a4rnxy76uwoiiybdpmrb6acf4 foreign key (QuadroSumario_id) references QuadroSumario (id)
+[avalia-docente] [2014-06-25 16:42:55-732] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_A4RNXY76UWOIIYBDPMRB6ACF4"; SQL statement:
+alter table QuadroSumario_NotasGrupoAtividade add index FK_a4rnxy76uwoiiybdpmrb6acf4 (QuadroSumario_id), add constraint FK_a4rnxy76uwoiiybdpmrb6acf4 foreign key (QuadroSumario_id) references QuadroSumario (id) [50004-174]
+[avalia-docente] [2014-06-25 16:42:55-734] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Regime add index FK_eyso6s2nirtpntyxmfnw94mi3 (versao_anterior), add constraint FK_eyso6s2nirtpntyxmfnw94mi3 foreign key (versao_anterior) references Regime (id)
+[avalia-docente] [2014-06-25 16:42:55-734] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_EYSO6S2NIRTPNTYXMFNW94MI3"; SQL statement:
+alter table Regime add index FK_eyso6s2nirtpntyxmfnw94mi3 (versao_anterior), add constraint FK_eyso6s2nirtpntyxmfnw94mi3 foreign key (versao_anterior) references Regime (id) [50004-174]
+[avalia-docente] [2014-06-25 16:42:55-735] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Resolucao add index FK_ptpvfefs5yo95ixprxnbdb72a (versao_anterior), add constraint FK_ptpvfefs5yo95ixprxnbdb72a foreign key (versao_anterior) references Resolucao (id)
+[avalia-docente] [2014-06-25 16:42:55-735] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_PTPVFEFS5YO95IXPRXNBDB72A"; SQL statement:
+alter table Resolucao add index FK_ptpvfefs5yo95ixprxnbdb72a (versao_anterior), add constraint FK_ptpvfefs5yo95ixprxnbdb72a foreign key (versao_anterior) references Resolucao (id) [50004-174]
+[avalia-docente] [2014-06-25 16:42:55-736] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Resolucao_QuadroSumario add index FK_4nefcaij79acqceelmb3h19oh (quadroSumarios_id), add constraint FK_4nefcaij79acqceelmb3h19oh foreign key (quadroSumarios_id) references QuadroSumario (id)
+[avalia-docente] [2014-06-25 16:42:55-736] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_4NEFCAIJ79ACQCEELMB3H19OH"; SQL statement:
+alter table Resolucao_QuadroSumario add index FK_4nefcaij79acqceelmb3h19oh (quadroSumarios_id), add constraint FK_4nefcaij79acqceelmb3h19oh foreign key (quadroSumarios_id) references QuadroSumario (id) [50004-174]
+[avalia-docente] [2014-06-25 16:42:55-737] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Resolucao_QuadroSumario add index FK_2iv10wqnx484wbhfmprie3eln (Resolucao_id), add constraint FK_2iv10wqnx484wbhfmprie3eln foreign key (Resolucao_id) references Resolucao (id)
+[avalia-docente] [2014-06-25 16:42:55-737] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_2IV10WQNX484WBHFMPRIE3ELN"; SQL statement:
+alter table Resolucao_QuadroSumario add index FK_2iv10wqnx484wbhfmprie3eln (Resolucao_id), add constraint FK_2iv10wqnx484wbhfmprie3eln foreign key (Resolucao_id) references Resolucao (id) [50004-174]
+[avalia-docente] [2014-06-25 16:42:55-737] [main] [] [INFO ] [SchemaExport   ]: HHH000230: Schema export complete
+[avalia-docente] [2014-06-25 16:42:55-774] [main] [] [INFO ] [GenericApplicationContext]: Bean 'entityManagerFactory' of type [class org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[avalia-docente] [2014-06-25 16:42:55-782] [main] [] [INFO ] [DefaultListableBeanFactory]: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@62158e60: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,dataSource,jpaProperties,org.springframework.orm.hibernate4.HibernateExceptionTranslator#0,org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor#0,jpaVendorAdapter,entityManagerFactory,transactionManager,multiplicadorRepository,atividadeRepository,grupoAtividadeRepository,itemAtividadeRepository,notasGrupoAtividadeRepository,quadroSumarioRepository,docenteRepository,resolucaoRepository,org.springframework.data.repository.core.support.RepositoryInterfaceAwareBeanPostProcessor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+[avalia-docente] [2014-06-25 16:42:56-008] [main] [] [WARN ] [AbstractTableMetaData]: Potential problem found: The configured data type factory 'class org.dbunit.dataset.datatype.DefaultDataTypeFactory' might cause problems with the current database 'H2' (e.g. some datatypes may not be supported properly). In rare cases you might see this message because the list of supported database products is incomplete (list=[derby]). If so please request a java-class update via the forums.If you are using your own IDataTypeFactory extending DefaultDataTypeFactory, ensure that you override getValidDbProducts() to specify the supported database products.
+[avalia-docente] [2014-06-25 16:42:56-042] [main] [] [WARN ] [AbstractTableMetaData]: Potential problem found: The configured data type factory 'class org.dbunit.dataset.datatype.DefaultDataTypeFactory' might cause problems with the current database 'H2' (e.g. some datatypes may not be supported properly). In rare cases you might see this message because the list of supported database products is incomplete (list=[derby]). If so please request a java-class update via the forums.If you are using your own IDataTypeFactory extending DefaultDataTypeFactory, ensure that you override getValidDbProducts() to specify the supported database products.
+[avalia-docente] [2014-06-25 16:42:56-087] [main] [] [WARN ] [AbstractTableMetaData]: Potential problem found: The configured data type factory 'class org.dbunit.dataset.datatype.DefaultDataTypeFactory' might cause problems with the current database 'H2' (e.g. some datatypes may not be supported properly). In rare cases you might see this message because the list of supported database products is incomplete (list=[derby]). If so please request a java-class update via the forums.If you are using your own IDataTypeFactory extending DefaultDataTypeFactory, ensure that you override getValidDbProducts() to specify the supported database products.
+[avalia-docente] [2014-06-25 16:42:56-180] [main] [] [WARN ] [AbstractTableMetaData]: Potential problem found: The configured data type factory 'class org.dbunit.dataset.datatype.DefaultDataTypeFactory' might cause problems with the current database 'H2' (e.g. some datatypes may not be supported properly). In rare cases you might see this message because the list of supported database products is incomplete (list=[derby]). If so please request a java-class update via the forums.If you are using your own IDataTypeFactory extending DefaultDataTypeFactory, ensure that you override getValidDbProducts() to specify the supported database products.
+[avalia-docente] [2014-06-25 16:42:56-216] [main] [] [WARN ] [AbstractTableMetaData]: Potential problem found: The configured data type factory 'class org.dbunit.dataset.datatype.DefaultDataTypeFactory' might cause problems with the current database 'H2' (e.g. some datatypes may not be supported properly). In rare cases you might see this message because the list of supported database products is incomplete (list=[derby]). If so please request a java-class update via the forums.If you are using your own IDataTypeFactory extending DefaultDataTypeFactory, ensure that you override getValidDbProducts() to specify the supported database products.
+[avalia-docente] [2014-06-25 16:42:56-233] [Thread-7] [] [INFO ] [GenericApplicationContext]: Closing org.springframework.context.support.GenericApplicationContext@9482acb: startup date [Wed Jun 25 16:42:54 BRT 2014]; root of context hierarchy
+[avalia-docente] [2014-06-25 16:42:56-233] [Thread-7] [] [INFO ] [DefaultListableBeanFactory]: Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@62158e60: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,dataSource,jpaProperties,org.springframework.orm.hibernate4.HibernateExceptionTranslator#0,org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor#0,jpaVendorAdapter,entityManagerFactory,transactionManager,multiplicadorRepository,atividadeRepository,grupoAtividadeRepository,itemAtividadeRepository,notasGrupoAtividadeRepository,quadroSumarioRepository,docenteRepository,resolucaoRepository,org.springframework.data.repository.core.support.RepositoryInterfaceAwareBeanPostProcessor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+[avalia-docente] [2014-06-25 16:42:56-236] [Thread-7] [] [INFO ] [LocalContainerEntityManagerFactoryBean]: Closing JPA EntityManagerFactory for persistence unit 'avaliaDocente'
+[avalia-docente] [2014-06-25 16:42:56-236] [Thread-7] [] [INFO ] [SchemaExport   ]: HHH000227: Running hbm2ddl schema export
+[avalia-docente] [2014-06-25 16:42:56-238] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Atividade drop foreign key FK_6s9e2tavcspah7m9f8wyxrq8y
+[avalia-docente] [2014-06-25 16:42:56-238] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table Atividade drop foreign key FK_6s9e2tavcspah7m9f8wyxrq8y [42122-174]
+[avalia-docente] [2014-06-25 16:42:56-238] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Atividade drop foreign key FK_fk8w73e07qv9h1w25xpg64ebk
+[avalia-docente] [2014-06-25 16:42:56-238] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table Atividade drop foreign key FK_fk8w73e07qv9h1w25xpg64ebk [42122-174]
+[avalia-docente] [2014-06-25 16:42:56-239] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Atividade drop foreign key FK_fd2fgki6oqb4mr4vxf7km0nxw
+[avalia-docente] [2014-06-25 16:42:56-239] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table Atividade drop foreign key FK_fd2fgki6oqb4mr4vxf7km0nxw [42122-174]
+[avalia-docente] [2014-06-25 16:42:56-240] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Avaliacao drop foreign key FK_5vksohj4mcqvxcg51n2an28tb
+[avalia-docente] [2014-06-25 16:42:56-240] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table Avaliacao drop foreign key FK_5vksohj4mcqvxcg51n2an28tb [42122-174]
+[avalia-docente] [2014-06-25 16:42:56-241] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Avaliacao drop foreign key FK_ceoong99fopou31vqgwu2wycj
+[avalia-docente] [2014-06-25 16:42:56-241] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table Avaliacao drop foreign key FK_ceoong99fopou31vqgwu2wycj [42122-174]
+[avalia-docente] [2014-06-25 16:42:56-242] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Docente drop foreign key FK_5w8lj8907q09gkf97ud0n9kqn
+[avalia-docente] [2014-06-25 16:42:56-242] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table Docente drop foreign key FK_5w8lj8907q09gkf97ud0n9kqn [42122-174]
+[avalia-docente] [2014-06-25 16:42:56-243] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Docente drop foreign key FK_1ojoi9c53cbeheg39nywjm8iv
+[avalia-docente] [2014-06-25 16:42:56-243] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table Docente drop foreign key FK_1ojoi9c53cbeheg39nywjm8iv [42122-174]
+[avalia-docente] [2014-06-25 16:42:56-244] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Docente_QuadroSumario drop foreign key FK_e1pyts6nasxxbghp3f3ls16qx
+[avalia-docente] [2014-06-25 16:42:56-244] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table Docente_QuadroSumario drop foreign key FK_e1pyts6nasxxbghp3f3ls16qx [42122-174]
+[avalia-docente] [2014-06-25 16:42:56-245] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Docente_QuadroSumario drop foreign key FK_7yd0rye7vf1wv080x5exmju7a
+[avalia-docente] [2014-06-25 16:42:56-245] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table Docente_QuadroSumario drop foreign key FK_7yd0rye7vf1wv080x5exmju7a [42122-174]
+[avalia-docente] [2014-06-25 16:42:56-245] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade drop foreign key FK_ht6byi0p1oxl3ctfa1n0qhok1
+[avalia-docente] [2014-06-25 16:42:56-245] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table GrupoAtividade drop foreign key FK_ht6byi0p1oxl3ctfa1n0qhok1 [42122-174]
+[avalia-docente] [2014-06-25 16:42:56-246] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade drop foreign key FK_iuqc0v8w9k1y2fdcx3l8qjl8h
+[avalia-docente] [2014-06-25 16:42:56-246] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table GrupoAtividade drop foreign key FK_iuqc0v8w9k1y2fdcx3l8qjl8h [42122-174]
+[avalia-docente] [2014-06-25 16:42:56-247] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade drop foreign key FK_6ts0188i5gi51g6o4inu1cn1w
+[avalia-docente] [2014-06-25 16:42:56-247] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table GrupoAtividade drop foreign key FK_6ts0188i5gi51g6o4inu1cn1w [42122-174]
+[avalia-docente] [2014-06-25 16:42:56-248] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade_Atividade drop foreign key FK_1vdk2h22fvgv4i6jhn73if0ln
+[avalia-docente] [2014-06-25 16:42:56-248] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table GrupoAtividade_Atividade drop foreign key FK_1vdk2h22fvgv4i6jhn73if0ln [42122-174]
+[avalia-docente] [2014-06-25 16:42:56-249] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade_Atividade drop foreign key FK_k3ua0rdiqga57v3amvkvpesnh
+[avalia-docente] [2014-06-25 16:42:56-249] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table GrupoAtividade_Atividade drop foreign key FK_k3ua0rdiqga57v3amvkvpesnh [42122-174]
+[avalia-docente] [2014-06-25 16:42:56-249] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade_NotasGrupoAtividade drop foreign key FK_gev2ekyeg5b5raxu69sap3x8a
+[avalia-docente] [2014-06-25 16:42:56-249] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table GrupoAtividade_NotasGrupoAtividade drop foreign key FK_gev2ekyeg5b5raxu69sap3x8a [42122-174]
+[avalia-docente] [2014-06-25 16:42:56-250] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade_NotasGrupoAtividade drop foreign key FK_6gyyh0ckfonr2xbm5433026bo
+[avalia-docente] [2014-06-25 16:42:56-250] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table GrupoAtividade_NotasGrupoAtividade drop foreign key FK_6gyyh0ckfonr2xbm5433026bo [42122-174]
+[avalia-docente] [2014-06-25 16:42:56-251] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table ItemAtividade drop foreign key FK_jk9r9j6scatyqinfpgpkhgwew
+[avalia-docente] [2014-06-25 16:42:56-251] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table ItemAtividade drop foreign key FK_jk9r9j6scatyqinfpgpkhgwew [42122-174]
+[avalia-docente] [2014-06-25 16:42:56-252] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table ItemAtividade drop foreign key FK_hawfu0txs45v32qud541qhvj0
+[avalia-docente] [2014-06-25 16:42:56-252] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table ItemAtividade drop foreign key FK_hawfu0txs45v32qud541qhvj0 [42122-174]
+[avalia-docente] [2014-06-25 16:42:56-252] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Multiplicador drop foreign key FK_hcqv7wx7i7u1xt1o64nlw8m4k
+[avalia-docente] [2014-06-25 16:42:56-252] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table Multiplicador drop foreign key FK_hcqv7wx7i7u1xt1o64nlw8m4k [42122-174]
+[avalia-docente] [2014-06-25 16:42:56-253] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table NotasGrupoAtividade drop foreign key FK_m4mij8t1a5pimcues8rse5982
+[avalia-docente] [2014-06-25 16:42:56-253] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table NotasGrupoAtividade drop foreign key FK_m4mij8t1a5pimcues8rse5982 [42122-174]
+[avalia-docente] [2014-06-25 16:42:56-254] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table NotasGrupoAtividade drop foreign key FK_hxu58q4cdpl8y4prnp6x4vifr
+[avalia-docente] [2014-06-25 16:42:56-254] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table NotasGrupoAtividade drop foreign key FK_hxu58q4cdpl8y4prnp6x4vifr [42122-174]
+[avalia-docente] [2014-06-25 16:42:56-255] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table NotasGrupoAtividade drop foreign key FK_ktt14x2jcm3s2y1w50d5h6887
+[avalia-docente] [2014-06-25 16:42:56-255] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table NotasGrupoAtividade drop foreign key FK_ktt14x2jcm3s2y1w50d5h6887 [42122-174]
+[avalia-docente] [2014-06-25 16:42:56-255] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table QuadroSumario drop foreign key FK_9eumvgtrg8s8st4grj9o9vn0r
+[avalia-docente] [2014-06-25 16:42:56-255] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table QuadroSumario drop foreign key FK_9eumvgtrg8s8st4grj9o9vn0r [42122-174]
+[avalia-docente] [2014-06-25 16:42:56-256] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table QuadroSumario drop foreign key FK_a1l6l5hc2c7t4wgtu8gnxftrb
+[avalia-docente] [2014-06-25 16:42:56-256] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table QuadroSumario drop foreign key FK_a1l6l5hc2c7t4wgtu8gnxftrb [42122-174]
+[avalia-docente] [2014-06-25 16:42:56-257] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table QuadroSumario drop foreign key FK_mug8yaiow5onrp3o9qpn2jinw
+[avalia-docente] [2014-06-25 16:42:56-257] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table QuadroSumario drop foreign key FK_mug8yaiow5onrp3o9qpn2jin[avalia-docente] [2014-06-25 16:45:35-854] [main] [] [INFO ] [XmlBeanDefinitionReader]: Loading XML bean definitions from class path resource [META-INF/spring/applicationContextTest-persistence.xml]
+[avalia-docente] [2014-06-25 16:45:38-697] [main] [] [INFO ] [GenericApplicationContext]: Refreshing org.springframework.context.support.GenericApplicationContext@68433461: startup date [Wed Jun 25 16:45:38 BRT 2014]; root of context hierarchy
+[avalia-docente] [2014-06-25 16:45:38-769] [main] [] [INFO ] [GenericApplicationContext]: Bean 'org.springframework.orm.hibernate4.HibernateExceptionTranslator#0' of type [class org.springframework.orm.hibernate4.HibernateExceptionTranslator] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[avalia-docente] [2014-06-25 16:45:38-804] [main] [] [INFO ] [MLog           ]: MLog clients using log4j logging.
+[avalia-docente] [2014-06-25 16:45:38-825] [main] [] [INFO ] [UidUtils       ]: Failed to get local InetAddress for VMID. This is unlikely to matter. At all. We'll add some extra randomness
+java.net.UnknownHostException: pc-649301: pc-649301: Nome ou serviço desconhecido
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1473)
+	at com.mchange.v2.uid.UidUtils.generateVmId(UidUtils.java:70)
+	at com.mchange.v2.uid.UidUtils.<clinit>(UidUtils.java:54)
+	at com.mchange.v2.c3p0.impl.C3P0ImplUtils.<clinit>(C3P0ImplUtils.java:122)
+	at com.mchange.v2.c3p0.impl.PoolBackedDataSourceBase.<init>(PoolBackedDataSourceBase.java:238)
+	at com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.<init>(AbstractPoolBackedDataSource.java:74)
+	at com.mchange.v2.c3p0.ComboPooledDataSource.<init>(ComboPooledDataSource.java:134)
+	at com.mchange.v2.c3p0.ComboPooledDataSource.<init>(ComboPooledDataSource.java:130)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:147)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:990)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:943)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:485)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:323)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:107)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1360)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1118)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:420)
+	at org.springframework.beans.factory.BeanFactoryUtils.beansOfTypeIncludingAncestors(BeanFactoryUtils.java:277)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.detectPersistenceExceptionTranslators(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.<init>(PersistenceExceptionTranslationInterceptor.java:79)
+	at org.springframework.dao.annotation.PersistenceExceptionTranslationAdvisor.<init>(PersistenceExceptionTranslationAdvisor.java:70)
+	at org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor.setBeanFactory(PersistenceExceptionTranslationPostProcessor.java:103)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeAwareMethods(AbstractAutowireCapableBeanFactory.java:1475)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:734)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:457)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:120)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:100)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:248)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:64)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91)
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:122)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:312)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:211)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:288)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:284)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:88)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+Caused by: java.net.UnknownHostException: pc-649301: Nome ou serviço desconhecido
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:901)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1293)
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1469)
+	... 84 more
+[avalia-docente] [2014-06-25 16:45:38-874] [main] [] [INFO ] [C3P0Registry   ]: Initializing c3p0-0.9.2.1 [built 20-March-2013 10:47:27 +0000; debug? true; trace: 10]
+[avalia-docente] [2014-06-25 16:45:38-948] [main] [] [INFO ] [GenericApplicationContext]: Bean 'dataSource' of type [class com.mchange.v2.c3p0.ComboPooledDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[avalia-docente] [2014-06-25 16:45:38-956] [main] [] [INFO ] [PropertiesFactoryBean]: Loading properties file from class path resource [hibernate-test.properties]
+[avalia-docente] [2014-06-25 16:45:38-956] [main] [] [INFO ] [GenericApplicationContext]: Bean 'jpaProperties' of type [class org.springframework.beans.factory.config.PropertiesFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[avalia-docente] [2014-06-25 16:45:38-956] [main] [] [INFO ] [GenericApplicationContext]: Bean 'jpaProperties' of type [class java.util.Properties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[avalia-docente] [2014-06-25 16:45:38-965] [main] [] [INFO ] [GenericApplicationContext]: Bean 'jpaVendorAdapter' of type [class org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[avalia-docente] [2014-06-25 16:45:38-974] [main] [] [INFO ] [LocalContainerEntityManagerFactoryBean]: Building JPA container EntityManagerFactory for persistence unit 'avaliaDocente'
+[avalia-docente] [2014-06-25 16:45:39-081] [main] [] [INFO ] [Version        ]: HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+[avalia-docente] [2014-06-25 16:45:39-085] [main] [] [INFO ] [Version        ]: HHH000412: Hibernate Core {4.2.7.Final}
+[avalia-docente] [2014-06-25 16:45:39-088] [main] [] [INFO ] [Environment    ]: HHH000205: Loaded properties from resource hibernate.properties: {hibernate.show_sql=true, hibernate.jdbc.batch_size=50, hibernate.bytecode.use_reflection_optimizer=true, hibernate.jdbc.fetch_size=10, hibernate.default_batch_fetch_size=16, hibernate.generate_statistics=true, hibernate.hbm2ddl.auto=create, hibernate.connection.useUnicode=true, hibernate.jdbc.use_streams_for_binary=true, hibernate.max_fetch_depth=5, hibernate.connection.charSet=UTF-8, hibernate.use_outer_join=true, hibernate.jdbc.use_scrollable_resultset=true, hibernate.format_sql=false, hibernate.connection.isolation=2, hibernate.order_inserts=true, hibernate.use_sql_comments=false, hibernate.order_updates=true, hibernate.dialect=org.hibernate.dialect.MySQLDialect, hibernate.query.factory_class=org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory}
+[avalia-docente] [2014-06-25 16:45:39-088] [main] [] [INFO ] [Environment    ]: HHH000407: Using java.io streams to persist binary types
+[avalia-docente] [2014-06-25 16:45:39-088] [main] [] [INFO ] [Environment    ]: HHH000406: Using bytecode reflection optimizer
+[avalia-docente] [2014-06-25 16:45:39-088] [main] [] [INFO ] [Environment    ]: HHH000021: Bytecode provider name : javassist
+[avalia-docente] [2014-06-25 16:45:39-245] [main] [] [INFO ] [ConnectionProviderInitiator]: HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+[avalia-docente] [2014-06-25 16:45:39-280] [main] [] [INFO ] [AbstractPoolBackedDataSource]: Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> qwwm4hjni5ly599zht|23d9b6a, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> org.h2.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> qwwm4hjni5ly599zht|23d9b6a, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:h2:mem:avaliaDocente-test;DB_CLOSE_ON_EXIT=FALSE, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 15, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+[avalia-docente] [2014-06-25 16:45:39-445] [main] [] [INFO ] [Dialect        ]: HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[avalia-docente] [2014-06-25 16:45:39-451] [main] [] [INFO ] [LobCreatorBuilder]: HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+[avalia-docente] [2014-06-25 16:45:39-615] [main] [] [INFO ] [TransactionFactoryInitiator]: HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+[avalia-docente] [2014-06-25 16:45:39-619] [main] [] [INFO ] [ASTQueryTranslatorFactory]: HHH000397: Using ASTQueryTranslatorFactory
+[avalia-docente] [2014-06-25 16:45:39-656] [main] [] [INFO ] [Version        ]: HV000001: Hibernate Validator 4.3.1.Final
+[avalia-docente] [2014-06-25 16:45:40-198] [main] [] [INFO ] [SchemaExport   ]: HHH000227: Running hbm2ddl schema export
+[avalia-docente] [2014-06-25 16:45:40-207] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Atividade drop foreign key FK_6s9e2tavcspah7m9f8wyxrq8y
+[avalia-docente] [2014-06-25 16:45:40-207] [main] [] [ERROR] [SchemaExport   ]: Table "ATIVIDADE" not found; SQL statement:
+alter table Atividade drop foreign key FK_6s9e2tavcspah7m9f8wyxrq8y [42102-174]
+[avalia-docente] [2014-06-25 16:45:40-210] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Atividade drop foreign key FK_fk8w73e07qv9h1w25xpg64ebk
+[avalia-docente] [2014-06-25 16:45:40-210] [main] [] [ERROR] [SchemaExport   ]: Table "ATIVIDADE" not found; SQL statement:
+alter table Atividade drop foreign key FK_fk8w73e07qv9h1w25xpg64ebk [42102-174]
+[avalia-docente] [2014-06-25 16:45:40-213] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Atividade drop foreign key FK_fd2fgki6oqb4mr4vxf7km0nxw
+[avalia-docente] [2014-06-25 16:45:40-213] [main] [] [ERROR] [SchemaExport   ]: Table "ATIVIDADE" not found; SQL statement:
+alter table Atividade drop foreign key FK_fd2fgki6oqb4mr4vxf7km0nxw [42102-174]
+[avalia-docente] [2014-06-25 16:45:40-216] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Avaliacao drop foreign key FK_5vksohj4mcqvxcg51n2an28tb
+[avalia-docente] [2014-06-25 16:45:40-216] [main] [] [ERROR] [SchemaExport   ]: Table "AVALIACAO" not found; SQL statement:
+alter table Avaliacao drop foreign key FK_5vksohj4mcqvxcg51n2an28tb [42102-174]
+[avalia-docente] [2014-06-25 16:45:40-219] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Avaliacao drop foreign key FK_ceoong99fopou31vqgwu2wycj
+[avalia-docente] [2014-06-25 16:45:40-219] [main] [] [ERROR] [SchemaExport   ]: Table "AVALIACAO" not found; SQL statement:
+alter table Avaliacao drop foreign key FK_ceoong99fopou31vqgwu2wycj [42102-174]
+[avalia-docente] [2014-06-25 16:45:40-222] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Docente drop foreign key FK_5w8lj8907q09gkf97ud0n9kqn
+[avalia-docente] [2014-06-25 16:45:40-222] [main] [] [ERROR] [SchemaExport   ]: Table "DOCENTE" not found; SQL statement:
+alter table Docente drop foreign key FK_5w8lj8907q09gkf97ud0n9kqn [42102-174]
+[avalia-docente] [2014-06-25 16:45:40-225] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Docente drop foreign key FK_1ojoi9c53cbeheg39nywjm8iv
+[avalia-docente] [2014-06-25 16:45:40-225] [main] [] [ERROR] [SchemaExport   ]: Table "DOCENTE" not found; SQL statement:
+alter table Docente drop foreign key FK_1ojoi9c53cbeheg39nywjm8iv [42102-174]
+[avalia-docente] [2014-06-25 16:45:40-228] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Docente_QuadroSumario drop foreign key FK_e1pyts6nasxxbghp3f3ls16qx
+[avalia-docente] [2014-06-25 16:45:40-228] [main] [] [ERROR] [SchemaExport   ]: Table "DOCENTE_QUADROSUMARIO" not found; SQL statement:
+alter table Docente_QuadroSumario drop foreign key FK_e1pyts6nasxxbghp3f3ls16qx [42102-174]
+[avalia-docente] [2014-06-25 16:45:40-231] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Docente_QuadroSumario drop foreign key FK_7yd0rye7vf1wv080x5exmju7a
+[avalia-docente] [2014-06-25 16:45:40-231] [main] [] [ERROR] [SchemaExport   ]: Table "DOCENTE_QUADROSUMARIO" not found; SQL statement:
+alter table Docente_QuadroSumario drop foreign key FK_7yd0rye7vf1wv080x5exmju7a [42102-174]
+[avalia-docente] [2014-06-25 16:45:40-234] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade drop foreign key FK_ht6byi0p1oxl3ctfa1n0qhok1
+[avalia-docente] [2014-06-25 16:45:40-234] [main] [] [ERROR] [SchemaExport   ]: Table "GRUPOATIVIDADE" not found; SQL statement:
+alter table GrupoAtividade drop foreign key FK_ht6byi0p1oxl3ctfa1n0qhok1 [42102-174]
+[avalia-docente] [2014-06-25 16:45:40-236] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade drop foreign key FK_iuqc0v8w9k1y2fdcx3l8qjl8h
+[avalia-docente] [2014-06-25 16:45:40-236] [main] [] [ERROR] [SchemaExport   ]: Table "GRUPOATIVIDADE" not found; SQL statement:
+alter table GrupoAtividade drop foreign key FK_iuqc0v8w9k1y2fdcx3l8qjl8h [42102-174]
+[avalia-docente] [2014-06-25 16:45:40-238] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade drop foreign key FK_6ts0188i5gi51g6o4inu1cn1w
+[avalia-docente] [2014-06-25 16:45:40-238] [main] [] [ERROR] [SchemaExport   ]: Table "GRUPOATIVIDADE" not found; SQL statement:
+alter table GrupoAtividade drop foreign key FK_6ts0188i5gi51g6o4inu1cn1w [42102-174]
+[avalia-docente] [2014-06-25 16:45:40-240] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade_Atividade drop foreign key FK_1vdk2h22fvgv4i6jhn73if0ln
+[avalia-docente] [2014-06-25 16:45:40-240] [main] [] [ERROR] [SchemaExport   ]: Table "GRUPOATIVIDADE_ATIVIDADE" not found; SQL statement:
+alter table GrupoAtividade_Atividade drop foreign key FK_1vdk2h22fvgv4i6jhn73if0ln [42102-174]
+[avalia-docente] [2014-06-25 16:45:40-242] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade_Atividade drop foreign key FK_k3ua0rdiqga57v3amvkvpesnh
+[avalia-docente] [2014-06-25 16:45:40-242] [main] [] [ERROR] [SchemaExport   ]: Table "GRUPOATIVIDADE_ATIVIDADE" not found; SQL statement:
+alter table GrupoAtividade_Atividade drop foreign key FK_k3ua0rdiqga57v3amvkvpesnh [42102-174]
+[avalia-docente] [2014-06-25 16:45:40-244] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade_NotasGrupoAtividade drop foreign key FK_gev2ekyeg5b5raxu69sap3x8a
+[avalia-docente] [2014-06-25 16:45:40-244] [main] [] [ERROR] [SchemaExport   ]: Table "GRUPOATIVIDADE_NOTASGRUPOATIVIDADE" not found; SQL statement:
+alter table GrupoAtividade_NotasGrupoAtividade drop foreign key FK_gev2ekyeg5b5raxu69sap3x8a [42102-174]
+[avalia-docente] [2014-06-25 16:45:40-245] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade_NotasGrupoAtividade drop foreign key FK_6gyyh0ckfonr2xbm5433026bo
+[avalia-docente] [2014-06-25 16:45:40-245] [main] [] [ERROR] [SchemaExport   ]: Table "GRUPOATIVIDADE_NOTASGRUPOATIVIDADE" not found; SQL statement:
+alter table GrupoAtividade_NotasGrupoAtividade drop foreign key FK_6gyyh0ckfonr2xbm5433026bo [42102-174]
+[avalia-docente] [2014-06-25 16:45:40-247] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table ItemAtividade drop foreign key FK_jk9r9j6scatyqinfpgpkhgwew
+[avalia-docente] [2014-06-25 16:45:40-247] [main] [] [ERROR] [SchemaExport   ]: Table "ITEMATIVIDADE" not found; SQL statement:
+alter table ItemAtividade drop foreign key FK_jk9r9j6scatyqinfpgpkhgwew [42102-174]
+[avalia-docente] [2014-06-25 16:45:40-248] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table ItemAtividade drop foreign key FK_hawfu0txs45v32qud541qhvj0
+[avalia-docente] [2014-06-25 16:45:40-248] [main] [] [ERROR] [SchemaExport   ]: Table "ITEMATIVIDADE" not found; SQL statement:
+alter table ItemAtividade drop foreign key FK_hawfu0txs45v32qud541qhvj0 [42102-174]
+[avalia-docente] [2014-06-25 16:45:40-250] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Multiplicador drop foreign key FK_hcqv7wx7i7u1xt1o64nlw8m4k
+[avalia-docente] [2014-06-25 16:45:40-250] [main] [] [ERROR] [SchemaExport   ]: Table "MULTIPLICADOR" not found; SQL statement:
+alter table Multiplicador drop foreign key FK_hcqv7wx7i7u1xt1o64nlw8m4k [42102-174]
+[avalia-docente] [2014-06-25 16:45:40-252] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table NotasGrupoAtividade drop foreign key FK_m4mij8t1a5pimcues8rse5982
+[avalia-docente] [2014-06-25 16:45:40-252] [main] [] [ERROR] [SchemaExport   ]: Table "NOTASGRUPOATIVIDADE" not found; SQL statement:
+alter table NotasGrupoAtividade drop foreign key FK_m4mij8t1a5pimcues8rse5982 [42102-174]
+[avalia-docente] [2014-06-25 16:45:40-254] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table NotasGrupoAtividade drop foreign key FK_hxu58q4cdpl8y4prnp6x4vifr
+[avalia-docente] [2014-06-25 16:45:40-254] [main] [] [ERROR] [SchemaExport   ]: Table "NOTASGRUPOATIVIDADE" not found; SQL statement:
+alter table NotasGrupoAtividade drop foreign key FK_hxu58q4cdpl8y4prnp6x4vifr [42102-174]
+[avalia-docente] [2014-06-25 16:45:40-255] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table NotasGrupoAtividade drop foreign key FK_ktt14x2jcm3s2y1w50d5h6887
+[avalia-docente] [2014-06-25 16:45:40-255] [main] [] [ERROR] [SchemaExport   ]: Table "NOTASGRUPOATIVIDADE" not found; SQL statement:
+alter table NotasGrupoAtividade drop foreign key FK_ktt14x2jcm3s2y1w50d5h6887 [42102-174]
+[avalia-docente] [2014-06-25 16:45:40-257] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table QuadroSumario drop foreign key FK_9eumvgtrg8s8st4grj9o9vn0r
+[avalia-docente] [2014-06-25 16:45:40-257] [main] [] [ERROR] [SchemaExport   ]: Table "QUADROSUMARIO" not found; SQL statement:
+alter table QuadroSumario drop foreign key FK_9eumvgtrg8s8st4grj9o9vn0r [42102-174]
+[avalia-docente] [2014-06-25 16:45:40-259] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table QuadroSumario drop foreign key FK_a1l6l5hc2c7t4wgtu8gnxftrb
+[avalia-docente] [2014-06-25 16:45:40-259] [main] [] [ERROR] [SchemaExport   ]: Table "QUADROSUMARIO" not found; SQL statement:
+alter table QuadroSumario drop foreign key FK_a1l6l5hc2c7t4wgtu8gnxftrb [42102-174]
+[avalia-docente] [2014-06-25 16:45:40-261] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table QuadroSumario drop foreign key FK_mug8yaiow5onrp3o9qpn2jinw
+[avalia-docente] [2014-06-25 16:45:40-261] [main] [] [ERROR] [SchemaExport   ]: Table "QUADROSUMARIO" not found; SQL statement:
+alter table QuadroSumario drop foreign key FK_mug8yaiow5onrp3o9qpn2jinw [42102-174]
+[avalia-docente] [2014-06-25 16:45:40-262] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table QuadroSumario_NotasGrupoAtividade drop foreign key FK_gilaf5gfg8igldf3gyq3koclp
+[avalia-docente] [2014-06-25 16:45:40-262] [main] [] [ERROR] [SchemaExport   ]: Table "QUADROSUMARIO_NOTASGRUPOATIVIDADE" not found; SQL statement:
+alter table QuadroSumario_NotasGrupoAtividade drop foreign key FK_gilaf5gfg8igldf3gyq3koclp [42102-174]
+[avalia-docente] [2014-06-25 16:45:40-264] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table QuadroSumario_NotasGrupoAtividade drop foreign key FK_a4rnxy76uwoiiybdpmrb6acf4
+[avalia-docente] [2014-06-25 16:45:40-264] [main] [] [ERROR] [SchemaExport   ]: Table "QUADROSUMARIO_NOTASGRUPOATIVIDADE" not found; SQL statement:
+alter table QuadroSumario_NotasGrupoAtividade drop foreign key FK_a4rnxy76uwoiiybdpmrb6acf4 [42102-174]
+[avalia-docente] [2014-06-25 16:45:40-266] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Regime drop foreign key FK_eyso6s2nirtpntyxmfnw94mi3
+[avalia-docente] [2014-06-25 16:45:40-266] [main] [] [ERROR] [SchemaExport   ]: Table "REGIME" not found; SQL statement:
+alter table Regime drop foreign key FK_eyso6s2nirtpntyxmfnw94mi3 [42102-174]
+[avalia-docente] [2014-06-25 16:45:40-268] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Resolucao drop foreign key FK_ptpvfefs5yo95ixprxnbdb72a
+[avalia-docente] [2014-06-25 16:45:40-268] [main] [] [ERROR] [SchemaExport   ]: Table "RESOLUCAO" not found; SQL statement:
+alter table Resolucao drop foreign key FK_ptpvfefs5yo95ixprxnbdb72a [42102-174]
+[avalia-docente] [2014-06-25 16:45:40-270] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Resolucao_QuadroSumario drop foreign key FK_4nefcaij79acqceelmb3h19oh
+[avalia-docente] [2014-06-25 16:45:40-270] [main] [] [ERROR] [SchemaExport   ]: Table "RESOLUCAO_QUADROSUMARIO" not found; SQL statement:
+alter table Resolucao_QuadroSumario drop foreign key FK_4nefcaij79acqceelmb3h19oh [42102-174]
+[avalia-docente] [2014-06-25 16:45:40-271] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Resolucao_QuadroSumario drop foreign key FK_2iv10wqnx484wbhfmprie3eln
+[avalia-docente] [2014-06-25 16:45:40-271] [main] [] [ERROR] [SchemaExport   ]: Table "RESOLUCAO_QUADROSUMARIO" not found; SQL statement:
+alter table Resolucao_QuadroSumario drop foreign key FK_2iv10wqnx484wbhfmprie3eln [42102-174]
+[avalia-docente] [2014-06-25 16:45:40-286] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Atividade add index FK_6s9e2tavcspah7m9f8wyxrq8y (versao_anterior), add constraint FK_6s9e2tavcspah7m9f8wyxrq8y foreign key (versao_anterior) references Atividade (id)
+[avalia-docente] [2014-06-25 16:45:40-286] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_6S9E2TAVCSPAH7M9F8WYXRQ8Y"; SQL statement:
+alter table Atividade add index FK_6s9e2tavcspah7m9f8wyxrq8y (versao_anterior), add constraint FK_6s9e2tavcspah7m9f8wyxrq8y foreign key (versao_anterior) references Atividade (id) [50004-174]
+[avalia-docente] [2014-06-25 16:45:40-288] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Atividade add index FK_fk8w73e07qv9h1w25xpg64ebk (grupo_atividade_id), add constraint FK_fk8w73e07qv9h1w25xpg64ebk foreign key (grupo_atividade_id) references GrupoAtividade (id)
+[avalia-docente] [2014-06-25 16:45:40-288] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_FK8W73E07QV9H1W25XPG64EBK"; SQL statement:
+alter table Atividade add index FK_fk8w73e07qv9h1w25xpg64ebk (grupo_atividade_id), add constraint FK_fk8w73e07qv9h1w25xpg64ebk foreign key (grupo_atividade_id) references GrupoAtividade (id) [50004-174]
+[avalia-docente] [2014-06-25 16:45:40-291] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Atividade add index FK_fd2fgki6oqb4mr4vxf7km0nxw (multiplicador_id), add constraint FK_fd2fgki6oqb4mr4vxf7km0nxw foreign key (multiplicador_id) references Multiplicador (id)
+[avalia-docente] [2014-06-25 16:45:40-291] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_FD2FGKI6OQB4MR4VXF7KM0NXW"; SQL statement:
+alter table Atividade add index FK_fd2fgki6oqb4mr4vxf7km0nxw (multiplicador_id), add constraint FK_fd2fgki6oqb4mr4vxf7km0nxw foreign key (multiplicador_id) references Multiplicador (id) [50004-174]
+[avalia-docente] [2014-06-25 16:45:40-293] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Avaliacao add index FK_5vksohj4mcqvxcg51n2an28tb (versao_anterior), add constraint FK_5vksohj4mcqvxcg51n2an28tb foreign key (versao_anterior) references Avaliacao (id)
+[avalia-docente] [2014-06-25 16:45:40-293] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_5VKSOHJ4MCQVXCG51N2AN28TB"; SQL statement:
+alter table Avaliacao add index FK_5vksohj4mcqvxcg51n2an28tb (versao_anterior), add constraint FK_5vksohj4mcqvxcg51n2an28tb foreign key (versao_anterior) references Avaliacao (id) [50004-174]
+[avalia-docente] [2014-06-25 16:45:40-295] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Avaliacao add index FK_ceoong99fopou31vqgwu2wycj (docente_id), add constraint FK_ceoong99fopou31vqgwu2wycj foreign key (docente_id) references Docente (id)
+[avalia-docente] [2014-06-25 16:45:40-295] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_CEOONG99FOPOU31VQGWU2WYCJ"; SQL statement:
+alter table Avaliacao add index FK_ceoong99fopou31vqgwu2wycj (docente_id), add constraint FK_ceoong99fopou31vqgwu2wycj foreign key (docente_id) references Docente (id) [50004-174]
+[avalia-docente] [2014-06-25 16:45:40-298] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Docente add index FK_5w8lj8907q09gkf97ud0n9kqn (versao_anterior), add constraint FK_5w8lj8907q09gkf97ud0n9kqn foreign key (versao_anterior) references Docente (id)
+[avalia-docente] [2014-06-25 16:45:40-298] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_5W8LJ8907Q09GKF97UD0N9KQN"; SQL statement:
+alter table Docente add index FK_5w8lj8907q09gkf97ud0n9kqn (versao_anterior), add constraint FK_5w8lj8907q09gkf97ud0n9kqn foreign key (versao_anterior) references Docente (id) [50004-174]
+[avalia-docente] [2014-06-25 16:45:40-300] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Docente add index FK_1ojoi9c53cbeheg39nywjm8iv (regime_id), add constraint FK_1ojoi9c53cbeheg39nywjm8iv foreign key (regime_id) references Regime (id)
+[avalia-docente] [2014-06-25 16:45:40-300] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_1OJOI9C53CBEHEG39NYWJM8IV"; SQL statement:
+alter table Docente add index FK_1ojoi9c53cbeheg39nywjm8iv (regime_id), add constraint FK_1ojoi9c53cbeheg39nywjm8iv foreign key (regime_id) references Regime (id) [50004-174]
+[avalia-docente] [2014-06-25 16:45:40-302] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Docente_QuadroSumario add index FK_e1pyts6nasxxbghp3f3ls16qx (quadroSumarios_id), add constraint FK_e1pyts6nasxxbghp3f3ls16qx foreign key (quadroSumarios_id) references QuadroSumario (id)
+[avalia-docente] [2014-06-25 16:45:40-302] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_E1PYTS6NASXXBGHP3F3LS16QX"; SQL statement:
+alter table Docente_QuadroSumario add index FK_e1pyts6nasxxbghp3f3ls16qx (quadroSumarios_id), add constraint FK_e1pyts6nasxxbghp3f3ls16qx foreign key (quadroSumarios_id) references QuadroSumario (id) [50004-174]
+[avalia-docente] [2014-06-25 16:45:40-304] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Docente_QuadroSumario add index FK_7yd0rye7vf1wv080x5exmju7a (Docente_id), add constraint FK_7yd0rye7vf1wv080x5exmju7a foreign key (Docente_id) references Docente (id)
+[avalia-docente] [2014-06-25 16:45:40-304] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_7YD0RYE7VF1WV080X5EXMJU7A"; SQL statement:
+alter table Docente_QuadroSumario add index FK_7yd0rye7vf1wv080x5exmju7a (Docente_id), add constraint FK_7yd0rye7vf1wv080x5exmju7a foreign key (Docente_id) references Docente (id) [50004-174]
+[avalia-docente] [2014-06-25 16:45:40-306] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade add index FK_ht6byi0p1oxl3ctfa1n0qhok1 (versao_anterior), add constraint FK_ht6byi0p1oxl3ctfa1n0qhok1 foreign key (versao_anterior) references GrupoAtividade (id)
+[avalia-docente] [2014-06-25 16:45:40-306] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_HT6BYI0P1OXL3CTFA1N0QHOK1"; SQL statement:
+alter table GrupoAtividade add index FK_ht6byi0p1oxl3ctfa1n0qhok1 (versao_anterior), add constraint FK_ht6byi0p1oxl3ctfa1n0qhok1 foreign key (versao_anterior) references GrupoAtividade (id) [50004-174]
+[avalia-docente] [2014-06-25 16:45:40-308] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade add index FK_iuqc0v8w9k1y2fdcx3l8qjl8h (grupo_atividade_pai_id), add constraint FK_iuqc0v8w9k1y2fdcx3l8qjl8h foreign key (grupo_atividade_pai_id) references GrupoAtividade (id)
+[avalia-docente] [2014-06-25 16:45:40-308] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_IUQC0V8W9K1Y2FDCX3L8QJL8H"; SQL statement:
+alter table GrupoAtividade add index FK_iuqc0v8w9k1y2fdcx3l8qjl8h (grupo_atividade_pai_id), add constraint FK_iuqc0v8w9k1y2fdcx3l8qjl8h foreign key (grupo_atividade_pai_id) references GrupoAtividade (id) [50004-174]
+[avalia-docente] [2014-06-25 16:45:40-329] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade add index FK_6ts0188i5gi51g6o4inu1cn1w (resolucao_id), add constraint FK_6ts0188i5gi51g6o4inu1cn1w foreign key (resolucao_id) references Resolucao (id)
+[avalia-docente] [2014-06-25 16:45:40-329] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_6TS0188I5GI51G6O4INU1CN1W"; SQL statement:
+alter table GrupoAtividade add index FK_6ts0188i5gi51g6o4inu1cn1w (resolucao_id), add constraint FK_6ts0188i5gi51g6o4inu1cn1w foreign key (resolucao_id) references Resolucao (id) [50004-174]
+[avalia-docente] [2014-06-25 16:45:40-331] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade_Atividade add index FK_1vdk2h22fvgv4i6jhn73if0ln (atividades_id), add constraint FK_1vdk2h22fvgv4i6jhn73if0ln foreign key (atividades_id) references Atividade (id)
+[avalia-docente] [2014-06-25 16:45:40-331] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_1VDK2H22FVGV4I6JHN73IF0LN"; SQL statement:
+alter table GrupoAtividade_Atividade add index FK_1vdk2h22fvgv4i6jhn73if0ln (atividades_id), add constraint FK_1vdk2h22fvgv4i6jhn73if0ln foreign key (atividades_id) references Atividade (id) [50004-174]
+[avalia-docente] [2014-06-25 16:45:40-332] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade_Atividade add index FK_k3ua0rdiqga57v3amvkvpesnh (GrupoAtividade_id), add constraint FK_k3ua0rdiqga57v3amvkvpesnh foreign key (GrupoAtividade_id) references GrupoAtividade (id)
+[avalia-docente] [2014-06-25 16:45:40-332] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_K3UA0RDIQGA57V3AMVKVPESNH"; SQL statement:
+alter table GrupoAtividade_Atividade add index FK_k3ua0rdiqga57v3amvkvpesnh (GrupoAtividade_id), add constraint FK_k3ua0rdiqga57v3amvkvpesnh foreign key (GrupoAtividade_id) references GrupoAtividade (id) [50004-174]
+[avalia-docente] [2014-06-25 16:45:40-334] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade_NotasGrupoAtividade add index FK_gev2ekyeg5b5raxu69sap3x8a (notasGrupoAtividades_id), add constraint FK_gev2ekyeg5b5raxu69sap3x8a foreign key (notasGrupoAtividades_id) references NotasGrupoAtividade (id)
+[avalia-docente] [2014-06-25 16:45:40-334] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_GEV2EKYEG5B5RAXU69SAP3X8A"; SQL statement:
+alter table GrupoAtividade_NotasGrupoAtividade add index FK_gev2ekyeg5b5raxu69sap3x8a (notasGrupoAtividades_id), add constraint FK_gev2ekyeg5b5raxu69sap3x8a foreign key (notasGrupoAtividades_id) references NotasGrupoAtividade (id) [50004-174]
+[avalia-docente] [2014-06-25 16:45:40-335] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade_NotasGrupoAtividade add index FK_6gyyh0ckfonr2xbm5433026bo (GrupoAtividade_id), add constraint FK_6gyyh0ckfonr2xbm5433026bo foreign key (GrupoAtividade_id) references GrupoAtividade (id)
+[avalia-docente] [2014-06-25 16:45:40-335] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_6GYYH0CKFONR2XBM5433026BO"; SQL statement:
+alter table GrupoAtividade_NotasGrupoAtividade add index FK_6gyyh0ckfonr2xbm5433026bo (GrupoAtividade_id), add constraint FK_6gyyh0ckfonr2xbm5433026bo foreign key (GrupoAtividade_id) references GrupoAtividade (id) [50004-174]
+[avalia-docente] [2014-06-25 16:45:40-337] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table ItemAtividade add index FK_jk9r9j6scatyqinfpgpkhgwew (versao_anterior), add constraint FK_jk9r9j6scatyqinfpgpkhgwew foreign key (versao_anterior) references ItemAtividade (id)
+[avalia-docente] [2014-06-25 16:45:40-337] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_JK9R9J6SCATYQINFPGPKHGWEW"; SQL statement:
+alter table ItemAtividade add index FK_jk9r9j6scatyqinfpgpkhgwew (versao_anterior), add constraint FK_jk9r9j6scatyqinfpgpkhgwew foreign key (versao_anterior) references ItemAtividade (id) [50004-174]
+[avalia-docente] [2014-06-25 16:45:40-339] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table ItemAtividade add index FK_hawfu0txs45v32qud541qhvj0 (atividade_id), add constraint FK_hawfu0txs45v32qud541qhvj0 foreign key (atividade_id) references Atividade (id)
+[avalia-docente] [2014-06-25 16:45:40-339] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_HAWFU0TXS45V32QUD541QHVJ0"; SQL statement:
+alter table ItemAtividade add index FK_hawfu0txs45v32qud541qhvj0 (atividade_id), add constraint FK_hawfu0txs45v32qud541qhvj0 foreign key (atividade_id) references Atividade (id) [50004-174]
+[avalia-docente] [2014-06-25 16:45:40-340] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Multiplicador add index FK_hcqv7wx7i7u1xt1o64nlw8m4k (versao_anterior), add constraint FK_hcqv7wx7i7u1xt1o64nlw8m4k foreign key (versao_anterior) references Multiplicador (id)
+[avalia-docente] [2014-06-25 16:45:40-340] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_HCQV7WX7I7U1XT1O64NLW8M4K"; SQL statement:
+alter table Multiplicador add index FK_hcqv7wx7i7u1xt1o64nlw8m4k (versao_anterior), add constraint FK_hcqv7wx7i7u1xt1o64nlw8m4k foreign key (versao_anterior) references Multiplicador (id) [50004-174]
+[avalia-docente] [2014-06-25 16:45:40-342] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table NotasGrupoAtividade add index FK_m4mij8t1a5pimcues8rse5982 (versao_anterior), add constraint FK_m4mij8t1a5pimcues8rse5982 foreign key (versao_anterior) references NotasGrupoAtividade (id)
+[avalia-docente] [2014-06-25 16:45:40-342] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_M4MIJ8T1A5PIMCUES8RSE5982"; SQL statement:
+alter table NotasGrupoAtividade add index FK_m4mij8t1a5pimcues8rse5982 (versao_anterior), add constraint FK_m4mij8t1a5pimcues8rse5982 foreign key (versao_anterior) references NotasGrupoAtividade (id) [50004-174]
+[avalia-docente] [2014-06-25 16:45:40-344] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table NotasGrupoAtividade add index FK_hxu58q4cdpl8y4prnp6x4vifr (grupo_atividade_id), add constraint FK_hxu58q4cdpl8y4prnp6x4vifr foreign key (grupo_atividade_id) references GrupoAtividade (id)
+[avalia-docente] [2014-06-25 16:45:40-344] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_HXU58Q4CDPL8Y4PRNP6X4VIFR"; SQL statement:
+alter table NotasGrupoAtividade add index FK_hxu58q4cdpl8y4prnp6x4vifr (grupo_atividade_id), add constraint FK_hxu58q4cdpl8y4prnp6x4vifr foreign key (grupo_atividade_id) references GrupoAtividade (id) [50004-174]
+[avalia-docente] [2014-06-25 16:45:40-346] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table NotasGrupoAtividade add index FK_ktt14x2jcm3s2y1w50d5h6887 (quadro_sumario_id), add constraint FK_ktt14x2jcm3s2y1w50d5h6887 foreign key (quadro_sumario_id) references QuadroSumario (id)
+[avalia-docente] [2014-06-25 16:45:40-346] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_KTT14X2JCM3S2Y1W50D5H6887"; SQL statement:
+alter table NotasGrupoAtividade add index FK_ktt14x2jcm3s2y1w50d5h6887 (quadro_sumario_id), add constraint FK_ktt14x2jcm3s2y1w50d5h6887 foreign key (quadro_sumario_id) references QuadroSumario (id) [50004-174]
+[avalia-docente] [2014-06-25 16:45:40-348] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table QuadroSumario add index FK_9eumvgtrg8s8st4grj9o9vn0r (versao_anterior), add constraint FK_9eumvgtrg8s8st4grj9o9vn0r foreign key (versao_anterior) references QuadroSumario (id)
+[avalia-docente] [2014-06-25 16:45:40-348] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_9EUMVGTRG8S8ST4GRJ9O9VN0R"; SQL statement:
+alter table QuadroSumario add index FK_9eumvgtrg8s8st4grj9o9vn0r (versao_anterior), add constraint FK_9eumvgtrg8s8st4grj9o9vn0r foreign key (versao_anterior) references QuadroSumario (id) [50004-174]
+[avalia-docente] [2014-06-25 16:45:40-351] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table QuadroSumario add index FK_a1l6l5hc2c7t4wgtu8gnxftrb (docente_id), add constraint FK_a1l6l5hc2c7t4wgtu8gnxftrb foreign key (docente_id) references Docente (id)
+[avalia-docente] [2014-06-25 16:45:40-351] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_A1L6L5HC2C7T4WGTU8GNXFTRB"; SQL statement:
+alter table QuadroSumario add index FK_a1l6l5hc2c7t4wgtu8gnxftrb (docente_id), add constraint FK_a1l6l5hc2c7t4wgtu8gnxftrb foreign key (docente_id) references Docente (id) [50004-174]
+[avalia-docente] [2014-06-25 16:45:40-352] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table QuadroSumario add index FK_mug8yaiow5onrp3o9qpn2jinw (resolucao_id), add constraint FK_mug8yaiow5onrp3o9qpn2jinw foreign key (resolucao_id) references Resolucao (id)
+[avalia-docente] [2014-06-25 16:45:40-352] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_MUG8YAIOW5ONRP3O9QPN2JINW"; SQL statement:
+alter table QuadroSumario add index FK_mug8yaiow5onrp3o9qpn2jinw (resolucao_id), add constraint FK_mug8yaiow5onrp3o9qpn2jinw foreign key (resolucao_id) references Resolucao (id) [50004-174]
+[avalia-docente] [2014-06-25 16:45:40-353] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table QuadroSumario_NotasGrupoAtividade add index FK_gilaf5gfg8igldf3gyq3koclp (notasGrupoAtividades_id), add constraint FK_gilaf5gfg8igldf3gyq3koclp foreign key (notasGrupoAtividades_id) references NotasGrupoAtividade (id)
+[avalia-docente] [2014-06-25 16:45:40-353] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_GILAF5GFG8IGLDF3GYQ3KOCLP"; SQL statement:
+alter table QuadroSumario_NotasGrupoAtividade add index FK_gilaf5gfg8igldf3gyq3koclp (notasGrupoAtividades_id), add constraint FK_gilaf5gfg8igldf3gyq3koclp foreign key (notasGrupoAtividades_id) references NotasGrupoAtividade (id) [50004-174]
+[avalia-docente] [2014-06-25 16:45:40-354] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table QuadroSumario_NotasGrupoAtividade add index FK_a4rnxy76uwoiiybdpmrb6acf4 (QuadroSumario_id), add constraint FK_a4rnxy76uwoiiybdpmrb6acf4 foreign key (QuadroSumario_id) references QuadroSumario (id)
+[avalia-docente] [2014-06-25 16:45:40-354] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_A4RNXY76UWOIIYBDPMRB6ACF4"; SQL statement:
+alter table QuadroSumario_NotasGrupoAtividade add index FK_a4rnxy76uwoiiybdpmrb6acf4 (QuadroSumario_id), add constraint FK_a4rnxy76uwoiiybdpmrb6acf4 foreign key (QuadroSumario_id) references QuadroSumario (id) [50004-174]
+[avalia-docente] [2014-06-25 16:45:40-355] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Regime add index FK_eyso6s2nirtpntyxmfnw94mi3 (versao_anterior), add constraint FK_eyso6s2nirtpntyxmfnw94mi3 foreign key (versao_anterior) references Regime (id)
+[avalia-docente] [2014-06-25 16:45:40-355] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_EYSO6S2NIRTPNTYXMFNW94MI3"; SQL statement:
+alter table Regime add index FK_eyso6s2nirtpntyxmfnw94mi3 (versao_anterior), add constraint FK_eyso6s2nirtpntyxmfnw94mi3 foreign key (versao_anterior) references Regime (id) [50004-174]
+[avalia-docente] [2014-06-25 16:45:40-356] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Resolucao add index FK_ptpvfefs5yo95ixprxnbdb72a (versao_anterior), add constraint FK_ptpvfefs5yo95ixprxnbdb72a foreign key (versao_anterior) references Resolucao (id)
+[avalia-docente] [2014-06-25 16:45:40-356] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_PTPVFEFS5YO95IXPRXNBDB72A"; SQL statement:
+alter table Resolucao add index FK_ptpvfefs5yo95ixprxnbdb72a (versao_anterior), add constraint FK_ptpvfefs5yo95ixprxnbdb72a foreign key (versao_anterior) references Resolucao (id) [50004-174]
+[avalia-docente] [2014-06-25 16:45:40-357] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Resolucao_QuadroSumario add index FK_4nefcaij79acqceelmb3h19oh (quadroSumarios_id), add constraint FK_4nefcaij79acqceelmb3h19oh foreign key (quadroSumarios_id) references QuadroSumario (id)
+[avalia-docente] [2014-06-25 16:45:40-357] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_4NEFCAIJ79ACQCEELMB3H19OH"; SQL statement:
+alter table Resolucao_QuadroSumario add index FK_4nefcaij79acqceelmb3h19oh (quadroSumarios_id), add constraint FK_4nefcaij79acqceelmb3h19oh foreign key (quadroSumarios_id) references QuadroSumario (id) [50004-174]
+[avalia-docente] [2014-06-25 16:45:40-358] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Resolucao_QuadroSumario add index FK_2iv10wqnx484wbhfmprie3eln (Resolucao_id), add constraint FK_2iv10wqnx484wbhfmprie3eln foreign key (Resolucao_id) references Resolucao (id)
+[avalia-docente] [2014-06-25 16:45:40-358] [main] [] [ERROR] [SchemaExport   ]: Unknown data type: "FK_2IV10WQNX484WBHFMPRIE3ELN"; SQL statement:
+alter table Resolucao_QuadroSumario add index FK_2iv10wqnx484wbhfmprie3eln (Resolucao_id), add constraint FK_2iv10wqnx484wbhfmprie3eln foreign key (Resolucao_id) references Resolucao (id) [50004-174]
+[avalia-docente] [2014-06-25 16:45:40-358] [main] [] [INFO ] [SchemaExport   ]: HHH000230: Schema export complete
+[avalia-docente] [2014-06-25 16:45:40-393] [main] [] [INFO ] [GenericApplicationContext]: Bean 'entityManagerFactory' of type [class org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[avalia-docente] [2014-06-25 16:45:40-399] [main] [] [INFO ] [DefaultListableBeanFactory]: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@4b331a23: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,dataSource,jpaProperties,org.springframework.orm.hibernate4.HibernateExceptionTranslator#0,org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor#0,jpaVendorAdapter,entityManagerFactory,transactionManager,docenteRepository,atividadeRepository,resolucaoRepository,itemAtividadeRepository,grupoAtividadeRepository,quadroSumarioRepository,notasGrupoAtividadeRepository,multiplicadorRepository,org.springframework.data.repository.core.support.RepositoryInterfaceAwareBeanPostProcessor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+[avalia-docente] [2014-06-25 16:45:40-623] [main] [] [WARN ] [AbstractTableMetaData]: Potential problem found: The configured data type factory 'class org.dbunit.dataset.datatype.DefaultDataTypeFactory' might cause problems with the current database 'H2' (e.g. some datatypes may not be supported properly). In rare cases you might see this message because the list of supported database products is incomplete (list=[derby]). If so please request a java-class update via the forums.If you are using your own IDataTypeFactory extending DefaultDataTypeFactory, ensure that you override getValidDbProducts() to specify the supported database products.
+[avalia-docente] [2014-06-25 16:45:40-683] [main] [] [WARN ] [AbstractTableMetaData]: Potential problem found: The configured data type factory 'class org.dbunit.dataset.datatype.DefaultDataTypeFactory' might cause problems with the current database 'H2' (e.g. some datatypes may not be supported properly). In rare cases you might see this message because the list of supported database products is incomplete (list=[derby]). If so please request a java-class update via the forums.If you are using your own IDataTypeFactory extending DefaultDataTypeFactory, ensure that you override getValidDbProducts() to specify the supported database products.
+[avalia-docente] [2014-06-25 16:45:40-782] [main] [] [WARN ] [AbstractTableMetaData]: Potential problem found: The configured data type factory 'class org.dbunit.dataset.datatype.DefaultDataTypeFactory' might cause problems with the current database 'H2' (e.g. some datatypes may not be supported properly). In rare cases you might see this message because the list of supported database products is incomplete (list=[derby]). If so please request a java-class update via the forums.If you are using your own IDataTypeFactory extending DefaultDataTypeFactory, ensure that you override getValidDbProducts() to specify the supported database products.
+[avalia-docente] [2014-06-25 16:45:40-812] [main] [] [WARN ] [AbstractTableMetaData]: Potential problem found: The configured data type factory 'class org.dbunit.dataset.datatype.DefaultDataTypeFactory' might cause problems with the current database 'H2' (e.g. some datatypes may not be supported properly). In rare cases you might see this message because the list of supported database products is incomplete (list=[derby]). If so please request a java-class update via the forums.If you are using your own IDataTypeFactory extending DefaultDataTypeFactory, ensure that you override getValidDbProducts() to specify the supported database products.
+[avalia-docente] [2014-06-25 16:45:40-823] [Thread-7] [] [INFO ] [GenericApplicationContext]: Closing org.springframework.context.support.GenericApplicationContext@68433461: startup date [Wed Jun 25 16:45:38 BRT 2014]; root of context hierarchy
+[avalia-docente] [2014-06-25 16:45:40-823] [Thread-7] [] [INFO ] [DefaultListableBeanFactory]: Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@4b331a23: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,dataSource,jpaProperties,org.springframework.orm.hibernate4.HibernateExceptionTranslator#0,org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor#0,jpaVendorAdapter,entityManagerFactory,transactionManager,docenteRepository,atividadeRepository,resolucaoRepository,itemAtividadeRepository,grupoAtividadeRepository,quadroSumarioRepository,notasGrupoAtividadeRepository,multiplicadorRepository,org.springframework.data.repository.core.support.RepositoryInterfaceAwareBeanPostProcessor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+[avalia-docente] [2014-06-25 16:45:40-826] [Thread-7] [] [INFO ] [LocalContainerEntityManagerFactoryBean]: Closing JPA EntityManagerFactory for persistence unit 'avaliaDocente'
+[avalia-docente] [2014-06-25 16:45:40-826] [Thread-7] [] [INFO ] [SchemaExport   ]: HHH000227: Running hbm2ddl schema export
+[avalia-docente] [2014-06-25 16:45:40-828] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Atividade drop foreign key FK_6s9e2tavcspah7m9f8wyxrq8y
+[avalia-docente] [2014-06-25 16:45:40-828] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table Atividade drop foreign key FK_6s9e2tavcspah7m9f8wyxrq8y [42122-174]
+[avalia-docente] [2014-06-25 16:45:40-829] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Atividade drop foreign key FK_fk8w73e07qv9h1w25xpg64ebk
+[avalia-docente] [2014-06-25 16:45:40-829] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table Atividade drop foreign key FK_fk8w73e07qv9h1w25xpg64ebk [42122-174]
+[avalia-docente] [2014-06-25 16:45:40-829] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Atividade drop foreign key FK_fd2fgki6oqb4mr4vxf7km0nxw
+[avalia-docente] [2014-06-25 16:45:40-829] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table Atividade drop foreign key FK_fd2fgki6oqb4mr4vxf7km0nxw [42122-174]
+[avalia-docente] [2014-06-25 16:45:40-830] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Avaliacao drop foreign key FK_5vksohj4mcqvxcg51n2an28tb
+[avalia-docente] [2014-06-25 16:45:40-830] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table Avaliacao drop foreign key FK_5vksohj4mcqvxcg51n2an28tb [42122-174]
+[avalia-docente] [2014-06-25 16:45:40-831] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Avaliacao drop foreign key FK_ceoong99fopou31vqgwu2wycj
+[avalia-docente] [2014-06-25 16:45:40-831] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table Avaliacao drop foreign key FK_ceoong99fopou31vqgwu2wycj [42122-174]
+[avalia-docente] [2014-06-25 16:45:40-832] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Docente drop foreign key FK_5w8lj8907q09gkf97ud0n9kqn
+[avalia-docente] [2014-06-25 16:45:40-832] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table Docente drop foreign key FK_5w8lj8907q09gkf97ud0n9kqn [42122-174]
+[avalia-docente] [2014-06-25 16:45:40-833] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Docente drop foreign key FK_1ojoi9c53cbeheg39nywjm8iv
+[avalia-docente] [2014-06-25 16:45:40-833] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table Docente drop foreign key FK_1ojoi9c53cbeheg39nywjm8iv [42122-174]
+[avalia-docente] [2014-06-25 16:45:40-834] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Docente_QuadroSumario drop foreign key FK_e1pyts6nasxxbghp3f3ls16qx
+[avalia-docente] [2014-06-25 16:45:40-834] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table Docente_QuadroSumario drop foreign key FK_e1pyts6nasxxbghp3f3ls16qx [42122-174]
+[avalia-docente] [2014-06-25 16:45:40-835] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Docente_QuadroSumario drop foreign key FK_7yd0rye7vf1wv080x5exmju7a
+[avalia-docente] [2014-06-25 16:45:40-835] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table Docente_QuadroSumario drop foreign key FK_7yd0rye7vf1wv080x5exmju7a [42122-174]
+[avalia-docente] [2014-06-25 16:45:40-836] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade drop foreign key FK_ht6byi0p1oxl3ctfa1n0qhok1
+[avalia-docente] [2014-06-25 16:45:40-836] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table GrupoAtividade drop foreign key FK_ht6byi0p1oxl3ctfa1n0qhok1 [42122-174]
+[avalia-docente] [2014-06-25 16:45:40-836] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade drop foreign key FK_iuqc0v8w9k1y2fdcx3l8qjl8h
+[avalia-docente] [2014-06-25 16:45:40-836] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table GrupoAtividade drop foreign key FK_iuqc0v8w9k1y2fdcx3l8qjl8h [42122-174]
+[avalia-docente] [2014-06-25 16:45:40-837] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade drop foreign key FK_6ts0188i5gi51g6o4inu1cn1w
+[avalia-docente] [2014-06-25 16:45:40-837] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table GrupoAtividade drop foreign key FK_6ts0188i5gi51g6o4inu1cn1w [42122-174]
+[avalia-docente] [2014-06-25 16:45:40-838] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade_Atividade drop foreign key FK_1vdk2h22fvgv4i6jhn73if0ln
+[avalia-docente] [2014-06-25 16:45:40-838] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table GrupoAtividade_Atividade drop foreign key FK_1vdk2h22fvgv4i6jhn73if0ln [42122-174]
+[avalia-docente] [2014-06-25 16:45:40-839] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade_Atividade drop foreign key FK_k3ua0rdiqga57v3amvkvpesnh
+[avalia-docente] [2014-06-25 16:45:40-839] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table GrupoAtividade_Atividade drop foreign key FK_k3ua0rdiqga57v3amvkvpesnh [42122-174]
+[avalia-docente] [2014-06-25 16:45:40-840] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade_NotasGrupoAtividade drop foreign key FK_gev2ekyeg5b5raxu69sap3x8a
+[avalia-docente] [2014-06-25 16:45:40-840] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table GrupoAtividade_NotasGrupoAtividade drop foreign key FK_gev2ekyeg5b5raxu69sap3x8a [42122-174]
+[avalia-docente] [2014-06-25 16:45:40-842] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade_NotasGrupoAtividade drop foreign key FK_6gyyh0ckfonr2xbm5433026bo
+[avalia-docente] [2014-06-25 16:45:40-842] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table GrupoAtividade_NotasGrupoAtividade drop foreign key FK_6gyyh0ckfonr2xbm5433026bo [42122-174]
+[avalia-docente] [2014-06-25 16:45:40-843] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table ItemAtividade drop foreign key FK_jk9r9j6scatyqinfpgpkhgwew
+[avalia-docente] [2014-06-25 16:45:40-843] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table ItemAtividade drop foreign key FK_jk9r9j6scatyqinfpgpkhgwew [42122-174]
+[avalia-docente] [2014-06-25 16:45:40-843] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table ItemAtividade drop foreign key FK_hawfu0txs45v32qud541qhvj0
+[avalia-docente] [2014-06-25 16:45:40-843] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table ItemAtividade drop foreign key FK_hawfu0txs45v32qud541qhvj0 [42122-174]
+[avalia-docente] [2014-06-25 16:45:40-844] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Multiplicador drop foreign key FK_hcqv7wx7i7u1xt1o64nlw8m4k
+[avalia-docente] [2014-06-25 16:45:40-844] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table Multiplicador drop foreign key FK_hcqv7wx7i7u1xt1o64nlw8m4k [42122-174]
+[avalia-docente] [2014-06-25 16:45:40-845] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table NotasGrupoAtividade drop foreign key FK_m4mij8t1a5pimcues8rse5982
+[avalia-docente] [2014-06-25 16:45:40-845] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table NotasGrupoAtividade drop foreign key FK_m4mij8t1a5pimcues8rse5982 [42122-174]
+[avalia-docente] [2014-06-25 16:45:40-845] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table NotasGrupoAtividade drop foreign key FK_hxu58q4cdpl8y4prnp6x4vifr
+[avalia-docente] [2014-06-25 16:45:40-845] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table NotasGrupoAtividade drop foreign key FK_hxu58q4cdpl8y4prnp6x4vifr [42122-174]
+[avalia-docente] [2014-06-25 16:45:40-846] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table NotasGrupoAtividade drop foreign key FK_ktt14x2jcm3s2y1w50d5h6887
+[avalia-docente] [2014-06-25 16:45:40-846] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table NotasGrupoAtividade drop foreign key FK_ktt14x2jcm3s2y1w50d5h6887 [42122-174]
+[avalia-docente] [2014-06-25 16:45:40-847] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table QuadroSumario drop foreign key FK_9eumvgtrg8s8st4grj9o9vn0r
+[avalia-docente] [2014-06-25 16:45:40-847] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table QuadroSumario drop foreign key FK_9eumvgtrg8s8st4grj9o9vn0r [42122-174]
+[avalia-docente] [2014-06-25 16:45:40-847] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table QuadroSumario drop foreign key FK_a1l6l5hc2c7t4wgtu8gnxftrb
+[avalia-docente] [2014-06-25 16:45:40-848] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table QuadroSumario drop foreign key FK_a1l6l5hc2c7t4wgtu8gnxftrb [42122-174]
+[avalia-docente] [2014-06-25 16:45:40-848] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table QuadroSumario drop foreign key FK_mug8yaiow5onrp3o9qpn2jinw
+[avalia-docente] [2014-06-25 16:45:40-848] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table QuadroSumario drop foreign key FK_mug8yaiow5onrp3o9qpn2jinw [42122-174]
+[avalia-docente] [2014-06-25 16:45:40-849] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table QuadroSumario_NotasGrupoAtividade drop foreign key FK_gilaf5gfg8igldf3gyq3koclp
+[avalia-docente] [2014-06-25 16:45:40-849] [Thread-7] [] [ERROR] [SchemaExport   ]: Column "FOREIGN" not found; SQL statement:
+alter table QuadroSumario_NotasGrupoAtividade drop foreign key FK_gilaf5gfg8igldf3gyq3koclp [42122-174]
+[avalia-docente] [2014-06-25 16:45:40-850] [Thread-7] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table QuadroSumario_NotasGrupoAtividade drop foreign key FK_a4rnxy76uwoiiybdpmrb6acf4
+[aval

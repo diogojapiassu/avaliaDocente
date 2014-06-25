@@ -1,0 +1,633 @@
+[avalia-docente] [2014-06-25 15:26:41-113] [main] [] [INFO ] [AvaliaDocenteMain]: Iniciando a aplicacao...
+[avalia-docente] [2014-06-25 15:26:41-187] [main] [] [INFO ] [ClassPathXmlApplicationContext]: Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@67cc3210: startup date [Wed Jun 25 15:26:41 BRT 2014]; root of context hierarchy
+[avalia-docente] [2014-06-25 15:26:41-233] [main] [] [INFO ] [XmlBeanDefinitionReader]: Loading XML bean definitions from class path resource [META-INF/spring/applicationContext.xml]
+[avalia-docente] [2014-06-25 15:26:42-759] [main] [] [INFO ] [XmlBeanDefinitionReader]: Loading XML bean definitions from class path resource [META-INF/spring/applicationContext-commons.xml]
+[avalia-docente] [2014-06-25 15:26:44-832] [main] [] [INFO ] [XmlBeanDefinitionReader]: Loading XML bean definitions from class path resource [META-INF/spring/applicationContext-persistence.xml]
+[avalia-docente] [2014-06-25 15:26:46-642] [main] [] [INFO ] [XmlBeanDefinitionReader]: Loading XML bean definitions from class path resource [META-INF/spring/applicationContext-persistence-dev.xml]
+[avalia-docente] [2014-06-25 15:26:47-065] [main] [] [INFO ] [XmlBeanDefinitionReader]: Loading XML bean definitions from class path resource [META-INF/spring/applicationContext-populador.xml]
+[avalia-docente] [2014-06-25 15:26:47-793] [main] [] [INFO ] [ClassPathXmlApplicationContext]: Bean 'org.springframework.orm.hibernate4.HibernateExceptionTranslator#0' of type [class org.springframework.orm.hibernate4.HibernateExceptionTranslator] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[avalia-docente] [2014-06-25 15:26:47-826] [main] [] [INFO ] [MLog           ]: MLog clients using log4j logging.
+[avalia-docente] [2014-06-25 15:26:47-847] [main] [] [INFO ] [UidUtils       ]: Failed to get local InetAddress for VMID. This is unlikely to matter. At all. We'll add some extra randomness
+java.net.UnknownHostException: pc-649301: pc-649301: Nome ou serviço desconhecido
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1473)
+	at com.mchange.v2.uid.UidUtils.generateVmId(UidUtils.java:70)
+	at com.mchange.v2.uid.UidUtils.<clinit>(UidUtils.java:54)
+	at com.mchange.v2.c3p0.impl.C3P0ImplUtils.<clinit>(C3P0ImplUtils.java:122)
+	at com.mchange.v2.c3p0.impl.PoolBackedDataSourceBase.<init>(PoolBackedDataSourceBase.java:238)
+	at com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.<init>(AbstractPoolBackedDataSource.java:74)
+	at com.mchange.v2.c3p0.ComboPooledDataSource.<init>(ComboPooledDataSource.java:134)
+	at com.mchange.v2.c3p0.ComboPooledDataSource.<init>(ComboPooledDataSource.java:130)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:147)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:990)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:943)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:485)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:323)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:107)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1360)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1118)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:420)
+	at org.springframework.beans.factory.BeanFactoryUtils.beansOfTypeIncludingAncestors(BeanFactoryUtils.java:277)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.detectPersistenceExceptionTranslators(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.<init>(PersistenceExceptionTranslationInterceptor.java:79)
+	at org.springframework.dao.annotation.PersistenceExceptionTranslationAdvisor.<init>(PersistenceExceptionTranslationAdvisor.java:70)
+	at org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor.setBeanFactory(PersistenceExceptionTranslationPostProcessor.java:103)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeAwareMethods(AbstractAutowireCapableBeanFactory.java:1475)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:734)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:457)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:83)
+	at br.ufg.inf.es.avaliadocente.context.CustomApplicationContext.<init>(CustomApplicationContext.java:33)
+	at br.ufg.inf.es.avaliadocente.context.CustomApplicationContext.getInstance(CustomApplicationContext.java:38)
+	at br.ufg.inf.es.avaliadocente.main.AvaliaDocenteMain.main(AvaliaDocenteMain.java:28)
+Caused by: java.net.UnknownHostException: pc-649301: Nome ou serviço desconhecido
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:901)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1293)
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1469)
+	... 52 more
+[avalia-docente] [2014-06-25 15:26:47-900] [main] [] [INFO ] [C3P0Registry   ]: Initializing c3p0-0.9.2.1 [built 20-March-2013 10:47:27 +0000; debug? true; trace: 10]
+[avalia-docente] [2014-06-25 15:26:47-970] [main] [] [INFO ] [ClassPathXmlApplicationContext]: Bean 'dataSource' of type [class com.mchange.v2.c3p0.ComboPooledDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[avalia-docente] [2014-06-25 15:26:47-977] [main] [] [INFO ] [PropertiesFactoryBean]: Loading properties file from class path resource [hibernate.properties]
+[avalia-docente] [2014-06-25 15:26:47-977] [main] [] [INFO ] [ClassPathXmlApplicationContext]: Bean 'jpaProperties' of type [class org.springframework.beans.factory.config.PropertiesFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[avalia-docente] [2014-06-25 15:26:47-977] [main] [] [INFO ] [ClassPathXmlApplicationContext]: Bean 'jpaProperties' of type [class java.util.Properties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[avalia-docente] [2014-06-25 15:26:47-985] [main] [] [INFO ] [ClassPathXmlApplicationContext]: Bean 'jpaVendorAdapter' of type [class org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[avalia-docente] [2014-06-25 15:26:47-995] [main] [] [INFO ] [LocalContainerEntityManagerFactoryBean]: Building JPA container EntityManagerFactory for persistence unit 'avaliaDocente'
+[avalia-docente] [2014-06-25 15:26:48-101] [main] [] [INFO ] [Version        ]: HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+[avalia-docente] [2014-06-25 15:26:48-105] [main] [] [INFO ] [Version        ]: HHH000412: Hibernate Core {4.2.7.Final}
+[avalia-docente] [2014-06-25 15:26:48-107] [main] [] [INFO ] [Environment    ]: HHH000205: Loaded properties from resource hibernate.properties: {hibernate.show_sql=true, hibernate.jdbc.batch_size=50, hibernate.bytecode.use_reflection_optimizer=true, hibernate.jdbc.fetch_size=10, hibernate.default_batch_fetch_size=16, hibernate.generate_statistics=true, hibernate.hbm2ddl.auto=update, hibernate.connection.useUnicode=true, hibernate.jdbc.use_streams_for_binary=true, hibernate.max_fetch_depth=5, hibernate.connection.charSet=UTF-8, hibernate.use_outer_join=true, hibernate.jdbc.use_scrollable_resultset=true, hibernate.format_sql=false, hibernate.connection.isolation=2, hibernate.order_inserts=true, hibernate.use_sql_comments=false, hibernate.order_updates=true, hibernate.dialect=org.hibernate.dialect.PostgreSQL82Dialect, hibernate.query.factory_class=org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory}
+[avalia-docente] [2014-06-25 15:26:48-107] [main] [] [INFO ] [Environment    ]: HHH000407: Using java.io streams to persist binary types
+[avalia-docente] [2014-06-25 15:26:48-107] [main] [] [INFO ] [Environment    ]: HHH000406: Using bytecode reflection optimizer
+[avalia-docente] [2014-06-25 15:26:48-107] [main] [] [INFO ] [Environment    ]: HHH000021: Bytecode provider name : javassist
+[avalia-docente] [2014-06-25 15:26:48-256] [main] [] [INFO ] [ConnectionProviderInitiator]: HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+[avalia-docente] [2014-06-25 15:26:48-289] [main] [] [INFO ] [AbstractPoolBackedDataSource]: Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1ehy3nljnhrcl1b74sr2|64ca9718, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> org.postgresql.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1ehy3nljnhrcl1b74sr2|64ca9718, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:postgresql://localhost:5432/avaliadocente, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 240, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+[avalia-docente] [2014-06-25 15:27:18-378] [C3P0PooledConnectionPoolManager[identityToken->1ehy3nljnhrcl1b74sr2|64ca9718]-HelperThread-#1] [] [WARN ] [BasicResourcePool]: com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask@57bb8fd8 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (30). Last acquisition attempt exception: 
+org.postgresql.util.PSQLException: Conexão negada. Verifique se o nome da máquina e a porta estão corretos e se o postmaster está aceitando conexões TCP/IP.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:207)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:64)
+	at org.postgresql.jdbc2.AbstractJdbc2Connection.<init>(AbstractJdbc2Connection.java:136)
+	at org.postgresql.jdbc3.AbstractJdbc3Connection.<init>(AbstractJdbc3Connection.java:29)
+	at org.postgresql.jdbc3g.AbstractJdbc3gConnection.<init>(AbstractJdbc3gConnection.java:21)
+	at org.postgresql.jdbc4.AbstractJdbc4Connection.<init>(AbstractJdbc4Connection.java:31)
+	at org.postgresql.jdbc4.Jdbc4Connection.<init>(Jdbc4Connection.java:24)
+	at org.postgresql.Driver.makeConnection(Driver.java:393)
+	at org.postgresql.Driver.connect(Driver.java:267)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:146)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:195)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:184)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:200)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1086)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquireAndDecrementPendingAcquiresWithinLockOnSuccess(BasicResourcePool.java:1073)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:44)
+	at com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:648)
+Caused by: java.net.ConnectException: Conexão recusada
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at java.net.Socket.connect(Socket.java:528)
+	at org.postgresql.core.PGStream.<init>(PGStream.java:60)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:101)
+	... 17 more
+[avalia-docente] [2014-06-25 15:27:18-379] [C3P0PooledConnectionPoolManager[identityToken->1ehy3nljnhrcl1b74sr2|64ca9718]-HelperThread-#1] [] [WARN ] [BasicResourcePool]: Having failed to acquire a resource, com.mchange.v2.resourcepool.BasicResourcePool@751e963 is interrupting all Threads waiting on a resource to check out. Will try again in response to new client requests.
+[avalia-docente] [2014-06-25 15:27:18-378] [C3P0PooledConnectionPoolManager[identityToken->1ehy3nljnhrcl1b74sr2|64ca9718]-HelperThread-#2] [] [WARN ] [BasicResourcePool]: com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask@5ae0dae7 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (30). Last acquisition attempt exception: 
+org.postgresql.util.PSQLException: Conexão negada. Verifique se o nome da máquina e a porta estão corretos e se o postmaster está aceitando conexões TCP/IP.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:207)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:64)
+	at org.postgresql.jdbc2.AbstractJdbc2Connection.<init>(AbstractJdbc2Connection.java:136)
+	at org.postgresql.jdbc3.AbstractJdbc3Connection.<init>(AbstractJdbc3Connection.java:29)
+	at org.postgresql.jdbc3g.AbstractJdbc3gConnection.<init>(AbstractJdbc3gConnection.java:21)
+	at org.postgresql.jdbc4.AbstractJdbc4Connection.<init>(AbstractJdbc4Connection.java:31)
+	at org.postgresql.jdbc4.Jdbc4Connection.<init>(Jdbc4Connection.java:24)
+	at org.postgresql.Driver.makeConnection(Driver.java:393)
+	at org.postgresql.Driver.connect(Driver.java:267)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:146)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:195)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:184)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:200)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1086)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquireAndDecrementPendingAcquiresWithinLockOnSuccess(BasicResourcePool.java:1073)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:44)
+	at com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:648)
+Caused by: java.net.ConnectException: Conexão recusada
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at java.net.Socket.connect(Socket.java:528)
+	at org.postgresql.core.PGStream.<init>(PGStream.java:60)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:101)
+	... 17 more
+[avalia-docente] [2014-06-25 15:27:18-380] [C3P0PooledConnectionPoolManager[identityToken->1ehy3nljnhrcl1b74sr2|64ca9718]-HelperThread-#2] [] [WARN ] [BasicResourcePool]: Having failed to acquire a resource, com.mchange.v2.resourcepool.BasicResourcePool@751e963 is interrupting all Threads waiting on a resource to check out. Will try again in response to new client requests.
+[avalia-docente] [2014-06-25 15:27:18-381] [C3P0PooledConnectionPoolManager[identityToken->1ehy3nljnhrcl1b74sr2|64ca9718]-HelperThread-#1] [] [WARN ] [BasicResourcePool]: com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask@38282baf -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (30). Last acquisition attempt exception: 
+org.postgresql.util.PSQLException: Conexão negada. Verifique se o nome da máquina e a porta estão corretos e se o postmaster está aceitando conexões TCP/IP.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:207)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:64)
+	at org.postgresql.jdbc2.AbstractJdbc2Connection.<init>(AbstractJdbc2Connection.java:136)
+	at org.postgresql.jdbc3.AbstractJdbc3Connection.<init>(AbstractJdbc3Connection.java:29)
+	at org.postgresql.jdbc3g.AbstractJdbc3gConnection.<init>(AbstractJdbc3gConnection.java:21)
+	at org.postgresql.jdbc4.AbstractJdbc4Connection.<init>(AbstractJdbc4Connection.java:31)
+	at org.postgresql.jdbc4.Jdbc4Connection.<init>(Jdbc4Connection.java:24)
+	at org.postgresql.Driver.makeConnection(Driver.java:393)
+	at org.postgresql.Driver.connect(Driver.java:267)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:146)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:195)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:184)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:200)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1086)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquireAndDecrementPendingAcquiresWithinLockOnSuccess(BasicResourcePool.java:1073)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:44)
+	at com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:648)
+Caused by: java.net.ConnectException: Conexão recusada
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at java.net.Socket.connect(Socket.java:528)
+	at org.postgresql.core.PGStream.<init>(PGStream.java:60)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:101)
+	... 17 more
+[avalia-docente] [2014-06-25 15:27:18-381] [C3P0PooledConnectionPoolManager[identityToken->1ehy3nljnhrcl1b74sr2|64ca9718]-HelperThread-#1] [] [WARN ] [BasicResourcePool]: Having failed to acquire a resource, com.mchange.v2.resourcepool.BasicResourcePool@751e963 is interrupting all Threads waiting on a resource to check out. Will try again in response to new client requests.
+[avalia-docente] [2014-06-25 15:27:18-385] [main] [] [WARN ] [JdbcServicesImpl]: HHH000342: Could not obtain connection to query metadata : Connections could not be acquired from the underlying database!
+[avalia-docente] [2014-06-25 15:27:18-385] [C3P0PooledConnectionPoolManager[identityToken->1ehy3nljnhrcl1b74sr2|64ca9718]-HelperThread-#2] [] [WARN ] [BasicResourcePool]: com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask@262e7302 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (30). Last acquisition attempt exception: 
+org.postgresql.util.PSQLException: Conexão negada. Verifique se o nome da máquina e a porta estão corretos e se o postmaster está aceitando conexões TCP/IP.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:207)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:64)
+	at org.postgresql.jdbc2.AbstractJdbc2Connection.<init>(AbstractJdbc2Connection.java:136)
+	at org.postgresql.jdbc3.AbstractJdbc3Connection.<init>(AbstractJdbc3Connection.java:29)
+	at org.postgresql.jdbc3g.AbstractJdbc3gConnection.<init>(AbstractJdbc3gConnection.java:21)
+	at org.postgresql.jdbc4.AbstractJdbc4Connection.<init>(AbstractJdbc4Connection.java:31)
+	at org.postgresql.jdbc4.Jdbc4Connection.<init>(Jdbc4Connection.java:24)
+	at org.postgresql.Driver.makeConnection(Driver.java:393)
+	at org.postgresql.Driver.connect(Driver.java:267)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:146)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:195)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:184)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:200)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1086)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquireAndDecrementPendingAcquiresWithinLockOnSuccess(BasicResourcePool.java:1073)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:44)
+	at com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:648)
+Caused by: java.net.ConnectException: Conexão recusada
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at java.net.Socket.connect(Socket.java:528)
+	at org.postgresql.core.PGStream.<init>(PGStream.java:60)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:101)
+	... 17 more
+[avalia-docente] [2014-06-25 15:27:18-385] [C3P0PooledConnectionPoolManager[identityToken->1ehy3nljnhrcl1b74sr2|64ca9718]-HelperThread-#2] [] [WARN ] [BasicResourcePool]: Having failed to acquire a resource, com.mchange.v2.resourcepool.BasicResourcePool@751e963 is interrupting all Threads waiting on a resource to check out. Will try again in response to new client requests.
+[avalia-docente] [2014-06-25 15:27:18-396] [main] [] [INFO ] [Dialect        ]: HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+[avalia-docente] [2014-06-25 15:27:18-402] [main] [] [INFO ] [LobCreatorBuilder]: HHH000422: Disabling contextual LOB creation as connection was null
+[avalia-docente] [2014-06-25 15:27:18-544] [main] [] [INFO ] [TransactionFactoryInitiator]: HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+[avalia-docente] [2014-06-25 15:27:18-548] [main] [] [INFO ] [ASTQueryTranslatorFactory]: HHH000397: Using ASTQueryTranslatorFactory
+[avalia-docente] [2014-06-25 15:27:18-586] [main] [] [INFO ] [Version        ]: HV000001: Hibernate Validator 4.3.1.Final
+[avalia-docente] [2014-06-25 15:27:19-626] [main] [] [INFO ] [SchemaUpdate   ]: HHH000228: Running hbm2ddl schema update
+[avalia-docente] [2014-06-25 15:27:19-626] [main] [] [INFO ] [SchemaUpdate   ]: HHH000102: Fetching database metadata
+[avalia-docente] [2014-06-25 15:27:48-500] [C3P0PooledConnectionPoolManager[identityToken->1ehy3nljnhrcl1b74sr2|64ca9718]-HelperThread-#1] [] [WARN ] [BasicResourcePool]: com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask@697afe5 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (30). Last acquisition attempt exception: 
+org.postgresql.util.PSQLException: Conexão negada. Verifique se o nome da máquina e a porta estão corretos e se o postmaster está aceitando conexões TCP/IP.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:207)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:64)
+	at org.postgresql.jdbc2.AbstractJdbc2Connection.<init>(AbstractJdbc2Connection.java:136)
+	at org.postgresql.jdbc3.AbstractJdbc3Connection.<init>(AbstractJdbc3Connection.java:29)
+	at org.postgresql.jdbc3g.AbstractJdbc3gConnection.<init>(AbstractJdbc3gConnection.java:21)
+	at org.postgresql.jdbc4.AbstractJdbc4Connection.<init>(AbstractJdbc4Connection.java:31)
+	at org.postgresql.jdbc4.Jdbc4Connection.<init>(Jdbc4Connection.java:24)
+	at org.postgresql.Driver.makeConnection(Driver.java:393)
+	at org.postgresql.Driver.connect(Driver.java:267)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:146)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:195)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:184)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:200)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1086)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquireAndDecrementPendingAcquiresWithinLockOnSuccess(BasicResourcePool.java:1073)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:44)
+	at com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:648)
+Caused by: java.net.ConnectException: Conexão recusada
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at java.net.Socket.connect(Socket.java:528)
+	at org.postgresql.core.PGStream.<init>(PGStream.java:60)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:101)
+	... 17 more
+[avalia-docente] [2014-06-25 15:27:48-501] [C3P0PooledConnectionPoolManager[identityToken->1ehy3nljnhrcl1b74sr2|64ca9718]-HelperThread-#0] [] [WARN ] [BasicResourcePool]: com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask@6cf27734 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (30). Last acquisition attempt exception: 
+org.postgresql.util.PSQLException: Conexão negada. Verifique se o nome da máquina e a porta estão corretos e se o postmaster está aceitando conexões TCP/IP.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:207)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:64)
+	at org.postgresql.jdbc2.AbstractJdbc2Connection.<init>(AbstractJdbc2Connection.java:136)
+	at org.postgresql.jdbc3.AbstractJdbc3Connection.<init>(AbstractJdbc3Connection.java:29)
+	at org.postgresql.jdbc3g.AbstractJdbc3gConnection.<init>(AbstractJdbc3gConnection.java:21)
+	at org.postgresql.jdbc4.AbstractJdbc4Connection.<init>(AbstractJdbc4Connection.java:31)
+	at org.postgresql.jdbc4.Jdbc4Connection.<init>(Jdbc4Connection.java:24)
+	at org.postgresql.Driver.makeConnection(Driver.java:393)
+	at org.postgresql.Driver.connect(Driver.java:267)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:146)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:195)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:184)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:200)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1086)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquireAndDecrementPendingAcquiresWithinLockOnSuccess(BasicResourcePool.java:1073)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:44)
+	at com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:648)
+Caused by: java.net.ConnectException: Conexão recusada
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at java.net.Socket.connect(Socket.java:528)
+	at org.postgresql.core.PGStream.<init>(PGStream.java:60)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:101)
+	... 17 more
+[avalia-docente] [2014-06-25 15:27:48-501] [C3P0PooledConnectionPoolManager[identityToken->1ehy3nljnhrcl1b74sr2|64ca9718]-HelperThread-#2] [] [WARN ] [BasicResourcePool]: com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask@509ce6c4 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (30). Last acquisition attempt exception: 
+org.postgresql.util.PSQLException: Conexão negada. Verifique se o nome da máquina e a porta estão corretos e se o postmaster está aceitando conexões TCP/IP.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:207)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:64)
+	at org.postgresql.jdbc2.AbstractJdbc2Connection.<init>(AbstractJdbc2Connection.java:136)
+	at org.postgresql.jdbc3.AbstractJdbc3Connection.<init>(AbstractJdbc3Connection.java:29)
+	at org.postgresql.jdbc3g.AbstractJdbc3gConnection.<init>(AbstractJdbc3gConnection.java:21)
+	at org.postgresql.jdbc4.AbstractJdbc4Connection.<init>(AbstractJdbc4Connection.java:31)
+	at org.postgresql.jdbc4.Jdbc4Connection.<init>(Jdbc4Connection.java:24)
+	at org.postgresql.Driver.makeConnection(Driver.java:393)
+	at org.postgresql.Driver.connect(Driver.java:267)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:146)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:195)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:184)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:200)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1086)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquireAndDecrementPendingAcquiresWithinLockOnSuccess(BasicResourcePool.java:1073)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:44)
+	at com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:648)
+Caused by: java.net.ConnectException: Conexão recusada
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at java.net.Socket.connect(Socket.java:528)
+	at org.postgresql.core.PGStream.<init>(PGStream.java:60)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:101)
+	... 17 more
+[avalia-docente] [2014-06-25 15:27:48-501] [C3P0PooledConnectionPoolManager[identityToken->1ehy3nljnhrcl1b74sr2|64ca9718]-HelperThread-#1] [] [WARN ] [BasicResourcePool]: Having failed to acquire a resource, com.mchange.v2.resourcepool.BasicResourcePool@751e963 is interrupting all Threads waiting on a resource to check out. Will try again in response to new client requests.
+[avalia-docente] [2014-06-25 15:27:48-502] [main] [] [ERROR] [SchemaUpdate   ]: HHH000319: Could not get database metadata
+java.sql.SQLException: Connections could not be acquired from the underlying database!
+	at com.mchange.v2.sql.SqlUtils.toSQLException(SqlUtils.java:118)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool.checkoutPooledConnection(C3P0PooledConnectionPool.java:689)
+	at com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.getConnection(AbstractPoolBackedDataSource.java:140)
+	at org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider.getConnection(InjectedDataSourceConnectionProvider.java:70)
+	at org.hibernate.tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.prepare(SuppliedConnectionProviderConnectionHelper.java:51)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:194)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:178)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:506)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1794)
+	at org.hibernate.ejb.EntityManagerFactoryImpl.<init>(EntityManagerFactoryImpl.java:96)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:914)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:899)
+	at org.hibernate.ejb.HibernatePersistence.createContainerEntityManagerFactory(HibernatePersistence.java:76)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:287)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:310)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1514)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1452)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:420)
+	at org.springframework.beans.factory.BeanFactoryUtils.beansOfTypeIncludingAncestors(BeanFactoryUtils.java:277)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.detectPersistenceExceptionTranslators(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.<init>(PersistenceExceptionTranslationInterceptor.java:79)
+	at org.springframework.dao.annotation.PersistenceExceptionTranslationAdvisor.<init>(PersistenceExceptionTranslationAdvisor.java:70)
+	at org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor.setBeanFactory(PersistenceExceptionTranslationPostProcessor.java:103)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeAwareMethods(AbstractAutowireCapableBeanFactory.java:1475)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:734)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:457)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:83)
+	at br.ufg.inf.es.avaliadocente.context.CustomApplicationContext.<init>(CustomApplicationContext.java:33)
+	at br.ufg.inf.es.avaliadocente.context.CustomApplicationContext.getInstance(CustomApplicationContext.java:38)
+	at br.ufg.inf.es.avaliadocente.main.AvaliaDocenteMain.main(AvaliaDocenteMain.java:28)
+Caused by: com.mchange.v2.resourcepool.CannotAcquireResourceException: A ResourcePool could not acquire a resource from its primary factory or source.
+	at com.mchange.v2.resourcepool.BasicResourcePool.awaitAvailable(BasicResourcePool.java:1418)
+	at com.mchange.v2.resourcepool.BasicResourcePool.prelimCheckoutResource(BasicResourcePool.java:606)
+	at com.mchange.v2.resourcepool.BasicResourcePool.checkoutResource(BasicResourcePool.java:526)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool.checkoutAndMarkConnectionInUse(C3P0PooledConnectionPool.java:755)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool.checkoutPooledConnection(C3P0PooledConnectionPool.java:682)
+	... 42 more
+[avalia-docente] [2014-06-25 15:27:48-503] [main] [] [ERROR] [SchemaUpdate   ]: HHH000299: Could not complete schema update
+java.sql.SQLException: Connections could not be acquired from the underlying database!
+	at com.mchange.v2.sql.SqlUtils.toSQLException(SqlUtils.java:118)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool.checkoutPooledConnection(C3P0PooledConnectionPool.java:689)
+	at com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.getConnection(AbstractPoolBackedDataSource.java:140)
+	at org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider.getConnection(InjectedDataSourceConnectionProvider.java:70)
+	at org.hibernate.tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.prepare(SuppliedConnectionProviderConnectionHelper.java:51)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:194)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:178)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:506)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1794)
+	at org.hibernate.ejb.EntityManagerFactoryImpl.<init>(EntityManagerFactoryImpl.java:96)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:914)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:899)
+	at org.hibernate.ejb.HibernatePersistence.createContainerEntityManagerFactory(HibernatePersistence.java:76)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:287)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:310)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1514)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1452)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:420)
+	at org.springframework.beans.factory.BeanFactoryUtils.beansOfTypeIncludingAncestors(BeanFactoryUtils.java:277)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.detectPersistenceExceptionTranslators(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.<init>(PersistenceExceptionTranslationInterceptor.java:79)
+	at org.springframework.dao.annotation.PersistenceExceptionTranslationAdvisor.<init>(PersistenceExceptionTranslationAdvisor.java:70)
+	at org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor.setBeanFactory(PersistenceExceptionTranslationPostProcessor.java:103)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeAwareMethods(AbstractAutowireCapableBeanFactory.java:1475)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:734)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:457)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:83)
+	at br.ufg.inf.es.avaliadocente.context.CustomApplicationContext.<init>(CustomApplicationContext.java:33)
+	at br.ufg.inf.es.avaliadocente.context.CustomApplicationContext.getInstance(CustomApplicationContext.java:38)
+	at br.ufg.inf.es.avaliadoce[avalia-docente] [2014-06-25 15:29:15-340] [main] [] [INFO ] [AvaliaDocenteMain]: Iniciando a aplicacao...
+[avalia-docente] [2014-06-25 15:29:15-415] [main] [] [INFO ] [ClassPathXmlApplicationContext]: Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@45974736: startup date [Wed Jun 25 15:29:15 BRT 2014]; root of context hierarchy
+[avalia-docente] [2014-06-25 15:29:15-461] [main] [] [INFO ] [XmlBeanDefinitionReader]: Loading XML bean definitions from class path resource [META-INF/spring/applicationContext.xml]
+[avalia-docente] [2014-06-25 15:29:16-549] [main] [] [INFO ] [XmlBeanDefinitionReader]: Loading XML bean definitions from class path resource [META-INF/spring/applicationContext-commons.xml]
+[avalia-docente] [2014-06-25 15:29:18-413] [main] [] [INFO ] [XmlBeanDefinitionReader]: Loading XML bean definitions from class path resource [META-INF/spring/applicationContext-persistence.xml]
+[avalia-docente] [2014-06-25 15:29:20-427] [main] [] [INFO ] [XmlBeanDefinitionReader]: Loading XML bean definitions from class path resource [META-INF/spring/applicationContext-persistence-dev.xml]
+[avalia-docente] [2014-06-25 15:29:20-840] [main] [] [INFO ] [XmlBeanDefinitionReader]: Loading XML bean definitions from class path resource [META-INF/spring/applicationContext-populador.xml]
+[avalia-docente] [2014-06-25 15:29:21-733] [main] [] [INFO ] [ClassPathXmlApplicationContext]: Bean 'org.springframework.orm.hibernate4.HibernateExceptionTranslator#0' of type [class org.springframework.orm.hibernate4.HibernateExceptionTranslator] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[avalia-docente] [2014-06-25 15:29:21-767] [main] [] [INFO ] [MLog           ]: MLog clients using log4j logging.
+[avalia-docente] [2014-06-25 15:29:21-789] [main] [] [INFO ] [UidUtils       ]: Failed to get local InetAddress for VMID. This is unlikely to matter. At all. We'll add some extra randomness
+java.net.UnknownHostException: pc-649301: pc-649301: Nome ou serviço desconhecido
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1473)
+	at com.mchange.v2.uid.UidUtils.generateVmId(UidUtils.java:70)
+	at com.mchange.v2.uid.UidUtils.<clinit>(UidUtils.java:54)
+	at com.mchange.v2.c3p0.impl.C3P0ImplUtils.<clinit>(C3P0ImplUtils.java:122)
+	at com.mchange.v2.c3p0.impl.PoolBackedDataSourceBase.<init>(PoolBackedDataSourceBase.java:238)
+	at com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.<init>(AbstractPoolBackedDataSource.java:74)
+	at com.mchange.v2.c3p0.ComboPooledDataSource.<init>(ComboPooledDataSource.java:134)
+	at com.mchange.v2.c3p0.ComboPooledDataSource.<init>(ComboPooledDataSource.java:130)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:147)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:990)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:943)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:485)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:323)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:107)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1360)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1118)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:420)
+	at org.springframework.beans.factory.BeanFactoryUtils.beansOfTypeIncludingAncestors(BeanFactoryUtils.java:277)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.detectPersistenceExceptionTranslators(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.<init>(PersistenceExceptionTranslationInterceptor.java:79)
+	at org.springframework.dao.annotation.PersistenceExceptionTranslationAdvisor.<init>(PersistenceExceptionTranslationAdvisor.java:70)
+	at org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor.setBeanFactory(PersistenceExceptionTranslationPostProcessor.java:103)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeAwareMethods(AbstractAutowireCapableBeanFactory.java:1475)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:734)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:457)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:83)
+	at br.ufg.inf.es.avaliadocente.context.CustomApplicationContext.<init>(CustomApplicationContext.java:33)
+	at br.ufg.inf.es.avaliadocente.context.CustomApplicationContext.getInstance(CustomApplicationContext.java:38)
+	at br.ufg.inf.es.avaliadocente.main.AvaliaDocenteMain.main(AvaliaDocenteMain.java:28)
+Caused by: java.net.UnknownHostException: pc-64[avalia-docente] [2014-06-25 15:33:21-466] [main] [] [INFO ] [AvaliaDocenteMain]: Iniciando a aplicacao...
+[avalia-docente] [2014-06-25 15:33:21-540] [main] [] [INFO ] [ClassPathXmlApplicationContext]: Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@67cc3210: startup date [Wed Jun 25 15:33:21 BRT 2014]; root of context hierarchy
+[avalia-docente] [2014-06-25 15:33:21-585] [main] [] [INFO ] [XmlBeanDefinitionReader]: Loading XML bean definitions from class path resource [META-INF/spring/applicationContext.xml]
+[avalia-docente] [2014-06-25 15:33:22-744] [main] [] [INFO ] [XmlBeanDefinitionReader]: Loading XML bean definitions from class path resource [META-INF/spring/applicationContext-commons.xml]
+[avalia-docente] [2014-06-25 15:33:24-915] [main] [] [INFO ] [XmlBeanDefinitionReader]: Loading XML bean definitions from class path resource [META-INF/spring/applicationContext-persistence.xml]
+[avalia-docente] [2014-06-25 15:33:26-824] [main] [] [INFO ] [XmlBeanDefinitionReader]: Loading XML bean definitions from class path resource [META-INF/spring/applicationContext-persistence-dev.xml]
+[avalia-docente] [2014-06-25 15:33:27-423] [main] [] [INFO ] [XmlBeanDefinitionReader]: Loading XML bean definitions from class path resource [META-INF/spring/applicationContext-populador.xml]
+[avalia-docente] [2014-06-25 15:33:28-045] [main] [] [INFO ] [ClassPathXmlApplicationContext]: Bean 'org.springframework.orm.hibernate4.HibernateExceptionTranslator#0' of type [class org.springframework.orm.hibernate4.HibernateExceptionTranslator] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[avalia-docente] [2014-06-25 15:33:28-078] [main] [] [INFO ] [MLog           ]: MLog clients using log4j logging.
+[avalia-docente] [2014-06-25 15:33:28-104] [main] [] [INFO ] [UidUtils       ]: Failed to get local InetAddress for VMID. This is unlikely to matter. At all. We'll add some extra randomness
+java.net.UnknownHostException: pc-649301: pc-649301: Nome ou serviço desconhecido
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1473)
+	at com.mchange.v2.uid.UidUtils.generateVmId(UidUtils.java:70)
+	at com.mchange.v2.uid.UidUtils.<clinit>(UidUtils.java:54)
+	at com.mchange.v2.c3p0.impl.C3P0ImplUtils.<clinit>(C3P0ImplUtils.java:122)
+	at com.mchange.v2.c3p0.impl.PoolBackedDataSourceBase.<init>(PoolBackedDataSourceBase.java:238)
+	at com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.<init>(AbstractPoolBackedDataSource.java:74)
+	at com.mchange.v2.c3p0.ComboPooledDataSource.<init>(ComboPooledDataSource.java:134)
+	at com.mchange.v2.c3p0.ComboPooledDataSource.<init>(ComboPooledDataSource.java:130)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:147)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:990)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:943)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:485)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:323)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:107)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1360)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1118)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:420)
+	at org.springframework.beans.factory.BeanFactoryUtils.beansOfTypeIncludingAncestors(BeanFactoryUtils.java:277)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.detectPersistenceExceptionTranslators(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.<init>(PersistenceExceptionTranslationInterceptor.java:79)
+	at org.springframework.dao.annotation.PersistenceExceptionTranslationAdvisor.<init>(PersistenceExceptionTranslationAdvisor.java:70)
+	at org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor.setBeanFactory(PersistenceExceptionTranslationPostProcessor.java:103)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeAwareMethods(AbstractAutowireCapableBeanFactory.java:1475)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:734)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:457)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:83)
+	at br.ufg.inf.es.avaliadocente.context.CustomApplicationContext.<init>(CustomApplicationContext.java:33)
+	at br.ufg.inf.es.avaliadocente.context.CustomApplicationContext.getInstance(CustomApplicationContext.java:38)
+	at br.ufg.inf.es.avaliadocente.main.AvaliaDocenteMain.main(AvaliaDocenteMain.java:28)
+Caused by: java.net.UnknownHostException: pc-649301: Nome ou serviço desconhecido
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:901)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1293)
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1469)
+	... 52 more
+[avalia-docente] [2014-06-25 15:33:28-149] [main] [] [INFO ] [C3P0Registry   ]: Initializing c3p0-0.9.2.1 [built 20-March-2013 10:47:27 +0000; debug? true; trace: 10]
+[avalia-docente] [2014-06-25 15:33:28-225] [main] [] [INFO ] [ClassPathXmlApplicationContext]: Bean 'dataSource' of type [class com.mchange.v2.c3p0.ComboPooledDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[avalia-docente] [2014-06-25 15:33:28-232] [main] [] [INFO ] [PropertiesFactoryBean]: Loading properties file from class path resource [hibernate.properties]
+[avalia-docente] [2014-06-25 15:33:28-232] [main] [] [INFO ] [ClassPathXmlApplicationContext]: Bean 'jpaProperties' of type [class org.springframework.beans.factory.config.PropertiesFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[avalia-docente] [2014-06-25 15:33:28-232] [main] [] [INFO ] [ClassPathXmlApplicationContext]: Bean 'jpaProperties' of type [class java.util.Properties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[avalia-docente] [2014-06-25 15:33:28-240] [main] [] [INFO ] [ClassPathXmlApplicationContext]: Bean 'jpaVendorAdapter' of type [class org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[avalia-docente] [2014-06-25 15:33:28-250] [main] [] [INFO ] [LocalContainerEntityManagerFactoryBean]: Building JPA container EntityManagerFactory for persistence unit 'avaliaDocente'
+[avalia-docente] [2014-06-25 15:33:28-358] [main] [] [INFO ] [Version        ]: HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+[avalia-docente] [2014-06-25 15:33:28-362] [main] [] [INFO ] [Version        ]: HHH000412: Hibernate Core {4.2.7.Final}
+[avalia-docente] [2014-06-25 15:33:28-363] [main] [] [INFO ] [Environment    ]: HHH000205: Loaded properties from resource hibernate.properties: {hibernate.show_sql=true, hibernate.jdbc.batch_size=50, hibernate.bytecode.use_reflection_optimizer=true, hibernate.jdbc.fetch_size=10, hibernate.default_batch_fetch_size=16, hibernate.generate_statistics=true, hibernate.hbm2ddl.auto=create, hibernate.connection.useUnicode=true, hibernate.jdbc.use_streams_for_binary=true, hibernate.max_fetch_depth=5, hibernate.connection.charSet=UTF-8, hibernate.use_outer_join=true, hibernate.jdbc.use_scrollable_resultset=true, hibernate.format_sql=false, hibernate.connection.isolation=2, hibernate.order_inserts=true, hibernate.use_sql_comments=false, hibernate.order_updates=true, hibernate.dialect=org.hibernate.dialect.MySQLDialect, hibernate.query.factory_class=org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory}
+[avalia-docente] [2014-06-25 15:33:28-364] [main] [] [INFO ] [Environment    ]: HHH000407: Using java.io streams to persist binary types
+[avalia-docente] [2014-06-25 15:33:28-364] [main] [] [INFO ] [Environment    ]: HHH000406: Using bytecode reflection optimizer
+[avalia-docente] [2014-06-25 15:33:28-364] [main] [] [INFO ] [Environment    ]: HHH000021: Bytecode provider name : javassist
+[avalia-docente] [2014-06-25 15:33:28-515] [main] [] [INFO ] [ConnectionProviderInitiator]: HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+[avalia-docente] [2014-06-25 15:33:28-548] [main] [] [INFO ] [AbstractPoolBackedDataSource]: Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1o7jw1tjnhsk1c2i8ij|17e3c793, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1o7jw1tjnhsk1c2i8ij|17e3c793, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/avaliadocente, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 240, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+[avalia-docente] [2014-06-25 15:33:28-737] [main] [] [INFO ] [Dialect        ]: HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[avalia-docente] [2014-06-25 15:33:28-743] [main] [] [INFO ] [LobCreatorBuilder]: HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+[avalia-docente] [2014-06-25 15:33:28-882] [main] [] [INFO ] [TransactionFactoryInitiator]: HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+[avalia-docente] [2014-06-25 15:33:28-885] [main] [] [INFO ] [ASTQueryTranslatorFactory]: HHH000397: Using ASTQueryTranslatorFactory
+[avalia-docente] [2014-06-25 15:33:28-920] [main] [] [INFO ] [Version        ]: HV000001: Hibernate Validator 4.3.1.Final
+[avalia-docente] [2014-06-25 15:33:30-281] [main] [] [INFO ] [SchemaExport   ]: HHH000227: Running hbm2ddl schema export
+[avalia-docente] [2014-06-25 15:33:30-301] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Atividade drop foreign key FK_6s9e2tavcspah7m9f8wyxrq8y
+[avalia-docente] [2014-06-25 15:33:30-301] [main] [] [ERROR] [SchemaExport   ]: Table 'avaliadocente.Atividade' doesn't exist
+[avalia-docente] [2014-06-25 15:33:30-460] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Atividade drop foreign key FK_fk8w73e07qv9h1w25xpg64ebk
+[avalia-docente] [2014-06-25 15:33:30-460] [main] [] [ERROR] [SchemaExport   ]: Table 'avaliadocente.Atividade' doesn't exist
+[avalia-docente] [2014-06-25 15:33:30-466] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Atividade drop foreign key FK_fd2fgki6oqb4mr4vxf7km0nxw
+[avalia-docente] [2014-06-25 15:33:30-466] [main] [] [ERROR] [SchemaExport   ]: Table 'avaliadocente.Atividade' doesn't exist
+[avalia-docente] [2014-06-25 15:33:30-470] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Avaliacao drop foreign key FK_5vksohj4mcqvxcg51n2an28tb
+[avalia-docente] [2014-06-25 15:33:30-470] [main] [] [ERROR] [SchemaExport   ]: Table 'avaliadocente.Avaliacao' doesn't exist
+[avalia-docente] [2014-06-25 15:33:30-473] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Avaliacao drop foreign key FK_ceoong99fopou31vqgwu2wycj
+[avalia-docente] [2014-06-25 15:33:30-473] [main] [] [ERROR] [SchemaExport   ]: Table 'avaliadocente.Avaliacao' doesn't exist
+[avalia-docente] [2014-06-25 15:33:30-475] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Docente drop foreign key FK_5w8lj8907q09gkf97ud0n9kqn
+[avalia-docente] [2014-06-25 15:33:30-475] [main] [] [ERROR] [SchemaExport   ]: Table 'avaliadocente.Docente' doesn't exist
+[avalia-docente] [2014-06-25 15:33:30-478] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Docente drop foreign key FK_1ojoi9c53cbeheg39nywjm8iv
+[avalia-docente] [2014-06-25 15:33:30-478] [main] [] [ERROR] [SchemaExport   ]: Table 'avaliadocente.Docente' doesn't exist
+[avalia-docente] [2014-06-25 15:33:30-479] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Docente_QuadroSumario drop foreign key FK_e1pyts6nasxxbghp3f3ls16qx
+[avalia-docente] [2014-06-25 15:33:30-479] [main] [] [ERROR] [SchemaExport   ]: Table 'avaliadocente.Docente_QuadroSumario' doesn't exist
+[avalia-docente] [2014-06-25 15:33:30-481] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Docente_QuadroSumario drop foreign key FK_7yd0rye7vf1wv080x5exmju7a
+[avalia-docente] [2014-06-25 15:33:30-481] [main] [] [ERROR] [SchemaExport   ]: Table 'avaliadocente.Docente_QuadroSumario' doesn't exist
+[avalia-docente] [2014-06-25 15:33:30-482] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade drop foreign key FK_ht6byi0p1oxl3ctfa1n0qhok1
+[avalia-docente] [2014-06-25 15:33:30-482] [main] [] [ERROR] [SchemaExport   ]: Table 'avaliadocente.GrupoAtividade' doesn't exist
+[avalia-docente] [2014-06-25 15:33:30-639] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade drop foreign key FK_iuqc0v8w9k1y2fdcx3l8qjl8h
+[avalia-docente] [2014-06-25 15:33:30-639] [main] [] [ERROR] [SchemaExport   ]: Table 'avaliadocente.GrupoAtividade' doesn't exist
+[avalia-docente] [2014-06-25 15:33:30-641] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade drop foreign key FK_6ts0188i5gi51g6o4inu1cn1w
+[avalia-docente] [2014-06-25 15:33:30-641] [main] [] [ERROR] [SchemaExport   ]: Table 'avaliadocente.GrupoAtividade' doesn't exist
+[avalia-docente] [2014-06-25 15:33:30-643] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade_Atividade drop foreign key FK_1vdk2h22fvgv4i6jhn73if0ln
+[avalia-docente] [2014-06-25 15:33:30-643] [main] [] [ERROR] [SchemaExport   ]: Table 'avaliadocente.GrupoAtividade_Atividade' doesn't exist
+[avalia-docente] [2014-06-25 15:33:30-644] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade_Atividade drop foreign key FK_k3ua0rdiqga57v3amvkvpesnh
+[avalia-docente] [2014-06-25 15:33:30-644] [main] [] [ERROR] [SchemaExport   ]: Table 'avaliadocente.GrupoAtividade_Atividade' doesn't exist
+[avalia-docente] [2014-06-25 15:33:30-645] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade_NotasGrupoAtividade drop foreign key FK_gev2ekyeg5b5raxu69sap3x8a
+[avalia-docente] [2014-06-25 15:33:30-645] [main] [] [ERROR] [SchemaExport   ]: Table 'avaliadocente.GrupoAtividade_NotasGrupoAtividade' doesn't exist
+[avalia-docente] [2014-06-25 15:33:30-646] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table GrupoAtividade_NotasGrupoAtividade drop foreign key FK_6gyyh0ckfonr2xbm5433026bo
+[avalia-docente] [2014-06-25 15:33:30-646] [main] [] [ERROR] [SchemaExport   ]: Table 'avaliadocente.GrupoAtividade_NotasGrupoAtividade' doesn't exist
+[avalia-docente] [2014-06-25 15:33:30-647] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table ItemAtividade drop foreign key FK_jk9r9j6scatyqinfpgpkhgwew
+[avalia-docente] [2014-06-25 15:33:30-647] [main] [] [ERROR] [SchemaExport   ]: Table 'avaliadocente.ItemAtividade' doesn't exist
+[avalia-docente] [2014-06-25 15:33:30-648] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table ItemAtividade drop foreign key FK_hawfu0txs45v32qud541qhvj0
+[avalia-docente] [2014-06-25 15:33:30-648] [main] [] [ERROR] [SchemaExport   ]: Table 'avaliadocente.ItemAtividade' doesn't exist
+[avalia-docente] [2014-06-25 15:33:30-649] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Multiplicador drop foreign key FK_hcqv7wx7i7u1xt1o64nlw8m4k
+[avalia-docente] [2014-06-25 15:33:30-649] [main] [] [ERROR] [SchemaExport   ]: Table 'avaliadocente.Multiplicador' doesn't exist
+[avalia-docente] [2014-06-25 15:33:30-810] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table NotasGrupoAtividade drop foreign key FK_m4mij8t1a5pimcues8rse5982
+[avalia-docente] [2014-06-25 15:33:30-810] [main] [] [ERROR] [SchemaExport   ]: Table 'avaliadocente.NotasGrupoAtividade' doesn't exist
+[avalia-docente] [2014-06-25 15:33:30-812] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table NotasGrupoAtividade drop foreign key FK_hxu58q4cdpl8y4prnp6x4vifr
+[avalia-docente] [2014-06-25 15:33:30-812] [main] [] [ERROR] [SchemaExport   ]: Table 'avaliadocente.NotasGrupoAtividade' doesn't exist
+[avalia-docente] [2014-06-25 15:33:30-813] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table NotasGrupoAtividade drop foreign key FK_ktt14x2jcm3s2y1w50d5h6887
+[avalia-docente] [2014-06-25 15:33:30-821] [main] [] [ERROR] [SchemaExport   ]: Table 'avaliadocente.NotasGrupoAtividade' doesn't exist
+[avalia-docente] [2014-06-25 15:33:30-826] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table QuadroSumario drop foreign key FK_9eumvgtrg8s8st4grj9o9vn0r
+[avalia-docente] [2014-06-25 15:33:30-826] [main] [] [ERROR] [SchemaExport   ]: Table 'avaliadocente.QuadroSumario' doesn't exist
+[avalia-docente] [2014-06-25 15:33:30-828] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table QuadroSumario drop foreign key FK_a1l6l5hc2c7t4wgtu8gnxftrb
+[avalia-docente] [2014-06-25 15:33:30-828] [main] [] [ERROR] [SchemaExport   ]: Table 'avaliadocente.QuadroSumario' doesn't exist
+[avalia-docente] [2014-06-25 15:33:30-830] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table QuadroSumario drop foreign key FK_mug8yaiow5onrp3o9qpn2jinw
+[avalia-docente] [2014-06-25 15:33:30-830] [main] [] [ERROR] [SchemaExport   ]: Table 'avaliadocente.QuadroSumario' doesn't exist
+[avalia-docente] [2014-06-25 15:33:30-831] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table QuadroSumario_NotasGrupoAtividade drop foreign key FK_gilaf5gfg8igldf3gyq3koclp
+[avalia-docente] [2014-06-25 15:33:30-832] [main] [] [ERROR] [SchemaExport   ]: Table 'avaliadocente.QuadroSumario_NotasGrupoAtividade' doesn't exist
+[avalia-docente] [2014-06-25 15:33:30-833] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table QuadroSumario_NotasGrupoAtividade drop foreign key FK_a4rnxy76uwoiiybdpmrb6acf4
+[avalia-docente] [2014-06-25 15:33:30-833] [main] [] [ERROR] [SchemaExport   ]: Table 'avaliadocente.QuadroSumario_NotasGrupoAtividade' doesn't exist
+[avalia-docente] [2014-06-25 15:33:31-021] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Regime drop foreign key FK_eyso6s2nirtpntyxmfnw94mi3
+[avalia-docente] [2014-06-25 15:33:31-021] [main] [] [ERROR] [SchemaExport   ]: Table 'avaliadocente.Regime' doesn't exist
+[avalia-docente] [2014-06-25 15:33:31-022] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Resolucao drop foreign key FK_ptpvfefs5yo95ixprxnbdb72a
+[avalia-docente] [2014-06-25 15:33:31-022] [main] [] [ERROR] [SchemaExport   ]: Table 'avaliadocente.Resolucao' doesn't exist
+[avalia-docente] [2014-06-25 15:33:31-024] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Resolucao_QuadroSumario drop foreign key FK_4nefcaij79acqceelmb3h19oh
+[avalia-docente] [2014-06-25 15:33:31-024] [main] [] [ERROR] [SchemaExport   ]: Table 'avaliadocente.Resolucao_QuadroSumario' doesn't exist
+[avalia-docente] [2014-06-25 15:33:31-026] [main] [] [ERROR] [SchemaExport   ]: HHH000389: Unsuccessful: alter table Resolucao_QuadroSumario drop foreign key FK_2iv10wqnx484wbhfmprie3eln
+[avalia-docente] [2014-06-25 15:33:31-026] [main] [] [ERROR] [SchemaExport   ]: Table 'avaliadocente.Resolucao_QuadroSumario' doesn't exist
+[avalia-docente] [2014-06-25 15:33:33-680] [main] [] [INFO ] [SchemaExport   ]: HHH000230: Schema export complete
+[avalia-docente] [2014-06-25 15:33:33-716] [main] [] [INFO ] [ClassPathXmlApplicationContext]: Bean 'entityManagerFactory' of type [class org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[avalia-docente] [2014-06-25 15:33:33-729] [main] [] [INFO ] [DefaultListableBeanFactory]: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultLista

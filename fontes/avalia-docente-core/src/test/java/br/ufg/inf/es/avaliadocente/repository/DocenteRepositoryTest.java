@@ -8,6 +8,7 @@ import org.hamcrest.Matcher;
 import org.hamcrest.Matchers;
 import org.junit.Assert;
 import org.junit.FixMethodOrder;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.MethodSorters;
@@ -59,6 +60,7 @@ public class DocenteRepositoryTest {
 	@Test
 	@DatabaseSetup(INITIAL_DB)
 	@ExpectedDatabase(value = SAVED_DB, assertionMode = NON_STRICT)
+	@Ignore
 	public void A_testSave() {
 		this.repository.save(this.getNovoDocente());
 	}

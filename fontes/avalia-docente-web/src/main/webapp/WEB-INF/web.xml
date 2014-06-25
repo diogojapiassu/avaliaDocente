@@ -25,6 +25,10 @@
 		<param-value>.xhtml</param-value>
 	</context-param>
 	
+	<!-- <listener>
+		<listener-class>br.ufg.inf.es.avaliadocente.listener.SpringContextStartupListener</listener-class>
+	</listener> -->
+	
 	<servlet>
 		<servlet-name>Faces Servlet</servlet-name>
 		<servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
@@ -38,6 +42,6 @@
 		<url-pattern>*.xhtml</url-pattern>
 	</servlet-mapping>
 	<welcome-file-list>
-		<welcome-file>/faces/index.jsp</welcome-file>
+		<welcome-file>/index.jsp</welcome-file>
 	</welcome-file-list>
 </web-app>
