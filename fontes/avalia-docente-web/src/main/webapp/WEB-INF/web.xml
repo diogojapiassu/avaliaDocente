@@ -25,7 +25,7 @@
 		<param-value>.xhtml</param-value>
 	</context-param>
 	
-	<!-- <listener>
+<!-- 	<listener>
 		<listener-class>br.ufg.inf.es.avaliadocente.listener.SpringContextStartupListener</listener-class>
 	</listener> -->
 	

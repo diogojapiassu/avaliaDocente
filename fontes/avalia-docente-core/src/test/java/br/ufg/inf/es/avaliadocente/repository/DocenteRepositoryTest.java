@@ -71,8 +71,7 @@ public class DocenteRepositoryTest {
 	 * @return
 	 */
 	private Docente getNovoDocente() {
-		return new DocenteBuilder().id(3L).nome("Ricardo Rocha")
-				.departamento("Instituto de Informática").build();
+		return new DocenteBuilder().id(3L).nome("Ricardo Rocha").build();
 	}
 
 	/**
@@ -84,8 +83,7 @@ public class DocenteRepositoryTest {
 	@ExpectedDatabase(value = UPDATED_DB, assertionMode = NON_STRICT)
 	public void B_testUpdate() {
 		final Docente docente = new DocenteBuilder().id(1L)
-				.nome("Marcelo Quinta").departamento("Instituto de Química")
-				.build();
+				.nome("Marcelo Quinta").build();
 		this.repository.save(docente);
 	}
 
