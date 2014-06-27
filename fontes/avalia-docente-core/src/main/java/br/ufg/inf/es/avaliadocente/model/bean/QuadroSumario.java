@@ -30,8 +30,8 @@ public class QuadroSumario extends AbstractEntity<QuadroSumario> {
 	@JoinColumn(name = "docente_id")
 	private Docente docente;
 	
-	@OneToMany(fetch = FetchType.LAZY)
-	private List<NotasGrupoAtividade> notasGrupoAtividades;
+//	@OneToMany(fetch = FetchType.LAZY)
+//	private List<NotasGrupoAtividade> notasGrupoAtividades;
 	
 	public Resolucao getResolucao() {
 		return resolucao;
@@ -49,11 +49,11 @@ public class QuadroSumario extends AbstractEntity<QuadroSumario> {
 		this.docente = docente;
 	}
 
-	public List<NotasGrupoAtividade> getNotasGrupoAtividades() {
-		return notasGrupoAtividades;
-	}
-
-	public void setNotasGrupoAtividades(List<NotasGrupoAtividade> notasGrupoAtividades) {
-		this.notasGrupoAtividades = notasGrupoAtividades;
-	}
+//	public List<NotasGrupoAtividade> getNotasGrupoAtividades() {
+//		return notasGrupoAtividades;
+//	}
+//
+//	public void setNotasGrupoAtividades(List<NotasGrupoAtividade> notasGrupoAtividades) {
+//		this.notasGrupoAtividades = notasGrupoAtividades;
+//	}
 }

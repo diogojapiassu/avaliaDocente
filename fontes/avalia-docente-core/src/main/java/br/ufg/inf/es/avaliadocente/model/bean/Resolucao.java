@@ -9,6 +9,8 @@ import javax.persistence.OneToMany;
 
 import br.ufg.inf.es.avaliadocente.model.support.AbstractEntity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 
 /**
  * Resolução que norteia a forma de avaliação dos docentes.
@@ -26,12 +28,13 @@ public class Resolucao extends AbstractEntity<Resolucao> {
 	private String descricao;
 
 	@Column
+	@JsonIgnore
 	private Integer numeroNotas;
 	
+	@JsonIgnore
 	@OneToMany(fetch = FetchType.LAZY) 
 	private List<QuadroSumario> quadroSumarios;
 	
-
 	public String getDescricao() {
 		return descricao;
 	}

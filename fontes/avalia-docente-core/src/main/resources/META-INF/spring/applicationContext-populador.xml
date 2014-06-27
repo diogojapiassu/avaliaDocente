@@ -7,7 +7,11 @@
 	<!-- Conjunto de beans populadores de banco de dados -->
 	<!-- Sera mantido temporariamente ate que consigamos subir a aplicacao
 		sem a necessidade de popular os dados -->
+		
+	<context:annotation-config />
 	<bean id="populador" class="br.ufg.inf.es.avaliadocente.main.populador.PopuladorBancoDeDados"/>
+	
+	<bean id="populadorDepartamento" class="br.ufg.inf.es.avaliadocente.main.populador.PopuladorDepartamento"/>
 	
 	<bean id="populadorDocente" class="br.ufg.inf.es.avaliadocente.main.populador.PopuladorDocente"/>
 	
@@ -16,5 +20,12 @@
 	<bean id="populadorGrupoAtividade" class="br.ufg.inf.es.avaliadocente.main.populador.PopuladorGrupoAtividade"/>
 	
 	<bean id="populadorAtividade" class="br.ufg.inf.es.avaliadocente.main.populador.PopuladorAtividade"/>
+	
+	<!-- Configurar o diretorio de saida do JSON no pom.xml do projeto parent -->
+	<bean id="avaliacoesJsonGenerator" class="br.ufg.inf.es.avaliadocente.main.generator.AvaliacoesJsonGenerator">
+		<constructor-arg type="java.lang.String" value="${diretorio.json}" />
+	</bean>
+	
+	<bean id="avaliacaoHandler" class="br.ufg.inf.es.avaliadocente.core.AvaliacaoHandler"/>
 
 </beans>

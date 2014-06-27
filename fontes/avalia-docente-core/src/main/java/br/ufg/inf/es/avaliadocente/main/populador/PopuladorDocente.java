@@ -10,8 +10,10 @@ import java.util.Set;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import br.ufg.inf.es.avaliadocente.model.bean.Departamento;
 import br.ufg.inf.es.avaliadocente.model.bean.Docente;
 import br.ufg.inf.es.avaliadocente.model.bean.builder.DocenteBuilder;
+import br.ufg.inf.es.avaliadocente.repository.DepartamentoRepository;
 import br.ufg.inf.es.avaliadocente.repository.DocenteRepository;
 import br.ufg.inf.es.avaliadocente.util.FileUtils;
 import br.ufg.inf.es.avaliadocente.util.RandomizerUniqueInteger;
@@ -32,24 +34,27 @@ public class PopuladorDocente implements IPopulador {
 	private static final Logger LOG = Logger.getLogger(PopuladorDocente.class);
 
 	@Autowired
-	DocenteRepository repository;
+	DocenteRepository docenteRepository;
+	
+	@Autowired
+	DepartamentoRepository departamentoRepository;
 	
 	Set<Integer> numerosAleatorios = new HashSet<>();
 	
 	List<Docente> docentes = new ArrayList<>();
+	
+	private final int QUANTIDADE_DOCENTES = 10000;
 	
 	@Override
 	public void popular() {
 		
 		String arquivoNomes = getConteudoArquivoNomes();
 		String arquivoSobrenomes = getConteudoArquivoSobrenomes();
-		String departamentos = getConteudoArquivoDepartamentos();
-		
+			
 		String[] nomes = FileUtils.splitByNewLine(arquivoNomes);
 		String[] sobrenomes = FileUtils.splitByNewLine(arquivoSobrenomes);
-		String[] departamentosUfg = FileUtils.splitByNewLine(departamentos);
 		
-		for (int i = 0; i < 10000; i++) {
+		for (int i = 1; i <= QUANTIDADE_DOCENTES; i++) {
 			RandomizerUniqueInteger r1 = new RandomizerUniqueInteger(nomes.length);
 			Integer randomNome = r1.getNewRandom();
 			
@@ -57,19 +62,26 @@ public class PopuladorDocente implements IPopulador {
 			Integer randomSobrenome = r2.getNewRandom();
 			
 			Random r3 = new Random();
-			int depRandom = r3.nextInt(departamentosUfg.length);
+			//sao 28 departamentos...
+			int depRandom = r3.nextInt(29);
+			if (depRandom == 0) {
+				depRandom = 1;
+			}
+			Departamento dep = departamentoRepository.findOne(new Long(depRandom));
 			
 			String docenteNome = nomes[randomNome] + " " + sobrenomes[randomSobrenome];
-			String departamento = departamentosUfg[depRandom];
 			
-			Docente docente = new DocenteBuilder().nome(docenteNome)
-					.departamento(departamento).build();
+			Docente docente = new DocenteBuilder()
+					.nome(docenteNome)
+					.departamento(dep)
+					.matricula(""+i)
+					.build();
 			
 			docentes.add(docente);
 			
 		}
 		
-		repository.save(docentes);
+		docenteRepository.save(docentes);
 	}
 
 	private String getConteudoArquivoNomes() {

@@ -32,11 +32,11 @@
 	</logger>
 
 	<logger name="org.springframework">
-		<level value="${log4j.level}" />
+		<level value="info" />
 	</logger>
 
 	<logger name="org.springframework.web">
-		<level value="${log4j.level}" />
+		<level value="info" />
 	</logger>
 
 	<root>

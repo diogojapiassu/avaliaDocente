@@ -27,26 +27,31 @@ public class PopuladorGrupoAtividade implements IPopulador {
 		
 		GrupoAtividade g1 = new GrupoAtividadeBuilder()
 				.descricao("I - Atividade de Ensino")
+				.indice(1)
 				.resolucao(resolucao)
 				.build();
 
 		GrupoAtividade g2 = new GrupoAtividadeBuilder()
 				.descricao("II - Producao Intelectual")
+				.indice(2)
 				.resolucao(resolucao)
 				.build();
 
 		GrupoAtividade g3 = new GrupoAtividadeBuilder()
 				.descricao("III - Atividades de Pesquisa e Extensão")
+				.indice(3)
 				.resolucao(resolucao)
 				.build();
 
 		GrupoAtividade g4 = new GrupoAtividadeBuilder()
 				.descricao("IV - Atividades Administrativas e de Representacao")
+				.indice(4)
 				.resolucao(resolucao)
 				.build();
 
 		GrupoAtividade g5 = new GrupoAtividadeBuilder()
 				.descricao("V - Outras atividades")
+				.indice(5)
 				.resolucao(resolucao)
 				.build();
 		

@@ -2,6 +2,8 @@ package br.ufg.inf.es.avaliadocente.main.populador;
 
 import java.io.IOException;
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.math.NumberUtils;
@@ -27,6 +29,8 @@ public class PopuladorAtividade implements IPopulador {
 	private static final Logger LOG = Logger.getLogger(PopuladorAtividade.class);
 
 	
+	List<Atividade> atividades = new ArrayList<>();
+	
 	@Autowired
 	AtividadeRepository atividadeRepository;
 	
@@ -38,29 +42,35 @@ public class PopuladorAtividade implements IPopulador {
 	
 	@Override
 	public void popular() {
+		String csv = getConteudoArquivoAtividades();
+		
+		if (csv != null) {
+			String[] linhas = FileUtils.splitByNewLine(csv);
+			
+			for (String linha : linhas) {
+				Atividade atv = atividadeFromCSV(linha);
+				atividades.add(atv);
+			}
+			atividadeRepository.save(atividades);
+		} else {
+			return;
+		}
+	}
+
+	/**
+	 * Obtém o conteúdo do arquivo CSV contendo as atividades
+	 * que serão cadastradas no sistema.
+	 * 
+	 * @return conteúdo do arquivo CSV.
+	 */
+	private String getConteudoArquivoAtividades() {
 		String csv = null;
 		try {
 			csv = FileUtils.getContent("cadastro/atividades/atividades.csv", "UTF-8");
 		} catch (IOException e) {
 			LOG.error("Falha ao obter o arquivo de atividades: ", e);
 		}
-		
-		if (csv != null) {
-			String[] linhas = FileUtils.splitByNewLine(csv);
-			
-//			int i = 1;
-			for (String linha : linhas) {
-				//LOG.info("Processando a linha " + i + ": " + linha);
-				
-				Atividade atv = atividadeFromCSV(linha);
-
-				atividadeRepository.save(atv);
-//				i++;
-			}
-		} else {
-			return;
-		}
-
+		return csv;
 	}
 	
 	public Atividade atividadeFromCSV(String line) {

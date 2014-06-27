@@ -71,17 +71,17 @@
 2;67;Produção e publicação de mapas, cartas ou similares;10;;false
 2;68;Desenvolvimento de maquete;5;;false
 2;69;Manutenção de obra artística Restauração de obra artística;20;;false
-2;69;Manutenção de obra artística Conservação de obra artística;10;;true
-2;70;Curadoria de exposições;5;;false
-2;71;Produção de cinema, vídeo, rádio, TV ou mídias digitais: editor;20;;true
-2;72;Produção de cinema, vídeo, rádio, TV ou mídias digitais: Participante;3;9;false
-2;73;Artigos de opinião veiculados em jornais e revistas (eletrônico ou impresso);1;;false
-2;74;Texto ou material didático para uso institucional (não fracionados e com  ampla divulgação);2;;false
-2;75;Artigos de divulgação científica, tecnológica e artística veiculados em jornais  revistas (eletrônico ou impresso);3;;false
-2;76;Apresentação oral de trabalho publicado em anais de congresso científico;3;9;false
-2;77;Apresentação em painel de trabalho publicado em anais de congresso científico;1;3;false
-2;78;Trabalho premiado em evento científico nacional ou internacional;5;;false
-2;79;Tese, dissertação e trabalho de iniciação científica premiados por instituições de fomento (sendo o docente o autor ou orientador do produto);8;;false
+2;70;Manutenção de obra artística Conservação de obra artística;10;;true
+2;71;Curadoria de exposições;5;;false
+2;72;Produção de cinema, vídeo, rádio, TV ou mídias digitais: editor;20;;true
+2;73;Produção de cinema, vídeo, rádio, TV ou mídias digitais: Participante;3;9;false
+2;74;Artigos de opinião veiculados em jornais e revistas (eletrônico ou impresso);1;;false
+2;75;Texto ou material didático para uso institucional (não fracionados e com  ampla divulgação);2;;false
+2;76;Artigos de divulgação científica, tecnológica e artística veiculados em jornais  revistas (eletrônico ou impresso);3;;false
+2;77;Apresentação oral de trabalho publicado em anais de congresso científico;3;9;false
+2;78;Apresentação em painel de trabalho publicado em anais de congresso científico;1;3;false
+2;79;Trabalho premiado em evento científico nacional ou internacional;5;;false
+2;80;Tese, dissertação e trabalho de iniciação científica premiados por instituições de fomento (sendo o docente o autor ou orientador do produto);8;;false
 3;1;Coordenador de projeto conjuntos de pesquisa e cooperação científica (tipo PRODOC, PROCAD, PNPD, entre outros) e de cursos MINTER e DINTER aprovados por órgãos oficiais de fomento;10;;false
 3;2;Coordenador de projeto de pesquisa aprovado com comprovação de financiamento (exceto bolsas);10;;false
 3;3;Coordenador de projeto de pesquisa aprovado sem financiamento;5;10;false
