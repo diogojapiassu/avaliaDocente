@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import br.ufg.inf.es.avaliadocente.context.CustomApplicationContext;
 import br.ufg.inf.es.avaliadocente.core.AvaliacaoHandler;
+import br.ufg.inf.es.avaliadocente.core.ThreadListaDeAvaliacoes;
 import br.ufg.inf.es.avaliadocente.model.bean.json.AvaliacaoJsonBinder;
 import br.ufg.inf.es.avaliadocente.util.FileUtils;
 
@@ -23,18 +24,21 @@ private static final Logger LOG = Logger.getLogger(AvaliaDocenteJsonProcessorMai
 	
 	@Autowired
 	private static AvaliacaoHandler avaliacaoHandler;
-	private static String diretorioJson = "C:/avaliacoes.json";
+	private static String diretorioJson = "/home/alunoinf/Downloads/avaliacao.json";
 	
 	public static void main(String[] args) {
 		LOG.info("Iniciando a aplicacao...");
 		
-		avaliacaoHandler = CustomApplicationContext.getInstance().getContext().getBean(AvaliacaoHandler.class);
-
+		CustomApplicationContext.getInstance();
+		
 		String json = getConteudoArquivoJson();
 		
-		avaliacaoHandler.setAvaliacao(AvaliacaoJsonBinder.unbindAvaliacoes(json).get(0));
+		//avaliacaoHandler.setAvaliacao(AvaliacaoJsonBinder.unbindAvaliacoes(json).get(0));
 		
-		new Thread(avaliacaoHandler).start();
+		ThreadListaDeAvaliacoes testaProcessamentoEmParalelo = 
+				new ThreadListaDeAvaliacoes(AvaliacaoJsonBinder.unbindAvaliacoes(json));
+		
+		new Thread(testaProcessamentoEmParalelo).start();
 	}
 
 	private static String getConteudoArquivoJson() {
