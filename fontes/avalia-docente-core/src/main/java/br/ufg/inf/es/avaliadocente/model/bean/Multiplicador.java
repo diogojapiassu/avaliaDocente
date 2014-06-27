@@ -11,7 +11,7 @@ import br.ufg.inf.es.avaliadocente.model.support.AbstractEntity;
  * Multiplicador a ser aplicado pela Atividade.
  * 
  * <p>
- * Quando {@link #isValorado}, significa que não será considerado apenas o valor
+ * Quando {@link #valorado}, significa que não será considerado apenas o valor
  * de {@link #fatorMultiplicador}, mas sim será multiplicado com um valor
  * qualquer passado.
  * 
@@ -41,7 +41,7 @@ public class Multiplicador extends AbstractEntity<Multiplicador>{
 	public Multiplicador(BigDecimal fatorMultiplicador, BigDecimal valorMaximo, Boolean isValorado) {
 		setFatorMultiplicador(fatorMultiplicador);
 		setValorMaximo(valorMaximo);
-		setIsValorado(isValorado);
+		setValorado(isValorado);
 	}
 	
 	@Column
@@ -51,9 +51,8 @@ public class Multiplicador extends AbstractEntity<Multiplicador>{
 	private BigDecimal valorMaximo;
 	
 	@Column
-	private Boolean isValorado;
+	private Boolean valorado;
 	
-
 	public BigDecimal getFatorMultiplicador() {
 		return fatorMultiplicador;
 	}
@@ -70,12 +69,16 @@ public class Multiplicador extends AbstractEntity<Multiplicador>{
 		this.valorMaximo = valorMaximo;
 	}
 
-	public Boolean getIsValorado() {
-		return isValorado;
+	public Boolean isValorado() {
+		return valorado;
 	}
 
-	public void setIsValorado(Boolean isValorado) {
-		this.isValorado = isValorado;
+	public Boolean getValorado() {
+		return valorado;
+	}
+
+	public void setValorado(Boolean valorado) {
+		this.valorado = valorado;
 	}
 
 }

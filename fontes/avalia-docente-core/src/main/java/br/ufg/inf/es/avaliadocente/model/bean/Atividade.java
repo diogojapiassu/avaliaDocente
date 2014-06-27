@@ -2,11 +2,15 @@ package br.ufg.inf.es.avaliadocente.model.bean;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
+import javax.persistence.Transient;
 
 import br.ufg.inf.es.avaliadocente.model.support.AbstractEntity;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * Representação de atividade de um grupo de atividades.
@@ -21,17 +25,26 @@ public class Atividade extends AbstractEntity<Atividade> {
 	private static final long serialVersionUID = 8454327804099597504L;
 	
 	@Column(length = 1000)
+	@JsonIgnore
 	private String descricao;
 	
 	@Column
 	private Long indice;
 	
-	@ManyToOne
+	/**
+	 * Representa o valor de entrada na avaliação.
+	 */
+	@Transient
+	private Long valor;
+	
 	@JoinColumn(name = "grupo_atividade_id")
+	@JsonIgnore
+	@ManyToOne(fetch = FetchType.EAGER)
 	private GrupoAtividade grupoAtividade;
 	
-	@OneToOne
 	@JoinColumn(name = "multiplicador_id")
+	@JsonIgnore
+	@OneToOne(fetch = FetchType.EAGER)
 	private Multiplicador multiplicador;
 	
 	public String getDescricao() {
@@ -48,6 +61,14 @@ public class Atividade extends AbstractEntity<Atividade> {
 
 	public void setIndice(Long indice) {
 		this.indice = indice;
+	}
+	
+	public Long getValor() {
+		return valor;
+	}
+
+	public void setValor(Long valor) {
+		this.valor = valor;
 	}
 
 	public GrupoAtividade getGrupoAtividade() {

@@ -21,6 +21,10 @@ public class NotasGrupoAtividade extends AbstractEntity<NotasGrupoAtividade> {
 
 	private static final long serialVersionUID = 8454327804099597504L;
 	
+	public NotasGrupoAtividade() {
+		valor = new BigDecimal(0);
+	}
+	
 	@ManyToOne
 	@JoinColumn(name = "quadro_sumario_id")
 	private QuadroSumario quadroSumario;
@@ -55,5 +59,15 @@ public class NotasGrupoAtividade extends AbstractEntity<NotasGrupoAtividade> {
 	public void setValor(BigDecimal valor) {
 		this.valor = valor;
 	}
-
+	
+	/**
+	 * Adiciona o valor passado ao valor atual.
+	 * <br>É o mesmo que <pre>this.valor = valor + valueToBeAdded;</pre>
+	 * 
+	 * @param valueToBeAdded valor a ser adicionado
+	 */
+	public void addValor(BigDecimal valueToBeAdded) {
+		this.valor = valor.add(valueToBeAdded);
+	}
+	
 }

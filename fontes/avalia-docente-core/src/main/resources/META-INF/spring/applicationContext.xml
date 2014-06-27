@@ -4,7 +4,8 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
 						http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
 
-	<import resource="applicationContext-commons.xml"/>
+	<context:annotation-config />
+<!-- 	<import resource="applicationContext-commons.xml"/> -->
 	<import resource="applicationContext-persistence.xml"/>
 
 </beans>

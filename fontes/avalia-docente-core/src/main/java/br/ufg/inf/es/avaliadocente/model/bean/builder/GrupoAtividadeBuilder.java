@@ -23,6 +23,11 @@ public class GrupoAtividadeBuilder {
 		return this;
 	}
 	
+	public GrupoAtividadeBuilder indice(final Integer indice) {
+		ReflectionTestUtils.setField(this.grupoAtividade, "indice", indice);
+		return this;
+	}
+	
 	public GrupoAtividadeBuilder grupoAtividadePai(final GrupoAtividade grupoAtividadePai) {
 		ReflectionTestUtils.setField(this.grupoAtividade, "grupoAtividadePai", grupoAtividadePai);
 		return this;

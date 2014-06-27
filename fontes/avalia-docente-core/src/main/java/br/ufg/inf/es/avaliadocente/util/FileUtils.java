@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.IOException;
 import java.util.StringTokenizer;
 
+import org.apache.commons.io.IOUtils;
+
 /**
  * 
  * Classe contendo métodos utilitários relacionados a manipulação de {@link File}s.
@@ -58,6 +60,27 @@ public class FileUtils {
 			}
 		}
 		return null;
+	}
+	
+	/**
+	 * 
+	 * @param path
+	 * @param encoding
+	 * @throws IOException
+	 */
+	public static void newFile(String path, String encoding) throws IOException {
+		org.apache.commons.io.FileUtils.write(new File(path), null, encoding);
+	}
+	
+	/**
+	 * 
+	 * @param path
+	 * @param content
+	 * @param encoding
+	 * @throws IOException
+	 */
+	public static void newFile(String path, String content, String encoding) throws IOException {
+		newFile(path, content, encoding);
 	}
 	
 	/**

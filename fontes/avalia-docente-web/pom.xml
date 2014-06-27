@@ -14,6 +14,7 @@
 		<jsf.version>2.2.7</jsf.version>
 		<primefaces.version>3.3.1</primefaces.version>
 		<jstl.version>1.2</jstl.version>
+		<servlet-api.version>2.5</servlet-api.version>
 	</properties>
 	<build>
 		<resources>
@@ -105,6 +106,13 @@
 			<artifactId>jstl</artifactId>
 			<version>${jstl.version}</version>
 		</dependency>
+		<!-- dependência para servlet -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>${servlet-api.version}</version>
+			<scope>provided</scope>
+		</dependency>
 
 		<!-- primefaces -->
 		<dependency>
@@ -112,7 +120,5 @@
 			<artifactId>primefaces</artifactId>
 			<version>${primefaces.version}</version>
 		</dependency>
-
-
 	</dependencies>
 </project>

@@ -11,6 +11,8 @@ import javax.persistence.OneToMany;
 
 import br.ufg.inf.es.avaliadocente.model.support.AbstractEntity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 /**
  * Docente que será submetido a avaliação.
  * 
@@ -29,20 +31,24 @@ public class Docente extends AbstractEntity<Docente> {
 	@Column
 	private String nome;
 	
-	@Column
-	private String departamento;
+	@JoinColumn(name = "departamento_id")
+	@JsonIgnore
+	@ManyToOne
+	private Departamento departamento;
 	
 	@Column
+	@JsonIgnore
 	private String periodo;
 	
-	@ManyToOne
 	@JoinColumn(name = "regime_id")
+	@JsonIgnore
+	@ManyToOne
 	private Regime regime;
 	
+	@JsonIgnore
 	@OneToMany(fetch = FetchType.LAZY)
 	private List<QuadroSumario> quadroSumarios;
 	
-
 	public String getMatricula() {
 		return matricula;
 	}
@@ -59,11 +65,11 @@ public class Docente extends AbstractEntity<Docente> {
 		this.nome = nome;
 	}
 	
-	public String getDepartamento() {
+	public Departamento getDepartamento() {
 		return departamento;
 	}
 	
-	public void setDepartamento(String departamento) {
+	public void setDepartamento(Departamento departamento) {
 		this.departamento = departamento;
 	}
 	

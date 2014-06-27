@@ -16,6 +16,8 @@ import javax.persistence.Version;
 
 import org.springframework.data.domain.Persistable;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 /**
  * Entidade abstrata para objetos persistíveis.
  * 
@@ -31,23 +33,28 @@ public abstract class AbstractEntity<E extends Serializable> implements Persista
 
     private static final long serialVersionUID = -2187928984731943693L;
 
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @JsonIgnore
     private Long id;
 
     /**
      * Versão utilizada pelo provider JPA para solução em concorrência
      */
+    @JsonIgnore
     @Version
     private Long versao;
 
     @Column
+    @JsonIgnore
     private Boolean hidden;
 
+    @JsonIgnore
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "data_insercao_alteracao")
     private Date dataInsercaoAlteracao;
     
+    @JsonIgnore
     @OneToOne(optional = true)
     @JoinColumn(name = "versao_anterior")
     private E versaoAnterior;
@@ -93,6 +100,7 @@ public abstract class AbstractEntity<E extends Serializable> implements Persista
         this.versaoAnterior = versaoAnterior;
     }
 
+    @JsonIgnore
     @Override
     public boolean isNew() {
         return this.getId() == null;

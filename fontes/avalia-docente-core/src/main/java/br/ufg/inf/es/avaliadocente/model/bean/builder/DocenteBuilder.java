@@ -2,6 +2,7 @@ package br.ufg.inf.es.avaliadocente.model.bean.builder;
 
 import org.springframework.test.util.ReflectionTestUtils;
 
+import br.ufg.inf.es.avaliadocente.model.bean.Departamento;
 import br.ufg.inf.es.avaliadocente.model.bean.Docente;
 
 /**
@@ -37,7 +38,7 @@ public class DocenteBuilder {
 		return this;
 	}
 	
-	public DocenteBuilder departamento(final String departamento) {
+	public DocenteBuilder departamento(final Departamento departamento) {
 		ReflectionTestUtils.setField(this.docente, "departamento", departamento);
 		return this;
 	}

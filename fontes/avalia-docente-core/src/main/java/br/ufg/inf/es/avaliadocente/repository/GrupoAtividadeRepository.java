@@ -11,4 +11,11 @@ import br.ufg.inf.es.avaliadocente.repository.support.GenericRepository;
  */
 public interface GrupoAtividadeRepository extends GenericRepository<GrupoAtividade, Long> {
 
+	/**
+	 * 
+	 * @param indice
+	 * @return
+	 */
+	GrupoAtividade findByIndice(Integer indice);
+
 }
