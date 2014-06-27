@@ -14,6 +14,23 @@
 
 	<h:form>
 	<p:editor value="#{testeMB.value}" />
+	<p:dataTable var="docente" value="#{testeMB.listaDeDocentes}">
+    <p:column headerText="Id">
+        <h:outputText value="#{docente.id}" />
+    </p:column>
+ 
+    <p:column headerText="Matricula">
+        <h:outputText value="#{docente.matricula}" />
+    </p:column>
+ 
+    <!-- <p:column headerText="Brand">
+        <h:outputText value="#{car.brand}" />
+    </p:column>
+ 
+    <p:column headerText="Color">
+        <h:outputText value="#{car.color}" />
+    </p:column> -->
+</p:dataTable>
 	</h:form>
 
 </h:body>

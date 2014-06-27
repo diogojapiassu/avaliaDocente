@@ -342,7 +342,7 @@
 			</dependency>
 			 
 			 <!-- 7zip -->
-			 <dependency>
+			<!--  <dependency>
 				<groupId>net.sf.sevenzipjbinding</groupId>
 				<artifactId>sevenzipjbinding</artifactId>
 				<version>${sevenzipjbinding.version}</version>
@@ -351,7 +351,7 @@
 				<groupId>net.sf.sevenzipjbinding</groupId>
 				<artifactId>sevenzipjbinding-AllPlatforms</artifactId>
 				<version>${sevenzipjbinding.version}</version>
-			</dependency>
+			</dependency> -->
 	</dependencies>
 
 	<!-- repositórios de dependências não presentes no repositório central -->
