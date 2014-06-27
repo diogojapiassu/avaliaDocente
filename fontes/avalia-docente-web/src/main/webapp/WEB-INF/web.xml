@@ -25,9 +25,10 @@
 		<param-value>.xhtml</param-value>
 	</context-param>
 	
-<!-- 	<listener>
+	<listener>
+		<!-- Listener para inicializar o contexto do Spring Framework -->
 		<listener-class>br.ufg.inf.es.avaliadocente.listener.SpringContextStartupListener</listener-class>
-	</listener> -->
+	</listener>
 	
 	<servlet>
 		<servlet-name>Faces Servlet</servlet-name>
