@@ -39,7 +39,7 @@ Desktop.ini
 ######################
  
 *.pydevproject
-.project
+# teste .project
 .metadata
 bin/**
 tmp/**
