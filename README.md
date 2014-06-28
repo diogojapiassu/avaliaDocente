@@ -41,11 +41,14 @@ Serão priorizados nesse projeto um desempenho aceitável no processamento (em p
 #### Tecnologias empregadas
 Serão empregadas as seguintes tecnologias durante o desenvolvimento do projeto:
 
-* Java, como plataforma geral de desenvolvimento;
-* Apache Maven, como ferramenta de integração e life-cycle management;
-* Spring Data JPA, como solução de persistência;
-* JSF, como especificação dos componentes web;
-* Primefaces, como biblioteca de componentes JSF;
+* [Java](http://java.com), como plataforma geral de desenvolvimento;
+* [Apache Maven](http://maven.apache.org), como ferramenta de integração e life-cycle management;
+* [Spring Framework](http://docs.spring.io/spring-framework/docs/3.2.4.RELEASE/spring-framework-reference/html/overview.html#overview-dependency-injection), como injeção de dependencia e inversão de controle;
+* [Spring Data JPA](http://docs.spring.io/spring-data/jpa/docs/1.4.2.RELEASE/reference/html/), como solução de persistência;
+* [JSF](https://javaserverfaces-spec-public.java.net/), como especificação dos componentes web;
+* [Primefaces](http://primefaces.org), como biblioteca de componentes JSF;
+* [Jackson](http://jackson.codehaus.org/), como JSON processor;
+* [C3P0](http://sourceforge.net/projects/c3p0/), como pool de conexões JDBC;
 
 Os demais aspectos do projeto ainda estão em aberto para discussão.
 
