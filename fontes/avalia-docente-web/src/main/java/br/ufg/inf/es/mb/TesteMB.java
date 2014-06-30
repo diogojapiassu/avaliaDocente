@@ -8,6 +8,8 @@ import javax.faces.bean.ManagedBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
 
+import br.ufg.inf.es.avaliadocente.context.CustomApplicationContext;
+import br.ufg.inf.es.avaliadocente.main.populador.PopuladorBancoDeDados;
 import br.ufg.inf.es.avaliadocente.model.bean.Docente;
 import br.ufg.inf.es.avaliadocente.model.bean.builder.DocenteBuilder;
 import br.ufg.inf.es.avaliadocente.repository.DocenteRepository;
@@ -23,8 +25,12 @@ public class TesteMB {
 	@Autowired
 	public DocenteRepository docenteRepository;
 	
-	@Autowired
 	private Docente docente;
+	
+	public TesteMB() {
+		docenteRepository = CustomApplicationContext.getInstance().getContext().getBean(DocenteRepository.class);
+		System.out.println("passa aqui primeiro?");
+	}
 
 	public String getValue() {
 		docente = new Docente();
@@ -39,7 +45,7 @@ public class TesteMB {
 	
 	public List<Docente> getListaDeDocentes() {
 		if (docenteRepository != null) {
-			return docenteRepository.findByNome("Evee");
+			return docenteRepository.findAll();
 		}
 		
 		List<Docente> lista = new ArrayList<Docente>();
