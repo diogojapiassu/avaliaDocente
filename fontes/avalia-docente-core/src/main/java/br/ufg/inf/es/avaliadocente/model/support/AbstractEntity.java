@@ -33,7 +33,7 @@ public abstract class AbstractEntity<E extends Serializable> implements Persista
 
     private static final long serialVersionUID = -2187928984731943693L;
 
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Id
     @JsonIgnore
     private Long id;

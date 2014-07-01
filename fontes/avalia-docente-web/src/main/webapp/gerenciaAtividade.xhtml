@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+<title>Gerenciador de Atividades</title>
+</h:head>
+<h:body>
+<h1>Gerenciador de Atividades</h1>
+<h:form>
+Id: <h:inputText value="#{atividadeMB.atividade.id}" disabled="true"/><br/>
+Descrição: <h:inputText value="#{atividadeMB.atividade.descricao}"/><br/>
+Índice: <h:inputText value="#{atividadeMB.atividade.indice}"/><br/>
+<!-- Editora: <h:inputText value="#{livroController.livro.editora}"/><br/>
+ISBN: <h:inputText value="#{livroController.livro.isbn}"/><br/>
+Avaliação: <h:selectOneMenu value="#{livroController.livro.avaliacao}">
+<f:selectItem itemLabel="1" itemValue="1"/>
+<f:selectItem itemLabel="2" itemValue="2"/>
+<f:selectItem itemLabel="3" itemValue="3"/>
+<f:selectItem itemLabel="4" itemValue="4"/>
+<f:selectItem itemLabel="5" itemValue="5"/>
+</h:selectOneMenu><br/> -->
+<h:commandButton action="#{atividadeMB.adicionarAtividade()}" value="Salvar Atividade"/>
+<!-- <h:commandButton action="#{livroController.alterarLivro}" value="Alterar Livro"/> -->
+<br/>
+<h:commandLink action="atividades" value="Voltar"/>
+</h:form>
+</h:body>
+</html>

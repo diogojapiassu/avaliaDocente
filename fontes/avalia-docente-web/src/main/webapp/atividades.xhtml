@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Gerenciador de Atividades</title>
+    </h:head>
+    <h:body>
+        <h1>Gerenciador de Atividades</h1>
+        <h:dataTable var="atividade" value="#{atividadeMB.listaDeAtividades}">
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Identificador"/>
+                </f:facet>
+                <h:outputText value="#{atividade.id}" />
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Descrição"/>
+                </f:facet>
+                <h:outputText value="#{atividade.descricao}"/>
+            </h:column>
+            <!-- <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Páginas"/>
+                </f:facet>
+                <h:outputText value="#{atividade.paginas}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Editora"/>
+                </f:facet>
+                <h:outputText value="#{atividade.editora}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Isbn"/>
+                </f:facet>
+                <h:outputText value="#{atividade.isbn}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Avaliação"/>
+                </f:facet>
+                <h:outputText value="#{atividade.avaliacao}"/>
+            </h:column> -->
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Alterar"/>
+                </f:facet>
+                <h:form>
+                    <h:commandButton action="#{atividadeMB.prepararAlterarAtividade(atividade)}" value="Alterar"/>
+                    </h:form>
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Excluir"/>
+                </f:facet>
+                <h:form>
+                    <h:commandButton action="#{atividadeMB.excluirAtividade(atividade)}" value="Excluir"/>
+                    </h:form>
+            </h:column>
+        </h:dataTable>
+        <br/>
+        <h:form>
+            <h:commandLink value="Nova Atividade" action="#{atividadeMB.preparaAdicionarAtividade()}"/>
+        </h:form>
+    </h:body>
+</html>
