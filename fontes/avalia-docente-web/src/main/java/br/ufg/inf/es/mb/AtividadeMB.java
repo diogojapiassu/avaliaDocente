@@ -13,8 +13,10 @@ import org.springframework.data.domain.Sort.Direction;
 import br.ufg.inf.es.avaliadocente.context.CustomApplicationContext;
 import br.ufg.inf.es.avaliadocente.model.bean.Atividade;
 import br.ufg.inf.es.avaliadocente.model.bean.GrupoAtividade;
+import br.ufg.inf.es.avaliadocente.model.bean.Multiplicador;
 import br.ufg.inf.es.avaliadocente.repository.AtividadeRepository;
 import br.ufg.inf.es.avaliadocente.repository.GrupoAtividadeRepository;
+import br.ufg.inf.es.avaliadocente.repository.MultiplicadorRepository;
 
 /**
  * 
@@ -27,6 +29,7 @@ public class AtividadeMB {
 
 	private List<Atividade> listaDeAtividades;
 	private List<GrupoAtividade> listaDeGruposDeAtividades;
+	private List<Multiplicador> listaDeMultiplicadores;
 	
 	@Autowired
 	public AtividadeRepository atividadeRepository;
@@ -34,13 +37,18 @@ public class AtividadeMB {
 	@Autowired
 	public GrupoAtividadeRepository grupoAtividadeRepository;
 	
+	@Autowired
+	public MultiplicadorRepository multiplicadorRepository;
+	
 	private Atividade atividade;
 	
 	private Long idGrupoEscolhido;
+	private Long idMultiplicadorEscolhido;
 	
 	public AtividadeMB() {
 		atividadeRepository = CustomApplicationContext.getInstance().getContext().getBean(AtividadeRepository.class);
 		grupoAtividadeRepository = CustomApplicationContext.getInstance().getContext().getBean(GrupoAtividadeRepository.class);
+		multiplicadorRepository = CustomApplicationContext.getInstance().getContext().getBean(MultiplicadorRepository.class);
 	}
 
 	public List<Atividade> getListaDeAtividades() {
@@ -63,6 +71,13 @@ public class AtividadeMB {
 			atividade.setGrupoAtividade(grupoEscolhido);
 		}else{
 			atividade.setGrupoAtividade(null);
+		}
+		
+		if(idMultiplicadorEscolhido != null){
+			Multiplicador multiplicadorEscolhido = multiplicadorRepository.findOne(idMultiplicadorEscolhido);
+			atividade.setMultiplicador(multiplicadorEscolhido);
+		}else{
+			atividade.setMultiplicador(null);
 		}
 		
 		atividadeRepository.save(atividade);
@@ -88,6 +103,12 @@ public class AtividadeMB {
 			idGrupoEscolhido = null;
 		}
 		
+		if(atividadeCarregada.getMultiplicador() != null){
+			idMultiplicadorEscolhido = atividadeCarregada.getMultiplicador().getId();
+		}else{
+			idMultiplicadorEscolhido = null;
+		}
+		
 		return "gerenciaAtividade";
 	}
 	
@@ -108,6 +129,7 @@ public class AtividadeMB {
 	private void limparAtividade() {
 		atividade = new Atividade();
 		idGrupoEscolhido = null;
+		idMultiplicadorEscolhido = null;
 	}
 
 	public Atividade getAtividade() {
@@ -132,6 +154,20 @@ public class AtividadeMB {
 			List<GrupoAtividade> listaDeGruposDeAtividades) {
 		this.listaDeGruposDeAtividades = listaDeGruposDeAtividades;
 	}
+	
+	public List<Multiplicador> getListaDeMultiplicadores() {
+		if(multiplicadorRepository != null){
+			listaDeMultiplicadores = multiplicadorRepository.findAllOrdenadoPorId();
+		}else{
+			listaDeMultiplicadores = new ArrayList<>();
+		}
+		
+		return listaDeMultiplicadores;
+	}
+
+	public void setListaDeMultiplicadores(List<Multiplicador> listaDeMultiplicadores) {
+		this.listaDeMultiplicadores = listaDeMultiplicadores;
+	}
 
 	public Long getIdGrupoEscolhido() {
 		return idGrupoEscolhido;
@@ -139,5 +175,13 @@ public class AtividadeMB {
 
 	public void setIdGrupoEscolhido(Long idGrupoEscolhido) {
 		this.idGrupoEscolhido = idGrupoEscolhido;
+	}
+
+	public Long getIdMultiplicadorEscolhido() {
+		return idMultiplicadorEscolhido;
+	}
+
+	public void setIdMultiplicadorEscolhido(Long idMultiplicadorEscolhido) {
+		this.idMultiplicadorEscolhido = idMultiplicadorEscolhido;
 	}
 }
