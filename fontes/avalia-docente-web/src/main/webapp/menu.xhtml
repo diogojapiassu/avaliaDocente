@@ -4,18 +4,13 @@
     xmlns:f="http://java.sun.com/jsf/core">
     
 	<ul class="nav nav-list" style="padding-top: 15px;width: 140px">
-		<li><em><h:outputText value="#{msg['label.listas']}" /></em></li>
+		<!-- <li><em><h:outputText value="#{msg['label.listas']}" /></em></li> -->
 		
-		<li>
-			<h:link outcome="prime" value="teste"/>
-		</li>
-		<li>
-			<h:link value="item 2"/>
-		</li>
-		<li class="divider"></li>
-		<li>
-			<h:link value="item 3"/>
-        </li>
+		<li><h:link outcome="atividades" value="Atividades"/></li>
+		<li><h:link outcome="grupoAtividades" value="Grupo de Atividades"/></li>
+		<li><h:link outcome="resolucoes" value="Resoluções"/></li>
+		<li><h:link outcome="multiplicadores" value="Multiplicadores"/></li>
+		
 	</ul>
 
 </ui:fragment>
