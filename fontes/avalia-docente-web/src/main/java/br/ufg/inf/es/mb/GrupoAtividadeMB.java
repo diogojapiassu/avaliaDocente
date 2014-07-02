@@ -10,7 +10,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import br.ufg.inf.es.avaliadocente.context.CustomApplicationContext;
 import br.ufg.inf.es.avaliadocente.model.bean.GrupoAtividade;
+import br.ufg.inf.es.avaliadocente.model.bean.Resolucao;
 import br.ufg.inf.es.avaliadocente.repository.GrupoAtividadeRepository;
+import br.ufg.inf.es.avaliadocente.repository.ResolucaoRepository;
 
 /**
  * 
@@ -25,15 +27,22 @@ public class GrupoAtividadeMB {
 	
 	private List<GrupoAtividade> listaDeGruposDeAtividadesPai;
 	
+	private List<Resolucao> listaDeResolucoes;
+	
 	@Autowired
 	public GrupoAtividadeRepository grupoAtividadeRepository;
+	
+	@Autowired
+	public ResolucaoRepository resolucaoRepository;
 	
 	private GrupoAtividade grupoAtividade;
 	
 	private Long idGrupoPaiEscolhido;
+	private Long idResolucaoEscolhida;
 	
 	public GrupoAtividadeMB() {
 		grupoAtividadeRepository = CustomApplicationContext.getInstance().getContext().getBean(GrupoAtividadeRepository.class);
+		resolucaoRepository = CustomApplicationContext.getInstance().getContext().getBean(ResolucaoRepository.class);
 	}
 	
 	public String adicionarGrupoAtividade(){
@@ -44,6 +53,13 @@ public class GrupoAtividadeMB {
 			grupoAtividade.setGrupoAtividadePai(grupoEscolhido);
 		}else{
 			grupoAtividade.setGrupoAtividadePai(null);
+		}
+		
+		if(idResolucaoEscolhida != null){
+			Resolucao resolucaoEscolhida = resolucaoRepository.findOne(idResolucaoEscolhida);
+			grupoAtividade.setResolucao(resolucaoEscolhida);
+		}else{
+			grupoAtividade.setResolucao(null);
 		}
 		
 		grupoAtividadeRepository.save(grupoAtividade);
@@ -69,6 +85,12 @@ public class GrupoAtividadeMB {
 			idGrupoPaiEscolhido = null;
 		}
 		
+		if(grupoAtividadeCarregada.getResolucao() != null){
+			idResolucaoEscolhida = grupoAtividadeCarregada.getResolucao().getId();
+		}else{
+			idResolucaoEscolhida = null;
+		}
+		
 		return "gerenciaGrupoAtividade";
 	}
 	
@@ -83,6 +105,7 @@ public class GrupoAtividadeMB {
 	public String preparaAdicionarGrupoAtividade(){
 		grupoAtividade = new GrupoAtividade();
 		idGrupoPaiEscolhido = null;
+		idResolucaoEscolhida = null;
 		getListaDeGruposDeAtividadesPai();
 		
 		return "gerenciaGrupoAtividade";
@@ -132,5 +155,27 @@ public class GrupoAtividadeMB {
 
 	public void setGrupoAtividade(GrupoAtividade grupoAtividade) {
 		this.grupoAtividade = grupoAtividade;
+	}
+
+	public List<Resolucao> getListaDeResolucoes() {
+		if(resolucaoRepository != null){
+			listaDeResolucoes = resolucaoRepository.findAll();
+		}else{
+			listaDeResolucoes = new ArrayList<>();
+		}
+		
+		return listaDeResolucoes;
+	}
+
+	public void setListaDeResolucoes(List<Resolucao> listaDeResolucoes) {
+		this.listaDeResolucoes = listaDeResolucoes;
+	}
+
+	public Long getIdResolucaoEscolhida() {
+		return idResolucaoEscolhida;
+	}
+
+	public void setIdResolucaoEscolhida(Long idResolucaoEscolhida) {
+		this.idResolucaoEscolhida = idResolucaoEscolhida;
 	}
 }
