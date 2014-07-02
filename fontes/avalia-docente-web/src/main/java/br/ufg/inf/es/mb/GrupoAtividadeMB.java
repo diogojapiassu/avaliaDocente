@@ -23,6 +23,8 @@ public class GrupoAtividadeMB {
 
 	private List<GrupoAtividade> listaDeGruposDeAtividades;
 	
+	private List<GrupoAtividade> listaDeGruposDeAtividadesPai;
+	
 	@Autowired
 	public GrupoAtividadeRepository grupoAtividadeRepository;
 	
@@ -35,6 +37,8 @@ public class GrupoAtividadeMB {
 	}
 	
 	public String adicionarGrupoAtividade(){
+		grupoAtividade = grupoAtividadeRepository.save(grupoAtividade);
+		
 		if(idGrupoPaiEscolhido != null){
 			GrupoAtividade grupoEscolhido = grupoAtividadeRepository.findOne(idGrupoPaiEscolhido);
 			grupoAtividade.setGrupoAtividadePai(grupoEscolhido);
@@ -57,6 +61,7 @@ public class GrupoAtividadeMB {
 	
 	public String prepararAlterarGrupoAtividade(GrupoAtividade grupoAtividadeCarregada){
 		this.grupoAtividade = grupoAtividadeCarregada;
+		getListaDeGruposDeAtividadesPai();
 		
 		if(grupoAtividadeCarregada.getGrupoAtividadePai() != null){
 			idGrupoPaiEscolhido = grupoAtividadeCarregada.getGrupoAtividadePai().getId();
@@ -78,8 +83,24 @@ public class GrupoAtividadeMB {
 	public String preparaAdicionarGrupoAtividade(){
 		grupoAtividade = new GrupoAtividade();
 		idGrupoPaiEscolhido = null;
+		getListaDeGruposDeAtividadesPai();
 		
 		return "gerenciaGrupoAtividade";
+	}
+	
+	public List<GrupoAtividade> getListaDeGruposDeAtividadesPai() {
+		if (grupoAtividadeRepository != null) {
+			listaDeGruposDeAtividadesPai = grupoAtividadeRepository.findAllOrdenadoPorId();
+		}else{
+			listaDeGruposDeAtividadesPai = new ArrayList<>(); 
+		}
+		
+		return listaDeGruposDeAtividadesPai;
+	}
+
+	public void setListaDeGruposDeAtividadesPai(
+			List<GrupoAtividade> listaDeGruposDeAtividadesPai) {
+		this.listaDeGruposDeAtividadesPai = listaDeGruposDeAtividadesPai;
 	}
 
 	public List<GrupoAtividade> getListaDeGruposDeAtividades() {

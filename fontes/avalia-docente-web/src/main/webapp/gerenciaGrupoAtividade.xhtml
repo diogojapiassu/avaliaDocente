@@ -19,7 +19,7 @@ Grupo Pai: <h:selectOneMenu value="#{grupoAtividadeMB.idGrupoPaiEscolhido}">
 <f:selectItem itemValue="" itemLabel="Selecione..."    
                         noSelectionOption="true" />
 
-<f:selectItems value="#{grupoAtividadeMB.listaDeGruposDeAtividades}" var="grupo"
+<f:selectItems value="#{grupoAtividadeMB.listaDeGruposDeAtividadesPai}" var="grupo"
    			itemLabel="#{grupo.descricao}" itemValue="#{grupo.id}" />
 
 <!-- <f:selectItem itemLabel="1" itemValue="1"/>
