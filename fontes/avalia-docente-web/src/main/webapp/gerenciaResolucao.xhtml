@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+<title>Gerenciador de Resolução</title>
+</h:head>
+<h:body>
+<h1>Gerenciador de Resolução</h1>
+<h:form>
+Id: <h:inputText value="#{resolucaoMB.resolucao.id}" disabled="true"/><br/>
+Descrição*: <h:inputText required="true" requiredMessage="Informe a descrição" value="#{resolucaoMB.resolucao.descricao}"/><br/>
+Número de Notas: <h:inputText value="#{resolucaoMB.resolucao.numeroNotas}"/><br/>
+
+<h:commandButton action="#{resolucaoMB.adicionarResolucao()}" value="Salvar Resolução"/>
+<!-- <h:commandButton action="#{livroController.alterarLivro}" value="Alterar Livro"/> -->
+<br/>
+<h:commandLink action="resolucoes" immediate="true" value="Voltar"/>
+</h:form>
+</h:body>
+</html>

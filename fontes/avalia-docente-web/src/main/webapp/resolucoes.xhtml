@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Gerenciador de Resoluções</title>
+    </h:head>
+    <h:body>
+        <h1>Gerenciador de Resoluções</h1>
+        <h:dataTable var="resolucao" value="#{resolucaoMB.listaDeResolucao}">
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Identificador"/>
+                </f:facet>
+                <h:outputText value="#{resolucao.id}" />
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Descrição"/>
+                </f:facet>
+                <h:outputText value="#{resolucao.descricao}"/>
+            </h:column>
+            <!-- <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Páginas"/>
+                </f:facet>
+                <h:outputText value="#{atividade.paginas}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Editora"/>
+                </f:facet>
+                <h:outputText value="#{atividade.editora}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Isbn"/>
+                </f:facet>
+                <h:outputText value="#{atividade.isbn}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Avaliação"/>
+                </f:facet>
+                <h:outputText value="#{atividade.avaliacao}"/>
+            </h:column> -->
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Alterar"/>
+                </f:facet>
+                <h:form>
+                    <h:commandButton action="#{resolucaoMB.prepararAlterarResolucao(resolucao)}" value="Alterar"/>
+                    </h:form>
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Excluir"/>
+                </f:facet>
+                <h:form>
+                    <h:commandButton action="#{resolucaoMB.excluirResolucao(resolucao)}" value="Excluir"/>
+                    </h:form>
+            </h:column>
+        </h:dataTable>
+        <br/>
+        <h:form>
+            <h:commandLink value="Nova Resolução" action="#{resolucaoMB.preparaAdicionarResolucao()}"/>
+        </h:form>
+    </h:body>
+</html>
