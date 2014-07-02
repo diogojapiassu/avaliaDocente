@@ -10,21 +10,28 @@ xmlns:f="http://java.sun.com/jsf/core">
 <h1>Gerenciador de Atividades</h1>
 <h:form>
 Id: <h:inputText value="#{atividadeMB.atividade.id}" disabled="true"/><br/>
-Descrição: <h:inputText value="#{atividadeMB.atividade.descricao}"/><br/>
+Descrição*: <h:inputText required="true" requiredMessage="Informe a descrição" value="#{atividadeMB.atividade.descricao}"/><br/>
 Índice: <h:inputText value="#{atividadeMB.atividade.indice}"/><br/>
 <!-- Editora: <h:inputText value="#{livroController.livro.editora}"/><br/>
-ISBN: <h:inputText value="#{livroController.livro.isbn}"/><br/>
-Avaliação: <h:selectOneMenu value="#{livroController.livro.avaliacao}">
-<f:selectItem itemLabel="1" itemValue="1"/>
+ISBN: <h:inputText value="#{livroController.livro.isbn}"/><br/> -->
+Grupo: <h:selectOneMenu value="#{atividadeMB.idGrupoEscolhido}">
+
+<f:selectItem itemValue="" itemLabel="Selecione..."    
+                        noSelectionOption="true" />
+
+<f:selectItems value="#{atividadeMB.listaDeGruposDeAtividades}" var="grupo"
+   			itemLabel="#{grupo.descricao}" itemValue="#{grupo.id}"/>
+
+<!-- <f:selectItem itemLabel="1" itemValue="1"/>
 <f:selectItem itemLabel="2" itemValue="2"/>
 <f:selectItem itemLabel="3" itemValue="3"/>
 <f:selectItem itemLabel="4" itemValue="4"/>
-<f:selectItem itemLabel="5" itemValue="5"/>
-</h:selectOneMenu><br/> -->
+<f:selectItem itemLabel="5" itemValue="5"/> -->
+</h:selectOneMenu><br/>
 <h:commandButton action="#{atividadeMB.adicionarAtividade()}" value="Salvar Atividade"/>
 <!-- <h:commandButton action="#{livroController.alterarLivro}" value="Alterar Livro"/> -->
 <br/>
-<h:commandLink action="atividades" value="Voltar"/>
+<h:commandLink action="atividades" immediate="true" value="Voltar"/>
 </h:form>
 </h:body>
 </html>
