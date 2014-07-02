@@ -4,23 +4,23 @@
 xmlns:h="http://java.sun.com/jsf/html"
 xmlns:f="http://java.sun.com/jsf/core">
 <h:head>
-<title>Gerenciador de Atividades</title>
+<title>Gerenciador de Grupo de Atividade</title>
 </h:head>
 <h:body>
-<h1>Gerenciador de Atividades</h1>
+<h1>Gerenciador de Grupo de Atividade</h1>
 <h:form>
-Id: <h:inputText value="#{atividadeMB.atividade.id}" disabled="true"/><br/>
-Descrição*: <h:inputText required="true" requiredMessage="Informe a descrição" value="#{atividadeMB.atividade.descricao}"/><br/>
-Índice: <h:inputText value="#{atividadeMB.atividade.indice}"/><br/>
+Id: <h:inputText value="#{grupoAtividadeMB.grupoAtividade.id}" disabled="true"/><br/>
+Descrição*: <h:inputText required="true" requiredMessage="Informe a descrição" value="#{grupoAtividadeMB.grupoAtividade.descricao}"/><br/>
+<!-- Índice: <h:inputText value="#{atividadeMB.atividade.indice}"/><br/> -->
 <!-- Editora: <h:inputText value="#{livroController.livro.editora}"/><br/>
 ISBN: <h:inputText value="#{livroController.livro.isbn}"/><br/> -->
-Grupo: <h:selectOneMenu value="#{atividadeMB.idGrupoEscolhido}">
+Grupo Pai: <h:selectOneMenu value="#{grupoAtividadeMB.idGrupoPaiEscolhido}">
 
 <f:selectItem itemValue="" itemLabel="Selecione..."    
                         noSelectionOption="true" />
 
-<f:selectItems value="#{atividadeMB.listaDeGruposDeAtividades}" var="grupo"
-   			itemLabel="#{grupo.descricao}" itemValue="#{grupo.id}"/>
+<f:selectItems value="#{grupoAtividadeMB.listaDeGruposDeAtividades}" var="grupo"
+   			itemLabel="#{grupo.descricao}" itemValue="#{grupo.id}" />
 
 <!-- <f:selectItem itemLabel="1" itemValue="1"/>
 <f:selectItem itemLabel="2" itemValue="2"/>
@@ -28,10 +28,10 @@ Grupo: <h:selectOneMenu value="#{atividadeMB.idGrupoEscolhido}">
 <f:selectItem itemLabel="4" itemValue="4"/>
 <f:selectItem itemLabel="5" itemValue="5"/> -->
 </h:selectOneMenu><br/>
-<h:commandButton action="#{atividadeMB.adicionarAtividade()}" value="Salvar Atividade"/>
+<h:commandButton action="#{grupoAtividadeMB.adicionarGrupoAtividade()}" value="Salvar Grupo Atividade"/>
 <!-- <h:commandButton action="#{livroController.alterarLivro}" value="Alterar Livro"/> -->
 <br/>
-<h:commandLink action="atividades" immediate="true" value="Voltar"/>
+<h:commandLink action="grupoAtividades" immediate="true" value="Voltar"/>
 </h:form>
 </h:body>
 </html>

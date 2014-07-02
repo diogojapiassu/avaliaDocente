@@ -14,6 +14,8 @@ import javax.persistence.OneToOne;
 import org.hibernate.annotations.Cascade;
 
 import br.ufg.inf.es.avaliadocente.model.support.AbstractEntity;
+import br.ufg.inf.es.avaliadocente.model.support.annotation.Hiddenable;
+import br.ufg.inf.es.avaliadocente.model.support.annotation.Updatable;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -25,6 +27,8 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
  *
  */
 @Entity
+@Updatable
+@Hiddenable
 public class GrupoAtividade extends AbstractEntity<GrupoAtividade> {
 
 	private static final long serialVersionUID = 8454327804099597504L;
