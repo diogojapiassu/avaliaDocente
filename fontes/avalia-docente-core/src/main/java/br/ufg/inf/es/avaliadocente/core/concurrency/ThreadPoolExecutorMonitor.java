@@ -35,6 +35,15 @@ public class ThreadPoolExecutorMonitor implements Runnable {
 		this.executor = executor;
 		this.delayMonitoramento = delayMonitoramento;
 	}
+	
+	/**
+	 * Contrói um monitor de {@link ThreadPoolExecutor}.
+	 * 
+	 * @param delayMonitoramento intervalo em um monitoramento e outro.
+	 */
+	public ThreadPoolExecutorMonitor(int delayMonitoramento) {
+		this(null, delayMonitoramento);
+	}
 
 	public void shutdown() {
 		this.run = false;
@@ -54,6 +63,14 @@ public class ThreadPoolExecutorMonitor implements Runnable {
 			
 			Sleeper.sleep(delayMonitoramento * 1000);
 		}
+	}
+
+	public void setExecutor(ThreadPoolExecutor executor) {
+		this.executor = executor;
+	}
+
+	public void setDelayMonitoramento(int delayMonitoramento) {
+		this.delayMonitoramento = delayMonitoramento;
 	}
 
 }

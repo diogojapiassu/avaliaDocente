@@ -7,7 +7,28 @@
 
 	<context:component-scan base-package="br.ufg.inf.es.avaliadocente" />
 
-	<!-- Simple Named Threa Factory -->
-	<bean id="simpleNamedThreadFactory" class="br.ufg.inf.es.avaliadocente.concurrency.SimpleNamedThreadFactory" />
+	<!-- Avaliacao Handler: bean responsavel por processar cada avaliação -->
+	<bean id="avaliacaoHandler" class="br.ufg.inf.es.avaliadocente.core.AvaliacaoHandler" scope="prototype"/>
+
+	<!-- Asynchronous Avaliacao Handler: bean responsavel por processar uma 
+		lista de avaliacoes de forma 'assincrona' -->
+	<bean id="asyncAvaliacaoHandler" class="br.ufg.inf.es.avaliadocente.core.concurrency.AsynchronousAvaliacaoHandlerImpl" />
+	
+	<!-- Simple Named Thread Factory -->
+	<bean id="simpleNamedThreadFactory" class="br.ufg.inf.es.avaliadocente.core.concurrency.SimpleNamedThreadFactory" />
+	
+	<!-- FactoryBean de ThreadPoolExecutor -->
+	<bean id="threadPoolExecutorFactory" class="org.springframework.scheduling.concurrent.ThreadPoolExecutorFactoryBean">
+		<property name="corePoolSize" value="8" />
+		<property name="maxPoolSize" value="8" />
+		<property name="keepAliveSeconds" value="60" />
+		<property name="allowCoreThreadTimeOut" value="false" />
+		<property name="exposeUnconfigurableExecutor" value="false" />
+	</bean>
+	
+	<!-- FactoryBean de ThreadPoolExecutor -->
+	<bean id="threadPoolExecutorMonitor" class="br.ufg.inf.es.avaliadocente.core.concurrency.ThreadPoolExecutorMonitor" scope="template">
+		
+	</bean>
 
 </beans>

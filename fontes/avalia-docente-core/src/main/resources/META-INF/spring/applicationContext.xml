@@ -7,5 +7,6 @@
 	<context:annotation-config />
 <!-- 	<import resource="applicationContext-commons.xml"/> -->
 	<import resource="applicationContext-persistence.xml"/>
+	<import resource="applicationContext-concurrency.xml"/>
 
 </beans>
