@@ -1,13 +1,16 @@
 package br.ufg.inf.es.avaliadocente.repository.support;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.EntityManager;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.NoRepositoryBean;
 
+import br.ufg.inf.es.avaliadocente.model.bean.Atividade;
 import br.ufg.inf.es.avaliadocente.model.support.AbstractEntity;
 
 /**
@@ -33,5 +36,7 @@ public interface GenericRepository<E extends AbstractEntity<E>, PK extends Seria
      * @return {@link EntityManager}
      */
     EntityManager getEntityManager();
+    
+    List<E> findAllOrdenadoPorId();
 
 }

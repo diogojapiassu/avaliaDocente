@@ -12,6 +12,8 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 
+import org.springframework.data.domain.Sort;
+import org.springframework.data.domain.Sort.Direction;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.data.jpa.repository.support.JpaEntityInformation;
 import org.springframework.data.jpa.repository.support.SimpleJpaRepository;
@@ -53,7 +55,10 @@ public class GenericRepositoryImpl<E extends AbstractEntity<E>, PK extends Seria
         final Date dataInsercaoAlteracao = Calendar.getInstance().getTime();
         entity.setDataInsercaoAlteracao(dataInsercaoAlteracao);
         if (this.getEntityInformation().isNew(entity)) {
-            this.getEntityManager().persist(entity);
+        	if (entity.getClass().isAnnotationPresent(Hiddenable.class)) {
+                entity.setHidden(Boolean.FALSE);
+            }
+        	this.getEntityManager().persist(entity);
         } else {
             final Updatable updatable = entity.getClass().getAnnotation(Updatable.class);
             final Boolean mustDoANewInsert = updatable.newinsert();
@@ -98,6 +103,14 @@ public class GenericRepositoryImpl<E extends AbstractEntity<E>, PK extends Seria
     public List<E> findAll() {
         if (this.getEntityInformation().getJavaType().isAnnotationPresent(Hiddenable.class)) {
             return super.findAll(this.isHidden());
+        }
+        return super.findAll();
+    }
+    
+    @Override
+    public List<E> findAllOrdenadoPorId() {
+        if (this.getEntityInformation().getJavaType().isAnnotationPresent(Hiddenable.class)) {
+            return super.findAll(this.isHidden(), new Sort(Direction.DESC, "id"));
         }
         return super.findAll();
     }
