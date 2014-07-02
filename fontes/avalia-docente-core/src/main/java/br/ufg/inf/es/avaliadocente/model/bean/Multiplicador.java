@@ -6,6 +6,8 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 
 import br.ufg.inf.es.avaliadocente.model.support.AbstractEntity;
+import br.ufg.inf.es.avaliadocente.model.support.annotation.Hiddenable;
+import br.ufg.inf.es.avaliadocente.model.support.annotation.Updatable;
 
 /**
  * Multiplicador a ser aplicado pela Atividade.
@@ -20,6 +22,8 @@ import br.ufg.inf.es.avaliadocente.model.support.AbstractEntity;
  * 
  */
 @Entity
+@Updatable
+@Hiddenable
 public class Multiplicador extends AbstractEntity<Multiplicador>{
 
 	private static final long serialVersionUID = 7117819398892815646L;

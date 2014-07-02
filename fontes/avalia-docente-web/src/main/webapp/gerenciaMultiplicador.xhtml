@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+<title>Gerenciador de Multiplicador</title>
+</h:head>
+<h:body>
+<h1>Gerenciador de Multiplicador</h1>
+<h:form>
+Id: <h:inputText value="#{multiplicadorMB.multiplicador.id}" disabled="true"/><br/>
+Fator de Multiplicação*: <h:inputText required="true" requiredMessage="Informe o fator" value="#{multiplicadorMB.multiplicador.fatorMultiplicador}"/><br/>
+Valor Máximo: <h:inputText value="#{multiplicadorMB.multiplicador.valorMaximo}"/><br/>
+
+<h:commandButton action="#{multiplicadorMB.adicionarMultiplicador()}" value="Salvar Multiplicador"/>
+<br/>
+<h:commandLink action="multiplicadores" immediate="true" value="Voltar"/>
+</h:form>
+</h:body>
+</html>
