@@ -7,8 +7,6 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Future;
 import java.util.concurrent.ThreadPoolExecutor;
 
-import org.springframework.beans.factory.annotation.Autowired;
-
 import br.ufg.inf.es.avaliadocente.context.CustomApplicationContext;
 import br.ufg.inf.es.avaliadocente.core.AvaliacaoHandler;
 import br.ufg.inf.es.avaliadocente.exception.AvaliacaoProcessamentoException;
@@ -32,17 +30,18 @@ public class AsynchronousAvaliacaoHandlerImpl extends
 	public AsynchronousAvaliacaoHandlerImpl() { }
 
 	@Override
+	@SuppressWarnings("rawtypes")
 	public void processarListaAvaliacoes()
 			throws AvaliacaoProcessamentoException {
 		MethodProfiling p = new MethodProfiling();
 		p.iniciarMedicao();
-		LOG.info("Hora de inicio" + p.getDataInicio());
 
 		ExecutorService es;
 		try {
 			es = threadPoolExecutorFactory.getObject();
 			
 			iniciarThreadPoolExecutorMonitor(es);
+			
 			
 			List<Future> futures = new ArrayList<Future>();
 
@@ -56,20 +55,17 @@ public class AsynchronousAvaliacaoHandlerImpl extends
 				futures.add(es.submit(avaliacaoHandler));
 			}
 
-			int ctr=0;
 			for (Future future : futures) {
 				try {
 					// blocking call, explicitly waiting for the response from a
 					// specific task, not necessarily the first task that is
 					// completed
-					Object obj = future.get();
-					LOG.info("** response worker " + ++ctr + " is in");
-				} catch (InterruptedException | ExecutionException e) {
-				}
+					future.get();
+				} catch (InterruptedException | ExecutionException e) { }
 			}
 	 
 			p.finalizarMedicao();
-			LOG.info("Job took " + p.tempoExecucao() + " segundos");
+			LOG.info("Processamento assincrono levou " + p.tempoExecucao() + " segundos");
 		} catch (Exception e1) {
 			LOG.error("Falha ao obter o ThreadPoolExecutor do Factory."
 					+ "Lista de avaliacoes nao sera processada: " + listaDeAvaliacoes.toString(), e1);

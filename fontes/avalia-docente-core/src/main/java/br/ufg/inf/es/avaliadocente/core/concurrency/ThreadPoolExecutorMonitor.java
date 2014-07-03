@@ -21,15 +21,22 @@ public class ThreadPoolExecutorMonitor implements Runnable {
 
 	private static final Logger LOG = Logger.getLogger(ThreadPoolExecutorMonitor.class);
 	
+	/**
+	 * {@link ThreadPoolExecutor} alvo (que será monitorado).
+	 */
 	private ThreadPoolExecutor executor;
-	private int delayMonitoramento;
+	/**
+	 * Intervalo entre um monitoramento e outro (em segundos). <br>
+	 * Padrão: 10 segundos.
+	 */
+	private int delayMonitoramento = 10;
 	private boolean run = true;
 
 	/**
 	 * Contrói um monitor de {@link ThreadPoolExecutor}.
 	 * 
 	 * @param executor {@link ThreadPoolExecutor} que será monitorado.
-	 * @param delayMonitoramento intervalo em um monitoramento e outro.
+	 * @param delayMonitoramento intervalo entre um monitoramento e outro (em segundos).
 	 */
 	public ThreadPoolExecutorMonitor(ThreadPoolExecutor executor, int delayMonitoramento) {
 		this.executor = executor;
@@ -39,7 +46,7 @@ public class ThreadPoolExecutorMonitor implements Runnable {
 	/**
 	 * Contrói um monitor de {@link ThreadPoolExecutor}.
 	 * 
-	 * @param delayMonitoramento intervalo em um monitoramento e outro.
+	 * @param delayMonitoramento intervalo entre um monitoramento e outro (em segundos).
 	 */
 	public ThreadPoolExecutorMonitor(int delayMonitoramento) {
 		this(null, delayMonitoramento);
@@ -54,7 +61,7 @@ public class ThreadPoolExecutorMonitor implements Runnable {
 	@Override
 	public void run() {
 		while (run) {
-			LOG.debug(String.format("[monitor] [%d/%d] Active: %d, Completed: %d, Task: %d, isShutdown: %s, isTerminated: %s",
+			LOG.debug(String.format("[thread-pool-monitor] [%d/%d] Active: %d, Completed: %d, Task: %d, isShutdown: %s, isTerminated: %s",
 				this.executor.getPoolSize(),
 				this.executor.getCorePoolSize(),
 				this.executor.getActiveCount(),
@@ -64,6 +71,11 @@ public class ThreadPoolExecutorMonitor implements Runnable {
 				this.executor.isTerminated()));
 			
 			Sleeper.sleep(delayMonitoramento * 1000);
+			
+			if (this.executor.isTerminated()) {
+				LOG.info(String.format("Encerrando o monitor %s para o ThreadPoolExecutor %s", Thread.currentThread().getName(), this.executor.toString()));
+				shutdown();
+			}
 		}
 	}
 

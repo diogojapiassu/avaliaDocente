@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import br.ufg.inf.es.avaliadocente.context.CustomApplicationContext;
 import br.ufg.inf.es.avaliadocente.core.AvaliacaoHandler;
 import br.ufg.inf.es.avaliadocente.core.concurrency.AbstractAsynchronousAvaliacaoHandler;
+import br.ufg.inf.es.avaliadocente.core.concurrency.AvaliacaoListSplitter;
 import br.ufg.inf.es.avaliadocente.model.bean.Avaliacao;
 import br.ufg.inf.es.avaliadocente.model.bean.json.AvaliacaoJsonBinder;
 import br.ufg.inf.es.avaliadocente.util.FileUtils;
@@ -27,7 +28,9 @@ private static final Logger LOG = Logger.getLogger(AvaliaDocenteJsonProcessorMai
 	
 	@Autowired
 	private static AvaliacaoHandler avaliacaoHandler;
-	private static String diretorioJson = "/home/alunoinf/Downloads/avaliacao.json";
+	@Autowired
+	private static AvaliacaoListSplitter avaliacaoListSplitter;
+	private static String diretorioJson = "C:/avaliacoes.json";
 	private static String json = null;
 	private static List<Avaliacao> avaliacoes = new ArrayList<>();
 	
@@ -53,14 +56,22 @@ private static final Logger LOG = Logger.getLogger(AvaliaDocenteJsonProcessorMai
 		//Inicializa o context do Spring...
 		CustomApplicationContext.getInstance();
 		
-		//Estou pedindo o Spring pra construir esse objeto com base na classe (AvaliacaoHandler)...
-		avaliacaoHandler = CustomApplicationContext.getInstance().getContext()
-				.getBean(AvaliacaoHandler.class);
+		getNewAvaliacaoHandler();
 		
+		getNewAsyncAvaliacaoHandler();
+	}
+
+	private static AbstractAsynchronousAvaliacaoHandler getNewAsyncAvaliacaoHandler() {
 		//Estou pedindo o Spring pra construir esse objeto com base no id do bean...
-		asyncAvaliacaoHandler = (AbstractAsynchronousAvaliacaoHandler) CustomApplicationContext
+		return asyncAvaliacaoHandler = (AbstractAsynchronousAvaliacaoHandler) CustomApplicationContext
 				.getInstance().getContext()
 				.getBean("asyncAvaliacaoHandler");
+	}
+	
+	private static AvaliacaoHandler getNewAvaliacaoHandler() {
+		//Estou pedindo o Spring pra construir esse objeto com base na classe (AvaliacaoHandler)...
+		return avaliacaoHandler = CustomApplicationContext.getInstance().getContext()
+						.getBean(AvaliacaoHandler.class);
 	}
 	
 	/**
@@ -86,11 +97,20 @@ private static final Logger LOG = Logger.getLogger(AvaliaDocenteJsonProcessorMai
 	 * Processa varias avaliações (para testes mais complexos).
 	 */
 	private static void processarVariasAvaliacoes() {
-		//Injea mais uma propriedade no objeto ja instanciado...
-		asyncAvaliacaoHandler.setListaDeAvaliacoes(avaliacoes);
 		
-		//Constroi uma Thread com o seu objeto ja instanciado...
-		new Thread(asyncAvaliacaoHandler).start();
+		avaliacaoListSplitter.setAvaliacoes(avaliacoes);
+		
+		for (List<Avaliacao> listaCom1000 : avaliacaoListSplitter.split()) {
+			//Obtem um novo asyncAvaliacaoHandler
+			asyncAvaliacaoHandler = getNewAsyncAvaliacaoHandler();
+			
+			//Injea mais uma propriedade no objeto ja instanciado...
+			asyncAvaliacaoHandler.setListaDeAvaliacoes(listaCom1000);
+			
+			//Constroi uma Thread com o seu objeto ja instanciado...
+			new Thread(asyncAvaliacaoHandler).start();
+		}
+		
 	}
 	
 

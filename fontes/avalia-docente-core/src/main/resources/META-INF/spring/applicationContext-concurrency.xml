@@ -8,29 +8,44 @@
 	<context:component-scan base-package="br.ufg.inf.es.avaliadocente" />
 
 	<!-- Avaliacao Handler: bean responsavel por processar cada avaliação -->
-	<bean id="avaliacaoHandler" class="br.ufg.inf.es.avaliadocente.core.AvaliacaoHandler" scope="prototype"/>
+	<bean id="avaliacaoHandler"
+		class="br.ufg.inf.es.avaliadocente.core.AvaliacaoHandler"
+		scope="prototype"
+		destroy-method="destroy" />
 
 	<!-- Asynchronous Avaliacao Handler: bean responsavel por processar uma 
 		lista de avaliacoes de forma 'assincrona' -->
-	<bean id="asyncAvaliacaoHandler" class="br.ufg.inf.es.avaliadocente.core.concurrency.AsynchronousAvaliacaoHandlerImpl"> 
+	<bean id="asyncAvaliacaoHandler"
+		class="br.ufg.inf.es.avaliadocente.core.concurrency.AsynchronousAvaliacaoHandlerImpl"
+		scope="prototype" > 
+		<property name="threadPoolExecutorFactory" ref="threadPoolExecutorFactory" />
 		<property name="threadPoolExecutorMonitor" ref="threadPoolExecutorMonitor" />
 	</bean>
 	
 	<!-- Simple Named Thread Factory -->
-	<bean id="simpleNamedThreadFactory" class="br.ufg.inf.es.avaliadocente.core.concurrency.SimpleNamedThreadFactory" />
+	<bean id="simpleNamedThreadFactory"
+		class="br.ufg.inf.es.avaliadocente.core.concurrency.SimpleNamedThreadFactory" />
 	
-	<!-- FactoryBean de ThreadPoolExecutor -->
-	<bean id="threadPoolExecutorFactory" class="org.springframework.scheduling.concurrent.ThreadPoolExecutorFactoryBean">
-		<property name="corePoolSize" value="8" />
-		<property name="maxPoolSize" value="8" />
-		<property name="keepAliveSeconds" value="60" />
-		<property name="allowCoreThreadTimeOut" value="false" />
-		<property name="exposeUnconfigurableExecutor" value="false" />
-	</bean>
+	<!-- Factory Bean de ThreadPoolExecutor's 
+	-corePoolSize: tamanho do pool
+	-maxPoolSizevalue: tamanho máximo do pool
+	-keepAliveSeconds: tempo em segundos que uma thread execende ficará em idle no pool até ser destruída -->
+	<bean id="threadPoolExecutorFactory"
+		class="org.springframework.scheduling.concurrent.ThreadPoolExecutorFactoryBean"
+		p:corePoolSize="4" p:maxPoolSizevalue="8" p:keepAliveSeconds="60" />
 	
-	<!-- FactoryBean de ThreadPoolExecutor -->
-	<bean id="threadPoolExecutorMonitor" class="br.ufg.inf.es.avaliadocente.core.concurrency.ThreadPoolExecutorMonitor" scope="prototype">
+	<!-- FactoryBean de ThreadPoolExecutor
+	-delayMonitoramento: intervalo entre um monitoramento e outro (em segundos). Padrão 10. -->
+	<bean id="threadPoolExecutorMonitor"
+		class="br.ufg.inf.es.avaliadocente.core.concurrency.ThreadPoolExecutorMonitor"
+		scope="prototype" p:delayMonitoramento="10" />
+	
+	<!-- AvaliacaoListSplitter: garante a divisao (split) de uma lista em sub-listas
+	-tamanhoSubListas: quantidade de itens que cada sub-lista conterá. Padrão: 1000 -->
+	<bean id="avaliacaoListSplitter"
+		class="br.ufg.inf.es.avaliadocente.core.concurrency.AvaliacaoListSplitter">
 		
+		<constructor-arg name="tamanhoSubListas" value="1000"/>
 	</bean>
 
 </beans>

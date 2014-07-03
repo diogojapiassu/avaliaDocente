@@ -7,6 +7,7 @@ import java.util.List;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import br.ufg.inf.es.avaliadocente.exception.AvaliacaoProcessamentoException;
 import br.ufg.inf.es.avaliadocente.model.bean.Atividade;
 import br.ufg.inf.es.avaliadocente.model.bean.Avaliacao;
 import br.ufg.inf.es.avaliadocente.model.bean.Docente;
@@ -20,6 +21,7 @@ import br.ufg.inf.es.avaliadocente.repository.DocenteRepository;
 import br.ufg.inf.es.avaliadocente.repository.GrupoAtividadeRepository;
 import br.ufg.inf.es.avaliadocente.repository.NotasGrupoAtividadeRepository;
 import br.ufg.inf.es.avaliadocente.repository.QuadroSumarioRepository;
+import br.ufg.inf.es.avaliadocente.util.MethodProfiling;
 
 /**
  * Trata uma {@link Avaliacao}. Mantém todo o fluxo de processamento de uma {@link Avaliacao}.
@@ -42,6 +44,8 @@ public class AvaliacaoHandler implements Runnable {
 	private static final Logger LOG = Logger.getLogger(AvaliacaoHandler.class);
 
 	private Avaliacao avaliacao;
+	
+	private MethodProfiling p = new MethodProfiling();
 	
 	@Autowired
 	DocenteRepository docenteRepository;
@@ -68,51 +72,48 @@ public class AvaliacaoHandler implements Runnable {
 		this.avaliacao = avaliacao;
 	}
 	
-	int quantasVezesEssaPorraVaiNoBanco = 0;
-	
 	@Override
 	public void run() {
-		long startIn = System.currentTimeMillis();
-		LOG.info("Iniciando processamento de avaliacao");
-		
-		if (avaliacao != null) {
-			Docente docente = avaliacao.getDocente();
+		try {
+			p.iniciarMedicao();
+			LOG.info("Iniciando processamento de avaliacao");
 			
-			Docente docenteBD = docenteRepository
-					.findByNomeAndMatricula(docente.getNome(), docente.getMatricula());
-			quantasVezesEssaPorraVaiNoBanco++;
-			
-			if (docenteBD == null) {
-				docenteBD = docente;
-				docenteRepository.save(docenteBD);
-				quantasVezesEssaPorraVaiNoBanco++;
+			if (avaliacao != null) {
+				Docente docente = avaliacao.getDocente();
+				
+				Docente docenteBD = docenteRepository
+						.findByNomeAndMatricula(docente.getNome(), docente.getMatricula());
+				
+				if (docenteBD == null) {
+					docenteBD = docente;
+					docenteRepository.save(docenteBD);
+				}
+				
+				QuadroSumario sumario = new QuadroSumarioBuilder()
+						.docente(docenteBD)	
+						.build();
+				
+				List<NotasGrupoAtividade> notas = new ArrayList<>();
+				for (GrupoAtividade gpr : avaliacao.getGrupoAtividade()) {
+					NotasGrupoAtividade notasGrupoAtividade = new NotasGrupoAtividadeBuilder().quadroSumario(sumario).build();
+					
+					tratarTodasAtividadesDoGrupoDeAtividades(gpr, notasGrupoAtividade);
+					
+					notas.add(notasGrupoAtividade);
+					
+				}
+				
+				quadroSumarioRepository.save(sumario);
+				notasGrupoAtividadeRepository.save(notas);
 			}
 			
-			QuadroSumario sumario = new QuadroSumarioBuilder()
-					.docente(docenteBD)	
-					.build();
-			
-			List<NotasGrupoAtividade> notas = new ArrayList<>();
-			for (GrupoAtividade gpr : avaliacao.getGrupoAtividade()) {
-				NotasGrupoAtividade notasGrupoAtividade = new NotasGrupoAtividadeBuilder().quadroSumario(sumario).build();
-				
-				tratarTodasAtividadesDoGrupoDeAtividades(gpr, notasGrupoAtividade);
-				
-				notas.add(notasGrupoAtividade);
-				
-			}
-			
-			quadroSumarioRepository.save(sumario);
-			quantasVezesEssaPorraVaiNoBanco++;
-			notasGrupoAtividadeRepository.save(notas);
-			quantasVezesEssaPorraVaiNoBanco++;
-			
+			p.finalizarMedicao();
+			LOG.info("Avaliacao processada em "+ p.tempoExecucao() + " segundos");
+		} catch (Exception e) {
+			String mensagem = String.format("Houve algum problema ao processar a avalicao %s", this.avaliacao.toString());
+			LOG.error(mensagem);
+			throw new AvaliacaoProcessamentoException(mensagem, e);
 		}
-		
-		long runnedIn = System.currentTimeMillis() - startIn;
-		LOG.info("Avaliacao processada em "+ runnedIn + " milissegundos");
-		
-		LOG.info("Quantas vezes essa porra vai no banco: " + quantasVezesEssaPorraVaiNoBanco);
 	}
 
 	/**
@@ -125,7 +126,6 @@ public class AvaliacaoHandler implements Runnable {
 		
 		//Sincroniza com o banco somente para nao dar TransientObjectException...
 		GrupoAtividade gprTemp = grupoAtividadeRepository.findByIndice(gpr.getIndice());
-		quantasVezesEssaPorraVaiNoBanco++;
 		notasGrupoAtividade.setGrupoAtividade(gprTemp);
 		
 		for (Atividade atv : gpr.getAtividades()) {
@@ -133,7 +133,6 @@ public class AvaliacaoHandler implements Runnable {
 			
 			//Sincronizando com o banco...
 			Atividade atvTemp = atividadeRepository.findByGrupoAtividadeAndIndice(gprTemp.getId(), atv.getIndice());
-			quantasVezesEssaPorraVaiNoBanco++;
 			Long pesoMultiplicador = atvTemp.getMultiplicador().getFatorMultiplicador().longValue();
 			
 			if (atvTemp.getMultiplicador().isValorado()) {
@@ -154,5 +153,17 @@ public class AvaliacaoHandler implements Runnable {
 		}
 	}
 	
+	/**
+	 * Método invocado quando o bean é destruído pelo Spring.
+	 */
+	public void destroy() {
+		avaliacao = null;
+		p = null;
+		docenteRepository = null;
+		quadroSumarioRepository = null;
+		atividadeRepository = null;
+		grupoAtividadeRepository = null;
+		notasGrupoAtividadeRepository = null;
+	}
 
 }

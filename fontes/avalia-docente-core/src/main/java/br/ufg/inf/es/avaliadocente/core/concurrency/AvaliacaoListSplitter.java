@@ -22,12 +22,18 @@ public class AvaliacaoListSplitter {
 	 */
 	private Integer tamanhoSubListas = 1000;
 	
+	public AvaliacaoListSplitter() { }
+	
 	/**
 	 * Assume o tamanho padrão de cada sub-lista.
 	 * @param avaliacoes
 	 */
 	public AvaliacaoListSplitter(List<Avaliacao> avaliacoes) {
 		this.avaliacoes = avaliacoes;
+	}
+	
+	public AvaliacaoListSplitter(Integer tamanhoSubListas) {
+		this.tamanhoSubListas = tamanhoSubListas;
 	}
 	
 	/**
@@ -38,6 +44,10 @@ public class AvaliacaoListSplitter {
 	public AvaliacaoListSplitter(List<Avaliacao> avaliacoes, Integer tamanhoSubListas) {
 		this.avaliacoes = avaliacoes;
 		this.tamanhoSubListas = tamanhoSubListas;
+	}
+	
+	public void setAvaliacoes(List<Avaliacao> avaliacoes) {
+		this.avaliacoes = avaliacoes;		
 	}
 	
 	/**
