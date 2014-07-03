@@ -44,6 +44,8 @@ public class ThreadPoolExecutorMonitor implements Runnable {
 	public ThreadPoolExecutorMonitor(int delayMonitoramento) {
 		this(null, delayMonitoramento);
 	}
+	
+	public ThreadPoolExecutorMonitor() { }
 
 	public void shutdown() {
 		this.run = false;

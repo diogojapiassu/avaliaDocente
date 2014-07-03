@@ -28,6 +28,8 @@ public class SimpleNamedThreadFactory implements ThreadFactory {
 		setNamePrefix(namePrefix);
 		return newThread(runnable);
 	}
+	
+	public SimpleNamedThreadFactory() { }
 
 	/**
 	 * Returns a new thread using a name as specified by this factory {@inheritDoc}

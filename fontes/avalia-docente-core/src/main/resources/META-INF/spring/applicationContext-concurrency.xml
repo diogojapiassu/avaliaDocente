@@ -12,7 +12,9 @@
 
 	<!-- Asynchronous Avaliacao Handler: bean responsavel por processar uma 
 		lista de avaliacoes de forma 'assincrona' -->
-	<bean id="asyncAvaliacaoHandler" class="br.ufg.inf.es.avaliadocente.core.concurrency.AsynchronousAvaliacaoHandlerImpl" />
+	<bean id="asyncAvaliacaoHandler" class="br.ufg.inf.es.avaliadocente.core.concurrency.AsynchronousAvaliacaoHandlerImpl"> 
+		<property name="threadPoolExecutorMonitor" ref="threadPoolExecutorMonitor" />
+	</bean>
 	
 	<!-- Simple Named Thread Factory -->
 	<bean id="simpleNamedThreadFactory" class="br.ufg.inf.es.avaliadocente.core.concurrency.SimpleNamedThreadFactory" />
@@ -27,7 +29,7 @@
 	</bean>
 	
 	<!-- FactoryBean de ThreadPoolExecutor -->
-	<bean id="threadPoolExecutorMonitor" class="br.ufg.inf.es.avaliadocente.core.concurrency.ThreadPoolExecutorMonitor" scope="template">
+	<bean id="threadPoolExecutorMonitor" class="br.ufg.inf.es.avaliadocente.core.concurrency.ThreadPoolExecutorMonitor" scope="prototype">
 		
 	</bean>
 
