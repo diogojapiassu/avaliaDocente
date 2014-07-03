@@ -17,10 +17,7 @@
 		lista de avaliacoes de forma 'assincrona' -->
 	<bean id="asyncAvaliacaoHandler"
 		class="br.ufg.inf.es.avaliadocente.core.concurrency.AsynchronousAvaliacaoHandlerImpl"
-		scope="prototype" > 
-		<property name="threadPoolExecutorFactory" ref="threadPoolExecutorFactory" />
-		<property name="threadPoolExecutorMonitor" ref="threadPoolExecutorMonitor" />
-	</bean>
+		scope="prototype" />
 	
 	<!-- Simple Named Thread Factory -->
 	<bean id="simpleNamedThreadFactory"
@@ -32,7 +29,7 @@
 	-keepAliveSeconds: tempo em segundos que uma thread execende ficará em idle no pool até ser destruída -->
 	<bean id="threadPoolExecutorFactory"
 		class="org.springframework.scheduling.concurrent.ThreadPoolExecutorFactoryBean"
-		p:corePoolSize="4" p:maxPoolSizevalue="8" p:keepAliveSeconds="60" />
+		p:corePoolSize="4" p:maxPoolSize="8" p:keepAliveSeconds="60" />
 	
 	<!-- FactoryBean de ThreadPoolExecutor
 	-delayMonitoramento: intervalo entre um monitoramento e outro (em segundos). Padrão 10. -->
