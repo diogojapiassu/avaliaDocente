@@ -25,7 +25,7 @@ public abstract class AbstractAsynchronousAvaliacaoHandler implements Runnable {
 	
 	@Autowired
 	protected ThreadPoolExecutorMonitor threadPoolExecutorMonitor;
-	
+
 	public AbstractAsynchronousAvaliacaoHandler(List<Avaliacao> listaDeAvaliacoes) {
 		this.listaDeAvaliacoes = listaDeAvaliacoes;
 	}
@@ -33,6 +33,12 @@ public abstract class AbstractAsynchronousAvaliacaoHandler implements Runnable {
 	public void setListaDeAvaliacoes(List<Avaliacao> listaDeAvaliacoes) {
 		this.listaDeAvaliacoes = listaDeAvaliacoes;
 	}
+	
+	public void setThreadPoolExecutorMonitor(ThreadPoolExecutorMonitor threadPoolExecutorMonitor) {
+		this.threadPoolExecutorMonitor = threadPoolExecutorMonitor;
+	}
+	
+	public AbstractAsynchronousAvaliacaoHandler() { }
 	
 	/**
 	 * Método que realiza o processamento de uma lista de {@link Avaliacao}.

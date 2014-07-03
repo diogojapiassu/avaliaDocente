@@ -9,6 +9,7 @@ import java.util.concurrent.ThreadPoolExecutor;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+import br.ufg.inf.es.avaliadocente.context.CustomApplicationContext;
 import br.ufg.inf.es.avaliadocente.core.AvaliacaoHandler;
 import br.ufg.inf.es.avaliadocente.exception.AvaliacaoProcessamentoException;
 import br.ufg.inf.es.avaliadocente.model.bean.Avaliacao;
@@ -24,12 +25,11 @@ import br.ufg.inf.es.avaliadocente.util.MethodProfiling;
 public class AsynchronousAvaliacaoHandlerImpl extends
 		AbstractAsynchronousAvaliacaoHandler {
 
-	@Autowired
-	AvaliacaoHandler avaliacaoHandler;
-	
 	public AsynchronousAvaliacaoHandlerImpl(List<Avaliacao> listaDeAvaliacoes) {
 		super(listaDeAvaliacoes);
 	}
+	
+	public AsynchronousAvaliacaoHandlerImpl() { }
 
 	@Override
 	public void processarListaAvaliacoes()
@@ -48,7 +48,11 @@ public class AsynchronousAvaliacaoHandlerImpl extends
 
 			for (int i = 0; i < listaDeAvaliacoes.size(); i++) {
 				LOG.info("Iniciando processamento assíncrono da Avaliacao #" + i);
+
+				//Obtem um novo bean do Spring
+				AvaliacaoHandler avaliacaoHandler = CustomApplicationContext.getInstance().getContext().getBean(AvaliacaoHandler.class);
 				avaliacaoHandler.setAvaliacao(this.listaDeAvaliacoes.get(i));
+				
 				futures.add(es.submit(avaliacaoHandler));
 			}
 
