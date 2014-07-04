@@ -48,7 +48,7 @@ Serão empregadas as seguintes tecnologias durante o desenvolvimento do projeto:
 * [JSF](https://javaserverfaces-spec-public.java.net/), como especificação dos componentes web;
 * [Primefaces](http://primefaces.org), como biblioteca de componentes JSF;
 * [Jackson](http://jackson.codehaus.org/), como JSON processor;
-* [C3P0](http://sourceforge.net/projects/c3p0/), como pool de conexões JDBC;
+* [~~C3P0~~](http://sourceforge.net/projects/c3p0/) [Hikari CP](https://github.com/brettwooldridge/HikariCP), como pool de conexões JDBC;
 
 Os demais aspectos do projeto ainda estão em aberto para discussão.
 
