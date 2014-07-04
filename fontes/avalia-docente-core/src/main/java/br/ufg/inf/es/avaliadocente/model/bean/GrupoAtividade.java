@@ -46,6 +46,7 @@ public class GrupoAtividade extends AbstractEntity<GrupoAtividade> {
 	private GrupoAtividade grupoAtividadePai;
 	
 	@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+	@JoinColumn(name = "grupo_atividade_id")
 	private List<Atividade> atividades;
 	
 	@JsonIgnore

@@ -37,6 +37,7 @@ import br.ufg.inf.es.avaliadocente.util.MethodProfiling;
  * <li>fim do processamento ;)</li>
  * 
  * @author Danilo Guimarães
+ * @author Luã Silvério
  *
  */
 public class AvaliacaoHandler implements Runnable {
@@ -93,11 +94,23 @@ public class AvaliacaoHandler implements Runnable {
 						.docente(docenteBD)	
 						.build();
 				
+				//pega todos os grupos e atividades existentes no banco de dados
+				List<GrupoAtividade> listaDeGrupos = grupoAtividadeRepository.findAll();
+				List<Atividade> listaDeAtividadesBD = atividadeRepository.findAll();
+				
+				if (listaDeGrupos.size() == 0 || listaDeAtividadesBD.size() == 0) {
+					LOG.info("Banco de dados não populado");
+					return;
+				}
+				
 				List<NotasGrupoAtividade> notas = new ArrayList<>();
-				for (GrupoAtividade gpr : avaliacao.getGrupoAtividade()) {
+				for (GrupoAtividade gprJson : avaliacao.getGrupoAtividade()) {
+					//pega o grupo especifico daquele indice no grupoAtividade da avaliação
+					GrupoAtividade gprBD = listaDeGrupos.get(gprJson.getIndice()-1);
+					
 					NotasGrupoAtividade notasGrupoAtividade = new NotasGrupoAtividadeBuilder().quadroSumario(sumario).build();
 					
-					tratarTodasAtividadesDoGrupoDeAtividades(gpr, notasGrupoAtividade);
+					tratarTodasAtividadesDoGrupoDeAtividades(gprJson, gprBD, listaDeAtividadesBD, notasGrupoAtividade);
 					
 					notas.add(notasGrupoAtividade);
 					
@@ -121,23 +134,21 @@ public class AvaliacaoHandler implements Runnable {
 	 * @param gpr grupo de atividade cuja lista de atividade será tratada.
 	 * @param notasGrupoAtividade 
 	 */
-	private void tratarTodasAtividadesDoGrupoDeAtividades(GrupoAtividade gpr, NotasGrupoAtividade notasGrupoAtividade) {
-		LOG.info("Tratando todas as atividades do grupo de atividades de indice " + gpr.getIndice());
+	private void tratarTodasAtividadesDoGrupoDeAtividades(GrupoAtividade gprJson, GrupoAtividade gprBD, List<Atividade> listaDeAtividadesBD, NotasGrupoAtividade notasGrupoAtividade) {
+		LOG.info("Tratando todas as atividades do grupo de atividades de indice " + gprJson.getIndice());
 		
-		//Sincroniza com o banco somente para nao dar TransientObjectException...
-		GrupoAtividade gprTemp = grupoAtividadeRepository.findByIndice(gpr.getIndice());
-		notasGrupoAtividade.setGrupoAtividade(gprTemp);
+		notasGrupoAtividade.setGrupoAtividade(gprBD);
 		
-		for (Atividade atv : gpr.getAtividades()) {
-			LOG.info("Tratando a atividade de indice " + atv.getIndice());
+		for (Atividade atvJson : gprJson.getAtividades()) {
+			LOG.info("Tratando a atividade de indice " + atvJson.getIndice());
+
+			Atividade atvBD = buscaAtividadeEmListaPorIndice(gprBD, atvJson.getIndice());
 			
-			//Sincronizando com o banco...
-			Atividade atvTemp = atividadeRepository.findByGrupoAtividadeAndIndice(gprTemp.getId(), atv.getIndice());
-			Long pesoMultiplicador = atvTemp.getMultiplicador().getFatorMultiplicador().longValue();
+			Long pesoMultiplicador = atvBD.getMultiplicador().getFatorMultiplicador().longValue();
 			
-			if (atvTemp.getMultiplicador().isValorado()) {
+			if (atvBD.getMultiplicador().isValorado()) {
 				//Peso da atividade que veio na avaliacao
-				Long pesoAtividade = atv.getValor();
+				Long pesoAtividade = atvJson.getValor();
 				
 				if (pesoAtividade == null) {
 					pesoAtividade = new Long(0);
@@ -151,6 +162,27 @@ public class AvaliacaoHandler implements Runnable {
 				notasGrupoAtividade.addValor(new BigDecimal(pesoMultiplicador));
 			}
 		}
+	}
+	/**
+	 * Para fazer um cast seguro de long para int
+	 * @param l
+	 * @return
+	 */
+	public static int safeLongToInt(long l) {
+	    if (l < Integer.MIN_VALUE || l > Integer.MAX_VALUE) {
+	        throw new IllegalArgumentException
+	            (l + " cannot be cast to int without changing its value.");
+	    }
+	    return (int) l;
+	}
+	
+	public Atividade buscaAtividadeEmListaPorIndice(GrupoAtividade gpr, Long long1) {
+		for (Atividade atv : gpr.getAtividades()) {
+			if (atv.getIndice() == long1) {
+				return atv;
+			}
+		}
+		return null;
 	}
 	
 	/**
