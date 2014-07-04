@@ -96,9 +96,8 @@ public class AvaliacaoHandler implements Runnable {
 				
 				//pega todos os grupos e atividades existentes no banco de dados
 				List<GrupoAtividade> listaDeGrupos = grupoAtividadeRepository.findAll();
-				List<Atividade> listaDeAtividadesBD = atividadeRepository.findAll();
 				
-				if (listaDeGrupos.size() == 0 || listaDeAtividadesBD.size() == 0) {
+				if (listaDeGrupos.size() == 0) {
 					LOG.info("Banco de dados não populado");
 					return;
 				}
@@ -110,7 +109,7 @@ public class AvaliacaoHandler implements Runnable {
 					
 					NotasGrupoAtividade notasGrupoAtividade = new NotasGrupoAtividadeBuilder().quadroSumario(sumario).build();
 					
-					tratarTodasAtividadesDoGrupoDeAtividades(gprJson, gprBD, listaDeAtividadesBD, notasGrupoAtividade);
+					tratarTodasAtividadesDoGrupoDeAtividades(gprJson, gprBD, notasGrupoAtividade);
 					
 					notas.add(notasGrupoAtividade);
 					
@@ -134,7 +133,7 @@ public class AvaliacaoHandler implements Runnable {
 	 * @param gpr grupo de atividade cuja lista de atividade será tratada.
 	 * @param notasGrupoAtividade 
 	 */
-	private void tratarTodasAtividadesDoGrupoDeAtividades(GrupoAtividade gprJson, GrupoAtividade gprBD, List<Atividade> listaDeAtividadesBD, NotasGrupoAtividade notasGrupoAtividade) {
+	private void tratarTodasAtividadesDoGrupoDeAtividades(GrupoAtividade gprJson, GrupoAtividade gprBD, NotasGrupoAtividade notasGrupoAtividade) {
 		LOG.info("Tratando todas as atividades do grupo de atividades de indice " + gprJson.getIndice());
 		
 		notasGrupoAtividade.setGrupoAtividade(gprBD);
