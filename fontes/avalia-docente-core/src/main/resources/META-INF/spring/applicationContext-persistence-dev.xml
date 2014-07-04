@@ -6,8 +6,28 @@
 						http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
 
 	<!-- C3p0 configuration -->
-	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close" p:driverClass="${jdbc.driver}" 
+	<!-- <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close" p:driverClass="${jdbc.driver}" 
 		p:jdbcUrl="${jdbc.url}" p:user="${jdbc.user}" p:password="${jdbc.password}" p:acquireRetryDelay="1000"
-		p:maxIdleTime="240" p:maxPoolSize="20" p:minPoolSize="5" p:autoCommitOnClose="false" />
+		p:maxIdleTime="240" p:maxPoolSize="20" p:minPoolSize="5" p:autoCommitOnClose="false" />-->
 
+	<!-- Hikari configuration -->
+	<bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
+		<property name="maximumPoolSize" value="8" />
+		<property name="minimumPoolSize" value="2" />
+		<property name="dataSourceClassName" value="${jdbc.datasource}" />
+		<property name="dataSourceProperties">
+			<props>
+				<prop key="serverName">${jdbc.hostname}</prop>
+				<prop key="portNumber">${jdbc.porta}</prop>
+				<prop key="databaseName">${jdbc.database}</prop>
+				<prop key="user">${jdbc.user}</prop>
+				<prop key="password">${jdbc.password}</prop>
+			</props>
+		</property>
+		<property name="poolName" value="springHikariCP" />
+	</bean>
+
+	<bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource">
+		<constructor-arg ref="hikariConfig" />
+	</bean>
 </beans>
