@@ -1,7 +1,9 @@
 package br.ufg.inf.es.avaliadocente.model.bean;
 
+import java.math.BigDecimal;
 import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
@@ -33,6 +35,12 @@ public class QuadroSumario extends AbstractEntity<QuadroSumario> {
 //	@OneToMany(fetch = FetchType.LAZY)
 //	private List<NotasGrupoAtividade> notasGrupoAtividades;
 	
+	/**
+	 * Valor total do somatório de todas as {@link NotasGrupoAtividade}.
+	 */
+	@Column(precision = 19, scale = 3)
+	private BigDecimal valorTotal = new BigDecimal(0);
+	
 	public Resolucao getResolucao() {
 		return resolucao;
 	}
@@ -56,4 +64,22 @@ public class QuadroSumario extends AbstractEntity<QuadroSumario> {
 //	public void setNotasGrupoAtividades(List<NotasGrupoAtividade> notasGrupoAtividades) {
 //		this.notasGrupoAtividades = notasGrupoAtividades;
 //	}
+	
+	public BigDecimal getValorTotal() {
+		return valorTotal;
+	}
+
+	public void setValorTotal(BigDecimal valorTotal) {
+		this.valorTotal = valorTotal;
+	}
+	
+	/**
+	 * Adiciona o valor passado ao valor atual.
+	 * <br>É o mesmo que <pre>this.valorTotal = valorTotal + valueToBeAdded;</pre>
+	 * 
+	 * @param valueToBeAdded valor a ser adicionado
+	 */
+	public void addValor(BigDecimal valueToBeAdded) {
+		this.valorTotal = valorTotal.add(valueToBeAdded);
+	}
 }

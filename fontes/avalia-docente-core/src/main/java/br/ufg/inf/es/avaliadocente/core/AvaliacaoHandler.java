@@ -115,6 +115,8 @@ public class AvaliacaoHandler implements Runnable {
 					
 				}
 				
+				calculaSomatorioNotasGrupoAtividadeNoQuadroSumario(sumario, notas);
+				
 				quadroSumarioRepository.save(sumario);
 				notasGrupoAtividadeRepository.save(notas);
 			}
@@ -126,6 +128,22 @@ public class AvaliacaoHandler implements Runnable {
 			LOG.error(mensagem);
 			throw new AvaliacaoProcessamentoException(mensagem, e);
 		}
+	}
+
+	/**
+	 * Faz o somatório da lista de {@link NotasGrupoAtividade} e salva o total em
+	 * {@link QuadroSumario #getValorTotal()}.
+	 * 
+	 * @param sumario {@link QuadroSumario}.
+	 * @param notas lista de {@link NotasGrupoAtividade}.
+	 */
+	private void calculaSomatorioNotasGrupoAtividadeNoQuadroSumario(QuadroSumario sumario, List<NotasGrupoAtividade> notas) {
+		for (NotasGrupoAtividade nga : notas) {
+			if (nga.getValor() != null) {
+				sumario.addValor(nga.getValor());
+			}
+		}
+		LOG.debug(String.format("Quadro sumario %s possui um valor de %s", sumario.toString(), sumario.getValorTotal()));
 	}
 
 	/**
@@ -196,5 +214,7 @@ public class AvaliacaoHandler implements Runnable {
 		grupoAtividadeRepository = null;
 		notasGrupoAtividadeRepository = null;
 	}
+	
+	
 
 }
