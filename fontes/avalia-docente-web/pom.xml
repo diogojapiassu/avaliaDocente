@@ -13,6 +13,8 @@
 		<!-- versão de dependências -->
 		<jsf.version>2.2.7</jsf.version>
 		<primefaces.version>3.3.1</primefaces.version>
+		<commons-io.version>2.4</commons-io.version>
+		<commons-fileupload.version>1.2.1</commons-fileupload.version>
 		<jstl.version>1.2</jstl.version>
 		<servlet-api.version>2.5</servlet-api.version>
 	</properties>
@@ -120,5 +122,20 @@
 			<artifactId>primefaces</artifactId>
 			<version>${primefaces.version}</version>
 		</dependency>
+		
+		<!-- commons-io -->
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>${commons-io.version}</version>
+		</dependency>
+		
+		<!-- commons-fileupload -->
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>${commons-fileupload.version}</version>
+		</dependency>
+
 	</dependencies>
 </project>
