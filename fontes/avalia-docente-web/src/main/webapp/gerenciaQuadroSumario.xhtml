@@ -28,11 +28,11 @@ xmlns:p="http://primefaces.org/ui">
     <p:column headerText="Departamento">
       <h:outputText value="#{quadroSumario.docente.departamento.nome}" />
     </p:column>
-     <p:column headerText="Departamento">
-      <h:outputText value="#{quadroSumario.docente.matricula}" />
-    </p:column>
      <p:column headerText="Resolução">
         <h:outputText value="#{quadroSumario.resolucao.descricao}" />
+    </p:column>
+     <p:column headerText="Nota Final">
+      <h:outputText value="#{quadroSumario.valorTotal}" />
     </p:column>
 </p:dataTable>
 <p:poll interval="5"   update="@(.myclass)" />

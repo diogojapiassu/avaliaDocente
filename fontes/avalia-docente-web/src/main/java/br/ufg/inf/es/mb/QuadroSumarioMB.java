@@ -132,8 +132,8 @@ public class QuadroSumarioMB {
     				tranfereArquivo(getFile().getFileName(), getFile().getInputstream());
     				String arquivo  = FileUtils.getFileContent(new File(destino+getFile().getFileName()));
     				List<Avaliacao> lista = AvaliacaoJsonBinder.unbindAvaliacoes(arquivo); 
-    				/*processarApenasUmaAvaliacao(lista);*/
-    				processarVariasAvaliacoes (lista);
+    				processarApenasUmaAvaliacao(lista);
+    				//processarVariasAvaliacoes (lista);
 				} catch (IOException e) {
 					Logger.getLogger("Não funcionou" +e.getMessage());
 				}
@@ -190,7 +190,7 @@ public class QuadroSumarioMB {
     
 	private static AbstractAsynchronousAvaliacaoHandler getNewAsyncAvaliacaoHandler() {
 		//Estou pedindo o Spring pra construir esse objeto com base no id do bean...
-		return asyncAvaliacaoHandler = (AbstractAsynchronousAvaliacaoHandler) CustomApplicationContext
+		return  (AbstractAsynchronousAvaliacaoHandler) CustomApplicationContext
 				.getInstance().getContext()
 				.getBean("asyncAvaliacaoHandler");
 	}
