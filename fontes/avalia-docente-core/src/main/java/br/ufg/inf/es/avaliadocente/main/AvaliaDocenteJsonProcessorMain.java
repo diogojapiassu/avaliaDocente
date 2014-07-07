@@ -44,7 +44,7 @@ private static final Logger LOG = Logger.getLogger(AvaliaDocenteJsonProcessorMai
 		
 		parseJson();
 		
-		processarApenasUmaAvaliacao();
+		//processarApenasUmaAvaliacao();
 		
 		processarVariasAvaliacoes();
 	}
@@ -59,6 +59,13 @@ private static final Logger LOG = Logger.getLogger(AvaliaDocenteJsonProcessorMai
 		getNewAvaliacaoHandler();
 		
 		getNewAsyncAvaliacaoHandler();
+		
+		getNewAvaliacaoListSplitter();
+	}
+
+	private static AvaliacaoListSplitter getNewAvaliacaoListSplitter() {
+		return avaliacaoListSplitter = CustomApplicationContext.getInstance().getContext().getBean(AvaliacaoListSplitter.class);
+		
 	}
 
 	private static AbstractAsynchronousAvaliacaoHandler getNewAsyncAvaliacaoHandler() {
