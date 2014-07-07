@@ -5,10 +5,10 @@ xmlns:h="http://java.sun.com/jsf/html"
 xmlns:f="http://java.sun.com/jsf/core"
 xmlns:p="http://primefaces.org/ui">
 <h:head>
-<title>Gerenciador de Quadro Sumario</title>
+<title>Listar: Quadro Sumario</title>
 </h:head>
 <h:body>
-<h1>Gerenciador de Quadro Sumario</h1>
+<h1>Lista de Quadro Sumario</h1>
 <h:form enctype="multipart/form-data">
     <p:growl id="messages" showDetail="true" />
  
@@ -24,9 +24,6 @@ xmlns:p="http://primefaces.org/ui">
     </p:column>
     <p:column headerText="Docente">
         <h:outputText value="#{quadroSumario.docente.nome}" />
-    </p:column>
-    <p:column headerText="Departamento">
-      <h:outputText value="#{quadroSumario.docente.departamento.nome}" />
     </p:column>
      <p:column headerText="Resolução">
         <h:outputText value="#{quadroSumario.resolucao.descricao}" />

@@ -40,10 +40,11 @@ import br.ufg.inf.es.avaliadocente.util.FileUtils;
 public class QuadroSumarioMB {
 
 	private List<QuadroSumario> listaQuadroSumario;
-	private Docente docente;
 	private List<NotasGrupoAtividade> notasGrupoAtividades;
 	private NotasGrupoAtividadeRepository notasGrupoAtividadeRepository;
 	private AvaliacaoHandler avaliacaoHandler;
+	private AvaliacaoListSplitter avaliacaoListSplitter;
+	
 	
 	@Autowired
 	private static AbstractAsynchronousAvaliacaoHandler asyncAvaliacaoHandler ;
@@ -60,6 +61,7 @@ public class QuadroSumarioMB {
 		quadroSumarioRepository = CustomApplicationContext.getInstance().getContext().getBean(QuadroSumarioRepository.class);
 		asyncAvaliacaoHandler  = (AbstractAsynchronousAvaliacaoHandler) CustomApplicationContext.getInstance().getContext().getBean("asyncAvaliacaoHandler");
 		notasGrupoAtividadeRepository = CustomApplicationContext.getInstance().getContext().getBean(NotasGrupoAtividadeRepository.class);
+		avaliacaoListSplitter = CustomApplicationContext.getInstance().getContext().getBean(AvaliacaoListSplitter.class);
 	}
 	
 	
@@ -67,24 +69,8 @@ public class QuadroSumarioMB {
 	public List<QuadroSumario> getListaQuadroSumario() {
 		if (quadroSumarioRepository != null) {
 			listaQuadroSumario = quadroSumarioRepository.findAllOrdenadoPorId();
-			
-	/*		for (QuadroSumario quadroSumarioTemp  : listaQuadroSumario) {
-				notasGrupoAtividades.addAll(pegaGrupoAtividade(quadroSumarioTemp.getId()));
-			}
-		}else{
-			listaQuadroSumario = new ArrayList<>(); 
-		}*/
 		}
 		return listaQuadroSumario;
-	}
-
-	public Docente getDocente() {
-		docente = listaQuadroSumario.get(0).getDocente();
-		return docente;
-	}
-
-	public void setDocente(Docente docente) {
-		this.docente = docente;
 	}
 
 	
@@ -132,10 +118,10 @@ public class QuadroSumarioMB {
     				tranfereArquivo(getFile().getFileName(), getFile().getInputstream());
     				String arquivo  = FileUtils.getFileContent(new File(destino+getFile().getFileName()));
     				List<Avaliacao> lista = AvaliacaoJsonBinder.unbindAvaliacoes(arquivo); 
-    				processarApenasUmaAvaliacao(lista);
-    				//processarVariasAvaliacoes (lista);
+    			//	processarApenasUmaAvaliacao(lista)
+    				processarVariasAvaliacoes (lista);
 				} catch (IOException e) {
-					Logger.getLogger("Não funcionou" +e.getMessage());
+					Logger.getLogger("Não foi possivel carregar o arquivo" +e.getMessage());
 				}
     			FacesMessage message = new FacesMessage("Arquivo ", file.getFileName() + " carregado com sucesso!!.");
                 FacesContext.getCurrentInstance().addMessage(null, message);
@@ -166,14 +152,13 @@ public class QuadroSumarioMB {
 		new Thread(avaliacaoHandler).start();
 	}
     
-    private List<NotasGrupoAtividade> pegaGrupoAtividade(Long idQuadroSumario){
+/*    private List<NotasGrupoAtividade> pegaGrupoAtividade(Long idQuadroSumario){
     	List<NotasGrupoAtividade> lista = notasGrupoAtividadeRepository.findByQuadroSumario(idQuadroSumario);
     	return lista;
-    }
+    }*/
     
     private void processarVariasAvaliacoes(List<Avaliacao>avaliacoes) {
-    	AvaliacaoListSplitter avaliacaoListSplitter =  new AvaliacaoListSplitter();
-    	asyncAvaliacaoHandler.setListaDeAvaliacoes(avaliacoes);
+    	avaliacaoListSplitter.setAvaliacoes(avaliacoes);
 		
 		for (List<Avaliacao> listaCom1000 : avaliacaoListSplitter.split()) {
 			//Obtem um novo asyncAvaliacaoHandler
@@ -194,5 +179,4 @@ public class QuadroSumarioMB {
 				.getInstance().getContext()
 				.getBean("asyncAvaliacaoHandler");
 	}
-    
-   }
+}
