@@ -31,7 +31,7 @@
 		class="org.springframework.scheduling.concurrent.ThreadPoolExecutorFactoryBean"
 		p:corePoolSize="4" p:maxPoolSize="8" p:keepAliveSeconds="60" />
 	
-	<!-- FactoryBean de ThreadPoolExecutor
+	<!-- ThreadPoolExecutorMonitor: monitora de tempos em tempos o estado de um ThreadPoolExecutor
 	-delayMonitoramento: intervalo entre um monitoramento e outro (em segundos). Padrão 10. -->
 	<bean id="threadPoolExecutorMonitor"
 		class="br.ufg.inf.es.avaliadocente.core.concurrency.ThreadPoolExecutorMonitor"
@@ -41,7 +41,6 @@
 	-tamanhoSubListas: quantidade de itens que cada sub-lista conterá. Padrão: 1000 -->
 	<bean id="avaliacaoListSplitter"
 		class="br.ufg.inf.es.avaliadocente.core.concurrency.AvaliacaoListSplitter">
-		
 		<constructor-arg name="tamanhoSubListas" value="1000"/>
 	</bean>
 

@@ -6,6 +6,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Future;
 import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 
 import br.ufg.inf.es.avaliadocente.context.CustomApplicationContext;
 import br.ufg.inf.es.avaliadocente.core.AvaliacaoHandler;
@@ -22,6 +23,8 @@ import br.ufg.inf.es.avaliadocente.util.MethodProfiling;
  */
 public class AsynchronousAvaliacaoHandlerImpl extends
 		AbstractAsynchronousAvaliacaoHandler {
+	
+	private ExecutorService es;
 
 	public AsynchronousAvaliacaoHandlerImpl(List<Avaliacao> listaDeAvaliacoes) {
 		super(listaDeAvaliacoes);
@@ -36,12 +39,10 @@ public class AsynchronousAvaliacaoHandlerImpl extends
 		MethodProfiling p = new MethodProfiling();
 		p.iniciarMedicao();
 
-		ExecutorService es;
 		try {
 			es = threadPoolExecutorFactory.getObject();
 			
 			iniciarThreadPoolExecutorMonitor(es);
-			
 			
 			List<Future> futures = new ArrayList<Future>();
 
@@ -54,16 +55,19 @@ public class AsynchronousAvaliacaoHandlerImpl extends
 				
 				futures.add(es.submit(avaliacaoHandler));
 			}
-
-			for (Future future : futures) {
-				try {
-					// blocking call, explicitly waiting for the response from a
-					// specific task, not necessarily the first task that is
-					// completed
-					future.get();
-				} catch (InterruptedException | ExecutionException e) { }
+			
+			//Fechando o ThreadPool: ninguem mais entra...
+			es.shutdown();
+			
+			try {
+				esperarExecutorServiceTerminar();
+			} catch (InterruptedException e) {
+				LOG.error("Nao foi possivel aguardar a finalizacao do ThreadPool", e);
 			}
-	 
+
+			//Desligando o monitor...
+			threadPoolExecutorMonitor.shutdown();
+			
 			p.finalizarMedicao();
 			LOG.info("Processamento assincrono levou " + p.tempoExecucao() + " segundos");
 		} catch (Exception e1) {
@@ -79,11 +83,25 @@ public class AsynchronousAvaliacaoHandlerImpl extends
 	 * @param es {@link ExecutorService} que será monitorado.
 	 */
 	private void iniciarThreadPoolExecutorMonitor(ExecutorService es) {
-//		threadPoolExecutorMonitor = new ThreadPoolExecutorMonitor((ThreadPoolExecutor) es, 1000);
 		threadPoolExecutorMonitor.setExecutor((ThreadPoolExecutor) es);
 		
 		Thread t = new Thread(threadPoolExecutorMonitor);
 		t.start();
+	}
+	
+	/**
+	 * Espera por durante 10 minutos até que o {@link ExecutorService} termine.
+	 * 
+	 * @throws InterruptedException 
+	 */
+	private void esperarExecutorServiceTerminar() throws InterruptedException {
+		/*
+		 * TODO parametrizar esse tempo, de preferencia
+		 * possibilitando a injecao via spring.
+		 */
+		int tempo = 10;
+		LOG.info("Esperarei o ThreadPool por durante " + tempo + " minutos ate que seja encerrado");
+		es.awaitTermination(tempo, TimeUnit.MINUTES);
 	}
 	
 
