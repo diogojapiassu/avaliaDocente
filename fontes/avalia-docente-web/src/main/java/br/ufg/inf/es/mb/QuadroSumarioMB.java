@@ -16,6 +16,8 @@ import javax.faces.context.FacesContext;
 
 import org.primefaces.model.UploadedFile;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.domain.Sort.Direction;
 
 import br.ufg.inf.es.avaliadocente.context.CustomApplicationContext;
 import br.ufg.inf.es.avaliadocente.core.AvaliacaoHandler;
@@ -68,7 +70,8 @@ public class QuadroSumarioMB {
 	
 	public List<QuadroSumario> getListaQuadroSumario() {
 		if (quadroSumarioRepository != null) {
-			listaQuadroSumario = quadroSumarioRepository.findAllOrdenadoPorId();
+			//Busca em ordem decrescente de 'valortotal'
+			listaQuadroSumario = quadroSumarioRepository.findAll(new Sort(Direction.DESC, "valorTotal"));
 		}
 		return listaQuadroSumario;
 	}

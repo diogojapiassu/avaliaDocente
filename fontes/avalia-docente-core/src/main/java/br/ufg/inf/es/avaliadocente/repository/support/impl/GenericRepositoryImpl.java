@@ -106,6 +106,14 @@ public class GenericRepositoryImpl<E extends AbstractEntity<E>, PK extends Seria
         }
         return super.findAll();
     }
+
+	@Override
+	public List<E> findAll(Sort sort) {
+		if (this.getEntityInformation().getJavaType().isAnnotationPresent(Hiddenable.class)) {
+			return super.findAll(this.isHidden(), sort);
+		}
+		return super.findAll(sort);
+	}
     
     @Override
     public List<E> findAllOrdenadoPorId() {
