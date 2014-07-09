@@ -1,39 +1,41 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-xmlns:h="http://java.sun.com/jsf/html"
-xmlns:f="http://java.sun.com/jsf/core"
-xmlns:p="http://primefaces.org/ui">
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
 <h:head>
 <title>Listar: Quadro Sumario</title>
 </h:head>
-<h:body>
-<h1>Lista de Quadro Sumario</h1>
-<h:form enctype="multipart/form-data">
-    <p:growl id="messages" showDetail="true" />
- 
-    <p:fileUpload value="#{quadroSumarioMB.file}" mode="simple" disabled="false" />
- 
-    <p:commandButton value="Submit" ajax="false" update="messages" actionListener ="#{quadroSumarioMB.upload}" />
-</h:form>
-<h:form>
+	<h:body>
+		<h1>Lista de Quadro Sumario</h1>
+		<h:form enctype="multipart/form-data">
+		    <p:growl id="messages" showDetail="true" />
 
-<p:dataTable styleClass="myclass" var="quadroSumario" value="#{quadroSumarioMB.listaQuadroSumario}">
-    <p:column headerText="Id">
-        <h:outputText value="#{quadroSumario.id}" />
-    </p:column>
-    <p:column headerText="Docente">
-        <h:outputText value="#{quadroSumario.docente.nome}" />
-    </p:column>
-     <p:column headerText="Resolução">
-        <h:outputText value="#{quadroSumario.resolucao.descricao}" />
-    </p:column>
-     <p:column headerText="Nota Final">
-      <h:outputText value="#{quadroSumario.valorTotal}" />
-    </p:column>
-</p:dataTable>
-<p:poll interval="5"   update="@(.myclass)" />
-<h:commandLink action="inicio" immediate="true" value="Voltar"/> 
-</h:form>
-</h:body>
+		    <p:fileUpload value="#{quadroSumarioMB.file}" mode="simple" disabled="false" />
+
+		    <p:commandButton value="Submit" ajax="false" update="messages" actionListener ="#{quadroSumarioMB.upload}" />
+		</h:form>
+		<h:form>
+
+			<p:dataTable styleClass="myclass" var="quadroSumario" value="#{quadroSumarioMB.listaQuadroSumario}"  paginator="true" rows="10"
+                paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                rowsPerPageTemplate="5,10,15">
+			    <p:column headerText="Id">
+			        <h:outputText value="#{quadroSumario.id}" />
+			    </p:column>
+			    <p:column headerText="Docente">
+			        <h:outputText value="#{quadroSumario.docente.nome}" />
+			    </p:column>
+			     <p:column headerText="Resolução">
+			        <h:outputText value="#{quadroSumario.resolucao.descricao}" />
+			    </p:column>
+			     <p:column headerText="Nota Final">
+			      <h:outputText value="#{quadroSumario.valorTotal}" />
+			    </p:column>
+			</p:dataTable>
+
+			<h:commandLink action="inicio" immediate="true" value="Voltar"/>
+		</h:form>
+	</h:body>
 </html>

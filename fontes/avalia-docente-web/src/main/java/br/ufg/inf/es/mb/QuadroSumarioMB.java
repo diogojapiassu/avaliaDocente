@@ -11,20 +11,18 @@ import java.util.logging.Logger;
 
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
+import javax.faces.bean.RequestScoped;
 import javax.faces.context.FacesContext;
 
+import org.primefaces.model.LazyDataModel;
 import org.primefaces.model.UploadedFile;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Sort;
-import org.springframework.data.domain.Sort.Direction;
 
 import br.ufg.inf.es.avaliadocente.context.CustomApplicationContext;
 import br.ufg.inf.es.avaliadocente.core.AvaliacaoHandler;
 import br.ufg.inf.es.avaliadocente.core.concurrency.AbstractAsynchronousAvaliacaoHandler;
 import br.ufg.inf.es.avaliadocente.core.concurrency.AvaliacaoListSplitter;
 import br.ufg.inf.es.avaliadocente.model.bean.Avaliacao;
-import br.ufg.inf.es.avaliadocente.model.bean.Docente;
 import br.ufg.inf.es.avaliadocente.model.bean.NotasGrupoAtividade;
 import br.ufg.inf.es.avaliadocente.model.bean.QuadroSumario;
 import br.ufg.inf.es.avaliadocente.model.bean.json.AvaliacaoJsonBinder;
@@ -33,31 +31,31 @@ import br.ufg.inf.es.avaliadocente.repository.QuadroSumarioRepository;
 import br.ufg.inf.es.avaliadocente.util.FileUtils;
 
 /**
- * 
+ *
  * @author Jhonatan Santos
  *
  */
 @ManagedBean
-@SessionScoped
+@RequestScoped
 public class QuadroSumarioMB {
 
-	private List<QuadroSumario> listaQuadroSumario;
+	private LazyDataModel <QuadroSumario> listaQuadroSumario;
 	private List<NotasGrupoAtividade> notasGrupoAtividades;
 	private NotasGrupoAtividadeRepository notasGrupoAtividadeRepository;
 	private AvaliacaoHandler avaliacaoHandler;
 	private AvaliacaoListSplitter avaliacaoListSplitter;
-	
-	
+
+
 	@Autowired
 	private static AbstractAsynchronousAvaliacaoHandler asyncAvaliacaoHandler ;
-	
+
 	@Autowired
 	public QuadroSumarioRepository quadroSumarioRepository;
-	
+
 	 private UploadedFile file;
 	 private String destino = "C:\\temp\\";
-	
-	
+
+
 	public QuadroSumarioMB() {
 		avaliacaoHandler = CustomApplicationContext.getInstance().getContext().getBean(AvaliacaoHandler.class);
 		quadroSumarioRepository = CustomApplicationContext.getInstance().getContext().getBean(QuadroSumarioRepository.class);
@@ -65,25 +63,25 @@ public class QuadroSumarioMB {
 		notasGrupoAtividadeRepository = CustomApplicationContext.getInstance().getContext().getBean(NotasGrupoAtividadeRepository.class);
 		avaliacaoListSplitter = CustomApplicationContext.getInstance().getContext().getBean(AvaliacaoListSplitter.class);
 	}
-	
-	
-	
-	public List<QuadroSumario> getListaQuadroSumario() {
+
+
+
+	public LazyDataModel <QuadroSumario> getListaQuadroSumario() {
 		if (quadroSumarioRepository != null) {
 			//Busca em ordem decrescente de 'valortotal'
-			listaQuadroSumario = quadroSumarioRepository.findAll(new Sort(Direction.DESC, "valorTotal"));
+			listaQuadroSumario = new GenericLazyList<QuadroSumario>( quadroSumarioRepository,"valorTotal");
 		}
 		return listaQuadroSumario;
 	}
 
-	
+
     public List<NotasGrupoAtividade> getNotasGrupoAtividades() {
     	if (notasGrupoAtividadeRepository != null) {
 			notasGrupoAtividades = notasGrupoAtividadeRepository.findAll();
 		}else{
-			notasGrupoAtividades = new ArrayList<>(); 
+			notasGrupoAtividades = new ArrayList<>();
 		}
-    	
+
 		return notasGrupoAtividades;
 	}
 
@@ -99,28 +97,28 @@ public class QuadroSumarioMB {
 	public UploadedFile getFile() {
         return file;
     }
- 
+
     public void setFile(UploadedFile file) {
         this.file = file;
     }
-     
+
     public void upload(){
     	String extValidate;
-    	
+
     	if(getFile() != null){
     		String ext =getFile().getFileName();
-    		
+
     		if(ext != null){
     			extValidate = ext.substring(ext.indexOf(".")+1);
     		}else{
     			extValidate = null;
     		}
-    		
+
     		if(extValidate !=  null){
     			try {
     				tranfereArquivo(getFile().getFileName(), getFile().getInputstream());
     				String arquivo  = FileUtils.getFileContent(new File(destino+getFile().getFileName()));
-    				List<Avaliacao> lista = AvaliacaoJsonBinder.unbindAvaliacoes(arquivo); 
+    				List<Avaliacao> lista = AvaliacaoJsonBinder.unbindAvaliacoes(arquivo);
     			//	processarApenasUmaAvaliacao(lista)
     				processarVariasAvaliacoes (lista);
 				} catch (IOException e) {
@@ -130,15 +128,15 @@ public class QuadroSumarioMB {
                 FacesContext.getCurrentInstance().addMessage(null, message);
     		}
     	}
-   
+
     }
-    
+
     public void tranfereArquivo(String nomeArquivo,InputStream entrada){
     	try{
     		OutputStream saida = new FileOutputStream(new File(destino+nomeArquivo));
     		int reader = 0;
     		byte[] bytes = new byte [(int)getFile().getSize()];
-    		
+
     		while((reader = entrada.read(bytes))!= -1){
     			saida.write(bytes, 0, reader);
     		}
@@ -151,31 +149,31 @@ public class QuadroSumarioMB {
     }
     private void processarApenasUmaAvaliacao(List<Avaliacao>avaliacoes) {
     	avaliacaoHandler.setAvaliacao(avaliacoes.get(0));
-		
+
 		new Thread(avaliacaoHandler).start();
 	}
-    
+
 /*    private List<NotasGrupoAtividade> pegaGrupoAtividade(Long idQuadroSumario){
     	List<NotasGrupoAtividade> lista = notasGrupoAtividadeRepository.findByQuadroSumario(idQuadroSumario);
     	return lista;
     }*/
-    
+
     private void processarVariasAvaliacoes(List<Avaliacao>avaliacoes) {
     	avaliacaoListSplitter.setAvaliacoes(avaliacoes);
-		
+
 		for (List<Avaliacao> listaCom1000 : avaliacaoListSplitter.split()) {
 			//Obtem um novo asyncAvaliacaoHandler
 			asyncAvaliacaoHandler = getNewAsyncAvaliacaoHandler();
-			
+
 			//Injea mais uma propriedade no objeto ja instanciado...
 			asyncAvaliacaoHandler.setListaDeAvaliacoes(listaCom1000);
-			
+
 			//Constroi uma Thread com o seu objeto ja instanciado...
 			new Thread(asyncAvaliacaoHandler).start();
 		}
-		
+
 	}
-    
+
 	private static AbstractAsynchronousAvaliacaoHandler getNewAsyncAvaliacaoHandler() {
 		//Estou pedindo o Spring pra construir esse objeto com base no id do bean...
 		return  (AbstractAsynchronousAvaliacaoHandler) CustomApplicationContext
