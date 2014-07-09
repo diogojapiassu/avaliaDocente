@@ -1,7 +1,9 @@
 package br.ufg.inf.es.avaliadocente.util;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Random;
 import java.util.Set;
 
@@ -68,6 +70,31 @@ public class RandomizerUniqueInteger {
 	 */
 	private Integer nextInt() {
 		return r.nextInt(size);
+	}
+	
+	/**
+	 * 
+	 * @param size
+	 * @return
+	 */
+	public static Integer[] generateRandomArray(int size) {
+		List<Integer> lista = generateRandomList(size);
+		Integer[] array = (Integer[]) lista.toArray(new Integer[lista.size()]);
+		return array;
+	}
+	
+	/**
+	 * 
+	 * @param size
+	 * @return
+	 */
+	public static List<Integer> generateRandomList(int size) {
+		List<Integer> a = new ArrayList<>(size);
+		for (int i = 1; i <= size; i++) {
+			a.add(i);
+		}
+		Collections.shuffle(a);
+		return a;
 	}
 
 }

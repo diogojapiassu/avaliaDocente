@@ -2,7 +2,10 @@ package br.ufg.inf.es.avaliadocente.util;
 
 import static org.junit.Assert.assertEquals;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import org.apache.log4j.Logger;
@@ -62,5 +65,18 @@ public class RandomizerUniqueIntegerTest {
 		return numeros;
 		
 	}
-
+	
+	@Test
+	public void garanteUnicidade() {
+		int size = 10;
+		Integer[] a = sut.generateRandomArray(size);
+		
+		Set<Integer> conjunto = new HashSet<>();
+		
+		for (Integer i : a) {
+			conjunto.add(i);
+		}
+		
+		assertEquals(size, conjunto.size());
+	}
 }

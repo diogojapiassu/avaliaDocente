@@ -77,9 +77,9 @@ public class PopuladorAtividade implements IPopulador {
 		String[] values = FileUtils.splitByComma(line);
 		
 		if (NumberUtils.isNumber(values[0])) {
-			Long idGrupoAtividade = Long.parseLong(values[0]);
+			Integer idGrupoAtividade = Integer.parseInt(values[0]);
 			
-			GrupoAtividade grp = grupoAtividadeRepository.findOne(idGrupoAtividade);
+			GrupoAtividade grp = grupoAtividadeRepository.findByIndice(idGrupoAtividade);
 			Long indice = Long.parseLong(values[1]);
 			String descricao = values[2];
 			BigDecimal multiplicador = new BigDecimal(values[3]);

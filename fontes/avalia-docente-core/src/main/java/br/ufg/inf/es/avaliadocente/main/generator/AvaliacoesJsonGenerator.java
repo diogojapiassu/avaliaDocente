@@ -3,8 +3,11 @@ package br.ufg.inf.es.avaliadocente.main.generator;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
+import java.util.Set;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +20,7 @@ import br.ufg.inf.es.avaliadocente.model.bean.builder.AvaliacaoBuilder;
 import br.ufg.inf.es.avaliadocente.repository.AtividadeRepository;
 import br.ufg.inf.es.avaliadocente.repository.DocenteRepository;
 import br.ufg.inf.es.avaliadocente.repository.GrupoAtividadeRepository;
+import br.ufg.inf.es.avaliadocente.util.RandomizerUniqueInteger;
 
 import com.fasterxml.jackson.core.JsonGenerationException;
 import com.fasterxml.jackson.databind.JsonMappingException;
@@ -89,8 +93,13 @@ public class AvaliacoesJsonGenerator implements IGenerator {
 		for (GrupoAtividade grp : grupoAtividades) {
 			List<Atividade> atividades = atividadeRepository.findByGrupoAtividade(grp);
 			
-			for (int i = 0; i < (atividades.size()+1) / 2; i++) {
-				Atividade atv = atividades.get(i);
+			//Array com os valores inteiros randomizados
+			Integer[] randoms = RandomizerUniqueInteger.generateRandomArray(atividades.size());
+			
+			int metadadeDasAtividades = atividades.size() / 2;
+		
+			for (int i = 0; i < metadadeDasAtividades; i++) {
+				Atividade atv = atividades.get(randoms[i]-1);
 				
 				if (atv.getMultiplicador().isValorado()) {
 					//LOG.info("Atividade " + atv.getDescricao() + " eh valorada");
@@ -103,6 +112,7 @@ public class AvaliacoesJsonGenerator implements IGenerator {
 			}
 		}
 	}
+	
 
 	/**
 	 * Grava um JSON com as avaliacoes no disco rígido
