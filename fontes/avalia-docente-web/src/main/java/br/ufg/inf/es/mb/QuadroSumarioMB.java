@@ -17,6 +17,8 @@ import javax.faces.context.FacesContext;
 import org.primefaces.model.LazyDataModel;
 import org.primefaces.model.UploadedFile;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.domain.Sort.Direction;
 
 import br.ufg.inf.es.avaliadocente.context.CustomApplicationContext;
 import br.ufg.inf.es.avaliadocente.core.AvaliacaoHandler;
@@ -39,7 +41,7 @@ import br.ufg.inf.es.avaliadocente.util.FileUtils;
 @RequestScoped
 public class QuadroSumarioMB {
 
-	private LazyDataModel <QuadroSumario> listaQuadroSumario;
+	private List<QuadroSumario> listaQuadroSumario;
 	private List<NotasGrupoAtividade> notasGrupoAtividades;
 	private NotasGrupoAtividadeRepository notasGrupoAtividadeRepository;
 	private AvaliacaoHandler avaliacaoHandler;
@@ -66,10 +68,10 @@ public class QuadroSumarioMB {
 
 
 
-	public LazyDataModel <QuadroSumario> getListaQuadroSumario() {
+	public List<QuadroSumario> getListaQuadroSumario() {
 		if (quadroSumarioRepository != null) {
 			//Busca em ordem decrescente de 'valortotal'
-			listaQuadroSumario = new GenericLazyList<QuadroSumario>( quadroSumarioRepository,"valorTotal");
+			listaQuadroSumario = quadroSumarioRepository.findAll(new Sort(Direction.DESC, "valorTotal"));
 		}
 		return listaQuadroSumario;
 	}
